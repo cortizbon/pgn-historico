@@ -43,6 +43,8 @@ with tab1:
     st.plotly_chart(fig)
 
 with tab2:
+
+    # Treemap general
     sector = st.selectbox("Seleccione el sector",
                           sectors)
     
@@ -55,10 +57,11 @@ with tab2:
                                            values=prices.values())
 
     fig, axes = plt.subplots(1, 3, figsize=(14, 6), sharey=True)
-    for idx, price in enumerate(pivot_sectors.columns.get_level_values(0)):
+    for idx, price in enumerate(pivot_sectors.columns.get_level_values(0).unique()):
         pivot_sectors[price].plot(kind='area', 
                                   ax=axes[idx],
-                                  cmap='Blues')
+                                  cmap='Blues',
+                                  legend=False)
         axes[idx].spines['top'].set_visible(False)
         axes[idx].spines['right'].set_visible(False)
     
@@ -87,6 +90,8 @@ with tab3:
     pivot_entity = filter_entity.pivot_table(index='year',
                                            values=prices.values(),
                                            aggfunc='sum')
+    
+    st.dataframe(pivot_entity)
     if st.button("Graficar histórico"):
         fig, axes = plt.subplots(1, 3, figsize=(14, 6), sharey=True)
         for idx, col in enumerate(pivot_entity):
