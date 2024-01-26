@@ -1,5 +1,3 @@
-# importar librerías
-
 import streamlit as st
 import numpy as np
 import json 
@@ -7,6 +5,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
 import seaborn as sns
+from io import BytesIO
+
 from utils import convert_df
 
 st.set_page_config(layout='wide')
@@ -21,11 +21,9 @@ prices = {"corrientes": 'cop',
           "constantes 2018": 'cop_def',
           "constantes 2024": 'cop_def_2024'}
 
+st.title("Histórico del Presupuesto General de la nación (2013-2024)")
 
-
-st.title("Histórico del Presupuesto Genreal de la nación (2013-2024)")
-
-tab1, tab2, tab3, tab4, tab5 = st.tabs(['Treemap', 'Sectores', 'Entidades', 'Árbol - PGN', 'Descargar datos'])
+tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(['Treemap', 'Sectores', 'Entidades', 'Variación real - Entidades', 'Árbol - PGN', 'Descargar datos'])
 
 with tab1:
     year = st.slider("Seleccione el año", 
@@ -127,8 +125,48 @@ with tab3:
                            data=file,
                            file_name=f"line_plots_{entidad}.png",
                            mime="image/png")
-
+            
 with tab4:
+
+    # filtrar sector
+    sector = st.selectbox("Seleccione un sector: ", sectors)
+    filter_sector = df[df['sector_code'] == sector] 
+    entity = st.selectbox("Seleccione una entidad: ", filter_sector['entidad'].unique())
+
+    filter_s_e = filter_sector[filter_sector['entidad'] == entity]
+
+    piv = filter_s_e.pivot_table(index='year',
+                           values='cop_def_2024',
+                           aggfunc='sum'
+                           )
+    piv['pct'] = piv['cop_def_2024'].pct_change()
+    piv['pct_avg'] = piv['pct'].mean()
+    fig, axes = plt.subplots(1, 2, figsize=(20, 8))
+    
+    axes[0].bar(piv.index, piv['cop_def_2024'], color='darkblue', label='Presupuesto')
+    axes[0].spines["top"].set_visible(False)
+    axes[0].spines["right"].set_visible(False)
+    axes[0].grid(axis='y')
+    axes[0].legend()
+
+    axes[1].plot(piv.index, piv['pct_avg'], color='green', label='Variación real promedio')
+    axes[1].plot(piv.index, piv['pct'], color='gold', label='Variación real')
+    axes[1].spines["top"].set_visible(False)
+    axes[1].spines["right"].set_visible(False)
+    axes[1].grid(axis='y')
+    axes[1].legend()
+    
+
+    fig.suptitle("Presupuesto real vs. Variación real")
+    st.pyplot(fig)
+
+
+    # filtrar entidad
+
+    # gráfico con gasto en barras, línea de variación real, línea de variación promedio
+
+
+with tab5:
 
     with open('dictio.json', 'rb') as js:
         dictio = json.load(js)
@@ -143,7 +181,7 @@ with tab4:
         data=json_string
     )
 
-with tab5:
+with tab6:
     col1, col2 = st.columns(2)
     with col1:
         sectors_selected = st.multiselect("Sector(es)", sectors)
@@ -155,36 +193,35 @@ with tab5:
 
     with col2:
 
-        prices_selected = st.multiselect("Nivel(es) de precios", prices.keys())
-        prices_selected = [prices[i] for i in prices_selected]
+        price_selected = st.selectbox("Nivel(es) de precios", prices.keys())
         total_or_account = st.selectbox("Suma o por cuenta", ["suma", "por cuenta"])
         if total_or_account == 'suma':
             pivot = filter_s_e_y.pivot_table(index='year',
-                                     values=prices_selected,
+                                     values=prices[price_selected],
                                      columns='entidad',
                                      aggfunc='sum').reset_index()
         
         else:
             pivot = filter_s_e_y.pivot_table(index=['year', 'cuenta'],
-                                     values=prices_selected,
+                                     values=prices[price_selected],
                                      columns='entidad',
                                      aggfunc='sum').reset_index()
         
         if st.button('Vista previa'):
             show = True            
             
-
-            
     if show:
         st.dataframe(pivot)
         csv = convert_df(pivot)
 
         st.download_button(
-                label="Download data as CSV",
+                label="Descargar CSV",
                 data=csv,
                 file_name='datos.csv',
                 mime='text/csv')
-
-
-
         
+        binary_output = BytesIO()
+        pivot.reset_index().to_excel(binary_output, index=False)
+        st.download_button(label = 'Descargar excel',
+                    data = binary_output.getvalue(),
+                    file_name = 'datos.xlsx')
