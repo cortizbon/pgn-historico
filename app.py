@@ -7,6 +7,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
 import seaborn as sns
+from utils import convert_df
 
 st.set_page_config(layout='wide')
 
@@ -14,6 +15,7 @@ df = pd.read_csv('gastos_def_2024.csv')
 years = df['year'].unique()
 sectors = df['sector_code'].unique()
 entities = df['entidad'].unique()
+show = False
 
 prices = {"corrientes": 'cop',
           "constantes 2018": 'cop_def',
@@ -23,7 +25,7 @@ prices = {"corrientes": 'cop',
 
 st.title("Histórico del Presupuesto Genreal de la nación (2013-2024)")
 
-tab1, tab2, tab3, tab4 = st.tabs(['Treemap', 'Sectores', 'Entidades', 'Árbol - PGN'])
+tab1, tab2, tab3, tab4, tab5 = st.tabs(['Treemap', 'Sectores', 'Entidades', 'Árbol - PGN', 'Descargar datos'])
 
 with tab1:
     year = st.slider("Seleccione el año", 
@@ -38,13 +40,27 @@ with tab1:
                                'sector_code', 
                                'entidad', 
                                'cuenta'],
-                    values=prices[price])
+                    values=prices[price],
+                    color_discrete_sequence=px.colors.qualitative.Prism)
+    
+    fig.update_layout(width=1000, height=600)
     
     st.plotly_chart(fig)
 
 with tab2:
 
-    # Treemap general
+    piv = df.groupby([ 'sector_code', 'entidad', 'year'])['cop'].sum().reset_index()
+
+    fig = px.area(piv,
+                  x="year",
+                  y="cop",
+                  color="sector_code",
+                  line_group='entidad',
+                  color_discrete_sequence=px.colors.qualitative.Prism)
+    
+    fig.update_layout(width=1300, height=750)
+    st.plotly_chart(fig)
+
     sector = st.selectbox("Seleccione el sector",
                           sectors)
     
@@ -127,4 +143,48 @@ with tab4:
         data=json_string
     )
 
+with tab5:
+    col1, col2 = st.columns(2)
+    with col1:
+        sectors_selected = st.multiselect("Sector(es)", sectors)
+        filter_ss = df[df['sector_code'].isin(sectors_selected)]
+        entities_selected = st.multiselect("Entidad(es)", filter_ss['entidad'].unique())
+        #rango de años
+        years_selected = st.multiselect("Año(s)", years)
+        filter_s_e_y = filter_ss[(filter_ss['entidad'].isin(entities_selected)) & (filter_ss['year'].isin(years_selected))]
 
+    with col2:
+
+        prices_selected = st.multiselect("Nivel(es) de precios", prices.keys())
+        prices_selected = [prices[i] for i in prices_selected]
+        total_or_account = st.selectbox("Suma o por cuenta", ["suma", "por cuenta"])
+        if total_or_account == 'suma':
+            pivot = filter_s_e_y.pivot_table(index='year',
+                                     values=prices_selected,
+                                     columns='entidad',
+                                     aggfunc='sum').reset_index()
+        
+        else:
+            pivot = filter_s_e_y.pivot_table(index=['year', 'cuenta'],
+                                     values=prices_selected,
+                                     columns='entidad',
+                                     aggfunc='sum').reset_index()
+        
+        if st.button('Vista previa'):
+            show = True            
+            
+
+            
+    if show:
+        st.dataframe(pivot)
+        csv = convert_df(pivot)
+
+        st.download_button(
+                label="Download data as CSV",
+                data=csv,
+                file_name='datos.csv',
+                mime='text/csv')
+
+
+
+        
