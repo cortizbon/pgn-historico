@@ -18,7 +18,6 @@ entities = df['entidad'].unique()
 show = False
 
 prices = {"corrientes": 'cop',
-          "constantes 2018": 'cop_def',
           "constantes 2024": 'cop_def_2024'}
 
 st.title("Histórico del Presupuesto General de la nación (2013-2024)")
@@ -70,7 +69,7 @@ with tab2:
                                            aggfunc='sum',
                                            values=prices.values())
 
-    fig, axes = plt.subplots(1, 3, figsize=(14, 6), sharey=True)
+    fig, axes = plt.subplots(1, 2, figsize=(14, 6), sharey=True)
     for idx, price in enumerate(pivot_sectors.columns.get_level_values(0).unique()):
         pivot_sectors[price].plot(kind='area', 
                                   ax=axes[idx],
@@ -107,13 +106,20 @@ with tab3:
     
     st.dataframe(pivot_entity)
     if st.button("Graficar histórico"):
-        fig, axes = plt.subplots(1, 3, figsize=(14, 6), sharey=True)
+        fig, axes = plt.subplots(1, 2, figsize=(14, 6), sharey=True)
         for idx, col in enumerate(pivot_entity):
-            pivot_sectors[col].plot(kind='line', 
-                                  ax=axes[idx])
+            pivot_entity[col].plot(kind='line', 
+                                  ax=axes[idx], 
+                                  label=entidad,
+                                  color='#2c3a9f',
+                                  marker='.',
+                                  xticks=pivot_entity.index,
+                                  ylim = (0, 
+                                          pivot_entity[col].max() + pivot_entity[col].max() / 10))
             axes[idx].spines['top'].set_visible(False)
             axes[idx].spines['right'].set_visible(False)
-
+            if idx  == 1:
+                axes[idx].legend()
         fig.suptitle(f"Histórico por entidad: {entidad}")
         fig.tight_layout()
         st.pyplot(fig)
@@ -143,10 +149,10 @@ with tab4:
     piv['pct_avg'] = piv['pct'].mean()
     fig, axes = plt.subplots(1, 2, figsize=(20, 8))
     
-    axes[0].bar(piv.index, piv['cop_def_2024'], color='darkblue', label='Presupuesto')
+    axes[0].bar(piv.index, piv['cop_def_2024'], color='#2c3a9f', label='Presupuesto')
     axes[0].spines["top"].set_visible(False)
     axes[0].spines["right"].set_visible(False)
-    axes[0].grid(axis='y')
+    axes[0].grid(axis='y', color="#f9f9f9",)
     axes[0].legend()
 
     axes[1].plot(piv.index, piv['pct_avg'], color='green', label='Variación real promedio')
@@ -196,17 +202,18 @@ with tab6:
         price_selected = st.selectbox("Nivel(es) de precios", prices.keys())
         total_or_account = st.selectbox("Suma o por cuenta", ["suma", "por cuenta"])
         if total_or_account == 'suma':
-            pivot = filter_s_e_y.pivot_table(index='year',
-                                     values=prices[price_selected],
-                                     columns='entidad',
-                                     aggfunc='sum').reset_index()
+            pivot = (filter_s_e_y.groupby(['year', 
+                                          'sector_code',
+                                          'entidad'])[prices[price_selected]]
+                                          .sum()
+                                          .reset_index())
         
         else:
-            pivot = filter_s_e_y.pivot_table(index=['year', 'cuenta'],
-                                     values=prices[price_selected],
-                                     columns='entidad',
-                                     aggfunc='sum').reset_index()
-        
+            pivot = (filter_s_e_y.groupby(['year', 
+                                          'sector_code',
+                                          'entidad','cuenta'])[prices[price_selected]]
+                                          .sum()
+                                          .reset_index())
         if st.button('Vista previa'):
             show = True            
             
@@ -221,7 +228,7 @@ with tab6:
                 mime='text/csv')
         
         binary_output = BytesIO()
-        pivot.reset_index().to_excel(binary_output, index=False)
+        pivot.to_excel(binary_output, index=False)
         st.download_button(label = 'Descargar excel',
                     data = binary_output.getvalue(),
                     file_name = 'datos.xlsx')
