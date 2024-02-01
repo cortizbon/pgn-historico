@@ -188,7 +188,7 @@ with tab5:
     )
 
 with tab6:
-    st.header("Descarga de dataset completo")
+    st.subheader("Descarga de dataset completo")
 
 
     binary_output = BytesIO()
@@ -201,6 +201,8 @@ with tab6:
 
     # agregar la categoría todos al multiselect 
     #
+
+    st.subheader("Descargar dataset filtrado")
     col1, col2 = st.columns(2)
     with col1:
         sectors_2 = ['Todos'] + sectors
