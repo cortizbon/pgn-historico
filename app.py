@@ -12,9 +12,9 @@ from utils import convert_df
 st.set_page_config(layout='wide')
 
 df = pd.read_csv('gastos_def_2024.csv')
-years = df['year'].unique()
-sectors = df['sector_code'].unique()
-entities = df['entidad'].unique()
+years = list(df['year'].unique())
+sectors = list(df['sector_code'].unique())
+entities = list(df['entidad'].unique())
 show = False
 
 prices = {"corrientes": 'cop',
@@ -188,13 +188,42 @@ with tab5:
     )
 
 with tab6:
+    st.header("Descarga de dataset completo")
+
+
+    binary_output = BytesIO()
+    df.to_excel(binary_output, index=False)
+    st.download_button(label = 'Descargar datos completos',
+                    data = binary_output.getvalue(),
+                    file_name = 'datos.xlsx')
+    
+    st.divider()
+
+    # agregar la categoría todos al multiselect 
+    #
     col1, col2 = st.columns(2)
     with col1:
-        sectors_selected = st.multiselect("Sector(es)", sectors)
-        filter_ss = df[df['sector_code'].isin(sectors_selected)]
-        entities_selected = st.multiselect("Entidad(es)", filter_ss['entidad'].unique())
+        sectors_2 = ['Todos'] + sectors
+        sectors_selected = st.multiselect("Sector(es)", sectors_2)
+        if "Todos" in sectors_selected:
+            filter_ss = df[df['sector_code'].isin(sectors)]
+        else:
+            filter_ss = df[df['sector_code'].isin(sectors_selected)]
+
+
+        entities_2 = ['Todas'] + list(filter_ss['entidad'].unique())
+
+        entities_selected = st.multiselect("Entidad(es)", entities_2)
+
+        if "Todas" in entities_selected:
+            entities_selected = list(filter_ss['entidad'].unique())
         #rango de años
-        years_selected = st.multiselect("Año(s)", years)
+        years_2 = ['Todos'] + years
+        years_selected = st.multiselect("Año(s)", years_2)
+
+        if "Todos" in years_selected:
+            years_selected = years.copy()
+
         filter_s_e_y = filter_ss[(filter_ss['entidad'].isin(entities_selected)) & (filter_ss['year'].isin(years_selected))]
 
     with col2:
