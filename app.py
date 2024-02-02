@@ -13,12 +13,14 @@ st.set_page_config(layout='wide')
 
 df = pd.read_csv('gastos_def_2024.csv')
 years = list(df['year'].unique())
-sectors = list(df['sector_code'].unique())
+years = [int(year) for year in years]
+sectors = list(df['sector'].unique())
 entities = list(df['entidad'].unique())
+
 show = False
 
-prices = {"corrientes": 'cop',
-          "constantes 2024": 'cop_def_2024'}
+prices = {"corrientes": 'apropiacion_corrientes',
+          "constantes 2024": 'apropiacion_cons_2024'}
 
 st.title("Histórico del Presupuesto General de la nación (2013-2024)")
 
@@ -34,9 +36,9 @@ with tab1:
 
     fig = px.treemap(filter_year, 
                      path=[px.Constant("PGN"),
-                               'sector_code', 
+                               'sector', 
                                'entidad', 
-                               'cuenta'],
+                               'tipo_gasto'],
                     values=prices[price],
                     color_discrete_sequence=px.colors.qualitative.Prism)
     
@@ -46,12 +48,12 @@ with tab1:
 
 with tab2:
 
-    piv = df.groupby([ 'sector_code', 'entidad', 'year'])['cop'].sum().reset_index()
+    piv = df.groupby([ 'sector', 'entidad', 'year'])['apropiacion_corrientes'].sum().reset_index()
 
     fig = px.area(piv,
                   x="year",
-                  y="cop",
-                  color="sector_code",
+                  y="apropiacion_corrientes",
+                  color="sector",
                   line_group='entidad',
                   color_discrete_sequence=px.colors.qualitative.Prism)
     
@@ -61,7 +63,7 @@ with tab2:
     sector = st.selectbox("Seleccione el sector",
                           sectors)
     
-    filter_sector = df[df['sector_code'] == sector]
+    filter_sector = df[df['sector'] == sector]
 
 
     pivot_sectors = filter_sector.pivot_table(index='year',
@@ -93,7 +95,7 @@ with tab2:
 
 with tab3:
     sector = st.selectbox("Seleccione el sector", sectors, key=2)
-    filter_sector = df[df['sector_code'] == sector]
+    filter_sector = df[df['sector'] == sector]
     entities_sector = filter_sector['entidad'].unique()
     entidad = st.selectbox("Seleccione la entidad",
                             entities_sector)
@@ -136,20 +138,20 @@ with tab4:
 
     # filtrar sector
     sector = st.selectbox("Seleccione un sector: ", sectors)
-    filter_sector = df[df['sector_code'] == sector] 
+    filter_sector = df[df['sector'] == sector] 
     entity = st.selectbox("Seleccione una entidad: ", filter_sector['entidad'].unique())
 
     filter_s_e = filter_sector[filter_sector['entidad'] == entity]
 
     piv = filter_s_e.pivot_table(index='year',
-                           values='cop_def_2024',
+                           values='apropiacion_cons_2024',
                            aggfunc='sum'
                            )
-    piv['pct'] = piv['cop_def_2024'].pct_change()
+    piv['pct'] = piv['apropiacion_cons_2024'].pct_change()
     piv['pct_avg'] = piv['pct'].mean()
     fig, axes = plt.subplots(1, 2, figsize=(20, 8))
     
-    axes[0].bar(piv.index, piv['cop_def_2024'], color='#2c3a9f', label='Presupuesto')
+    axes[0].bar(piv.index, piv['apropiacion_cons_2024'], color='#2c3a9f', label='Presupuesto')
     axes[0].spines["top"].set_visible(False)
     axes[0].spines["right"].set_visible(False)
     axes[0].grid(axis='y', color="#f9f9f9",)
@@ -208,9 +210,9 @@ with tab6:
         sectors_2 = ['Todos'] + sectors
         sectors_selected = st.multiselect("Sector(es)", sectors_2)
         if "Todos" in sectors_selected:
-            filter_ss = df[df['sector_code'].isin(sectors)]
+            filter_ss = df[df['sector'].isin(sectors)]
         else:
-            filter_ss = df[df['sector_code'].isin(sectors_selected)]
+            filter_ss = df[df['sector'].isin(sectors_selected)]
 
 
         entities_2 = ['Todas'] + list(filter_ss['entidad'].unique())
@@ -234,15 +236,15 @@ with tab6:
         total_or_account = st.selectbox("Suma o por cuenta", ["suma", "por cuenta"])
         if total_or_account == 'suma':
             pivot = (filter_s_e_y.groupby(['year', 
-                                          'sector_code',
+                                          'sector',
                                           'entidad'])[prices[price_selected]]
                                           .sum()
                                           .reset_index())
         
         else:
             pivot = (filter_s_e_y.groupby(['year', 
-                                          'sector_code',
-                                          'entidad','cuenta'])[prices[price_selected]]
+                                          'sector',
+                                          'entidad','tipo_gasto'])[prices[price_selected]]
                                           .sum()
                                           .reset_index())
         if st.button('Vista previa'):
