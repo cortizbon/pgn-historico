@@ -24,7 +24,12 @@ prices = {"corrientes": 'apropiacion_corrientes',
 
 st.title("Histórico del Presupuesto General de la nación (2013-2024)")
 
-tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(['Treemap', 'Sectores', 'Entidades', 'Variación real - Entidades', 'Árbol - PGN', 'Descargar datos'])
+tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(['Treemap - Sunburst', 
+                                              'Sectores', 
+                                              'Entidades', 
+                                              'Variación real - Entidades', 
+                                              'Árbol - PGN', 
+                                              'Descargar datos'])
 
 with tab1:
     year = st.slider("Seleccione el año", 
@@ -45,6 +50,13 @@ with tab1:
     fig.update_layout(width=1000, height=600)
     
     st.plotly_chart(fig)
+
+    fig = px.sunburst(filter_year, path=[px.Constant('PGN'),'sector', 'entidad', 'tipo_gasto'], values=prices[price])
+    fig.update_layout(width=1000, height=1000)
+    st.plotly_chart(fig)
+
+
+
 
 with tab2:
 
