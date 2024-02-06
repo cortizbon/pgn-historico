@@ -84,39 +84,6 @@ with tab2:
     fig.update_layout(width=1300, height=750)
     st.plotly_chart(fig)
 
-    sector = st.selectbox("Seleccione el sector",
-                          sectors)
-    
-    filter_sector = df[df['sector'] == sector]
-
-
-    pivot_sectors = filter_sector.pivot_table(index='year',
-                                           columns='entidad',
-                                           aggfunc='sum',
-                                           values=prices.values())
-
-    fig, axes = plt.subplots(1, 2, figsize=(14, 6), sharey=True)
-    for idx, price in enumerate(pivot_sectors.columns.get_level_values(0).unique()):
-        pivot_sectors[price].plot(kind='area', 
-                                  ax=axes[idx],
-                                  cmap='Blues',
-                                  legend=False)
-        axes[idx].spines['top'].set_visible(False)
-        axes[idx].spines['right'].set_visible(False)
-    
-
-    fig.suptitle(f"Histórico por sector: {sector}")
-    fig.tight_layout()
-    st.pyplot(fig)
-    fig.savefig(f"area_plots_sector_{sector}.png")
-
-    with open(f"area_plots_sector_{sector}.png", "rb") as file:
-
-        st.download_button(label="Descargar gráfico",
-                           data=file,
-                           file_name=f"area_plots_sector_{sector}.png",
-                           mime="image/png")
-
 with tab3:
     sector = st.selectbox("Seleccione el sector", sectors, key=2)
     filter_sector = df[df['sector'] == sector]
