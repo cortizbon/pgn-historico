@@ -7,7 +7,8 @@ import plotly.express as px
 import seaborn as sns
 from io import BytesIO
 
-from utils import convert_df
+
+from utils import DIC_COLORES, convert_df, get_dic_colors, get_dic_colors_area
 
 st.set_page_config(layout='wide')
 
@@ -39,19 +40,25 @@ with tab1:
                          prices.keys())
     filter_year = df[df['year'] == year]
 
+    dic_treemap = get_dic_colors(filter_year)
     fig = px.treemap(filter_year, 
-                     path=[px.Constant("PGN"),
-                               'sector', 
+                     path=[     'sector', 
                                'entidad', 
                                'tipo_gasto'],
                     values=prices[price],
-                    color_discrete_sequence=px.colors.qualitative.Prism)
+                    color='sector',
+                    color_discrete_map=dic_treemap)
     
     fig.update_layout(width=1000, height=600)
     
     st.plotly_chart(fig)
+    
 
-    fig = px.sunburst(filter_year, path=[px.Constant('PGN'),'sector', 'entidad', 'tipo_gasto'], values=prices[price])
+    fig = px.sunburst(filter_year, 
+                      path=['sector', 'entidad', 'tipo_gasto'], 
+                      values=prices[price],
+                      color='sector',
+                      color_discrete_map=dic_treemap)
     fig.update_layout(width=1000, height=1000)
     st.plotly_chart(fig)
 
@@ -60,14 +67,19 @@ with tab1:
 
 with tab2:
 
-    piv = df.groupby([ 'sector', 'entidad', 'year'])['apropiacion_corrientes'].sum().reset_index()
+    piv = (df
+           .groupby([ 'sector', 'entidad', 'year'])['apropiacion_cons_2024']
+           .sum()
+           .reset_index()
+           .sort_values(by=['year', 'apropiacion_cons_2024'], ascending=False))
+    dic_area = get_dic_colors_area(df)
 
     fig = px.area(piv,
                   x="year",
-                  y="apropiacion_corrientes",
+                  y="apropiacion_cons_2024",
                   color="sector",
                   line_group='entidad',
-                  color_discrete_sequence=px.colors.qualitative.Prism)
+                  color_discrete_map=dic_area)
     
     fig.update_layout(width=1300, height=750)
     st.plotly_chart(fig)
@@ -148,7 +160,7 @@ with tab3:
             
 with tab4:
 
-    # filtrar sector
+
     sector = st.selectbox("Seleccione un sector: ", sectors)
     filter_sector = df[df['sector'] == sector] 
     entity = st.selectbox("Seleccione una entidad: ", filter_sector['entidad'].unique())
@@ -161,6 +173,7 @@ with tab4:
                            )
     piv['pct'] = piv['apropiacion_cons_2024'].pct_change()
     piv['pct_avg'] = piv['pct'].mean()
+    piv['CAGR'] = ((piv.loc[2024, 'apropiacion_cons_2024'] / piv.loc[2013, 'apropiacion_cons_2024']) ** (1/11)) - 1
     fig, axes = plt.subplots(1, 2, figsize=(20, 8))
     
     axes[0].bar(piv.index, piv['apropiacion_cons_2024'], color='#2c3a9f', label='Presupuesto')
@@ -171,6 +184,7 @@ with tab4:
 
     axes[1].plot(piv.index, piv['pct_avg'], color='green', label='Variación real promedio')
     axes[1].plot(piv.index, piv['pct'], color='gold', label='Variación real')
+    axes[1].plot(piv.index, piv['CAGR'], color='darkblue', label='CAGR')
     axes[1].spines["top"].set_visible(False)
     axes[1].spines["right"].set_visible(False)
     axes[1].grid(axis='y')
@@ -181,9 +195,7 @@ with tab4:
     st.pyplot(fig)
 
 
-    # filtrar entidad
 
-    # gráfico con gasto en barras, línea de variación real, línea de variación promedio
 
 
 with tab5:
