@@ -25,12 +25,12 @@ prices = {"corrientes": 'apropiacion_corrientes',
 
 st.title("Histórico del Presupuesto General de la nación (2013-2024)")
 
-tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(['Treemap - Sunburst', 
+tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs(['Treemap - Sunburst', 
                                               'Sectores', 
                                               'Entidades', 
                                               'Variación real - Entidades', 
                                               'Árbol - PGN', 
-                                              'Descargar datos'])
+                                              'Descargar datos', 'Test Datos desagregados - 2024'])
 
 with tab1:
     year = st.slider("Seleccione el año", 
@@ -256,3 +256,23 @@ with tab6:
         st.download_button(label = 'Descargar excel',
                     data = binary_output.getvalue(),
                     file_name = 'datos.xlsx')
+
+with tab7:
+    tdd = pd.read_csv('test_desagregados_datos.csv')
+    tdd[['cuenta', 'subcuenta', 'proyecto', 'subproyecto']] = tdd[['cuenta', 'subcuenta', 'proyecto', 'subproyecto']].fillna('') 
+    fig = px.sunburst(tdd, path=[px.Constant('PGN'), 
+                                 'sector', 
+                                 'entidad', 
+                                 'cuenta_g', 'cuenta', 'subcuenta'], 
+                                  values='total',
+                      color='sector_code')
+    st.plotly_chart(fig)
+
+    csv = convert_df(tdd)
+
+    st.download_button(
+                label="Descargar datos desagregados - 2024",
+                data=csv,
+                file_name='datos_desagregados_2024.csv',
+                mime='text/csv')
+
