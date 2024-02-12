@@ -6,6 +6,8 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 import seaborn as sns
 from io import BytesIO
+from plotly.subplots import make_subplots
+import plotly.graph_objects as go
 
 
 from utils import DIC_COLORES, convert_df, get_dic_colors, get_dic_colors_area
@@ -139,27 +141,32 @@ with tab4:
                            aggfunc='sum'
                            )
     piv['pct'] = piv['apropiacion_cons_2024'].pct_change()
-    piv['pct_avg'] = piv['pct'].mean()
     piv['CAGR'] = ((piv.loc[2024, 'apropiacion_cons_2024'] / piv.loc[2013, 'apropiacion_cons_2024']) ** (1/11)) - 1
-    fig, axes = plt.subplots(1, 2, figsize=(20, 8))
-    
-    axes[0].bar(piv.index, piv['apropiacion_cons_2024'], color='#2c3a9f', label='Presupuesto')
-    axes[0].spines["top"].set_visible(False)
-    axes[0].spines["right"].set_visible(False)
-    axes[0].grid(axis='y', color="#f9f9f9",)
-    axes[0].legend()
 
-    axes[1].plot(piv.index, piv['pct_avg'], color='green', label='Variación real promedio')
-    axes[1].plot(piv.index, piv['pct'], color='gold', label='Variación real')
-    axes[1].plot(piv.index, piv['CAGR'], color='darkblue', label='CAGR')
-    axes[1].spines["top"].set_visible(False)
-    axes[1].spines["right"].set_visible(False)
-    axes[1].grid(axis='y')
-    axes[1].legend()
-    
+    piv = piv.reset_index()
 
-    fig.suptitle("Presupuesto real vs. Variación real")
-    st.pyplot(fig)
+    fig = make_subplots(rows=1, cols=2)
+
+    fig.add_trace(
+        go.Bar(x=piv['year'], y=piv['apropiacion_cons_2024'],
+               name='Apropiación'),
+        row=1, col=1, 
+    )
+
+    fig.add_trace(go.Line(
+            x=piv['year'], y=piv['pct'], name='Variación porcentual'
+        ),
+        row=1, col=2
+    )
+    fig.add_trace(
+        go.Line(
+            x=piv['year'], y=piv['CAGR'], name='Variación anualizada'
+        ),
+        row=1, col=2
+    )
+    fig.update_layout(width=1000, height=500)
+
+    st.plotly_chart(fig)
 
 
 
