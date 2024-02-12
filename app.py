@@ -15,22 +15,21 @@ from utils import DIC_COLORES, convert_df, get_dic_colors, get_dic_colors_area
 st.set_page_config(layout='wide')
 
 df = pd.read_csv('gastos_def_2024.csv')
-years = list(df['year'].unique())
+years = list(df['Año'].unique())
 years = [int(year) for year in years]
-sectors = list(df['sector'].unique())
-entities = list(df['entidad'].unique())
+sectors = list(df['Sector'].unique())
+entities = list(df['Entidad'].unique())
 
 show = False
 
-prices = {"corrientes": 'apropiacion_corrientes',
-          "constantes 2024": 'apropiacion_cons_2024'}
+prices = {"corrientes": 'Apropiación a precios corrientes en millones',
+          "constantes 2024": 'Apropiación a precios constantes (2024) en millones'}
 
 st.title("Histórico del Presupuesto General de la nación (2013-2024)")
 
-tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs(['Treemap - Sunburst', 
+tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(['Treemap - Sunburst', 
                                               'Sectores', 
                                               'Entidades', 
-                                              'Variación real - Entidades', 
                                               'Árbol - PGN', 
                                               'Descargar datos', 'Test Datos desagregados - 2024'])
 
@@ -40,16 +39,17 @@ with tab1:
                      max_value=max(years))
     price = st.selectbox("Seleccione el nivel de precios",
                          prices.keys())
-    filter_year = df[df['year'] == year]
+    filter_year = df[df['Año'] == year]
 
     dic_treemap = get_dic_colors(filter_year)
     fig = px.treemap(filter_year, 
-                     path=[     'sector', 
-                               'entidad', 
-                               'tipo_gasto'],
+                     path=[     'Sector', 
+                               'Entidad', 
+                               'Tipo de gasto'],
                     values=prices[price],
-                    color='sector',
-                    color_discrete_map=dic_treemap)
+                    color='Sector',
+                    color_discrete_map=dic_treemap,
+                    title="Matriz de composición de apropiación (en millones)")
     
     fig.update_layout(width=1000, height=600)
     
@@ -57,10 +57,10 @@ with tab1:
     
 
     fig = px.sunburst(filter_year, 
-                      path=['sector', 'entidad', 'tipo_gasto'], 
+                      path=['Sector', 'Entidad', 'Tipo de gasto'], 
                       values=prices[price],
-                      color='sector',
-                      color_discrete_map=dic_treemap)
+                      color='Sector',
+                      color_discrete_map=dic_treemap, title='Jerarquía contable del PGN')
     fig.update_layout(width=1000, height=1000)
     st.plotly_chart(fig)
 
@@ -70,17 +70,17 @@ with tab1:
 with tab2:
 
     piv = (df
-           .groupby([ 'sector', 'entidad', 'year'])['apropiacion_cons_2024']
+           .groupby([ 'Sector', 'Entidad', 'Año'])['Apropiación a precios constantes (2024) en millones']
            .sum()
            .reset_index()
-           .sort_values(by=['year', 'apropiacion_cons_2024'], ascending=False))
+           .sort_values(by=['Año', 'Apropiación a precios constantes (2024) en millones'], ascending=False))
     dic_area = get_dic_colors_area(df)
 
     fig = px.area(piv,
-                  x="year",
-                  y="apropiacion_cons_2024",
-                  color="sector",
-                  line_group='entidad',
+                  x="Año",
+                  y='Apropiación a precios constantes (2024) en millones',
+                  color="Sector",
+                  line_group='Entidad',
                   color_discrete_map=dic_area)
     
     fig.update_layout(width=1300, height=750)
@@ -88,91 +88,86 @@ with tab2:
 
 with tab3:
     sector = st.selectbox("Seleccione el sector", sectors, key=2)
-    filter_sector = df[df['sector'] == sector]
-    entities_sector = filter_sector['entidad'].unique()
+    filter_sector = df[df['Sector'] == sector]
+    entities_sector = filter_sector['Entidad'].unique()
     entidad = st.selectbox("Seleccione la entidad",
                             entities_sector)
     
-    filter_entity = filter_sector[filter_sector['entidad'] == entidad]
+    filter_entity = filter_sector[filter_sector['Entidad'] == entidad]
 
-    pivot_entity = filter_entity.pivot_table(index='year',
+    pivot_entity = filter_entity.pivot_table(index='Año',
                                            values=prices.values(),
                                            aggfunc='sum')
     
-    st.dataframe(pivot_entity)
-    if st.button("Graficar histórico"):
-        fig, axes = plt.subplots(1, 2, figsize=(14, 6), sharey=True)
-        for idx, col in enumerate(pivot_entity):
-            pivot_entity[col].plot(kind='line', 
-                                  ax=axes[idx], 
-                                  label=entidad,
-                                  color='#2c3a9f',
-                                  marker='.',
-                                  xticks=pivot_entity.index,
-                                  ylim = (0, 
-                                          pivot_entity[col].max() + pivot_entity[col].max() / 10))
-            axes[idx].spines['top'].set_visible(False)
-            axes[idx].spines['right'].set_visible(False)
-            if idx  == 1:
-                axes[idx].legend()
-        fig.suptitle(f"Histórico por entidad: {entidad}")
-        fig.tight_layout()
-        st.pyplot(fig)
-        fig.savefig(f"line_plots_{entidad}.png")
+    pivot_entity = pivot_entity.reset_index()
+    fig = make_subplots(rows=1, cols=2, x_title='Año', shared_yaxes=True, y_title='Monto en millones de pesos')
+    
+    fig.add_trace(go.Line(
+            x=pivot_entity['Año'], 
+            y=pivot_entity['Apropiación a precios corrientes en millones'], 
+            name='Apropiación a precios corrientes en millones', line=dict(color=DIC_COLORES['ax_viol'][0])
+        ),
+        row=1, col=1
+    )
+    fig.add_trace(
+        go.Line(
+            x=pivot_entity['Año'], y=pivot_entity['Apropiación a precios constantes (2024) en millones'], 
+            name='Apropiación a precios constantes (2024) en millones', line=dict(color=DIC_COLORES['ax_viol'][1])
+        ),
+        row=1, col=2
+    )
+    fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
+    yanchor="bottom",
+    y=1.02,
+    xanchor="right",
+    x=1), title=entidad)
 
-        with open(f"line_plots_{entidad}.png", "rb") as file:
+    st.plotly_chart(fig)
 
-            st.download_button(label="Descargar gráfico", key=3,
-                           data=file,
-                           file_name=f"line_plots_{entidad}.png",
-                           mime="image/png")
-            
-with tab4:
+    st.subheader(f"Variación histórica por entidad: {entidad}")
 
 
-    sector = st.selectbox("Seleccione un sector: ", sectors)
-    filter_sector = df[df['sector'] == sector] 
-    entity = st.selectbox("Seleccione una entidad: ", filter_sector['entidad'].unique())
-
-    filter_s_e = filter_sector[filter_sector['entidad'] == entity]
-
-    piv = filter_s_e.pivot_table(index='year',
-                           values='apropiacion_cons_2024',
+    piv = filter_entity.pivot_table(index='Año',
+                           values='Apropiación a precios constantes (2024) en millones',
                            aggfunc='sum'
                            )
-    piv['pct'] = piv['apropiacion_cons_2024'].pct_change()
-    piv['CAGR'] = ((piv.loc[2024, 'apropiacion_cons_2024'] / piv.loc[2013, 'apropiacion_cons_2024']) ** (1/11)) - 1
-
+    piv['pct'] = piv['Apropiación a precios constantes (2024) en millones'].pct_change()
+    piv['pct'] = (piv['pct'] * 100).round(2)
+    piv['CAGR'] = ((piv.loc[2024, 'Apropiación a precios constantes (2024) en millones'] / piv.loc[2013, 'Apropiación a precios constantes (2024) en millones']) ** (1/11)) - 1
+    piv['CAGR'] = (piv['CAGR'] * 100).round(2)
     piv = piv.reset_index()
 
-    fig = make_subplots(rows=1, cols=2)
+    fig = make_subplots(rows=1, cols=2, x_title='Año')
 
     fig.add_trace(
-        go.Bar(x=piv['year'], y=piv['apropiacion_cons_2024'],
-               name='Apropiación'),
+        go.Bar(x=piv['Año'], y=piv['Apropiación a precios constantes (2024) en millones'],
+               name='Apropiación a precios constantes (2024) en millones', marker_color=DIC_COLORES['ofiscal'][1]),
         row=1, col=1, 
     )
 
     fig.add_trace(go.Line(
-            x=piv['year'], y=piv['pct'], name='Variación porcentual'
+            x=piv['Año'], 
+            y=piv['pct'], 
+            name='Variación porcentual (%)', line=dict(color=DIC_COLORES['ro_am_na'][1])
         ),
         row=1, col=2
     )
     fig.add_trace(
         go.Line(
-            x=piv['year'], y=piv['CAGR'], name='Variación anualizada'
+            x=piv['Año'], y=piv['CAGR'], name='Variación anualizada (%)', line=dict(color=DIC_COLORES['verde'][0])
         ),
         row=1, col=2
     )
-    fig.update_layout(width=1000, height=500)
+    fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
+    yanchor="bottom",
+    y=1.02,
+    xanchor="right",
+    x=1))
 
     st.plotly_chart(fig)
 
 
-
-
-
-with tab5:
+with tab4:
 
     with open('dictio.json', 'rb') as js:
         dictio = json.load(js)
@@ -187,7 +182,7 @@ with tab5:
         data=json_string
     )
 
-with tab6:
+with tab5:
     st.subheader("Descarga de dataset completo")
 
 
@@ -208,17 +203,17 @@ with tab6:
         sectors_2 = ['Todos'] + sectors
         sectors_selected = st.multiselect("Sector(es)", sectors_2)
         if "Todos" in sectors_selected:
-            filter_ss = df[df['sector'].isin(sectors)]
+            filter_ss = df[df['Sector'].isin(sectors)]
         else:
-            filter_ss = df[df['sector'].isin(sectors_selected)]
+            filter_ss = df[df['Sector'].isin(sectors_selected)]
 
 
-        entities_2 = ['Todas'] + list(filter_ss['entidad'].unique())
+        entities_2 = ['Todas'] + list(filter_ss['Entidad'].unique())
 
         entities_selected = st.multiselect("Entidad(es)", entities_2)
 
         if "Todas" in entities_selected:
-            entities_selected = list(filter_ss['entidad'].unique())
+            entities_selected = list(filter_ss['Entidad'].unique())
         #rango de años
         years_2 = ['Todos'] + years
         years_selected = st.multiselect("Año(s)", years_2)
@@ -226,23 +221,23 @@ with tab6:
         if "Todos" in years_selected:
             years_selected = years.copy()
 
-        filter_s_e_y = filter_ss[(filter_ss['entidad'].isin(entities_selected)) & (filter_ss['year'].isin(years_selected))]
+        filter_s_e_y = filter_ss[(filter_ss['Entidad'].isin(entities_selected)) & (filter_ss['Año'].isin(years_selected))]
 
     with col2:
 
         price_selected = st.selectbox("Nivel(es) de precios", prices.keys())
         total_or_account = st.selectbox("Suma o por cuenta", ["suma", "por cuenta"])
         if total_or_account == 'suma':
-            pivot = (filter_s_e_y.groupby(['year', 
-                                          'sector',
-                                          'entidad'])[prices[price_selected]]
+            pivot = (filter_s_e_y.groupby(['Año', 
+                                          'Sector',
+                                          'Entidad'])[prices[price_selected]]
                                           .sum()
                                           .reset_index())
         
         else:
-            pivot = (filter_s_e_y.groupby(['year', 
-                                          'sector',
-                                          'entidad','tipo_gasto'])[prices[price_selected]]
+            pivot = (filter_s_e_y.groupby(['Año', 
+                                          'Sector',
+                                          'Entidad','Tipo de gasto'])[prices[price_selected]]
                                           .sum()
                                           .reset_index())
         if st.button('Vista previa'):
@@ -264,7 +259,7 @@ with tab6:
                     data = binary_output.getvalue(),
                     file_name = 'datos.xlsx')
 
-with tab7:
+with tab6:
     tdd = pd.read_csv('test_desagregados_datos.csv')
     tdd[['cuenta', 'subcuenta', 'proyecto', 'subproyecto']] = tdd[['cuenta', 'subcuenta', 'proyecto', 'subproyecto']].fillna('') 
     fig = px.sunburst(tdd, path=[px.Constant('PGN'), 
