@@ -27,11 +27,10 @@ prices = {"corrientes": 'Apropiación a precios corrientes en millones',
 
 st.title("Histórico del Presupuesto General de la nación (2013-2024)")
 
-tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(['Treemap - Sunburst', 
+tab1, tab2, tab3, tab4, tab5 = st.tabs(['Treemap - Sunburst', 
                                               'Sectores', 
                                               'Entidades', 
-                                              'Árbol - PGN', 
-                                              'Descargar datos', 'Test Datos desagregados - 2024'])
+                                              'Descarga de datos', 'Test Datos desagregados - 2024'])
 
 with tab1:
     year = st.slider("Seleccione el año", 
@@ -167,22 +166,8 @@ with tab3:
     st.plotly_chart(fig)
 
 
+
 with tab4:
-
-    with open('dictio.json', 'rb') as js:
-        dictio = json.load(js)
-
-    json_string = json.dumps(dictio)
-    st.json(json_string, expanded=False)
-
-    st.download_button(
-        label='Descargar JSON',
-        file_name='dictio.json',
-        mime="application/json",
-        data=json_string
-    )
-
-with tab5:
     st.subheader("Descarga de dataset completo")
 
 
@@ -258,8 +243,24 @@ with tab5:
         st.download_button(label = 'Descargar excel',
                     data = binary_output.getvalue(),
                     file_name = 'datos.xlsx')
+        
+    st.divider()
+        
+    st.subheader("Descarga del árbol sector-entidad del PGN")
+    with open('dictio.json', 'rb') as js:
+        dictio = json.load(js)
 
-with tab6:
+    json_string = json.dumps(dictio)
+    st.json(json_string, expanded=False)
+
+    st.download_button(
+        label='Descargar JSON',
+        file_name='dictio.json',
+        mime="application/json",
+        data=json_string
+    )
+
+with tab5:
     tdd = pd.read_csv('test_desagregados_datos.csv')
     tdd[['cuenta', 'subcuenta', 'proyecto', 'subproyecto']] = tdd[['cuenta', 'subcuenta', 'proyecto', 'subproyecto']].fillna('') 
     fig = px.sunburst(tdd, path=[px.Constant('PGN'), 
