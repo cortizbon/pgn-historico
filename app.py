@@ -27,9 +27,8 @@ prices = {"corrientes": 'Apropiación a precios corrientes en millones',
 
 st.title("Histórico del Presupuesto General de la nación (2013-2024)")
 
-tab1, tab2, tab3, tab4, tab5 = st.tabs(['Treemap - Sunburst', 
-                                              'Sectores', 
-                                              'Entidades', 
+tab1, tab2, tab3, tab4 = st.tabs(['Treemap - Sunburst', 
+                                              'Sectores y entidades',
                                               'Descarga de datos', 'Test Datos desagregados - 2024'])
 
 with tab1:
@@ -68,26 +67,97 @@ with tab1:
 
 with tab2:
 
-    piv = (df
-           .groupby([ 'Sector', 'Entidad', 'Año'])['Apropiación a precios constantes (2024) en millones']
-           .sum()
-           .reset_index()
-           .sort_values(by=['Año', 'Apropiación a precios constantes (2024) en millones'], ascending=False))
-    dic_area = get_dic_colors_area(df)
+    #piv = (df
+    #       .groupby([ 'Sector', 'Entidad', 'Año'])['Apropiación a precios constantes (2024) en millones']
+    #       .sum()
+    #       .reset_index()
+    #       .sort_values(by=['Año', 'Apropiación a precios constantes (2024) en millones'], ascending=False))
+    #dic_area = get_dic_colors_area(df)
 
-    fig = px.area(piv,
-                  x="Año",
-                  y='Apropiación a precios constantes (2024) en millones',
-                  color="Sector",
-                  line_group='Entidad',
-                  color_discrete_map=dic_area)
+    #fig = px.area(piv,
+    #              x="Año",
+    #              y='Apropiación a precios constantes (2024) en millones',
+    #              color="Sector",
+    #              line_group='Entidad',
+    #              color_discrete_map=dic_area)
     
-    fig.update_layout(width=1300, height=750)
-    st.plotly_chart(fig)
+    #fig.update_layout(width=1300, height=750)
+    #st.plotly_chart(fig)
 
-with tab3:
     sector = st.selectbox("Seleccione el sector", sectors, key=2)
     filter_sector = df[df['Sector'] == sector]
+
+    pivot_sector = filter_sector.pivot_table(index='Año', values=prices.values(), aggfunc='sum').reset_index()
+
+    fig = make_subplots(rows=1, cols=2, x_title='Año', shared_yaxes=True, y_title='Monto en millones de pesos')
+    
+    fig.add_trace(go.Line(
+            x=pivot_sector['Año'], 
+            y=pivot_sector['Apropiación a precios corrientes en millones'], 
+            name='Apropiación a precios corrientes en millones', line=dict(color=DIC_COLORES['ax_viol'][0])
+        ),
+        row=1, col=1
+    )
+    fig.add_trace(
+        go.Line(
+            x=pivot_sector['Año'], y=pivot_sector['Apropiación a precios constantes (2024) en millones'], 
+            name='Apropiación a precios constantes (2024) en millones', line=dict(color=DIC_COLORES['ax_viol'][1])
+        ),
+        row=1, col=2
+    )
+    fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
+    yanchor="bottom",
+    y=1.02,
+    xanchor="right",
+    x=1), title=sector)
+
+    st.plotly_chart(fig)
+
+    st.subheader(f"Variación histórica por sector: {sector}")
+
+
+    piv = filter_sector.pivot_table(index='Año',
+                           values='Apropiación a precios constantes (2024) en millones',
+                           aggfunc='sum'
+                           )
+    piv['pct'] = piv['Apropiación a precios constantes (2024) en millones'].pct_change()
+    piv['pct'] = (piv['pct'] * 100).round(2)
+    piv['CAGR'] = ((piv.loc[2024, 'Apropiación a precios constantes (2024) en millones'] / piv.loc[2013, 'Apropiación a precios constantes (2024) en millones']) ** (1/11)) - 1
+    piv['CAGR'] = (piv['CAGR'] * 100).round(2)
+    piv = piv.reset_index()
+
+    fig = make_subplots(rows=1, cols=2, x_title='Año')
+
+    fig.add_trace(
+        go.Bar(x=piv['Año'], y=piv['Apropiación a precios constantes (2024) en millones'],
+               name='Apropiación a precios constantes (2024) en millones', marker_color=DIC_COLORES['ofiscal'][1]),
+        row=1, col=1, 
+    )
+
+    fig.add_trace(go.Line(
+            x=piv['Año'], 
+            y=piv['pct'], 
+            name='Variación porcentual (%)', line=dict(color=DIC_COLORES['ro_am_na'][1])
+        ),
+        row=1, col=2
+    )
+    fig.add_trace(
+        go.Line(
+            x=piv['Año'], y=piv['CAGR'], name='Variación anualizada (%)', line=dict(color=DIC_COLORES['verde'][0])
+        ),
+        row=1, col=2
+    )
+    fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
+    yanchor="bottom",
+    y=1.02,
+    xanchor="right",
+    x=1))
+
+    st.plotly_chart(fig)
+
+
+
+
     entities_sector = filter_sector['Entidad'].unique()
     entidad = st.selectbox("Seleccione la entidad",
                             entities_sector)
@@ -167,7 +237,7 @@ with tab3:
 
 
 
-with tab4:
+with tab3:
     st.subheader("Descarga de dataset completo")
 
 
@@ -260,7 +330,30 @@ with tab4:
         data=json_string
     )
 
-with tab5:
+with tab4:
+
+    st.subheader('Desagregados 2023')
+
+    tdd = pd.read_csv('test_desagregados_2023.csv')
+    tdd[['cuenta', 'subcuenta', 'proyecto', 'subproyecto']] = tdd[['cuenta', 'subcuenta', 'proyecto', 'subproyecto']].fillna('') 
+    fig = px.sunburst(tdd, path=[px.Constant('PGN'), 
+                                 'sector', 
+                                 'entidad', 
+                                 'cuenta_g', 'cuenta', 'subcuenta'], 
+                                  values='total_def_2024',
+                      color='sector_code')
+    st.plotly_chart(fig)
+
+    csv = convert_df(tdd)
+
+    st.download_button(
+                label="Descargar datos desagregados - 2023",
+                data=csv,
+                file_name='datos_desagregados_2024.csv',
+                mime='text/csv')
+
+
+    st.subheader('Desagregados 2024')
     tdd = pd.read_csv('test_desagregados_datos.csv')
     tdd[['cuenta', 'subcuenta', 'proyecto', 'subproyecto']] = tdd[['cuenta', 'subcuenta', 'proyecto', 'subproyecto']].fillna('') 
     fig = px.sunburst(tdd, path=[px.Constant('PGN'), 
