@@ -27,62 +27,73 @@ prices = {"corrientes": 'Apropiación a precios corrientes en millones',
 
 st.title("Histórico del Presupuesto General de la nación (2013-2024)")
 
-tab1, tab2, tab3, tab4 = st.tabs(['Treemap - Sunburst', 
-                                              'Sectores y entidades',
-                                              'Descarga de datos', 'Test Datos desagregados - 2024'])
+tab1, tab2, tab3, tab4 = st.tabs(['PGN histórico',
+                                  'Descarga de datos',
+                                  'Treemap - Sunburst', 
+                                    'Test Datos desagregados - 2024'])
+
 
 with tab1:
-    year = st.slider("Seleccione el año", 
-                     min_value=min(years),
-                     max_value=max(years))
-    price = st.selectbox("Seleccione el nivel de precios",
-                         prices.keys())
-    filter_year = df[df['Año'] == year]
 
-    dic_treemap = get_dic_colors(filter_year)
-    fig = px.treemap(filter_year, 
-                     path=[     'Sector', 
-                               'Entidad', 
-                               'Tipo de gasto'],
-                    values=prices[price],
-                    color='Sector',
-                    color_discrete_map=dic_treemap,
-                    title="Matriz de composición de apropiación (en millones)")
     
-    fig.update_layout(width=1000, height=600)
+
+    piv_2024 = df.groupby('Año')['apropiacion_cons_2024'].sum().reset_index()
+    piv_corr = df.groupby('Año')['apropiacion_corrientes'].sum().reset_index()
+    fig = make_subplots(rows=1, cols=2, x_title='Año', shared_yaxes=True, y_title='Monto en millones de pesos')
     
+    fig.add_trace(go.Line(
+            x=piv_corr['Año'], 
+            y=piv_corr['apropiacion_corrientes'], 
+            name='Apropiación a precios corrientes en millones', line=dict(color=DIC_COLORES['ax_viol'][0])
+        ),
+        row=1, col=1
+    )
+    fig.add_trace(
+        go.Line(
+            x=piv_2024['Año'], y=piv_2024['apropiacion_cons_2024'], 
+            name='Apropiación a precios constantes (2024) en millones', line=dict(color=DIC_COLORES['ax_viol'][1])
+        ),
+        row=1, col=2
+    )
+    fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
+    yanchor="bottom",
+    y=1.02,
+    xanchor="right",
+    x=1), title='Histórico del PGN')
+
     st.plotly_chart(fig)
-    
 
-    fig = px.sunburst(filter_year, 
-                      path=['Sector', 'Entidad', 'Tipo de gasto'], 
-                      values=prices[price],
-                      color='Sector',
-                      color_discrete_map=dic_treemap, title='Jerarquía contable del PGN')
-    fig.update_layout(width=1000, height=1000)
+    piv_tipo_gasto = (df
+                      .groupby(['Año', 'Tipo de gasto'])['Apropiación a precios constantes (2024) en millones']
+                      .sum()
+                      .reset_index())
+    piv_tipo_gasto['total'] = piv_tipo_gasto.groupby(['Año'])['Apropiación a precios constantes (2024) en millones'].transform('sum')
+
+    piv_tipo_gasto['%'] = ((piv_tipo_gasto['Apropiación a precios constantes (2024) en millones'] / piv_tipo_gasto['total']) * 100).round(2)
+
+    # distribución de gastos en las principales entidades (2024)
+    # sectores con mayor asignación
+    # entidades con mayor asignación 
+    fig = px.bar(piv_tipo_gasto, 
+                 x='Año', 
+                 y='%',
+                 color='Tipo de gasto',
+                 barmode='stack',
+                 color_discrete_sequence=[DIC_COLORES['ax_viol'][1],
+                                          DIC_COLORES['az_verd'][2],
+                                          DIC_COLORES['ro_am_na'][3]],
+                                          )
+    
+    fig.update_layout(legend=dict(orientation="h",
+    yanchor="bottom",
+    y=1.02,
+    xanchor="right",
+    x=1), title='Distribución del presupuesto de gastos (2013-2024)')
+
     st.plotly_chart(fig)
 
-
-
-
-with tab2:
-
-    #piv = (df
-    #       .groupby([ 'Sector', 'Entidad', 'Año'])['Apropiación a precios constantes (2024) en millones']
-    #       .sum()
-    #       .reset_index()
-    #       .sort_values(by=['Año', 'Apropiación a precios constantes (2024) en millones'], ascending=False))
-    #dic_area = get_dic_colors_area(df)
-
-    #fig = px.area(piv,
-    #              x="Año",
-    #              y='Apropiación a precios constantes (2024) en millones',
-    #              color="Sector",
-    #              line_group='Entidad',
-    #              color_discrete_map=dic_area)
-    
-    #fig.update_layout(width=1300, height=750)
-    #st.plotly_chart(fig)
+    st.divider()
+    st.header('Histórico por sector')
 
     sector = st.selectbox("Seleccione el sector", sectors, key=2)
     filter_sector = df[df['Sector'] == sector]
@@ -154,6 +165,9 @@ with tab2:
     x=1))
 
     st.plotly_chart(fig)
+
+    st.divider()
+    st.header('Histórico por entidad')
 
 
 
@@ -235,9 +249,12 @@ with tab2:
 
     st.plotly_chart(fig)
 
+    exp = st.expander("* unidades de medida")
+    exp.write("Las unidades de medida de los gráficos de línea históricos y de las barras deben multiplicarse por 1 millón. Ejemplo: si el nodo muestra 70.89M, significa que el monto asignado total es $70'890.000.000.000")
 
 
-with tab3:
+
+with tab2:
     st.subheader("Descarga de dataset completo")
 
 
@@ -252,7 +269,7 @@ with tab3:
     # agregar la categoría todos al multiselect 
     #
 
-    st.subheader("Descargar dataset filtrado")
+    st.subheader("Descarga de dataset filtrado")
     col1, col2 = st.columns(2)
     with col1:
         sectors_2 = ['Todos'] + sectors
@@ -329,6 +346,40 @@ with tab3:
         mime="application/json",
         data=json_string
     )
+
+with tab3:
+    year = st.slider("Seleccione el año", 
+                     min_value=min(years),
+                     max_value=max(years))
+    price = st.selectbox("Seleccione el nivel de precios",
+                         prices.keys())
+    filter_year = df[df['Año'] == year]
+
+    dic_treemap = get_dic_colors(filter_year)
+    fig = px.treemap(filter_year, 
+                     path=[     'Sector', 
+                               'Entidad', 
+                               'Tipo de gasto'],
+                    values=prices[price],
+                    color='Sector',
+                    color_discrete_map=dic_treemap,
+                    title="Matriz de composición de apropiación (en millones)")
+    
+    fig.update_layout(width=1000, height=600)
+    
+    st.plotly_chart(fig)
+    
+
+    fig = px.sunburst(filter_year, 
+                      path=['Sector', 'Entidad', 'Tipo de gasto'], 
+                      values=prices[price],
+                      color='Sector',
+                      color_discrete_map=dic_treemap, title='Jerarquía contable del PGN')
+    fig.update_layout(width=1000, height=1000)
+    st.plotly_chart(fig)
+
+    exp = st.expander("* dinámica de los gráficos")
+    exp.write("Tanto el treemap como el sunburst pueden ser utilizados para observar la composición del gasto por cuentas jerarquizado por Sector -> Entidad -> Tipo de gasto. Al hacer clic en alguno de los elementos, el gráfico dinámicamente entrará en el elemento y mostrará las jerarquías internas.")
 
 with tab4:
 
