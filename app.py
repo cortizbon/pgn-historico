@@ -8,7 +8,7 @@ import seaborn as sns
 from io import BytesIO
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
-
+from streamlit_option_menu import option_menu
 
 from utils import DIC_COLORES, convert_df, get_dic_colors, get_dic_colors_area
 
@@ -19,49 +19,37 @@ years = list(df['Año'].unique())
 years = [int(year) for year in years]
 sectors = list(df['Sector'].unique())
 entities = list(df['Entidad'].unique())
+dict_gasto = {'Funcionamiento':DIC_COLORES['az_verd'][2],
+              'Deuda':DIC_COLORES['ax_viol'][1],
+              'Inversion':DIC_COLORES['ro_am_na'][3]}
 
 show = False
+
 
 prices = {"corrientes": 'Apropiación a precios corrientes en millones',
           "constantes 2024": 'Apropiación a precios constantes (2024) en millones'}
 
-st.title("Histórico del Presupuesto General de la nación (2013-2024)")
-
-tab1, tab2, tab3, tab4 = st.tabs(['PGN histórico',
-                                  'Descarga de datos',
-                                  'Treemap - Sunburst', 
-                                    'Test Datos desagregados - 2024'])
-
-
-with tab1:
-
+with st.sidebar:
+    selected_option = option_menu("Menú", ["Main", "Histórico general", "Histórico por sector", "Histórico por entidad", "Treemap", "Descarga de datos"], 
+        icons=['arrow-right-short', 'file-bar-graph', 'intersect', "list-task", 'columns', 'cloud-download'], 
+        menu_icon="p", default_index=0, orientation="vertical")
     
-
-    piv_2024 = df.groupby('Año')['apropiacion_cons_2024'].sum().reset_index()
+if selected_option == "Main":
+    st.header("Página principal")
+elif selected_option == "Histórico general":
+    st.header(selected_option)
+    piv_2024 = df.groupby('Año')['Apropiación a precios constantes (2024) en millones'].sum().reset_index()
     piv_corr = df.groupby('Año')['apropiacion_corrientes'].sum().reset_index()
-    fig = make_subplots(rows=1, cols=2, x_title='Año', shared_yaxes=True, y_title='Monto en millones de pesos')
+
+    fig = make_subplots(rows=1, cols=2, x_title='Año',  y_title='Monto en millones de pesos')
     
-    fig.add_trace(go.Line(
-            x=piv_corr['Año'], 
-            y=piv_corr['apropiacion_corrientes'], 
-            name='Apropiación a precios corrientes en millones', line=dict(color=DIC_COLORES['ax_viol'][0])
+    fig.add_trace(
+        go.Line(
+            x=piv_2024['Año'], y=piv_2024['Apropiación a precios constantes (2024) en millones'], 
+            name='Apropiación a precios constantes (2024) en millones', line=dict(color=DIC_COLORES['ax_viol'][1])
         ),
         row=1, col=1
     )
-    fig.add_trace(
-        go.Line(
-            x=piv_2024['Año'], y=piv_2024['apropiacion_cons_2024'], 
-            name='Apropiación a precios constantes (2024) en millones', line=dict(color=DIC_COLORES['ax_viol'][1])
-        ),
-        row=1, col=2
-    )
-    fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
-    yanchor="bottom",
-    y=1.02,
-    xanchor="right",
-    x=1), title='Histórico del PGN')
-
-    st.plotly_chart(fig)
 
     piv_tipo_gasto = (df
                       .groupby(['Año', 'Tipo de gasto'])['Apropiación a precios constantes (2024) en millones']
@@ -71,29 +59,32 @@ with tab1:
 
     piv_tipo_gasto['%'] = ((piv_tipo_gasto['Apropiación a precios constantes (2024) en millones'] / piv_tipo_gasto['total']) * 100).round(2)
 
-    # distribución de gastos en las principales entidades (2024)
-    # sectores con mayor asignación
-    # entidades con mayor asignación 
-    fig = px.bar(piv_tipo_gasto, 
-                 x='Año', 
-                 y='%',
-                 color='Tipo de gasto',
-                 barmode='stack',
-                 color_discrete_sequence=[DIC_COLORES['ax_viol'][1],
-                                          DIC_COLORES['az_verd'][2],
-                                          DIC_COLORES['ro_am_na'][3]],
-                                          )
-    
-    fig.update_layout(legend=dict(orientation="h",
+        
+    for i, group in piv_tipo_gasto.groupby('Tipo de gasto'):
+        fig.add_trace(go.Bar(
+            x=group['Año'],
+            y=group['%'],
+            name=i, marker_color=dict_gasto[i]
+        ), row=1, col=2)
+
+    fig.update_layout(barmode='stack')
+    fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
     yanchor="bottom",
     y=1.02,
     xanchor="right",
-    x=1), title='Distribución del presupuesto de gastos (2013-2024)')
+    x=1), title='Histórico general',separators=',')
+
 
     st.plotly_chart(fig)
 
-    st.divider()
-    st.header('Histórico por sector')
+
+
+    # distribución de gastos en las principales entidades (2024)
+    # sectores con mayor asignación
+    # entidades con mayor asignación 
+
+elif selected_option == "Histórico por sector":
+    st.header(selected_option)
 
     sector = st.selectbox("Seleccione el sector", sectors, key=2)
     filter_sector = df[df['Sector'] == sector]
@@ -102,76 +93,91 @@ with tab1:
 
     fig = make_subplots(rows=1, cols=2, x_title='Año', shared_yaxes=True, y_title='Monto en millones de pesos')
     
-    fig.add_trace(go.Line(
-            x=pivot_sector['Año'], 
-            y=pivot_sector['Apropiación a precios corrientes en millones'], 
-            name='Apropiación a precios corrientes en millones', line=dict(color=DIC_COLORES['ax_viol'][0])
-        ),
-        row=1, col=1
-    )
     fig.add_trace(
         go.Line(
             x=pivot_sector['Año'], y=pivot_sector['Apropiación a precios constantes (2024) en millones'], 
             name='Apropiación a precios constantes (2024) en millones', line=dict(color=DIC_COLORES['ax_viol'][1])
         ),
-        row=1, col=2
+        row=1, col=1
     )
+
+    piv_tipo_gasto_sector = (filter_sector
+                      .groupby(['Año', 'Tipo de gasto'])['Apropiación a precios constantes (2024) en millones']
+                      .sum()
+                      .reset_index())
+    for i, group in piv_tipo_gasto_sector.groupby('Tipo de gasto'):
+        fig.add_trace(go.Bar(
+            x=group['Año'],
+            y=group['Apropiación a precios constantes (2024) en millones'],
+            name=i, marker_color=dict_gasto[i]
+        ), row=1, col=2)
+
+    fig.update_layout(barmode='stack')
+
+
     fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
     yanchor="bottom",
     y=1.02,
     xanchor="right",
-    x=1), title=sector)
+    x=1), title=sector,separators=',')
 
     st.plotly_chart(fig)
+
+    piv_tipo_gasto = (df
+                      .groupby(['Año', 'Tipo de gasto'])['Apropiación a precios constantes (2024) en millones']
+                      .sum()
+                      .reset_index())
 
     st.subheader(f"Variación histórica por sector: {sector}")
 
+    try:
+        piv = filter_sector.pivot_table(index='Año',
+                            values='Apropiación a precios constantes (2024) en millones',
+                            aggfunc='sum'
+                            )
+        piv['pct'] = piv['Apropiación a precios constantes (2024) en millones'].pct_change()
+        piv['pct'] = (piv['pct'] * 100).round(2)
+        piv['CAGR'] = ((piv.loc[2024, 'Apropiación a precios constantes (2024) en millones'] / piv.loc[2013, 'Apropiación a precios constantes (2024) en millones']) ** (1/11)) - 1
+        piv['CAGR'] = (piv['CAGR'] * 100).round(2)
+        piv = piv.reset_index()
 
-    piv = filter_sector.pivot_table(index='Año',
-                           values='Apropiación a precios constantes (2024) en millones',
-                           aggfunc='sum'
-                           )
-    piv['pct'] = piv['Apropiación a precios constantes (2024) en millones'].pct_change()
-    piv['pct'] = (piv['pct'] * 100).round(2)
-    piv['CAGR'] = ((piv.loc[2024, 'Apropiación a precios constantes (2024) en millones'] / piv.loc[2013, 'Apropiación a precios constantes (2024) en millones']) ** (1/11)) - 1
-    piv['CAGR'] = (piv['CAGR'] * 100).round(2)
-    piv = piv.reset_index()
+        fig = make_subplots(rows=1, cols=2, x_title='Año')
 
-    fig = make_subplots(rows=1, cols=2, x_title='Año')
+        fig.add_trace(
+            go.Bar(x=piv['Año'], y=piv['Apropiación a precios constantes (2024) en millones'],
+                name='Apropiación a precios constantes (2024) en millones', marker_color=DIC_COLORES['ofiscal'][1]),
+            row=1, col=1, 
+        )
 
-    fig.add_trace(
-        go.Bar(x=piv['Año'], y=piv['Apropiación a precios constantes (2024) en millones'],
-               name='Apropiación a precios constantes (2024) en millones', marker_color=DIC_COLORES['ofiscal'][1]),
-        row=1, col=1, 
-    )
+        fig.add_trace(go.Line(
+                x=piv['Año'], 
+                y=piv['pct'], 
+                name='Variación porcentual (%)', line=dict(color=DIC_COLORES['ro_am_na'][1])
+            ),
+            row=1, col=2
+        )
+        fig.add_trace(
+            go.Line(
+                x=piv['Año'], y=piv['CAGR'], name='Variación anualizada (%)', line=dict(color=DIC_COLORES['verde'][0])
+            ),
+            row=1, col=2
+        )
+        fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
+        yanchor="bottom",
+        y=1.02,
+        xanchor="right",
+        x=1))
 
-    fig.add_trace(go.Line(
-            x=piv['Año'], 
-            y=piv['pct'], 
-            name='Variación porcentual (%)', line=dict(color=DIC_COLORES['ro_am_na'][1])
-        ),
-        row=1, col=2
-    )
-    fig.add_trace(
-        go.Line(
-            x=piv['Año'], y=piv['CAGR'], name='Variación anualizada (%)', line=dict(color=DIC_COLORES['verde'][0])
-        ),
-        row=1, col=2
-    )
-    fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
-    yanchor="bottom",
-    y=1.02,
-    xanchor="right",
-    x=1))
-
-    st.plotly_chart(fig)
-
-    st.divider()
-    st.header('Histórico por entidad')
-
+        st.plotly_chart(fig)
+    except KeyError as e:
+        st.error("No hay suficiente información para calcular la variación histórica.")
 
 
 
+elif selected_option == "Histórico por entidad":
+    st.header(selected_option)
+    sector = st.selectbox("Seleccione el sector", sectors, key=2)
+    filter_sector = df[df['Sector'] == sector]
     entities_sector = filter_sector['Entidad'].unique()
     entidad = st.selectbox("Seleccione la entidad",
                             entities_sector)
@@ -185,20 +191,26 @@ with tab1:
     pivot_entity = pivot_entity.reset_index()
     fig = make_subplots(rows=1, cols=2, x_title='Año', shared_yaxes=True, y_title='Monto en millones de pesos')
     
-    fig.add_trace(go.Line(
-            x=pivot_entity['Año'], 
-            y=pivot_entity['Apropiación a precios corrientes en millones'], 
-            name='Apropiación a precios corrientes en millones', line=dict(color=DIC_COLORES['ax_viol'][0])
-        ),
-        row=1, col=1
-    )
     fig.add_trace(
         go.Line(
             x=pivot_entity['Año'], y=pivot_entity['Apropiación a precios constantes (2024) en millones'], 
             name='Apropiación a precios constantes (2024) en millones', line=dict(color=DIC_COLORES['ax_viol'][1])
         ),
-        row=1, col=2
+        row=1, col=1
     )
+    piv_tipo_gasto_entity = (filter_entity
+                      .groupby(['Año', 'Tipo de gasto'])['Apropiación a precios constantes (2024) en millones']
+                      .sum()
+                      .reset_index())
+    for i, group in piv_tipo_gasto_entity.groupby('Tipo de gasto'):
+        fig.add_trace(go.Bar(
+            x=group['Año'],
+            y=group['Apropiación a precios constantes (2024) en millones'],
+            name=i, marker_color=dict_gasto[i]
+        ), row=1, col=2)
+
+    fig.update_layout(barmode='stack')
+
     fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
     yanchor="bottom",
     y=1.02,
@@ -206,6 +218,12 @@ with tab1:
     x=1), title=entidad)
 
     st.plotly_chart(fig)
+
+    piv_tipo_gasto_entity = (filter_entity
+                      .groupby(['Año', 'Tipo de gasto'])['Apropiación a precios constantes (2024) en millones']
+                      .sum()
+                      .reset_index())
+
 
     st.subheader(f"Variación histórica por entidad: {entidad}")
 
@@ -248,13 +266,31 @@ with tab1:
     x=1))
 
     st.plotly_chart(fig)
+elif selected_option == "Treemap":
+    st.header("Treemap")
+    year = st.slider("Seleccione el año", 
+                     min_value=min(years),
+                     max_value=max(years))
+    price = st.selectbox("Seleccione el nivel de precios",
+                         prices.keys())
+    filter_year = df[df['Año'] == year]
 
-    exp = st.expander("* unidades de medida")
-    exp.write("Las unidades de medida de los gráficos de línea históricos y de las barras deben multiplicarse por 1 millón. Ejemplo: si el nodo muestra 70.89M, significa que el monto asignado total es $70'890.000.000.000")
+    dic_treemap = get_dic_colors(filter_year)
+    dic_treemap['(?)'] = "#D9D9ED"
+    fig = px.treemap(filter_year, 
+                     path=[px.Constant('PGN'),     'Sector', 
+                               'Entidad', 
+                               'Tipo de gasto'],
+                    values=prices[price],
+                    color='Sector',
+                    color_discrete_map=dic_treemap,
+                    title="Matriz de composición de apropiación (en millones)")
+    
+    fig.update_layout(width=1000, height=600)
+    
+    st.plotly_chart(fig)
+else:
 
-
-
-with tab2:
     st.subheader("Descarga de dataset completo")
 
 
@@ -347,37 +383,8 @@ with tab2:
         data=json_string
     )
 
-with tab3:
-    year = st.slider("Seleccione el año", 
-                     min_value=min(years),
-                     max_value=max(years))
-    price = st.selectbox("Seleccione el nivel de precios",
-                         prices.keys())
-    filter_year = df[df['Año'] == year]
 
-    dic_treemap = get_dic_colors(filter_year)
-    fig = px.treemap(filter_year, 
-                     path=[     'Sector', 
-                               'Entidad', 
-                               'Tipo de gasto'],
-                    values=prices[price],
-                    color='Sector',
-                    color_discrete_map=dic_treemap,
-                    title="Matriz de composición de apropiación (en millones)")
-    
-    fig.update_layout(width=1000, height=600)
-    
-    st.plotly_chart(fig)
-    
 
-    fig = px.sunburst(filter_year, 
-                      path=['Sector', 'Entidad', 'Tipo de gasto'], 
-                      values=prices[price],
-                      color='Sector',
-                      color_discrete_map=dic_treemap, title='Jerarquía contable del PGN')
-    fig.update_layout(width=1000, height=1000)
-    st.plotly_chart(fig)
 
-    exp = st.expander("* dinámica de los gráficos")
-    exp.write("Tanto el treemap como el sunburst pueden ser utilizados para observar la composición del gasto por cuentas jerarquizado por Sector -> Entidad -> Tipo de gasto. Al hacer clic en alguno de los elementos, el gráfico dinámicamente entrará en el elemento y mostrará las jerarquías internas.")
 
+   
