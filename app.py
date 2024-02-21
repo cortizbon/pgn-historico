@@ -12,7 +12,7 @@ from streamlit_option_menu import option_menu
 
 from utils import DIC_COLORES, convert_df, get_dic_colors, get_dic_colors_area
 
-st.set_page_config(layout='wide')
+st.set_page_config(layout='wide', page_title="ofiscal - PePE")
 
 df = pd.read_csv('gastos_def_2024.csv')
 years = list(df['Año'].unique())
