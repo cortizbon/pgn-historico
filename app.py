@@ -35,7 +35,7 @@ with st.sidebar:
         menu_icon="p", default_index=0, orientation="vertical")
     
 if selected_option == "Main":
-    st.header("Página principal")
+    st.header("PePE: Presupuesto en Perpectiva Económica")
 elif selected_option == "Histórico general":
     st.header(selected_option)
     piv_2024 = df.groupby('Año')['Apropiación a precios constantes (2024) en millones'].sum().reset_index()
@@ -44,7 +44,7 @@ elif selected_option == "Histórico general":
     fig = make_subplots(rows=1, cols=2, x_title='Año',  y_title='Monto en millones de pesos')
     
     fig.add_trace(
-        go.Line(
+        go.scatter.Line(
             x=piv_2024['Año'], y=piv_2024['Apropiación a precios constantes (2024) en millones'], 
             name='Apropiación a precios constantes (2024) en millones', line=dict(color=DIC_COLORES['ax_viol'][1])
         ),
@@ -94,7 +94,7 @@ elif selected_option == "Histórico por sector":
     fig = make_subplots(rows=1, cols=2, x_title='Año', shared_yaxes=True, y_title='Monto en millones de pesos')
     
     fig.add_trace(
-        go.Line(
+        go.scatter.Line(
             x=pivot_sector['Año'], y=pivot_sector['Apropiación a precios constantes (2024) en millones'], 
             name='Apropiación a precios constantes (2024) en millones', line=dict(color=DIC_COLORES['ax_viol'][1])
         ),
@@ -149,7 +149,7 @@ elif selected_option == "Histórico por sector":
             row=1, col=1, 
         )
 
-        fig.add_trace(go.Line(
+        fig.add_trace(go.scatter.Line(
                 x=piv['Año'], 
                 y=piv['pct'], 
                 name='Variación porcentual (%)', line=dict(color=DIC_COLORES['ro_am_na'][1])
@@ -157,7 +157,7 @@ elif selected_option == "Histórico por sector":
             row=1, col=2
         )
         fig.add_trace(
-            go.Line(
+            go.scatter.Line(
                 x=piv['Año'], y=piv['CAGR'], name='Variación anualizada (%)', line=dict(color=DIC_COLORES['verde'][0])
             ),
             row=1, col=2
@@ -192,7 +192,7 @@ elif selected_option == "Histórico por entidad":
     fig = make_subplots(rows=1, cols=2, x_title='Año', shared_yaxes=True, y_title='Monto en millones de pesos')
     
     fig.add_trace(
-        go.Line(
+        go.scatter.Line(
             x=pivot_entity['Año'], y=pivot_entity['Apropiación a precios constantes (2024) en millones'], 
             name='Apropiación a precios constantes (2024) en millones', line=dict(color=DIC_COLORES['ax_viol'][1])
         ),
@@ -246,7 +246,7 @@ elif selected_option == "Histórico por entidad":
         row=1, col=1, 
     )
 
-    fig.add_trace(go.Line(
+    fig.add_trace(go.scatter.Line(
             x=piv['Año'], 
             y=piv['pct'], 
             name='Variación porcentual (%)', line=dict(color=DIC_COLORES['ro_am_na'][1])
@@ -254,7 +254,7 @@ elif selected_option == "Histórico por entidad":
         row=1, col=2
     )
     fig.add_trace(
-        go.Line(
+        go.scatter.Line(
             x=piv['Año'], y=piv['CAGR'], name='Variación anualizada (%)', line=dict(color=DIC_COLORES['verde'][0])
         ),
         row=1, col=2
