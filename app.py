@@ -12,7 +12,7 @@ from streamlit_option_menu import option_menu
 
 from utils import DIC_COLORES, convert_df, get_dic_colors, get_dic_colors_area
 
-st.set_page_config(layout='wide', page_title="ofiscal - PePE")
+st.set_page_config(layout='wide', page_title="ofiscal - PePE", page_icon='imgs/favicon.jpeg')
 
 df = pd.read_csv('gastos_def_2024.csv')
 years = list(df['Año'].unique())
@@ -34,9 +34,14 @@ with st.sidebar:
         icons=['arrow-right-short', 'file-bar-graph', 'intersect', "list-task", 'columns', 'cloud-download'], 
         menu_icon="p", default_index=0, orientation="vertical")
     
+    
+
+    
 if selected_option == "Main":
-    st.header("PePE: Presupuesto en Perpectiva Económica")
+    st.image("imgs/transp.png")
+    st.header("PePE: Presupuesto en Perspectiva Económica")
 elif selected_option == "Histórico general":
+    st.image("imgs/transp.png")
     st.header(selected_option)
     piv_2024 = df.groupby('Año')['Apropiación a precios constantes (2024) en millones'].sum().reset_index()
     piv_corr = df.groupby('Año')['apropiacion_corrientes'].sum().reset_index()
@@ -84,6 +89,7 @@ elif selected_option == "Histórico general":
     # entidades con mayor asignación 
 
 elif selected_option == "Histórico por sector":
+    st.image("imgs/transp.png")
     st.header(selected_option)
 
     sector = st.selectbox("Seleccione el sector", sectors, key=2)
@@ -175,6 +181,8 @@ elif selected_option == "Histórico por sector":
 
 
 elif selected_option == "Histórico por entidad":
+
+    st.image("imgs/transp.png")
     st.header(selected_option)
     sector = st.selectbox("Seleccione el sector", sectors, key=2)
     filter_sector = df[df['Sector'] == sector]
@@ -267,6 +275,7 @@ elif selected_option == "Histórico por entidad":
 
     st.plotly_chart(fig)
 elif selected_option == "Treemap":
+    st.image("imgs/transp.png")
     st.header("Treemap")
     year = st.slider("Seleccione el año", 
                      min_value=min(years),
@@ -290,6 +299,7 @@ elif selected_option == "Treemap":
     
     st.plotly_chart(fig)
 else:
+    st.image("imgs/transp.png")
 
     st.subheader("Descarga de dataset completo")
 

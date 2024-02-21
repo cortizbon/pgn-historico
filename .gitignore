@@ -1,6 +1,4 @@
 /venv
-*.png
-*.jpeg
 /__pycache__
 *.ipynb
 test*.*
