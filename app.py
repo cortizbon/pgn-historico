@@ -34,6 +34,7 @@ prices = {"corrientes": 'Apropiación a precios corrientes en millones',
 #        icons=['arrow-right-short', 'file-bar-graph', 'intersect', "list-task", 'columns', 'cloud-download'], 
 #        menu_icon="p", default_index=0, orientation="vertical")
 st.image("imgs/transp.png")
+st.divider()
 
 selected_option = option_menu(None, ["Main", "Histórico general", "Histórico por sector", "Histórico por entidad", "Treemap", "Descarga de datos"], 
         icons=['arrow-right-short', 'file-bar-graph', 'intersect', "list-task", 'columns', 'cloud-download'], 
@@ -42,8 +43,8 @@ selected_option = option_menu(None, ["Main", "Histórico general", "Histórico p
 
     
 if selected_option == "Main":
-    
-    st.header("PePE: Presupuesto en Perspectiva Económica")
+    pass
+
 elif selected_option == "Histórico general":
 
     st.header(selected_option)
