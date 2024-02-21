@@ -304,6 +304,7 @@ elif selected_option == "Treemap":
     
     st.plotly_chart(fig)
 else:
+    st.header("Descarga de datos")
 
 
     st.subheader("Descarga de dataset completo")
@@ -314,11 +315,6 @@ else:
     st.download_button(label = 'Descargar datos completos',
                     data = binary_output.getvalue(),
                     file_name = 'datos.xlsx')
-    
-    st.divider()
-
-    # agregar la categoría todos al multiselect 
-    #
 
     st.subheader("Descarga de dataset filtrado")
     col1, col2 = st.columns(2)
