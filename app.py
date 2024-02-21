@@ -29,19 +29,23 @@ show = False
 prices = {"corrientes": 'Apropiación a precios corrientes en millones',
           "constantes 2024": 'Apropiación a precios constantes (2024) en millones'}
 
-with st.sidebar:
-    selected_option = option_menu("Menú", ["Main", "Histórico general", "Histórico por sector", "Histórico por entidad", "Treemap", "Descarga de datos"], 
+#with st.sidebar:
+#    selected_option = option_menu("Menú", ["Main", "Histórico general", "Histórico por sector", "Histórico por entidad", "Treemap", "Descarga de datos"], 
+#        icons=['arrow-right-short', 'file-bar-graph', 'intersect', "list-task", 'columns', 'cloud-download'], 
+#        menu_icon="p", default_index=0, orientation="vertical")
+st.image("imgs/transp.png")
+
+selected_option = option_menu(None, ["Main", "Histórico general", "Histórico por sector", "Histórico por entidad", "Treemap", "Descarga de datos"], 
         icons=['arrow-right-short', 'file-bar-graph', 'intersect', "list-task", 'columns', 'cloud-download'], 
-        menu_icon="p", default_index=0, orientation="vertical")
-    
+        menu_icon="p", default_index=0, orientation="horizontal")    
     
 
     
 if selected_option == "Main":
-    st.image("imgs/transp.png")
+    
     st.header("PePE: Presupuesto en Perspectiva Económica")
 elif selected_option == "Histórico general":
-    st.image("imgs/transp.png")
+
     st.header(selected_option)
     piv_2024 = df.groupby('Año')['Apropiación a precios constantes (2024) en millones'].sum().reset_index()
     piv_corr = df.groupby('Año')['apropiacion_corrientes'].sum().reset_index()
@@ -89,7 +93,7 @@ elif selected_option == "Histórico general":
     # entidades con mayor asignación 
 
 elif selected_option == "Histórico por sector":
-    st.image("imgs/transp.png")
+
     st.header(selected_option)
 
     sector = st.selectbox("Seleccione el sector", sectors, key=2)
@@ -182,7 +186,7 @@ elif selected_option == "Histórico por sector":
 
 elif selected_option == "Histórico por entidad":
 
-    st.image("imgs/transp.png")
+
     st.header(selected_option)
     sector = st.selectbox("Seleccione el sector", sectors, key=2)
     filter_sector = df[df['Sector'] == sector]
@@ -275,7 +279,7 @@ elif selected_option == "Histórico por entidad":
 
     st.plotly_chart(fig)
 elif selected_option == "Treemap":
-    st.image("imgs/transp.png")
+
     st.header("Treemap")
     year = st.slider("Seleccione el año", 
                      min_value=min(years),
@@ -299,7 +303,7 @@ elif selected_option == "Treemap":
     
     st.plotly_chart(fig)
 else:
-    st.image("imgs/transp.png")
+
 
     st.subheader("Descarga de dataset completo")
 
