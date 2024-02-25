@@ -15,6 +15,7 @@ from utils import DIC_COLORES, convert_df, get_dic_colors, get_dic_colors_area
 st.set_page_config(layout='wide', page_title="ofiscal - PePE", page_icon='imgs/favicon.jpeg')
 
 df = pd.read_csv('gastos_def_2024.csv')
+df['Apropiación a precios constantes (2024)'] /= 1000000000
 years = list(df['Año'].unique())
 years = [int(year) for year in years]
 sectors = list(df['Sector'].unique())
@@ -26,8 +27,8 @@ dict_gasto = {'Funcionamiento':DIC_COLORES['az_verd'][2],
 show = False
 
 
-prices = {"corrientes": 'Apropiación a precios corrientes en millones',
-          "constantes 2024": 'Apropiación a precios constantes (2024) en millones'}
+prices = {"corrientes": 'Apropiación a precios corrientes',
+          "constantes 2024": 'Apropiación a precios constantes (2024)'}
 
 #with st.sidebar:
 #    selected_option = option_menu("Menú", ["Main", "Histórico general", "Histórico por sector", "Histórico por entidad", "Treemap", "Descarga de datos"], 
@@ -48,26 +49,28 @@ if selected_option == "Main":
 elif selected_option == "Histórico general":
 
     st.header(selected_option)
-    piv_2024 = df.groupby('Año')['Apropiación a precios constantes (2024) en millones'].sum().reset_index()
+    piv_2024 = df.groupby('Año')['Apropiación a precios constantes (2024)'].sum().reset_index()
     piv_corr = df.groupby('Año')['apropiacion_corrientes'].sum().reset_index()
 
-    fig = make_subplots(rows=1, cols=2, x_title='Año',  y_title='Monto en millones de pesos')
+    #piv_2024['Apropiación a precios constantes (2024)'] /= 1000
+
+    fig = make_subplots(rows=1, cols=2, x_title='Año',  )
     
     fig.add_trace(
         go.Line(
-            x=piv_2024['Año'], y=piv_2024['Apropiación a precios constantes (2024) en millones'], 
-            name='Apropiación a precios constantes (2024) en millones', line=dict(color=DIC_COLORES['ax_viol'][1])
+            x=piv_2024['Año'], y=piv_2024['Apropiación a precios constantes (2024)'], 
+            name='Apropiación a precios constantes (2024)', line=dict(color=DIC_COLORES['ax_viol'][1])
         ),
         row=1, col=1
     )
 
     piv_tipo_gasto = (df
-                      .groupby(['Año', 'Tipo de gasto'])['Apropiación a precios constantes (2024) en millones']
+                      .groupby(['Año', 'Tipo de gasto'])['Apropiación a precios constantes (2024)']
                       .sum()
                       .reset_index())
-    piv_tipo_gasto['total'] = piv_tipo_gasto.groupby(['Año'])['Apropiación a precios constantes (2024) en millones'].transform('sum')
+    piv_tipo_gasto['total'] = piv_tipo_gasto.groupby(['Año'])['Apropiación a precios constantes (2024)'].transform('sum')
 
-    piv_tipo_gasto['%'] = ((piv_tipo_gasto['Apropiación a precios constantes (2024) en millones'] / piv_tipo_gasto['total']) * 100).round(2)
+    piv_tipo_gasto['%'] = ((piv_tipo_gasto['Apropiación a precios constantes (2024)'] / piv_tipo_gasto['total']) * 100).round(2)
 
         
     for i, group in piv_tipo_gasto.groupby('Tipo de gasto'):
@@ -77,12 +80,12 @@ elif selected_option == "Histórico general":
             name=i, marker_color=dict_gasto[i]
         ), row=1, col=2)
 
-    fig.update_layout(barmode='stack')
+    fig.update_layout(barmode='stack', hovermode='x unified')
     fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
     yanchor="bottom",
     y=1.02,
     xanchor="right",
-    x=1), title='Histórico general',separators=',')
+    x=1), title='Histórico general <br><sup>Cifras en miles de millones de pesos</sup>', yaxis_tickformat='.0f')
 
 
     st.plotly_chart(fig)
@@ -102,86 +105,80 @@ elif selected_option == "Histórico por sector":
 
     pivot_sector = filter_sector.pivot_table(index='Año', values=prices.values(), aggfunc='sum').reset_index()
 
-    fig = make_subplots(rows=1, cols=2, x_title='Año', shared_yaxes=True, y_title='Monto en millones de pesos')
+    fig = make_subplots(rows=1, cols=2, x_title='Año', shared_yaxes=True)
     
     fig.add_trace(
         go.Line(
-            x=pivot_sector['Año'], y=pivot_sector['Apropiación a precios constantes (2024) en millones'], 
-            name='Apropiación a precios constantes (2024) en millones', line=dict(color=DIC_COLORES['ax_viol'][1])
+            x=pivot_sector['Año'], y=pivot_sector['Apropiación a precios constantes (2024)'], 
+            name='Apropiación a precios constantes (2024)', line=dict(color=DIC_COLORES['ax_viol'][1])
         ),
         row=1, col=1
     )
 
     piv_tipo_gasto_sector = (filter_sector
-                      .groupby(['Año', 'Tipo de gasto'])['Apropiación a precios constantes (2024) en millones']
+                      .groupby(['Año', 'Tipo de gasto'])['Apropiación a precios constantes (2024)']
                       .sum()
                       .reset_index())
     for i, group in piv_tipo_gasto_sector.groupby('Tipo de gasto'):
         fig.add_trace(go.Bar(
             x=group['Año'],
-            y=group['Apropiación a precios constantes (2024) en millones'],
+            y=group['Apropiación a precios constantes (2024)'],
             name=i, marker_color=dict_gasto[i]
         ), row=1, col=2)
 
-    fig.update_layout(barmode='stack')
+    fig.update_layout(barmode='stack', hovermode='x unified')
 
 
     fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
     yanchor="bottom",
     y=1.02,
     xanchor="right",
-    x=1), title=sector,separators=',')
+    x=1), title=f"{sector} <br><sup>Cifras en miles de millones de pesos</sup>", yaxis_tickformat='.0f')
 
     st.plotly_chart(fig)
 
-    piv_tipo_gasto = (df
-                      .groupby(['Año', 'Tipo de gasto'])['Apropiación a precios constantes (2024) en millones']
-                      .sum()
-                      .reset_index())
-
     st.subheader(f"Variación histórica por sector: {sector}")
 
-    try:
-        piv = filter_sector.pivot_table(index='Año',
-                            values='Apropiación a precios constantes (2024) en millones',
-                            aggfunc='sum'
-                            )
-        piv['pct'] = piv['Apropiación a precios constantes (2024) en millones'].pct_change()
-        piv['pct'] = (piv['pct'] * 100).round(2)
-        piv['CAGR'] = ((piv.loc[2024, 'Apropiación a precios constantes (2024) en millones'] / piv.loc[2013, 'Apropiación a precios constantes (2024) en millones']) ** (1/11)) - 1
-        piv['CAGR'] = (piv['CAGR'] * 100).round(2)
-        piv = piv.reset_index()
 
-        fig = make_subplots(rows=1, cols=2, x_title='Año')
 
-        fig.add_trace(
-            go.Bar(x=piv['Año'], y=piv['Apropiación a precios constantes (2024) en millones'],
-                name='Apropiación a precios constantes (2024) en millones', marker_color=DIC_COLORES['ofiscal'][1]),
+    pivot_sector = pivot_sector.set_index('Año')
+    pivot_sector['pct'] = pivot_sector['Apropiación a precios constantes (2024)'].pct_change()
+    pivot_sector['pct'] = (pivot_sector['pct'] * 100).round(2)
+    den = max(pivot_sector.index) - min(pivot_sector.index)
+    pivot_sector['CAGR'] = ((pivot_sector.loc[min(pivot_sector.index), 'Apropiación a precios constantes (2024)'] / pivot_sector.loc[max(pivot_sector.index), 'Apropiación a precios constantes (2024)']) ** (1/11)) - 1
+    pivot_sector['CAGR'] = (pivot_sector['CAGR'] * 100).round(2)
+    pivot_sector = pivot_sector.reset_index()
+
+    fig = make_subplots(rows=1, cols=2, x_title='Año')
+
+    fig.add_trace(
+            go.Bar(x=pivot_sector['Año'], y=pivot_sector['Apropiación a precios constantes (2024)'],
+                name='Apropiación a precios constantes (2024)', marker_color=DIC_COLORES['ofiscal'][1]),
             row=1, col=1, 
         )
 
-        fig.add_trace(go.Line(
-                x=piv['Año'], 
-                y=piv['pct'], 
+    fig.add_trace(go.Line(
+                x=pivot_sector['Año'], 
+                y=pivot_sector['pct'], 
                 name='Variación porcentual (%)', line=dict(color=DIC_COLORES['ro_am_na'][1])
             ),
             row=1, col=2
         )
-        fig.add_trace(
+    fig.add_trace(
             go.Line(
-                x=piv['Año'], y=piv['CAGR'], name='Variación anualizada (%)', line=dict(color=DIC_COLORES['verde'][0])
+                x=pivot_sector['Año'], y=pivot_sector['CAGR'], name='Variación anualizada (%)', line=dict(color=DIC_COLORES['verde'][0])
             ),
             row=1, col=2
         )
-        fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
+    fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
         yanchor="bottom",
         y=1.02,
         xanchor="right",
-        x=1))
+        x=1), hovermode='x unified', yaxis_tickformat='.0f', title=f"{sector} <br><sup>Cifras en miles de millones de pesos</sup>")
 
-        st.plotly_chart(fig)
-    except KeyError as e:
-        st.error("No hay suficiente información para calcular la variación histórica.")
+    st.plotly_chart(fig)
+    
+
 
 
 
@@ -189,8 +186,9 @@ elif selected_option == "Histórico por entidad":
 
 
     st.header(selected_option)
-    sector = st.selectbox("Seleccione el sector", sectors, key=2)
+    sector = st.selectbox("Seleccione el sector", sectors, key=3)
     filter_sector = df[df['Sector'] == sector]
+ 
     entities_sector = filter_sector['Entidad'].unique()
     entidad = st.selectbox("Seleccione la entidad",
                             entities_sector)
@@ -202,73 +200,69 @@ elif selected_option == "Histórico por entidad":
                                            aggfunc='sum')
     
     pivot_entity = pivot_entity.reset_index()
-    fig = make_subplots(rows=1, cols=2, x_title='Año', shared_yaxes=True, y_title='Monto en millones de pesos')
+
+    fig = make_subplots(rows=1, cols=2, x_title='Año', shared_yaxes=True)
     
     fig.add_trace(
         go.Line(
-            x=pivot_entity['Año'], y=pivot_entity['Apropiación a precios constantes (2024) en millones'], 
-            name='Apropiación a precios constantes (2024) en millones', line=dict(color=DIC_COLORES['ax_viol'][1])
+            x=pivot_entity['Año'], y=pivot_entity['Apropiación a precios constantes (2024)'], 
+            name='Apropiación a precios constantes (2024)', line=dict(color=DIC_COLORES['ax_viol'][1])
         ),
         row=1, col=1
     )
     piv_tipo_gasto_entity = (filter_entity
-                      .groupby(['Año', 'Tipo de gasto'])['Apropiación a precios constantes (2024) en millones']
+                      .groupby(['Año', 'Tipo de gasto'])['Apropiación a precios constantes (2024)']
                       .sum()
                       .reset_index())
     for i, group in piv_tipo_gasto_entity.groupby('Tipo de gasto'):
         fig.add_trace(go.Bar(
             x=group['Año'],
-            y=group['Apropiación a precios constantes (2024) en millones'],
+            y=group['Apropiación a precios constantes (2024)'],
             name=i, marker_color=dict_gasto[i]
         ), row=1, col=2)
 
-    fig.update_layout(barmode='stack')
+    fig.update_layout(barmode='stack', hovermode='x unified')
 
     fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
     yanchor="bottom",
     y=1.02,
     xanchor="right",
-    x=1), title=entidad)
+    x=1), title=f"{entidad} <br><sup>Cifras en miles de millones de pesos</sup>", yaxis_tickformat='.0f')
 
     st.plotly_chart(fig)
 
-    piv_tipo_gasto_entity = (filter_entity
-                      .groupby(['Año', 'Tipo de gasto'])['Apropiación a precios constantes (2024) en millones']
-                      .sum()
-                      .reset_index())
-
+    if len(piv_tipo_gasto_entity) <= 1:
+        st.warning(f"La entidad {entidad} solo tiene información de un año.")
+        st.stop()
 
     st.subheader(f"Variación histórica por entidad: {entidad}")
 
-
-    piv = filter_entity.pivot_table(index='Año',
-                           values='Apropiación a precios constantes (2024) en millones',
-                           aggfunc='sum'
-                           )
-    piv['pct'] = piv['Apropiación a precios constantes (2024) en millones'].pct_change()
-    piv['pct'] = (piv['pct'] * 100).round(2)
-    piv['CAGR'] = ((piv.loc[2024, 'Apropiación a precios constantes (2024) en millones'] / piv.loc[2013, 'Apropiación a precios constantes (2024) en millones']) ** (1/11)) - 1
-    piv['CAGR'] = (piv['CAGR'] * 100).round(2)
-    piv = piv.reset_index()
+    pivot_entity = pivot_entity.set_index('Año')
+    pivot_entity['pct'] = pivot_entity['Apropiación a precios constantes (2024)'].pct_change()
+    pivot_entity['pct'] = (pivot_entity['pct'] * 100).round(2)
+    den = max(pivot_entity.index) - min(pivot_entity.index)
+    pivot_entity['CAGR'] = ((pivot_entity.loc[min(pivot_entity.index), 'Apropiación a precios constantes (2024)'] / pivot_entity.loc[max(pivot_entity.index), 'Apropiación a precios constantes (2024)']) ** (1/den)) - 1
+    pivot_entity['CAGR'] = (pivot_entity['CAGR'] * 100).round(2)
+    pivot_entity = pivot_entity.reset_index()
 
     fig = make_subplots(rows=1, cols=2, x_title='Año')
 
     fig.add_trace(
-        go.Bar(x=piv['Año'], y=piv['Apropiación a precios constantes (2024) en millones'],
-               name='Apropiación a precios constantes (2024) en millones', marker_color=DIC_COLORES['ofiscal'][1]),
+        go.Bar(x=pivot_entity['Año'], y=pivot_entity['Apropiación a precios constantes (2024)'],
+               name='Apropiación a precios constantes (2024)', marker_color=DIC_COLORES['ofiscal'][1]),
         row=1, col=1, 
     )
 
     fig.add_trace(go.Line(
-            x=piv['Año'], 
-            y=piv['pct'], 
+            x=pivot_entity['Año'], 
+            y=pivot_entity['pct'], 
             name='Variación porcentual (%)', line=dict(color=DIC_COLORES['ro_am_na'][1])
         ),
         row=1, col=2
     )
     fig.add_trace(
         go.Line(
-            x=piv['Año'], y=piv['CAGR'], name='Variación anualizada (%)', line=dict(color=DIC_COLORES['verde'][0])
+            x=pivot_entity['Año'], y=pivot_entity['CAGR'], name='Variación anualizada (%)', line=dict(color=DIC_COLORES['verde'][0])
         ),
         row=1, col=2
     )
@@ -276,7 +270,7 @@ elif selected_option == "Histórico por entidad":
     yanchor="bottom",
     y=1.02,
     xanchor="right",
-    x=1))
+    x=1), hovermode='x unified', yaxis_tickformat='.0f', title=f"{entidad} <br><sup>Cifras en miles de millones de pesos</sup>")
 
     st.plotly_chart(fig)
 elif selected_option == "Treemap":
