@@ -241,9 +241,10 @@ elif selected_option == "Histórico por entidad":
     pivot_entity['pct'] = pivot_entity['Apropiación a precios constantes (2024)'].pct_change()
     pivot_entity['pct'] = (pivot_entity['pct'] * 100).round(2)
     den = max(pivot_entity.index) - min(pivot_entity.index)
-    pivot_entity['CAGR'] = ((pivot_entity.loc[min(pivot_entity.index), 'Apropiación a precios constantes (2024)'] / pivot_entity.loc[max(pivot_entity.index), 'Apropiación a precios constantes (2024)']) ** (1/den)) - 1
+    pivot_entity['CAGR'] = ((pivot_entity.loc[max(pivot_entity.index), 'Apropiación a precios constantes (2024)'] / pivot_entity.loc[min(pivot_entity.index), 'Apropiación a precios constantes (2024)'] ) ** (1/den)) - 1
     pivot_entity['CAGR'] = (pivot_entity['CAGR'] * 100).round(2)
     pivot_entity = pivot_entity.reset_index()
+    st.dataframe(pivot_entity)
 
     fig = make_subplots(rows=1, cols=2, x_title='Año')
 
