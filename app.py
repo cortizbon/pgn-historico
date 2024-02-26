@@ -231,7 +231,7 @@ elif selected_option == "Histórico por entidad":
 
     st.plotly_chart(fig)
 
-    if len(piv_tipo_gasto_entity) <= 1:
+    if pivot_entity['Año'].nunique() <=1:
         st.warning(f"La entidad {entidad} solo tiene información de un año.")
         st.stop()
 
