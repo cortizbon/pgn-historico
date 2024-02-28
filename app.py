@@ -15,6 +15,7 @@ from utils import DIC_COLORES, convert_df, get_dic_colors, get_dic_colors_area
 st.set_page_config(layout='wide', page_title="ofiscal - PePE", page_icon='imgs/favicon.jpeg')
 
 df = pd.read_csv('gastos_def_2024.csv')
+df['Apropiación a precios corrientes'] /= 1000000000
 df['Apropiación a precios constantes (2024)'] /= 1000000000
 years = list(df['Año'].unique())
 years = [int(year) for year in years]
