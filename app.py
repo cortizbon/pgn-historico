@@ -22,7 +22,7 @@ sectors = list(df['Sector'].unique())
 entities = list(df['Entidad'].unique())
 dict_gasto = {'Funcionamiento':DIC_COLORES['az_verd'][2],
               'Deuda':DIC_COLORES['ax_viol'][1],
-              'Inversion':DIC_COLORES['ro_am_na'][3]}
+              'Inversión':DIC_COLORES['ro_am_na'][3]}
 
 show = False
 
