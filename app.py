@@ -292,7 +292,7 @@ elif selected_option == "Treemap":
                     values=prices[price],
                     color='Sector',
                     color_discrete_map=dic_treemap,
-                    title="Matriz de composición del PGN <br><sup>Cifras en miles de miles de millones de pesos</sup>")
+                    title="Matriz de composición anual del PGN <br><sup>Cifras de miles de millones de pesos</sup>")
     
     fig.update_layout(width=1000, height=600)
     
