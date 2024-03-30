@@ -146,7 +146,7 @@ elif selected_option == "Histórico por sector":
     pivot_sector['pct'] = pivot_sector['Apropiación a precios constantes (2024)'].pct_change()
     pivot_sector['pct'] = (pivot_sector['pct'] * 100).round(2)
     den = max(pivot_sector.index) - min(pivot_sector.index)
-    pivot_sector['CAGR'] = ((pivot_sector.loc[min(pivot_sector.index), 'Apropiación a precios constantes (2024)'] / pivot_sector.loc[max(pivot_sector.index), 'Apropiación a precios constantes (2024)']) ** (1/11)) - 1
+    pivot_sector['CAGR'] = ((pivot_sector.loc[max(pivot_sector.index), 'Apropiación a precios constantes (2024)'] / pivot_sector.loc[min(pivot_sector.index), 'Apropiación a precios constantes (2024)']) ** (1/11)) - 1
     pivot_sector['CAGR'] = (pivot_sector['CAGR'] * 100).round(2)
     pivot_sector = pivot_sector.reset_index()
 
