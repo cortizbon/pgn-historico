@@ -10,11 +10,12 @@ from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 from streamlit_option_menu import option_menu
 
-from utils import DIC_COLORES, convert_df, get_dic_colors, get_dic_colors_area
+from utils import DIC_COLORES, convert_df, get_dic_colors, get_dic_colors_area, create_dataframe_sankey
 
 st.set_page_config(layout='wide', page_title="ofiscal - PePE", page_icon='imgs/favicon.jpeg')
 
 df = pd.read_csv('gastos_def_2024.csv')
+df2 = pd.read_csv('anteproyecto_2025.csv')
 df['Apropiación a precios corrientes'] /= 1000000000
 df['Apropiación a precios constantes (2024)'] /= 1000000000
 years = list(df['Año'].unique())
@@ -38,8 +39,20 @@ prices = {"corrientes": 'Apropiación a precios corrientes',
 st.image("imgs/transp.png")
 st.divider()
 
-selected_option = option_menu(None, ["Main", "Histórico general", "Histórico por sector", "Histórico por entidad", "Treemap", "Descarga de datos"], 
-        icons=['arrow-right-short', 'file-bar-graph', 'intersect', "list-task", 'columns', 'cloud-download'], 
+selected_option = option_menu(None, ["Main", 
+                                     "Histórico general", 
+                                     "Histórico por sector", 
+                                     "Histórico por entidad", 
+                                     "Treemap", 
+                                     "Descarga de datos",
+                                     "Anteproyecto - 2025"], 
+        icons=['arrow-right-short', 
+               'file-bar-graph', 
+               'intersect', 
+               "list-task", 
+               'columns', 
+               'cloud-download',
+               'pencil-square'], 
         menu_icon="p", default_index=0, orientation="horizontal")    
     
 
@@ -293,14 +306,92 @@ elif selected_option == "Treemap":
                     values=prices[price],
                     color='Sector',
                     color_discrete_map=dic_treemap,
-                    title="Matriz de composición anual del PGN <br><sup>Cifras de miles de millones de pesos</sup>")
+                    title="Matriz de composición anual del PGN <br><sup>Cifras en miles de millones de pesos</sup>")
     
     fig.update_layout(width=1000, height=600)
     
     st.plotly_chart(fig)
+
+elif selected_option == "Anteproyecto - 2025":
+    
+    st.header("Anteproyecto - 2025")
+
+    fig = px.treemap(df2, 
+                            path=[px.Constant('Anteproyecto'), 'Sector', 'ENTIDAD','Tipo de gasto', 
+                                    'CONCEPTO'],
+                            values='TOTAL',
+                            title="Matriz de composición anual del Anteproyecto <br><sup>Cifras en millones de pesos</sup>",
+                            color_continuous_scale='Teal')
+            
+    fig.update_layout(width=1000, height=600)
+            
+    st.plotly_chart(fig)
+
+    st.subheader("Flujo del gasto por sector (% del PGN)")
+    lista = ['Sector', 'Tipo de gasto', 'CONCEPTO']
+
+    top_10 = df2.groupby('Sector')['TOTAL'].sum().reset_index().sort_values(by='TOTAL', ascending=False).head(10)['Sector']
+
+    top_10_df = df2[df2['Sector'].isin(top_10)]
+
+    dicti = {'source':['Inversion','Servicio de la deuda']}
+    rev_info, conc = create_dataframe_sankey(top_10_df, 'TOTAL %',*lista, **dicti)
+    fig = go.Figure(data=[go.Sankey(
+    node = dict(
+      pad = 15,
+      thickness = 20,
+      line = dict(color = "#2635bf", width = 0.5),
+      label = list(rev_info.keys()),
+      color = "#2635bf"
+    ),
+    link = dict(
+      source = conc['source'], # indices correspond to labels, eg A1, A2, A1, B1, ...
+      target = conc['target'],
+      value = conc['value']
+    ))])
+
+    fig.update_layout(title_text="Flujo de gasto por sector - Top 10 por gasto", font_size=10, width=1000, height=600)
+    st.plotly_chart(fig)
+
+    st.subheader("Flujo del gasto por entidad (% del PGN)")
+    lista = ['ENTIDAD', 'Tipo de gasto', 'CONCEPTO']
+
+    top_10 = df2.groupby('ENTIDAD')['TOTAL'].sum().reset_index().sort_values(by='TOTAL', ascending=False).head(10)['ENTIDAD']
+
+    top_10_df = df2[df2['ENTIDAD'].isin(top_10)]
+
+    dicti = {'source':['Inversion','Servicio de la deuda']}
+    rev_info, conc = create_dataframe_sankey(top_10_df, 'TOTAL %',*lista, **dicti)
+    fig = go.Figure(data=[go.Sankey(
+    node = dict(
+      pad = 15,
+      thickness = 20,
+      line = dict(color = "#2635bf", width = 0.5),
+      label = list(rev_info.keys()),
+      color = "#2635bf"
+    ),
+    link = dict(
+      source = conc['source'], # indices correspond to labels, eg A1, A2, A1, B1, ...
+      target = conc['target'],
+      value = conc['value']
+    ))])
+
+    fig.update_layout(title_text="Flujo de gasto por entidad - Top 10 por gasto", font_size=10, width=1000, height=600)
+    st.plotly_chart(fig)
+
+    st.subheader("Descarga de datos")
+
+
+    binary_output = BytesIO()
+    df2.to_excel(binary_output, index=False)
+    st.download_button(label = 'Descargar datos de anteproyecto',
+                    data = binary_output.getvalue(),
+                    file_name = 'anteproyecto_2025.xlsx')    
+
+    
+
 else:
     st.header("Descarga de datos")
-
 
     st.subheader("Descarga de dataset completo")
 
