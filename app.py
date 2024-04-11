@@ -314,6 +314,7 @@ elif selected_option == "Treemap":
 
 elif selected_option == "Anteproyecto - 2025":
     
+    
     st.header("Anteproyecto - 2025")
 
     fig = px.treemap(df2, 
@@ -334,23 +335,33 @@ elif selected_option == "Anteproyecto - 2025":
 
     top_10_df = df2[df2['Sector'].isin(top_10)]
 
-    dicti = {'source':['Inversion','Servicio de la deuda']}
-    rev_info, conc = create_dataframe_sankey(top_10_df, 'TOTAL %',*lista, **dicti)
+    dicti = {'2':['Inversion','Servicio de la deuda']}
+    nodes, rev_info, links = create_dataframe_sankey(top_10_df, 'TOTAL %',*lista, **dicti)
     fig = go.Figure(data=[go.Sankey(
+    arrangement='snap',
     node = dict(
       pad = 15,
       thickness = 20,
       line = dict(color = "#2635bf", width = 0.5),
-      label = list(rev_info.keys()),
-      color = "#2635bf"
+      label = nodes['names'],
+      color = nodes['color'],
+      x = nodes['x_pos'].values ,
+      y = nodes['x_pos'].values / 2.4
     ),
     link = dict(
-      source = conc['source'], # indices correspond to labels, eg A1, A2, A1, B1, ...
-      target = conc['target'],
-      value = conc['value']
+      source = links['source'], 
+      target = links['target'],
+      value = links['value'],
+      color = links['color'],
+      hovertemplate='Proporción del gasto de %{source.label}<br />'+
+        'hacia %{target.label}:<br /> <b>%{value:.2f}%<extra></extra>'
     ))])
 
-    fig.update_layout(title_text="Flujo de gasto por sector - Top 10 por gasto", font_size=10, width=1000, height=600)
+    fig.update_layout(title_text="Flujo de gasto por sector - Top 10", 
+                      font_size=12, 
+                      width=1000, 
+                      height=600)
+    st.plotly_chart(fig)
     st.plotly_chart(fig)
 
     st.subheader("Flujo del gasto por entidad (% del PGN)")
@@ -360,23 +371,32 @@ elif selected_option == "Anteproyecto - 2025":
 
     top_10_df = df2[df2['ENTIDAD'].isin(top_10)]
 
-    dicti = {'source':['Inversion','Servicio de la deuda']}
-    rev_info, conc = create_dataframe_sankey(top_10_df, 'TOTAL %',*lista, **dicti)
+    dicti = {'2':['Inversion','Servicio de la deuda']}
+    nodes, rev_info, links = create_dataframe_sankey(top_10_df, 'TOTAL %',*lista, **dicti)
     fig = go.Figure(data=[go.Sankey(
+    arrangement='snap',
     node = dict(
       pad = 15,
       thickness = 20,
       line = dict(color = "#2635bf", width = 0.5),
-      label = list(rev_info.keys()),
-      color = "#2635bf"
+      label = nodes['names'],
+      color = nodes['color'],
+      x = nodes['x_pos'].values,
+      y = nodes['x_pos'].values / 2.4
     ),
     link = dict(
-      source = conc['source'], # indices correspond to labels, eg A1, A2, A1, B1, ...
-      target = conc['target'],
-      value = conc['value']
+      source = links['source'], 
+      target = links['target'],
+      value = links['value'],
+      color = links['color'],
+      hovertemplate='Proporción del gasto de %{source.label}<br />'+
+        'hacia %{target.label}:<br /> <b>%{value:.2f}%<extra></extra>'
     ))])
 
-    fig.update_layout(title_text="Flujo de gasto por entidad - Top 10 por gasto", font_size=10, width=1000, height=600)
+    fig.update_layout(title_text="Flujo de gasto por entidad - Top 10", 
+                      font_size=12, 
+                      width=1000, 
+                      height=600)
     st.plotly_chart(fig)
 
     st.subheader("Descarga de datos")
