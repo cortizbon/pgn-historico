@@ -328,6 +328,43 @@ elif selected_option == "Anteproyecto - 2025":
             
     st.plotly_chart(fig)
 
+    st.subheader("Flujo del gasto por tipo de gasto (% del PGN)")
+
+    lista = ['PGN', 'Tipo de gasto', 'CONCEPTO']
+    df3 = df2.copy()
+    df3['PGN'] = 'PGN'
+
+    dicti = {'2':['Inversion','Servicio de la deuda']}
+    nodes, rev_info, links = create_dataframe_sankey(df3, 'TOTAL %',*lista, **dicti)
+    fig = go.Figure(data=[go.Sankey(
+    arrangement='snap',
+    node = dict(
+      pad = 15,
+      thickness = 20,
+      line = dict(color = "#2635bf", width = 0.5),
+      label = nodes['names'],
+      color = nodes['color'],
+      x = nodes['x_pos'].values ,
+      y = nodes['x_pos'].values / 2.4
+    ),
+    link = dict(
+      source = links['source'], 
+      target = links['target'],
+      value = links['value'],
+      color = links['color'],
+      hovertemplate='Proporción del gasto de %{source.label}<br />'+
+        'hacia %{target.label}:<br /> <b>%{value:.2f}%<extra></extra>'
+    ))])
+
+    fig.update_layout(title_text="Flujo de gasto por sector - Top 10", 
+                      font_size=12, 
+                      width=1000, 
+                      height=600)
+    st.plotly_chart(fig)
+
+
+
+
     st.subheader("Flujo del gasto por sector (% del PGN)")
     lista = ['Sector', 'Tipo de gasto', 'CONCEPTO']
 

@@ -64,8 +64,8 @@ def create_dataframe_sankey(data, value_column, *columns, **filtros):
 
     nodes = pd.DataFrame({'names':nodes_list,
                   'pos':pos_list}).reset_index().rename(columns={'index':'id'})
-    nodes['x_pos'] = (nodes['pos'] / 2) + 0.001
-    nodes['x_pos'] = [0.95 if v >=1 else v for v in nodes['x_pos']]
+    nodes['x_pos'] = (nodes['pos'] / 2) + 0.02
+    nodes['x_pos'] = [0.96 if v >=1 else v for v in nodes['x_pos']]
     nodes['color'] = nodes['pos'].map(colors_nodes)
 
     colors_links = dict(enumerate(["#D9D9ED", "#FFE9C5", "#CBECEF"]))
