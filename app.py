@@ -362,7 +362,7 @@ elif selected_option == "Anteproyecto - 2025":
                       width=1000, 
                       height=600)
     st.plotly_chart(fig)
-    st.plotly_chart(fig)
+    
 
     st.subheader("Flujo del gasto por entidad (% del PGN)")
     lista = ['ENTIDAD', 'Tipo de gasto', 'CONCEPTO']
