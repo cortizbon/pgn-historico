@@ -44,13 +44,15 @@ selected_option = option_menu(None, ["Main",
                                      "Histórico por sector", 
                                      "Histórico por entidad", 
                                      "Treemap", 
-                                     "Descarga de datos"], 
+                                     "Descarga de datos",
+                                     "Anteproyecto - 2025"], 
         icons=['arrow-right-short', 
                'file-bar-graph', 
                'intersect', 
                "list-task", 
                'columns', 
-               'cloud-download'], 
+               'cloud-download',
+               'pencil-square'], 
         menu_icon="p", default_index=0, orientation="horizontal")    
     
 
@@ -310,7 +312,7 @@ elif selected_option == "Treemap":
     
     st.plotly_chart(fig)
 
-else:
+elif selected_option == "Anteproyecto - 2025":
     
     
     st.header("Anteproyecto - 2025")
@@ -449,3 +451,98 @@ else:
 
     
 
+else:
+    st.header("Descarga de datos")
+
+    st.subheader("Descarga de dataset completo")
+
+
+    binary_output = BytesIO()
+    df.to_excel(binary_output, index=False)
+    st.download_button(label = 'Descargar datos completos',
+                    data = binary_output.getvalue(),
+                    file_name = 'datos.xlsx')
+
+    st.subheader("Descarga de dataset filtrado")
+    col1, col2 = st.columns(2)
+    with col1:
+        sectors_2 = ['Todos'] + sectors
+        sectors_selected = st.multiselect("Sector(es)", sectors_2)
+        if "Todos" in sectors_selected:
+            filter_ss = df[df['Sector'].isin(sectors)]
+        else:
+            filter_ss = df[df['Sector'].isin(sectors_selected)]
+
+
+        entities_2 = ['Todas'] + list(filter_ss['Entidad'].unique())
+
+        entities_selected = st.multiselect("Entidad(es)", entities_2)
+
+        if "Todas" in entities_selected:
+            entities_selected = list(filter_ss['Entidad'].unique())
+        #rango de años
+        years_2 = ['Todos'] + years
+        years_selected = st.multiselect("Año(s)", years_2)
+
+        if "Todos" in years_selected:
+            years_selected = years.copy()
+
+        filter_s_e_y = filter_ss[(filter_ss['Entidad'].isin(entities_selected)) & (filter_ss['Año'].isin(years_selected))]
+
+    with col2:
+
+        price_selected = st.selectbox("Nivel(es) de precios", prices.keys())
+        total_or_account = st.selectbox("Suma o por cuenta", ["suma", "por cuenta"])
+        if total_or_account == 'suma':
+            pivot = (filter_s_e_y.groupby(['Año', 
+                                          'Sector',
+                                          'Entidad'])[prices[price_selected]]
+                                          .sum()
+                                          .reset_index())
+        
+        else:
+            pivot = (filter_s_e_y.groupby(['Año', 
+                                          'Sector',
+                                          'Entidad','Tipo de gasto'])[prices[price_selected]]
+                                          .sum()
+                                          .reset_index())
+        if st.button('Vista previa'):
+            show = True            
+            
+    if show:
+        st.dataframe(pivot)
+        csv = convert_df(pivot)
+
+        st.download_button(
+                label="Descargar CSV",
+                data=csv,
+                file_name='datos.csv',
+                mime='text/csv')
+        
+        binary_output = BytesIO()
+        pivot.to_excel(binary_output, index=False)
+        st.download_button(label = 'Descargar excel',
+                    data = binary_output.getvalue(),
+                    file_name = 'datos.xlsx')
+        
+    st.divider()
+        
+    st.subheader("Descarga del árbol sector-entidad del PGN")
+    with open('dictio.json', 'rb') as js:
+        dictio = json.load(js)
+
+    json_string = json.dumps(dictio)
+    st.json(json_string, expanded=False)
+
+    st.download_button(
+        label='Descargar JSON',
+        file_name='dictio.json',
+        mime="application/json",
+        data=json_string
+    )
+
+
+
+
+
+   
