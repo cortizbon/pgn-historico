@@ -52,7 +52,7 @@ def create_dataframe_sankey(data, value_column, *columns, **filtros):
     nodes_list = []
     pos_list = []
     
-    colors_nodes = dict(enumerate(["#2F399B", "#F7B261", "#81D3CD" ]))
+    colors_nodes = dict(enumerate(["#2F399B", "#F7B261", "#0FB7B3", "#81D3CD"]))
     for idx, column in enumerate(columns):
         for i, value in enumerate(data[column].unique()):
             if str(idx) in filtros.keys():
@@ -64,7 +64,7 @@ def create_dataframe_sankey(data, value_column, *columns, **filtros):
 
     nodes = pd.DataFrame({'names':nodes_list,
                   'pos':pos_list}).reset_index().rename(columns={'index':'id'})
-    nodes['x_pos'] = (nodes['pos'] / 2) + 0.02
+    nodes['x_pos'] = (nodes['pos'] / (len(columns) - 1)) + 0.02
     nodes['x_pos'] = [0.96 if v >=1 else v for v in nodes['x_pos']]
     nodes['color'] = nodes['pos'].map(colors_nodes)
 

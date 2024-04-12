@@ -366,14 +366,16 @@ elif selected_option == "Anteproyecto - 2025":
 
 
     st.subheader("Flujo del gasto por sector (% del PGN)")
-    lista = ['Sector', 'Tipo de gasto', 'CONCEPTO']
+    lista = ['PGN', 'Sector', 'Tipo de gasto', 'CONCEPTO']
+    df3 = df2.copy()
+    df3['PGN'] = 'PGN'
 
     top_10 = df2.groupby('Sector')['TOTAL'].sum().reset_index().sort_values(by='TOTAL', ascending=False).head(10)['Sector']
 
-    top_10_df = df2[df2['Sector'].isin(top_10)]
+    df3.loc[~df3['Sector'].isin(top_10), 'Sector'] = 'Otros sectores'
 
-    dicti = {'2':['Inversion','Servicio de la deuda']}
-    nodes, rev_info, links = create_dataframe_sankey(top_10_df, 'TOTAL %',*lista, **dicti)
+    dicti = {'3':['Inversion','Servicio de la deuda']}
+    nodes, rev_info, links = create_dataframe_sankey(df3, 'TOTAL %',*lista, **dicti)
     fig = go.Figure(data=[go.Sankey(
     arrangement='snap',
     node = dict(
@@ -394,7 +396,7 @@ elif selected_option == "Anteproyecto - 2025":
         'hacia %{target.label}:<br /> <b>%{value:.2f}%<extra></extra>'
     ))])
 
-    fig.update_layout(title_text="Flujo de gasto por sector - Top 10", 
+    fig.update_layout(title_text="Flujo de gasto por sector", 
                       font_size=12, 
                       width=1000, 
                       height=600)
@@ -402,14 +404,16 @@ elif selected_option == "Anteproyecto - 2025":
     
 
     st.subheader("Flujo del gasto por entidad (% del PGN)")
-    lista = ['ENTIDAD', 'Tipo de gasto', 'CONCEPTO']
+    lista = ['PGN','ENTIDAD', 'Tipo de gasto', 'CONCEPTO']
+    df3 = df2.copy()
+    df3['PGN'] = 'PGN'
 
     top_10 = df2.groupby('ENTIDAD')['TOTAL'].sum().reset_index().sort_values(by='TOTAL', ascending=False).head(10)['ENTIDAD']
 
-    top_10_df = df2[df2['ENTIDAD'].isin(top_10)]
+    df3.loc[~df3['ENTIDAD'].isin(top_10), 'ENTIDAD'] = 'Otras entidades'
 
-    dicti = {'2':['Inversion','Servicio de la deuda']}
-    nodes, rev_info, links = create_dataframe_sankey(top_10_df, 'TOTAL %',*lista, **dicti)
+    dicti = {'3':['Inversion','Servicio de la deuda']}
+    nodes, rev_info, links = create_dataframe_sankey(df3, 'TOTAL %',*lista, **dicti)
     fig = go.Figure(data=[go.Sankey(
     arrangement='snap',
     node = dict(
@@ -430,7 +434,7 @@ elif selected_option == "Anteproyecto - 2025":
         'hacia %{target.label}:<br /> <b>%{value:.2f}%<extra></extra>'
     ))])
 
-    fig.update_layout(title_text="Flujo de gasto por entidad - Top 10", 
+    fig.update_layout(title_text="Flujo de gasto por entidad", 
                       font_size=12, 
                       width=1000, 
                       height=600)
