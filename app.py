@@ -359,7 +359,7 @@ elif selected_option == "Anteproyecto - 2025":
         'hacia %{target.label}:<br /> <b>%{value:.2f}%<extra></extra>'
     ))])
 
-    fig.update_layout(title_text="Flujo de gasto por sector - Top 10", 
+    fig.update_layout(title_text="Flujo del gasto", 
                       font_size=12, 
                       width=1000, 
                       height=600)
@@ -399,7 +399,7 @@ elif selected_option == "Anteproyecto - 2025":
         'hacia %{target.label}:<br /> <b>%{value:.2f}%<extra></extra>'
     ))])
 
-    fig.update_layout(title_text="Flujo de gasto por sector", 
+    fig.update_layout(title_text="Flujo del gasto por sector", 
                       font_size=12, 
                       width=1000, 
                       height=600)
@@ -437,7 +437,7 @@ elif selected_option == "Anteproyecto - 2025":
         'hacia %{target.label}:<br /> <b>%{value:.2f}%<extra></extra>'
     ))])
 
-    fig.update_layout(title_text="Flujo de gasto por entidad", 
+    fig.update_layout(title_text="Flujo del gasto por entidad", 
                       font_size=12, 
                       width=1000, 
                       height=600)
