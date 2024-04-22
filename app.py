@@ -15,7 +15,7 @@ from utils import DIC_COLORES, convert_df, get_dic_colors, get_dic_colors_area, 
 st.set_page_config(layout='wide', page_title="ofiscal - PePE", page_icon='imgs/favicon.jpeg')
 
 df = pd.read_csv('gastos_def_2024.csv')
-df2 = pd.read_csv('anteproyecto_2025.csv')
+df2 = pd.read_csv('datos_desagregados_2025.csv')
 df['Apropiación a precios corrientes'] /= 1000000000
 df['Apropiación a precios constantes (2024)'] /= 1000000000
 years = list(df['Año'].unique())
@@ -317,10 +317,13 @@ elif selected_option == "Anteproyecto - 2025":
     
     st.header("Anteproyecto - 2025")
 
-    fig = px.treemap(df2, 
-                            path=[px.Constant('Anteproyecto'), 'Sector', 'ENTIDAD','Tipo de gasto', 
-                                    'CONCEPTO'],
-                            values='TOTAL',
+    df4 = df2.copy()
+    df4.loc[df4['CTA PROG'].isna(), 'CTA PROG'] = 'Inversión'
+
+    fig = px.treemap(df4, 
+                            path=[px.Constant('Anteproyecto'), 'Sector', 'Entidad','Tipo de gasto', 
+                                    'CTA PROG'],
+                            values='Apropiación 2025',
                             title="Matriz de composición anual del Anteproyecto <br><sup>Cifras en millones de pesos</sup>",
                             color_continuous_scale='Teal')
             
@@ -330,12 +333,12 @@ elif selected_option == "Anteproyecto - 2025":
 
     st.subheader("Flujo del gasto por tipo de gasto (% del PGN)")
 
-    lista = ['PGN', 'Tipo de gasto', 'CONCEPTO']
+    lista = ['PGN', 'Tipo de gasto', 'CTA PROG']
     df3 = df2.copy()
     df3['PGN'] = 'PGN'
 
-    dicti = {'2':['Inversion','Servicio de la deuda']}
-    nodes, rev_info, links = create_dataframe_sankey(df3, 'TOTAL %',*lista, **dicti)
+    dicti = {'2':['Inversión','Deuda']}
+    nodes, rev_info, links = create_dataframe_sankey(df3, '% porc',*lista, **dicti)
     fig = go.Figure(data=[go.Sankey(
     arrangement='snap',
     node = dict(
@@ -366,16 +369,16 @@ elif selected_option == "Anteproyecto - 2025":
 
 
     st.subheader("Flujo del gasto por sector (% del PGN)")
-    lista = ['PGN', 'Sector', 'Tipo de gasto', 'CONCEPTO']
+    lista = ['PGN', 'Sector', 'Tipo de gasto', 'CTA PROG']
     df3 = df2.copy()
     df3['PGN'] = 'PGN'
 
-    top_10 = df2.groupby('Sector')['TOTAL'].sum().reset_index().sort_values(by='TOTAL', ascending=False).head(10)['Sector']
+    top_10 = df2.groupby('Sector')['Apropiación 2025'].sum().reset_index().sort_values(by='Apropiación 2025', ascending=False).head(10)['Sector']
 
     df3.loc[~df3['Sector'].isin(top_10), 'Sector'] = 'Otros sectores'
 
-    dicti = {'3':['Inversion','Servicio de la deuda']}
-    nodes, rev_info, links = create_dataframe_sankey(df3, 'TOTAL %',*lista, **dicti)
+    dicti = {'3':['Inversión','Deuda']}
+    nodes, rev_info, links = create_dataframe_sankey(df3, '% porc',*lista, **dicti)
     fig = go.Figure(data=[go.Sankey(
     arrangement='snap',
     node = dict(
@@ -404,16 +407,16 @@ elif selected_option == "Anteproyecto - 2025":
     
 
     st.subheader("Flujo del gasto por entidad (% del PGN)")
-    lista = ['PGN','ENTIDAD', 'Tipo de gasto', 'CONCEPTO']
+    lista = ['PGN','Entidad', 'Tipo de gasto', 'CTA PROG']
     df3 = df2.copy()
     df3['PGN'] = 'PGN'
 
-    top_10 = df2.groupby('ENTIDAD')['TOTAL'].sum().reset_index().sort_values(by='TOTAL', ascending=False).head(10)['ENTIDAD']
+    top_10 = df2.groupby('Entidad')['Apropiación 2025'].sum().reset_index().sort_values(by='Apropiación 2025', ascending=False).head(10)['Entidad']
 
-    df3.loc[~df3['ENTIDAD'].isin(top_10), 'ENTIDAD'] = 'Otras entidades'
+    df3.loc[~df3['Entidad'].isin(top_10), 'Entidad'] = 'Otras entidades'
 
-    dicti = {'3':['Inversion','Servicio de la deuda']}
-    nodes, rev_info, links = create_dataframe_sankey(df3, 'TOTAL %',*lista, **dicti)
+    dicti = {'3':['Inversión','Deuda']}
+    nodes, rev_info, links = create_dataframe_sankey(df3, '% porc',*lista, **dicti)
     fig = go.Figure(data=[go.Sankey(
     arrangement='snap',
     node = dict(
