@@ -1227,7 +1227,7 @@ Año,Sector,Código de sector,Entidad,Código de entidad,Tipo de gasto,apropiaci
 2017,Agricultura y desarrollo rural,17,Agencia nacional de tierras - ant,1717,Inversión,166100000000,245680292127.591,245680292127.591,166100000000
 2017,Agricultura y desarrollo rural,17,Agencia de desarrollo rural - adr,1718,Funcionamiento,18241400000,26981050456.44936,26981050456.44936,18241400000
 2017,Agricultura y desarrollo rural,17,Agencia de desarrollo rural - adr,1718,Inversión,277460000000,410394062936.3119,410394062936.3119,277460000000
-2017,Agricultura y desarrollo rural,17,Agencia de renovación del territorio - art,1719,Funcionamiento,2803300000,4146391107.29245,4146391107.29245,2803300000
+2017,Presidencia de la república,2,Agencia de renovación del territorio - art,214,Funcionamiento,2803300000,4146391107.29245,4146391107.29245,2803300000
 2017,Salud y protección social,19,Ministerio de salud y protección social,1901,Funcionamiento,12157480835814,17982260344842.7,17982260344842.7,12157480835814
 2017,Salud y protección social,19,Ministerio de salud y protección social,1901,Inversión,315590784388,466793715239.1296,466793715239.1296,315590784388
 2017,Salud y protección social,19,Instituto nacional de salud (ins),1903,Funcionamiento,30337197000,44872073577.91859,44872073577.91859,30337197000
@@ -1511,8 +1511,8 @@ Año,Sector,Código de sector,Entidad,Código de entidad,Tipo de gasto,apropiaci
 2018,Agricultura y desarrollo rural,17,Agencia nacional de tierras - ant,1717,Inversión,261304696769,371305023101.8023,371305023101.8023,261304696769
 2018,Agricultura y desarrollo rural,17,Agencia de desarrollo rural - adr,1718,Funcionamiento,21971645586,31220955737.76228,31220955737.76228,21971645586
 2018,Agricultura y desarrollo rural,17,Agencia de desarrollo rural - adr,1718,Inversión,262541031969,373061813070.2711,373061813070.2711,262541031969
-2018,Agricultura y desarrollo rural,17,Agencia de renovación del territorio - art,1719,Funcionamiento,44400845940,63092081127.28848,63092081127.28848,44400845940
-2018,Agricultura y desarrollo rural,17,Agencia de renovación del territorio - art,1719,Inversión,51930000000,73790751134.95667,73790751134.95667,51930000000
+2018,Presidencia de la república,2,Agencia de renovación del territorio - art,214,Funcionamiento,44400845940,63092081127.28848,63092081127.28848,44400845940
+2018,Presidencia de la república,2,Agencia de renovación del territorio - art,214,Inversión,51930000000,73790751134.95667,73790751134.95667,51930000000
 2018,Salud y protección social,19,Ministerio de salud y protección social,1901,Funcionamiento,23052103051803,32756248785537.65,32756248785537.65,23052103051803
 2018,Salud y protección social,19,Ministerio de salud y protección social,1901,Inversión,393396353887,559002743059.406,559002743059.406,393396353887
 2018,Salud y protección social,19,Instituto nacional de salud (ins),1903,Funcionamiento,33804038000,48034380038.79488,48034380038.79488,33804038000
@@ -1807,8 +1807,8 @@ Año,Sector,Código de sector,Entidad,Código de entidad,Tipo de gasto,apropiaci
 2019,Agricultura y desarrollo rural,17,Agencia nacional de tierras - ant,1717,Inversión,316424294330,435779538151.276,435779538151.276,316424294330
 2019,Agricultura y desarrollo rural,17,Agencia de desarrollo rural - adr,1718,Funcionamiento,21993510913,30289463229.3836,30289463229.3836,21993510913
 2019,Agricultura y desarrollo rural,17,Agencia de desarrollo rural - adr,1718,Inversión,248857975094,342727203299.4568,342727203299.4568,248857975094
-2019,Agricultura y desarrollo rural,17,Agencia de renovación del territorio - art,1719,Funcionamiento,47472083624,65378553566.9728,65378553566.9728,47472083624
-2019,Agricultura y desarrollo rural,17,Agencia de renovación del territorio - art,1719,Inversión,66595114310,91714791427.732,91714791427.732,66595114310
+2019,Presidencia de la república,2,Agencia de renovación del territorio - art,214,Funcionamiento,47472083624,65378553566.9728,65378553566.9728,47472083624
+2019,Presidencia de la república,2,Agencia de renovación del territorio - art,214,Inversión,66595114310,91714791427.732,91714791427.732,66595114310
 2019,Salud y protección social,19,Ministerio de salud y protección social,1901,Funcionamiento,30583108406007,42119056896752.84,42119056896752.84,30583108406007
 2019,Salud y protección social,19,Ministerio de salud y protección social,1901,Inversión,505676708196,696417962527.5311,696417962527.5311,505676708196
 2019,Salud y protección social,19,Instituto nacional de salud (ins),1903,Funcionamiento,36118398072,49742257824.7584,49742257824.7584,36118398072
