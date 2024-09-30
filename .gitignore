@@ -3,3 +3,4 @@
 *.ipynb
 test*.*
 *.css
+.DS_Store
