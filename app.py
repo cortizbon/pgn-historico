@@ -16,6 +16,7 @@ st.set_page_config(layout='wide', page_title="ofiscal - PePE", page_icon='imgs/f
 
 df = pd.read_csv('gastos_def_2024.csv')
 df2 = pd.read_csv('datos_desagregados_2025.csv')
+df2025 = pd.read_csv('ley_2025.csv')
 df['Apropiación a precios corrientes'] /= 1000000000
 df['Apropiación a precios constantes (2024)'] /= 1000000000
 years = list(df['Año'].unique())
@@ -45,7 +46,7 @@ selected_option = option_menu(None, ["Main",
                                      "Histórico por entidad", 
                                      "Treemap", 
                                      "Descarga de datos",
-                                     "Anteproyecto - 2025"], 
+                                     "Proyecto - 2025"], 
         icons=['arrow-right-short', 
                'file-bar-graph', 
                'intersect', 
@@ -312,7 +313,29 @@ elif selected_option == "Treemap":
     
     st.plotly_chart(fig)
 
-elif selected_option == "Anteproyecto - 2025":
+elif selected_option == "Proyecto - 2025":
+
+    st.header("Proyecto de ley - 2025")
+    df2025['TOTAL_mil'] = (df2025['TOTAL'] / 1000000).round(1)
+
+    fig = px.treemap(df2025, path=[px.Constant('Proyecto'), 'Sector', 'Entidad', 'Tipo de gasto'],
+                            values='TOTAL_mil',
+                            title="Matriz de composición anual del proyecto <br><sup>Cifras en millones de pesos</sup>",
+                            color_continuous_scale='Teal')
+
+    fig.update_layout(width=1000, height=600)
+            
+    st.plotly_chart(fig)
+
+    st.subheader("Descarga de datos")
+
+
+    binary_output = BytesIO()
+    df2025.to_excel(binary_output, index=False)
+    st.download_button(label = 'Descargar datos de proyecto',
+                    data = binary_output.getvalue(),
+                    file_name = 'proyecto_2025.xlsx')  
+
     
     
     st.header("Anteproyecto - 2025")

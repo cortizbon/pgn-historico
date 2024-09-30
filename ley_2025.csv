@@ -1,0 +1,301 @@
+TOTAL,Código de entidad,Tipo de gasto,Código de sector,Sector,Entidad,Año
+1112522000000,101,Funcionamiento,1,Congreso de la república,Congreso de la república,2025
+1106000000,101,Deuda,1,Congreso de la república,Congreso de la república,2025
+200000000000,101,Inversión,1,Congreso de la república,Congreso de la república,2025
+452841786933,201,Funcionamiento,2,Presidencia de la república,Presidencia de la república,2025
+168668164194,201,Inversión,2,Presidencia de la república,Presidencia de la república,2025
+48822000000,209,Funcionamiento,2,Presidencia de la república,"Agencia presidencial de cooperación internacional de colombia, apc - colombia",2025
+72545160000,209,Inversión,2,Presidencia de la república,"Agencia presidencial de cooperación internacional de colombia, apc - colombia",2025
+707832000000,211,Funcionamiento,2,Presidencia de la república,Unidad nacional para la gestión del riesgo de desastres,2025
+17000000000,211,Inversión,2,Presidencia de la república,Unidad nacional para la gestión del riesgo de desastres,2025
+353859084174,212,Funcionamiento,2,Presidencia de la república,Agencia para la reincorporación y la normalización - arn,2025
+2200000000,212,Inversión,2,Presidencia de la república,Agencia para la reincorporación y la normalización - arn,2025
+11856000000,213,Funcionamiento,2,Presidencia de la república,Agencia nacional inmobiliaria virgilio barco vargas,2025
+24000000000,213,Inversión,2,Presidencia de la república,Agencia nacional inmobiliaria virgilio barco vargas,2025
+74833000000,214,Funcionamiento,2,Presidencia de la república,Agencia de renovación del territorio – art,2025
+65000000000,214,Inversión,2,Presidencia de la república,Agencia de renovación del territorio – art,2025
+121110968620,301,Funcionamiento,3,Planeación,Departamento administrativo nacional de planeación,2025
+643371314128,301,Inversión,3,Planeación,Departamento administrativo nacional de planeación,2025
+25808823411,303,Funcionamiento,3,Planeación,Unidad administrativa especial  - agencia nacional de contratación pública - colombia compra eficiente,2025
+94683000000,303,Inversión,3,Planeación,Unidad administrativa especial  - agencia nacional de contratación pública - colombia compra eficiente,2025
+354424083800,324,Funcionamiento,3,Planeación,Superintendencia de servicios públicos domiciliarios,2025
+73143450309,324,Inversión,3,Planeación,Superintendencia de servicios públicos domiciliarios,2025
+153718925120,401,Funcionamiento,4,Información estadística,Departamento administrativo nacional de estadística (dane),2025
+194597506983,401,Inversión,4,Información estadística,Departamento administrativo nacional de estadística (dane),2025
+2744000000,402,Funcionamiento,4,Información estadística,Fondo rotatorio del dane,2025
+75000000000,402,Inversión,4,Información estadística,Fondo rotatorio del dane,2025
+119056000000,403,Funcionamiento,4,Información estadística,Instituto geográfico agustín codazzi - igac,2025
+600485461000,403,Inversión,4,Información estadística,Instituto geográfico agustín codazzi - igac,2025
+34103299265,501,Funcionamiento,5,Empleo público,Departamento administrativo de la función pública,2025
+15000356199,501,Inversión,5,Empleo público,Departamento administrativo de la función pública,2025
+145292167438,503,Funcionamiento,5,Empleo público,Escuela superior de administración pública (esap),2025
+272535702975,503,Inversión,5,Empleo público,Escuela superior de administración pública (esap),2025
+768975000000,1101,Funcionamiento,11,Relaciones exteriores,Ministerio de relaciones exteriores,2025
+880003000000,1102,Funcionamiento,11,Relaciones exteriores,Fondo rotatorio del ministerio de relaciones exteriores,2025
+142749930347,1102,Inversión,11,Relaciones exteriores,Fondo rotatorio del ministerio de relaciones exteriores,2025
+252961000000,1104,Funcionamiento,11,Relaciones exteriores,Unidad administrativa especial migración colombia,2025
+50649000000,1104,Inversión,11,Relaciones exteriores,Unidad administrativa especial migración colombia,2025
+164176400000,1201,Funcionamiento,12,Justicia y del derecho,Ministerio de justicia y del derecho,2025
+73125091530,1201,Inversión,12,Justicia y del derecho,Ministerio de justicia y del derecho,2025
+721531000000,1204,Funcionamiento,12,Justicia y del derecho,Superintendencia de notariado y registro,2025
+297617170025,1204,Inversión,12,Justicia y del derecho,Superintendencia de notariado y registro,2025
+2162793720000,1208,Funcionamiento,12,Justicia y del derecho,Instituto nacional penitenciario y carcelario - inpec,2025
+6432700000,1208,Inversión,12,Justicia y del derecho,Instituto nacional penitenciario y carcelario - inpec,2025
+142920600000,1210,Funcionamiento,12,Justicia y del derecho,Unidad administrativa especial agencia nacional de defensa jurídica del estado,2025
+12266327000,1210,Inversión,12,Justicia y del derecho,Unidad administrativa especial agencia nacional de defensa jurídica del estado,2025
+1521986600000,1211,Funcionamiento,12,Justicia y del derecho,Unidad de servicios penitenciarios y carcelarios - uspec,2025
+417850199304,1211,Inversión,12,Justicia y del derecho,Unidad de servicios penitenciarios y carcelarios - uspec,2025
+29367129242482,1301,Funcionamiento,13,Hacienda,Ministerio de hacienda y crédito público,2025
+3687426084927,1301,Inversión,13,Hacienda,Ministerio de hacienda y crédito público,2025
+24549000000,1308,Funcionamiento,13,Hacienda,Unidad administrativa especial contaduría general de la nación,2025
+8700000000,1308,Inversión,13,Hacienda,Unidad administrativa especial contaduría general de la nación,2025
+25169000000,1309,Funcionamiento,13,Hacienda,Superintendencia de la economía solidaria,2025
+10000000000,1309,Inversión,13,Hacienda,Superintendencia de la economía solidaria,2025
+4336363532000,1310,Funcionamiento,13,Hacienda,Unidad administrativa especial dirección de impuestos y aduanas nacionales,2025
+78629373000,1310,Inversión,13,Hacienda,Unidad administrativa especial dirección de impuestos y aduanas nacionales,2025
+31256000000,1312,Funcionamiento,13,Hacienda,Unidad de información y análisis financiero,2025
+5027100000,1312,Inversión,13,Hacienda,Unidad de información y análisis financiero,2025
+411995624000,1313,Funcionamiento,13,Hacienda,Superintendencia financiera de colombia,2025
+61066305153,1313,Inversión,13,Hacienda,Superintendencia financiera de colombia,2025
+279210000000,1314,Funcionamiento,13,Hacienda,Unidad administrativa especial de gestión  pensional y contribuciones parafiscales de la protección social (ugppp),2025
+7000000000,1314,Inversión,13,Hacienda,Unidad administrativa especial de gestión  pensional y contribuciones parafiscales de la protección social (ugppp),2025
+44434000000,1315,Funcionamiento,13,Hacienda,Fondo adaptación,2025
+623765525677,1315,Inversión,13,Hacienda,Fondo adaptación,2025
+109828422000000,1401,Deuda,14,Servicio de la deuda pública nacional,Servicio de la deuda pública nacional,2025
+22187987000000,1501,Funcionamiento,15,Defensa y policía,Ministerio de defensa nacional,2025
+551476868334,1501,Deuda,15,Defensa y policía,Ministerio de defensa nacional,2025
+2092802953143,1501,Inversión,15,Defensa y policía,Ministerio de defensa nacional,2025
+7731579000000,1503,Funcionamiento,15,Defensa y policía,Caja de retiro de las fuerzas militares,2025
+16480000000,1503,Inversión,15,Defensa y policía,Caja de retiro de las fuerzas militares,2025
+36841000000,1507,Funcionamiento,15,Defensa y policía,Instituto casas fiscales del ejército,2025
+38200000000,1507,Inversión,15,Defensa y policía,Instituto casas fiscales del ejército,2025
+44705000000,1508,Funcionamiento,15,Defensa y policía,"Defensa civil colombiana, guillermo león valencia",2025
+12300000000,1508,Inversión,15,Defensa y policía,"Defensa civil colombiana, guillermo león valencia",2025
+64037000000,1510,Funcionamiento,15,Defensa y policía,Club militar de oficiales,2025
+4578000000,1510,Inversión,15,Defensa y policía,Club militar de oficiales,2025
+7327127000000,1511,Funcionamiento,15,Defensa y policía,Caja de sueldos de retiro de la policía nacional,2025
+9548000000,1511,Inversión,15,Defensa y policía,Caja de sueldos de retiro de la policía nacional,2025
+307162000000,1512,Funcionamiento,15,Defensa y policía,Fondo rotatorio de la policía,2025
+5276235351,1512,Inversión,15,Defensa y policía,Fondo rotatorio de la policía,2025
+33484000000,1516,Funcionamiento,15,Defensa y policía,Superintendencia de vigilancia y seguridad privada,2025
+4575000000,1516,Inversión,15,Defensa y policía,Superintendencia de vigilancia y seguridad privada,2025
+519740000000,1519,Funcionamiento,15,Defensa y policía,Hospital militar,2025
+46400000000,1519,Inversión,15,Defensa y policía,Hospital militar,2025
+828963000000,1520,Funcionamiento,15,Defensa y policía,Agencia logística de las fuerzas militares,2025
+6500000000,1520,Inversión,15,Defensa y policía,Agencia logística de las fuerzas militares,2025
+175754000000,1521,Funcionamiento,15,Defensa y policía,Unidad administrativa especial de la justicia penal militar y policial,2025
+11227362144,1521,Inversión,15,Defensa y policía,Unidad administrativa especial de la justicia penal militar y policial,2025
+16989377000000,1601,Funcionamiento,16,Defensa y policía,Policía nacional,2025
+244562549467,1601,Inversión,16,Defensa y policía,Policía nacional,2025
+436853554000,1701,Funcionamiento,17,Agricultura y desarrollo rural,Ministerio de agricultura y desarrollo rural,2025
+1097072964088,1701,Inversión,17,Agricultura y desarrollo rural,Ministerio de agricultura y desarrollo rural,2025
+219595508000,1702,Funcionamiento,17,Agricultura y desarrollo rural,Instituto colombiano agropecuario (ica),2025
+270668107733,1702,Inversión,17,Agricultura y desarrollo rural,Instituto colombiano agropecuario (ica),2025
+24417000000,1715,Funcionamiento,17,Agricultura y desarrollo rural,Autoridad nacional de acuicultura y pesca - aunap,2025
+73520013996,1715,Inversión,17,Agricultura y desarrollo rural,Autoridad nacional de acuicultura y pesca - aunap,2025
+80608731000,1716,Funcionamiento,17,Agricultura y desarrollo rural,Unidad administrativa especial de gestión de restitución de tierras despojadas,2025
+455420835664,1716,Inversión,17,Agricultura y desarrollo rural,Unidad administrativa especial de gestión de restitución de tierras despojadas,2025
+82539448000,1717,Funcionamiento,17,Agricultura y desarrollo rural,Agencia nacional de tierras - ant,2025
+1570644076174,1717,Inversión,17,Agricultura y desarrollo rural,Agencia nacional de tierras - ant,2025
+57526196000,1718,Funcionamiento,17,Agricultura y desarrollo rural,Agencia de desarrollo rural - adr,2025
+656674002345,1718,Inversión,17,Agricultura y desarrollo rural,Agencia de desarrollo rural - adr,2025
+63192352924489,1901,Funcionamiento,19,Salud y protección social,Ministerio de salud y protección social,2025
+1886900174049,1901,Inversión,19,Salud y protección social,Ministerio de salud y protección social,2025
+61080047000,1903,Funcionamiento,19,Salud y protección social,Instituto nacional de salud (ins),2025
+62680604677,1903,Inversión,19,Salud y protección social,Instituto nacional de salud (ins),2025
+239012900000,1910,Funcionamiento,19,Salud y protección social,Superintendencia nacional de salud,2025
+147198844691,1910,Inversión,19,Salud y protección social,Superintendencia nacional de salud,2025
+182243290000,1912,Funcionamiento,19,Salud y protección social,Instituto nacional de vigilancia de medicamentos y alimentos - invima,2025
+60520761562,1912,Inversión,19,Salud y protección social,Instituto nacional de vigilancia de medicamentos y alimentos - invima,2025
+434073887000,1913,Funcionamiento,19,Salud y protección social,Fondo de previsión social del congreso ,2025
+500000000,1913,Inversión,19,Salud y protección social,Fondo de previsión social del congreso ,2025
+842723447000,1914,Funcionamiento,19,Salud y protección social,Fondo pasivo social de ferrocarriles nacionales de colombia ,2025
+1900500000,1914,Inversión,19,Salud y protección social,Fondo pasivo social de ferrocarriles nacionales de colombia ,2025
+213507113200,2101,Funcionamiento,21,Minas y energía,Ministerio de minas y energía,2025
+3459701281,2101,Deuda,21,Minas y energía,Ministerio de minas y energía,2025
+6651165204240,2101,Inversión,21,Minas y energía,Ministerio de minas y energía,2025
+77090638784,2103,Funcionamiento,21,Minas y energía,Servicio geológico colombiano,2025
+114937956623,2103,Inversión,21,Minas y energía,Servicio geológico colombiano,2025
+37050677000,2109,Funcionamiento,21,Minas y energía,Unidad de planeacion minero energética - upme,2025
+36479831271,2109,Inversión,21,Minas y energía,Unidad de planeacion minero energética - upme,2025
+27129264823,2110,Funcionamiento,21,Minas y energía,Instituto de planificación y promoción de soluciones  energéticas para las zonas no interconectadas - ipse,2025
+137762840337,2110,Inversión,21,Minas y energía,Instituto de planificación y promoción de soluciones  energéticas para las zonas no interconectadas - ipse,2025
+3064210361082,2111,Funcionamiento,21,Minas y energía,Agencia nacional de hidrocarburos - anh,2025
+385890000000,2111,Inversión,21,Minas y energía,Agencia nacional de hidrocarburos - anh,2025
+372516686000,2112,Funcionamiento,21,Minas y energía,Agencia nacional de minería - anm,2025
+116615000000,2112,Inversión,21,Minas y energía,Agencia nacional de minería - anm,2025
+64666847437906,2201,Funcionamiento,22,Educación,Ministerio de educación nacional,2025
+5661042732911,2201,Inversión,22,Educación,Ministerio de educación nacional,2025
+49826078281,2234,Funcionamiento,22,Educación,Escuela tecnológica instituto técnico central,2025
+19207038725,2234,Inversión,22,Educación,Escuela tecnológica instituto técnico central,2025
+8747852389,2238,Funcionamiento,22,Educación,Instituto nacional de formación técnica profesional de san andres y providencia,2025
+8217481969,2238,Inversión,22,Educación,Instituto nacional de formación técnica profesional de san andres y providencia,2025
+11137346365,2239,Funcionamiento,22,Educación,Instituto nacional de formación técnica profesional de san juan del cesar,2025
+9388000000,2239,Inversión,22,Educación,Instituto nacional de formación técnica profesional de san juan del cesar,2025
+30444508468,2241,Funcionamiento,22,Educación,Instituto tolimense de formación técnica profesional,2025
+8184071470,2241,Inversión,22,Educación,Instituto tolimense de formación técnica profesional,2025
+15041341108,2242,Funcionamiento,22,Educación,"Instituto técnico nacional de comercio ""simón rodríguez"" de cali",2025
+12125395223,2242,Inversión,22,Educación,"Instituto técnico nacional de comercio ""simón rodríguez"" de cali",2025
+16318707345,2246,Funcionamiento,22,Educación,Unidad administrativa especial alimentación escolar,2025
+2105728519128,2246,Inversión,22,Educación,Unidad administrativa especial alimentación escolar,2025
+6433355555940,2257,Funcionamiento,22,Educación,Entes autónomos universitarios estatales - universidades públicas,2025
+189134997201,2257,Inversión,22,Educación,Entes autónomos universitarios estatales - universidades públicas,2025
+127996875000,2301,Funcionamiento,23,Tecnologías de la información y las comunicaciones,Ministerio de tecnologías de la información y las comunicaciones,2025
+599534016000,2306,Funcionamiento,23,Tecnologías de la información y las comunicaciones,Fondo único de tecnologías de la información y las comunicaciones,2025
+1636783512553,2306,Inversión,23,Tecnologías de la información y las comunicaciones,Fondo único de tecnologías de la información y las comunicaciones,2025
+38833930000,2308,Funcionamiento,23,Tecnologías de la información y las comunicaciones,Unidad administrativa especial comisión de regulación de las comunicaciones ,2025
+18016917000,2308,Inversión,23,Tecnologías de la información y las comunicaciones,Unidad administrativa especial comisión de regulación de las comunicaciones ,2025
+22024741401,2309,Funcionamiento,23,Tecnologías de la información y las comunicaciones,Agencia nacional del espectro - ane,2025
+27314426599,2309,Inversión,23,Tecnologías de la información y las comunicaciones,Agencia nacional del espectro - ane,2025
+27442872600,2311,Funcionamiento,23,Tecnologías de la información y las comunicaciones,Computadores para educar cpe,2025
+147562268400,2311,Inversión,23,Tecnologías de la información y las comunicaciones,Computadores para educar cpe,2025
+5231290000,2312,Funcionamiento,23,Tecnologías de la información y las comunicaciones,Corporación agencia nacional de gobierno digital - and,2025
+131722000296,2312,Inversión,23,Tecnologías de la información y las comunicaciones,Corporación agencia nacional de gobierno digital - and,2025
+315303412000,2401,Funcionamiento,24,Transporte,Ministerio de transporte,2025
+6797215826,2401,Deuda,24,Transporte,Ministerio de transporte,2025
+129575000000,2401,Inversión,24,Transporte,Ministerio de transporte,2025
+220812175000,2402,Funcionamiento,24,Transporte,Instituto nacional de vías,2025
+601876014,2402,Deuda,24,Transporte,Instituto nacional de vías,2025
+3464357634368,2402,Inversión,24,Transporte,Instituto nacional de vías,2025
+837409834774,2412,Funcionamiento,24,Transporte,Unidad administrativa especial de la aeronáutica civil,2025
+2283951000000,2412,Inversión,24,Transporte,Unidad administrativa especial de la aeronáutica civil,2025
+134319232110,2413,Funcionamiento,24,Transporte,Agencia nacional de infraestructura,2025
+2013839757091,2413,Deuda,24,Transporte,Agencia nacional de infraestructura,2025
+7382206818592,2413,Inversión,24,Transporte,Agencia nacional de infraestructura,2025
+18098365000,2414,Funcionamiento,24,Transporte,Unidad de planeación del sector de infraestructura de transporte,2025
+16500000000,2414,Inversión,24,Transporte,Unidad de planeación del sector de infraestructura de transporte,2025
+1407199000,2415,Funcionamiento,24,Transporte,Comisión de regulación de infraestructura y transporte,2025
+29644186000,2416,Funcionamiento,24,Transporte,Agencia nacional de seguridad vial,2025
+174455608437,2416,Inversión,24,Transporte,Agencia nacional de seguridad vial,2025
+60447831028,2417,Funcionamiento,24,Transporte,Superintendencia de puertos y transporte,2025
+37067526073,2417,Inversión,24,Transporte,Superintendencia de puertos y transporte,2025
+1347128000000,2501,Funcionamiento,25,Organismos de control,Procuraduría general de la nación,2025
+96802000000,2501,Inversión,25,Organismos de control,Procuraduría general de la nación,2025
+1130439000000,2502,Funcionamiento,25,Organismos de control,Defensoría del pueblo,2025
+122300000000,2502,Inversión,25,Organismos de control,Defensoría del pueblo,2025
+1307041000000,2601,Funcionamiento,26,Organismos de control,Contraloría general de la república,2025
+186701326884,2601,Inversión,26,Organismos de control,Contraloría general de la república,2025
+148098000000,2602,Funcionamiento,26,Organismos de control,Fondo de bienestar social de la contraloría general de la república,2025
+898818033,2602,Inversión,26,Organismos de control,Fondo de bienestar social de la contraloría general de la república,2025
+9097188000000,2701,Funcionamiento,27,Rama judicial,Rama judicial,2025
+17695578134,2701,Deuda,27,Rama judicial,Rama judicial,2025
+1300000000000,2701,Inversión,27,Rama judicial,Rama judicial,2025
+573522107559,2801,Funcionamiento,28,Registraduría,Registraduría nacional del estado civil,2025
+158698049298,2801,Inversión,28,Registraduría,Registraduría nacional del estado civil,2025
+92500584478,2802,Funcionamiento,28,Registraduría,Fondo rotatorio de la registraduría,2025
+171718456809,2802,Inversión,28,Registraduría,Fondo rotatorio de la registraduría,2025
+14685380447,2803,Funcionamiento,28,Registraduría,Fondo social de vivienda de la registraduría nacional del estado civil,2025
+478221131936,2804,Funcionamiento,28,Registraduría,Consejo nacional electoral,2025
+10646765998,2804,Inversión,28,Registraduría,Consejo nacional electoral,2025
+6214415600000,2901,Funcionamiento,29,Fiscalía,Fiscalía general de la nación,2025
+173977914661,2901,Deuda,29,Fiscalía,Fiscalía general de la nación,2025
+206231750000,2901,Inversión,29,Fiscalía,Fiscalía general de la nación,2025
+389542913000,2902,Funcionamiento,29,Fiscalía,Instituto nacional de medicina legal y ciencias forenses,2025
+114155647000,2902,Inversión,29,Fiscalía,Instituto nacional de medicina legal y ciencias forenses,2025
+19569955000,2904,Funcionamiento,29,Fiscalía,Fondo especial para la administración de bienes de la fiscalía general de la nación,2025
+19276000000,2904,Inversión,29,Fiscalía,Fondo especial para la administración de bienes de la fiscalía general de la nación,2025
+413756961050,3201,Funcionamiento,32,Ambiente y desarrollo sostenible,Ministerio de ambiente y desarrollo sostenible,2025
+785846835468,3201,Inversión,32,Ambiente y desarrollo sostenible,Ministerio de ambiente y desarrollo sostenible,2025
+67307033210,3202,Funcionamiento,32,Ambiente y desarrollo sostenible,"Instituto de hidrología, meteorología y estudios ambientales- ideam",2025
+31999229301,3202,Inversión,32,Ambiente y desarrollo sostenible,"Instituto de hidrología, meteorología y estudios ambientales- ideam",2025
+98170300000,3204,Funcionamiento,32,Ambiente y desarrollo sostenible,Fondo nacional ambiental,2025
+175098406366,3204,Inversión,32,Ambiente y desarrollo sostenible,Fondo nacional ambiental,2025
+4024700000,3208,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación autónoma regional de los valles del sinú y san jorge (cvs),2025
+6325400806,3209,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación autónoma regional del quindío (crq),2025
+5049176129,3210,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación para el desarrollo sostenible del urabá (corpourabá),2025
+5283500000,3211,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación autónoma regional de caldas (corpocaldas),2025
+99070023380,3212,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación autónoma regional para el desarrollo sostenible del choco (codechoco),2025
+1702100000,3213,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación autónoma regional para la defensa de la meseta de bucaramanga (cdmb),2025
+2926072953,3214,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación autónoma regional del tolima (cortolima),2025
+3514167948,3215,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación autónoma regional de risaralda (carder),2025
+3513251788,3216,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación autónoma regional de nariño (corponariño),2025
+5315100000,3217,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación autónoma regional de la frontera nororiental (corponor),2025
+5048300000,3218,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación autónoma regional de la  guajira (corpoguajira),2025
+4025096652,3219,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación autónoma regional del cesar (corpocesar),2025
+8006600000,3221,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación autónoma regional del cauca (crc),2025
+6650774000,3222,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación autónoma regional del magdalena (corpamag),2025
+3044415021,3223,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación para el desarrollo sostenible del sur de la amazonia (corpoamazonia),2025
+3250763399,3224,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación  para el desarrollo sostenible del norte y oriente de la amazonia (cda),2025
+3159139259,3226,Funcionamiento,32,Ambiente y desarrollo sostenible,"Corporación para el desarrollo sostenible del archipiélago de san andres, providencia y santa catalina (coralina)",2025
+3443000000,3227,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación para el desarrollo sostenible del área de manejo especial la macarena (cormacarena),2025
+3107181000,3228,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación  para el desarrollo sostenible de la mojana y el san jorge (corpomojana),2025
+2947800000,3229,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación autónoma regional de la orinoquia (corporinoquia),2025
+3441456374,3230,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación autónoma regional de sucre (carsucre),2025
+3275600000,3231,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación autónoma regional del alto magdalena (cam),2025
+3234214457,3232,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación autónoma regional del centro de antioquia (corantioquia),2025
+2807918000,3233,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación autónoma regional del atlántico (cra),2025
+3161500000,3234,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación autónoma regional de santander (cas),2025
+2837208309,3235,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación autónoma regional de boyacá (corpoboyacá),2025
+3185000000,3236,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación autónoma regional de chivor (corpochivor),2025
+1014700000,3237,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación autónoma regional del guavio (corpoguavio),2025
+3065068000,3238,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación autónoma regional del canal del dique (cardique),2025
+3700700000,3239,Funcionamiento,32,Ambiente y desarrollo sostenible,Corporación autónoma regional del sur de bolívar (csb),2025
+292859963090,3301,Funcionamiento,33,"Ministerio de las culturas, las artes y los saberes","Ministerio de las culturas, las artes y los saberes",2025
+651354591139,3301,Inversión,33,"Ministerio de las culturas, las artes y los saberes","Ministerio de las culturas, las artes y los saberes",2025
+20106894416,3304,Funcionamiento,33,"Ministerio de las culturas, las artes y los saberes",Archivo general de la nación,2025
+34525005387,3304,Inversión,33,"Ministerio de las culturas, las artes y los saberes",Archivo general de la nación,2025
+27730016172,3305,Funcionamiento,33,"Ministerio de las culturas, las artes y los saberes",Instituto colombiano de antropología e historia,2025
+33681709185,3305,Inversión,33,"Ministerio de las culturas, las artes y los saberes",Instituto colombiano de antropología e historia,2025
+16050094833,3307,Funcionamiento,33,"Ministerio de las culturas, las artes y los saberes",Instituto caro y cuervo,2025
+14454263039,3307,Inversión,33,"Ministerio de las culturas, las artes y los saberes",Instituto caro y cuervo,2025
+63510000000,3401,Funcionamiento,34,Organismos de control,Auditoría general de la republica,2025
+13000000000,3401,Inversión,34,Organismos de control,Auditoría general de la republica,2025
+660302227000,3501,Funcionamiento,35,"Comercio, industria y turismo","Ministerio de comercio, industria y turismo",2025
+198352184065,3501,Inversión,35,"Comercio, industria y turismo","Ministerio de comercio, industria y turismo",2025
+194184002000,3502,Funcionamiento,35,"Comercio, industria y turismo",Superintendencia de sociedades,2025
+30696200000,3502,Inversión,35,"Comercio, industria y turismo",Superintendencia de sociedades,2025
+226582198000,3503,Funcionamiento,35,"Comercio, industria y turismo",Superintendencia de industria y comercio,2025
+145087794139,3503,Inversión,35,"Comercio, industria y turismo",Superintendencia de industria y comercio,2025
+15548661000,3504,Funcionamiento,35,"Comercio, industria y turismo",Unidad administrativa especial junta central contadores,2025
+14000753000,3504,Inversión,35,"Comercio, industria y turismo",Unidad administrativa especial junta central contadores,2025
+23980556000,3505,Funcionamiento,35,"Comercio, industria y turismo",Instituto nacional de metrología - inm,2025
+15715756932,3505,Inversión,35,"Comercio, industria y turismo",Instituto nacional de metrología - inm,2025
+46596615048309,3601,Funcionamiento,36,Trabajo,Ministerio del trabajo,2025
+440592840646,3601,Inversión,36,Trabajo,Ministerio del trabajo,2025
+127990194000,3602,Funcionamiento,36,Trabajo,Servicio nacional de aprendizaje (sena),2025
+6243740691413,3602,Inversión,36,Trabajo,Servicio nacional de aprendizaje (sena),2025
+10352398000,3612,Funcionamiento,36,Trabajo,Unidad administrativa especial de organizaciones solidarias,2025
+45000000000,3612,Inversión,36,Trabajo,Unidad administrativa especial de organizaciones solidarias,2025
+15043360000,3613,Funcionamiento,36,Trabajo,Unidad administrativa especial del servicio público de empleo,2025
+17000000000,3613,Inversión,36,Trabajo,Unidad administrativa especial del servicio público de empleo,2025
+1111333500000,3701,Funcionamiento,37,Interior,Ministerio del interior,2025
+397622826322,3701,Inversión,37,Interior,Ministerio del interior,2025
+7837900000,3703,Funcionamiento,37,Interior,Dirección nacional del derecho de autor,2025
+841000000,3703,Inversión,37,Interior,Dirección nacional del derecho de autor,2025
+4959010000,3704,Funcionamiento,37,Interior,Corporación nacional para la reconstrucción de la cuenca del rio páez y zonas aledañas nasa ki we,2025
+10056384633,3704,Inversión,37,Interior,Corporación nacional para la reconstrucción de la cuenca del rio páez y zonas aledañas nasa ki we,2025
+2681558502000,3708,Funcionamiento,37,Interior,Unidad nacional de protección - unp,2025
+7809482693,3708,Deuda,37,Interior,Unidad nacional de protección - unp,2025
+3000000000,3708,Inversión,37,Interior,Unidad nacional de protección - unp,2025
+15484100000,3709,Funcionamiento,37,Interior,Dirección nacional de bomberos,2025
+71906000000,3709,Inversión,37,Interior,Dirección nacional de bomberos,2025
+36967864777,3801,Funcionamiento,38,Empleo público,Comisión nacional del servicio civil,2025
+109930103096,3801,Inversión,38,Empleo público,Comisión nacional del servicio civil,2025
+32876734000,3901,Funcionamiento,39,"Ciencia, tecnología e innovación","Ministerio de ciencia, tecnología e innovación",2025
+266987639124,3901,Inversión,39,"Ciencia, tecnología e innovación","Ministerio de ciencia, tecnología e innovación",2025
+4343587194403,4001,Funcionamiento,40,"Vivienda, ciudad y territorio","Ministerio de vivienda, ciudad y territorio",2025
+1614293994900,4001,Inversión,40,"Vivienda, ciudad y territorio","Ministerio de vivienda, ciudad y territorio",2025
+8800000000,4002,Funcionamiento,40,"Vivienda, ciudad y territorio",Fondo nacional de vivienda - fonvivienda,2025
+2659636589387,4002,Inversión,40,"Vivienda, ciudad y territorio",Fondo nacional de vivienda - fonvivienda,2025
+262123929351,4101,Funcionamiento,41,Inclusión social y reconciliación,Departamento administrativo para la prosperidad social,2025
+5399606566879,4101,Inversión,41,Inclusión social y reconciliación,Departamento administrativo para la prosperidad social,2025
+1822309711324,4104,Funcionamiento,41,Inclusión social y reconciliación,Unidad de atención y reparación integral a las víctimas,2025
+2488667165115,4104,Inversión,41,Inclusión social y reconciliación,Unidad de atención y reparación integral a las víctimas,2025
+18503458353,4105,Funcionamiento,41,Inclusión social y reconciliación,Centro de memoria histórica,2025
+60905600185,4105,Inversión,41,Inclusión social y reconciliación,Centro de memoria histórica,2025
+155589000000,4201,Funcionamiento,42,Inteligencia,Departamento administrativo dirección nacional de inteligencia,2025
+38231000000,4201,Inversión,42,Inteligencia,Departamento administrativo dirección nacional de inteligencia,2025
+64365817578,4301,Funcionamiento,43,Deporte y recreación,Ministerio del deporte,2025
+400000000000,4301,Inversión,43,Deporte y recreación,Ministerio del deporte,2025
+547711000000,4401,Funcionamiento,44,"Sistema integral de verdad, justicia, reparación y no repetición",Jurisdicción especial para la paz,2025
+189521300973,4401,Inversión,44,"Sistema integral de verdad, justicia, reparación y no repetición",Jurisdicción especial para la paz,2025
+117569000000,4403,Funcionamiento,44,"Sistema integral de verdad, justicia, reparación y no repetición",Unidad de búsqueda de personas dadas por desaparecidas en el contexto y en razón del conflicto armado (ubpd),2025
+76273000000,4403,Inversión,44,"Sistema integral de verdad, justicia, reparación y no repetición",Unidad de búsqueda de personas dadas por desaparecidas en el contexto y en razón del conflicto armado (ubpd),2025
+808923000000,4601,Funcionamiento,46,Igualdad y equidad,Instituto nacional para ciegos (inci),2025
+498912000000,4601,Inversión,46,Igualdad y equidad,Instituto nacional para ciegos (inci),2025
+1239138129543,4602,Funcionamiento,46,Igualdad y equidad,Instituto colombiano de bienestar familiar (icbf),2025
+9539621582782,4602,Inversión,46,Igualdad y equidad,Instituto colombiano de bienestar familiar (icbf),2025
+8852229359,4603,Funcionamiento,46,Igualdad y equidad,Instituto nacional para sordos (insor),2025
+8358622693,4603,Inversión,46,Igualdad y equidad,Instituto nacional para sordos (insor),2025
+8306001653,4604,Funcionamiento,46,Igualdad y equidad,Instituto nacional para ciegos (inci),2025
+3764015576,4604,Inversión,46,Igualdad y equidad,Instituto nacional para ciegos (inci),2025
