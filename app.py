@@ -209,7 +209,7 @@ elif selected_option == "Gastos":
         xanchor="right",
         x=1), title=f"{sector} <br><sup>Cifras en miles de millones de pesos</sup>", yaxis_tickformat='.0f')
 
-        st.plotly_chart(fig, key=2)
+        st.plotly_chart(fig, key=20)
 
         st.subheader(f"Variación histórica por sector: {sector}")
 
@@ -250,7 +250,7 @@ elif selected_option == "Gastos":
             xanchor="right",
             x=1), hovermode='x unified', yaxis_tickformat='.0f', title=f"{sector} <br><sup>Cifras en miles de millones de pesos</sup>")
 
-        st.plotly_chart(fig, key=3)
+        st.plotly_chart(fig, key=30)
 
     with tab3:
     
@@ -297,7 +297,7 @@ elif selected_option == "Gastos":
         xanchor="right",
         x=1), title=f"{entidad} <br><sup>Cifras en miles de millones de pesos</sup>", yaxis_tickformat='.0f')
 
-        st.plotly_chart(fig, key=4)
+        st.plotly_chart(fig, key=40)
 
         if pivot_entity['Año'].nunique() <=1:
             st.warning(f"La entidad {entidad} solo tiene información de un año.")
@@ -340,7 +340,7 @@ elif selected_option == "Gastos":
         xanchor="right",
         x=1), hovermode='x unified', yaxis_tickformat='.0f', title=f"{entidad} <br><sup>Cifras en miles de millones de pesos</sup>")
 
-        st.plotly_chart(fig, key=5)
+        st.plotly_chart(fig, key=50)
 
 elif selected_option == "Treemap":
 
