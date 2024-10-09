@@ -1,0 +1,177 @@
+Tipo de impuesto,Clasificación,Subclasificación,Mes,Valor,Mes_num,clas_alt
+Interno,Renta,Renta - Cuotas,Enero,120796.021707,1,Renta
+Interno,Renta,Renta - Cuotas,Febrero,3310458.391089,2,Renta
+Interno,Renta,Renta - Cuotas,Marzo,170159.122844,3,Renta
+Interno,Renta,Renta - Cuotas,Abril,4726511.559675001,4,Renta
+Interno,Renta,Renta - Cuotas,Mayo,6302898.509433,5,Renta
+Interno,Renta,Renta - Cuotas,Junio,5632638.452654,6,Renta
+Interno,Renta,Renta - Cuotas,Julio,3742887.148364,7,Renta
+Interno,Renta,Renta - Cuotas,Agosto,1756762.838044,8,Renta
+Interno,Renta,Retención Renta,Enero,11573001.05088779,1,Renta
+Interno,Renta,Retención Renta,Febrero,6434917.87472827,2,Renta
+Interno,Renta,Retención Renta,Marzo,7452804.960400162,3,Renta
+Interno,Renta,Retención Renta,Abril,7582229.627898184,4,Renta
+Interno,Renta,Retención Renta,Mayo,7756743.989612525,5,Renta
+Interno,Renta,Retención Renta,Junio,7235524.252660058,6,Renta
+Interno,Renta,Retención Renta,Julio,7902065.69925462,7,Renta
+Interno,Renta,Retención Renta,Agosto,7757274.010543552,8,Renta
+Interno,IVA Interno,Declaraciones IVA,Enero,11366234.234614,1,IVA Interno
+Interno,IVA Interno,Declaraciones IVA,Febrero,606147.51347,2,IVA Interno
+Interno,IVA Interno,Declaraciones IVA,Marzo,7231737.697341001,3,IVA Interno
+Interno,IVA Interno,Declaraciones IVA,Abril,557034.5575110001,4,IVA Interno
+Interno,IVA Interno,Declaraciones IVA,Mayo,8863703.349892,5,IVA Interno
+Interno,IVA Interno,Declaraciones IVA,Junio,558993.26302,6,IVA Interno
+Interno,IVA Interno,Declaraciones IVA,Julio,7631958.598825,7,IVA Interno
+Interno,IVA Interno,Declaraciones IVA,Agosto,486461.307139,8,IVA Interno
+Interno,IVA Interno,Retención IVA,Enero,1837967.513542268,1,IVA Interno
+Interno,IVA Interno,Retención IVA,Febrero,692248.5460351459,2,IVA Interno
+Interno,IVA Interno,Retención IVA,Marzo,844524.4592857275,3,IVA Interno
+Interno,IVA Interno,Retención IVA,Abril,933995.979950188,4,IVA Interno
+Interno,IVA Interno,Retención IVA,Mayo,902520.9620496002,5,IVA Interno
+Interno,IVA Interno,Retención IVA,Junio,877106.4055918874,6,IVA Interno
+Interno,IVA Interno,Retención IVA,Julio,946881.3195829132,7,IVA Interno
+Interno,IVA Interno,Retención IVA,Agosto,1007367.946188735,8,IVA Interno
+Interno,G.M.F.,G.M.F.,Enero,1309280.049,1,Otros
+Interno,G.M.F.,G.M.F.,Febrero,1095924.443,2,Otros
+Interno,G.M.F.,G.M.F.,Marzo,1127481.305,3,Otros
+Interno,G.M.F.,G.M.F.,Abril,1285281.262,4,Otros
+Interno,G.M.F.,G.M.F.,Mayo,1096439.217,5,Otros
+Interno,G.M.F.,G.M.F.,Junio,1087294.316,6,Otros
+Interno,G.M.F.,G.M.F.,Julio,1394111.994,7,Otros
+Interno,G.M.F.,G.M.F.,Agosto,1047039.517551,8,Otros
+Interno,Timbre,Timbre,Enero,33501.16674194393,1,Otros
+Interno,Timbre,Timbre,Febrero,14139.60991258336,2,Otros
+Interno,Timbre,Timbre,Marzo,16971.04533610973,3,Otros
+Interno,Timbre,Timbre,Abril,19356.72355462825,4,Otros
+Interno,Timbre,Timbre,Mayo,21148.53339487275,5,Otros
+Interno,Timbre,Timbre,Junio,19104.97311805544,6,Otros
+Interno,Timbre,Timbre,Julio,21111.04680246675,7,Otros
+Interno,Timbre,Timbre,Agosto,18782.97134571273,8,Otros
+Interno,Patrimonio,Patrimonio,Enero,4610.894695,1,Otros
+Interno,Patrimonio,Patrimonio,Febrero,10524.686321,2,Otros
+Interno,Patrimonio,Patrimonio,Marzo,9702.759619,3,Otros
+Interno,Patrimonio,Patrimonio,Abril,12831.363286,4,Otros
+Interno,Patrimonio,Patrimonio,Mayo,606103.901543,5,Otros
+Interno,Patrimonio,Patrimonio,Junio,16717.681242,6,Otros
+Interno,Patrimonio,Patrimonio,Julio,16802.730113,7,Otros
+Interno,Patrimonio,Patrimonio,Agosto,38026.272831,8,Otros
+Interno,Riqueza ,Riqueza ,Enero,376.574038,1,Otros
+Interno,Riqueza ,Riqueza ,Febrero,513.545032,2,Otros
+Interno,Riqueza ,Riqueza ,Marzo,491.665147,3,Otros
+Interno,Riqueza ,Riqueza ,Abril,470.751922,4,Otros
+Interno,Riqueza ,Riqueza ,Mayo,625.409575,5,Otros
+Interno,Riqueza ,Riqueza ,Junio,247.350649,6,Otros
+Interno,Riqueza ,Riqueza ,Julio,215.907282,7,Otros
+Interno,Riqueza ,Riqueza ,Agosto,84.639469,8,Otros
+Interno,Impuesto al Consumo,Impuesto al Consumo,Enero,642153.967044,1,Otros
+Interno,Impuesto al Consumo,Impuesto al Consumo,Febrero,30031.489413,2,Otros
+Interno,Impuesto al Consumo,Impuesto al Consumo,Marzo,490931.511061,3,Otros
+Interno,Impuesto al Consumo,Impuesto al Consumo,Abril,33631.760369,4,Otros
+Interno,Impuesto al Consumo,Impuesto al Consumo,Mayo,487124.125576,5,Otros
+Interno,Impuesto al Consumo,Impuesto al Consumo,Junio,33378.661767,6,Otros
+Interno,Impuesto al Consumo,Impuesto al Consumo,Julio,545640.89979,7,Otros
+Interno,Impuesto al Consumo,Impuesto al Consumo,Agosto,31512.050816,8,Otros
+Interno,Impuesto Gasolina y ACPM,Impuesto Gasolina y ACPM,Enero,215229.71,1,Otros
+Interno,Impuesto Gasolina y ACPM,Impuesto Gasolina y ACPM,Febrero,197665.896,2,Otros
+Interno,Impuesto Gasolina y ACPM,Impuesto Gasolina y ACPM,Marzo,203872.641,3,Otros
+Interno,Impuesto Gasolina y ACPM,Impuesto Gasolina y ACPM,Abril,213437.787,4,Otros
+Interno,Impuesto Gasolina y ACPM,Impuesto Gasolina y ACPM,Mayo,219055.966,5,Otros
+Interno,Impuesto Gasolina y ACPM,Impuesto Gasolina y ACPM,Junio,220151.29,6,Otros
+Interno,Impuesto Gasolina y ACPM,Impuesto Gasolina y ACPM,Julio,203842.718,7,Otros
+Interno,Impuesto Gasolina y ACPM,Impuesto Gasolina y ACPM,Agosto,208394.817,8,Otros
+Interno,Impuesto al Carbono,Impuesto al Carbono,Enero,94161.342,1,Otros
+Interno,Impuesto al Carbono,Impuesto al Carbono,Febrero,118.852,2,Otros
+Interno,Impuesto al Carbono,Impuesto al Carbono,Marzo,85973.876,3,Otros
+Interno,Impuesto al Carbono,Impuesto al Carbono,Abril,0.0,4,Otros
+Interno,Impuesto al Carbono,Impuesto al Carbono,Mayo,95828.017,5,Otros
+Interno,Impuesto al Carbono,Impuesto al Carbono,Junio,10.589,6,Otros
+Interno,Impuesto al Carbono,Impuesto al Carbono,Julio,88584.962,7,Otros
+Interno,Impuesto al Carbono,Impuesto al Carbono,Agosto,0.0,8,Otros
+Interno,CREE,CREE Declaraciones,Enero,231.320722,1,Otros
+Interno,CREE,CREE Declaraciones,Febrero,424.176203,2,Otros
+Interno,CREE,CREE Declaraciones,Marzo,666.447585,3,Otros
+Interno,CREE,CREE Declaraciones,Abril,935.257188,4,Otros
+Interno,CREE,CREE Declaraciones,Mayo,301.354847,5,Otros
+Interno,CREE,CREE Declaraciones,Junio,533.051328,6,Otros
+Interno,CREE,CREE Declaraciones,Julio,267.506549,7,Otros
+Interno,CREE,CREE Declaraciones,Agosto,794.006939,8,Otros
+Interno,CREE,CREE Retención,Enero,64.734,1,Otros
+Interno,CREE,CREE Retención,Febrero,101.257,2,Otros
+Interno,CREE,CREE Retención,Marzo,360.192,3,Otros
+Interno,CREE,CREE Retención,Abril,309.507672,4,Otros
+Interno,CREE,CREE Retención,Mayo,315.766,5,Otros
+Interno,CREE,CREE Retención,Junio,156.665,6,Otros
+Interno,CREE,CREE Retención,Julio,102.06,7,Otros
+Interno,CREE,CREE Retención,Agosto,172.395,8,Otros
+Interno,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Enero,444365.183,1,Otros
+Interno,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Febrero,53486.597,2,Otros
+Interno,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Marzo,17515.614,3,Otros
+Interno,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Abril,213717.619,4,Otros
+Interno,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Mayo,328592.46,5,Otros
+Interno,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Junio,362169.3755,6,Otros
+Interno,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Julio,406240.759,7,Otros
+Interno,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Agosto,43049.688,8,Otros
+Interno,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Enero,25.555,1,Otros
+Interno,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Febrero,48.285,2,Otros
+Interno,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Marzo,85.340216,3,Otros
+Interno,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Abril,68.22,4,Otros
+Interno,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Mayo,33.338,5,Otros
+Interno,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Junio,221.252,6,Otros
+Interno,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Julio,126.909,7,Otros
+Interno,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Agosto,18.636,8,Otros
+Interno,Consumo bienes inmuebles,Consumo bienes inmuebles,Enero,1886.619,1,Otros
+Interno,Consumo bienes inmuebles,Consumo bienes inmuebles,Febrero,482.545,2,Otros
+Interno,Consumo bienes inmuebles,Consumo bienes inmuebles,Marzo,435.418,3,Otros
+Interno,Consumo bienes inmuebles,Consumo bienes inmuebles,Abril,475.062,4,Otros
+Interno,Consumo bienes inmuebles,Consumo bienes inmuebles,Mayo,392.595,5,Otros
+Interno,Consumo bienes inmuebles,Consumo bienes inmuebles,Junio,237.829,6,Otros
+Interno,Consumo bienes inmuebles,Consumo bienes inmuebles,Julio,458.836,7,Otros
+Interno,Consumo bienes inmuebles,Consumo bienes inmuebles,Agosto,562.045,8,Otros
+Interno,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Enero,11.198,1,Otros
+Interno,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Febrero,63524.11,2,Otros
+Interno,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Marzo,283.507,3,Otros
+Interno,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Abril,54.178,4,Otros
+Interno,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Mayo,16.69,5,Otros
+Interno,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Junio,85.6,6,Otros
+Interno,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Julio,114.678,7,Otros
+Interno,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Agosto,0.024,8,Otros
+Interno,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Enero,49759.528,1,Otros
+Interno,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Febrero,504.235,2,Otros
+Interno,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Marzo,30917.789,3,Otros
+Interno,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Abril,29.872,4,Otros
+Interno,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Mayo,31561.707,5,Otros
+Interno,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Junio,98.766,6,Otros
+Interno,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Julio,47210.544,7,Otros
+Interno,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Agosto,106.96,8,Otros
+Interno,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Enero,254762.567,1,Otros
+Interno,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Febrero,5599.622,2,Otros
+Interno,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Marzo,322759.653,3,Otros
+Interno,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Abril,7528.461,4,Otros
+Interno,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Mayo,333750.282,5,Otros
+Interno,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Junio,3764.23,6,Otros
+Interno,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Julio,309409.881,7,Otros
+Interno,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Agosto,4667.76,8,Otros
+Externo,Arancel,Arancel,Enero,453206.7010275688,1,Otros
+Externo,Arancel,Arancel,Febrero,478272.1260102457,2,Otros
+Externo,Arancel,Arancel,Marzo,410902.5222947666,3,Otros
+Externo,Arancel,Arancel,Abril,449098.2066685401,4,Otros
+Externo,Arancel,Arancel,Mayo,476690.1179725541,5,Otros
+Externo,Arancel,Arancel,Junio,529060.8156509027,6,Otros
+Externo,Arancel,Arancel,Julio,527605.8254468692,7,Otros
+Externo,Arancel,Arancel,Agosto,581885.3723814564,8,Otros
+Externo,IVA Externo ,IVA Externo ,Enero,2533478.395749431,1,Otros
+Externo,IVA Externo ,IVA Externo ,Febrero,2576177.112361754,2,Otros
+Externo,IVA Externo ,IVA Externo ,Marzo,2254475.077723234,3,Otros
+Externo,IVA Externo ,IVA Externo ,Abril,2613135.19070346,4,Otros
+Externo,IVA Externo ,IVA Externo ,Mayo,2759213.477023446,5,Otros
+Externo,IVA Externo ,IVA Externo ,Junio,2700743.314317097,6,Otros
+Externo,IVA Externo ,IVA Externo ,Julio,2705959.175627131,7,Otros
+Externo,IVA Externo ,IVA Externo ,Agosto,2939399.920281544,8,Otros
+Por clasificar,Por clasificar,Por clasificar,Enero,7577.818649,1,Otros
+Por clasificar,Por clasificar,Por clasificar,Febrero,6602.78341,2,Otros
+Por clasificar,Por clasificar,Por clasificar,Marzo,31145.535852,3,Otros
+Por clasificar,Por clasificar,Por clasificar,Abril,8680.017,4,Otros
+Por clasificar,Por clasificar,Por clasificar,Mayo,9567.692249,5,Otros
+Por clasificar,Por clasificar,Por clasificar,Junio,6679.978724,6,Otros
+Por clasificar,Por clasificar,Por clasificar,Julio,5935.512435,7,Otros
+Por clasificar,Por clasificar,Por clasificar,Agosto,7747.051418,8,Otros
