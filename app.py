@@ -14,10 +14,10 @@ from utils import DIC_COLORES, convert_df, get_dic_colors, get_dic_colors_area, 
 
 st.set_page_config(layout='wide', page_title="ofiscal - PePE", page_icon='imgs/favicon.jpeg')
 
-df = pd.read_csv('gastos_def_2024.csv')
-df2 = pd.read_csv('datos_desagregados_2025.csv')
-df2025 = pd.read_csv('ley_2025.csv')
-inc = pd.read_csv('ingresos_pgn.csv')
+df = pd.read_csv('datasets/gastos_def_2024.csv')
+df2 = pd.read_csv('datasets/datos_desagregados_2025.csv')
+df2025 = pd.read_csv('datasets/ley_2025.csv')
+inc = pd.read_csv('datasets/ingresos_pgn.csv')
 inc['Valor_24_esc'] = (inc['Valor_24'] / 1_000_000_000).round(1)
 df['Apropiación a precios corrientes'] /= 1000000000
 df['Apropiación a precios constantes (2024)'] /= 1000000000
@@ -67,7 +67,7 @@ selected_option = option_menu(None, ["Main",
                'intersect', 
                'columns',
                "list-task",
-               "list-task", 
+               "database", 
                'pencil-square',
                'cloud-download'], 
         menu_icon="p", default_index=0, orientation="horizontal")    
@@ -105,7 +105,7 @@ elif selected_option == 'Ingresos':
             y=group['%'],
             name=i, marker_color=dict_ingreso[i], 
             marker_pattern_shape=dict_pat_ingreso[i],
-            marker_pattern_bgcolor=DIC_COLORES['ax_viol'][1],
+            marker_pattern_bgcolor=DIC_COLORES['az_verd'][2],
             marker_pattern_size=6,
             opacity=val
         ),  row=1, col=2)
@@ -396,7 +396,7 @@ elif selected_option == 'Ejecución':
 
 
 
-    df_ejec = pd.read_csv('ejecucion_agosto.csv')
+    df_ejec = pd.read_csv('datasets/ejecucion_agosto.csv')
 
     total_ap = (df_ejec.groupby('mes_num')['APR. VIGENTE'].sum() / 1_000_000_000_000).round(1)
     total_ej = (df_ejec.groupby('mes_num')['OBLIGACION'].sum() / 1_000_000_000_000).round(1)
@@ -939,7 +939,7 @@ elif selected_option == 'Ejecución':
                     mime='text/csv')
 
 elif selected_option == 'Recaudo':
-    rec = pd.read_csv('recaudo.csv')
+    rec = pd.read_csv('datasets/recaudo.csv')
     rec['Valor'] = rec['Valor'] / 1_000
 
     tab1, tab2, tab3 = st.tabs(['General', 'Interno', 'Externo'])
@@ -1331,7 +1331,7 @@ else:
     st.divider()
         
     st.subheader("Descarga del árbol sector-entidad del PGN")
-    with open('dictio.json', 'rb') as js:
+    with open('dictios/dictio.json', 'rb') as js:
         dictio = json.load(js)
 
     json_string = json.dumps(dictio)
