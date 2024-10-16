@@ -121,7 +121,28 @@ elif selected_option == 'Ingresos':
         x=1), title='Histórico general <br><sup>Cifras en miles de millones de pesos</sup>', yaxis_tickformat='.0f')
 
 
-        st.plotly_chart(fig)    
+        st.plotly_chart(fig)  
+
+        piv_year = inc.groupby(['Año', 'Ingreso_alt'])['Valor_24_esc'].sum().reset_index()
+        fig = make_subplots(rows=1, cols=1, x_title='Año',  )
+
+        for n, i in enumerate(piv_year['Ingreso_alt'].unique()):
+            filtro = piv_year[piv_year['Ingreso_alt'] == i]       
+            fig.add_trace(
+                go.Line(
+                    x=filtro['Año'], y=filtro['Valor_24_esc'], 
+                    name=i, line=dict(color=DIC_COLORES['ro_am_na'][n]),
+                ),
+                row=1, col=1
+            )
+            print(n)  
+        fig.update_layout(barmode='stack', hovermode='x unified')
+        fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
+            yanchor="bottom",
+            y=1.02,
+            xanchor="right",
+            x=1), title='Histórico general <br><sup>Cifras en miles de millones de pesos</sup>', yaxis_tickformat='.0f')
+        st.plotly_chart(fig)
 
     with tab2:
         d = inc[inc['Sector'] != 'Nación']
