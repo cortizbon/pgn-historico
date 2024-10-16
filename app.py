@@ -78,48 +78,140 @@ if selected_option == "Main":
     pass
 
 elif selected_option == 'Ingresos':
+    tab1, tab2, tab3 = st.tabs(['General', 'Por sector', 'Por entidad'])
 
-    piv_year = inc.groupby('Año')['Valor_24_esc'].sum().reset_index()
-    fig = make_subplots(rows=1, cols=2, x_title='Año',  )
-    
-    fig.add_trace(
-        go.Line(
-            x=piv_year['Año'], y=piv_year['Valor_24_esc'], 
-            name='Ingreso', line=dict(color=DIC_COLORES['ax_viol'][1])
-        ),
-        row=1, col=1
-    )
+    with tab1:
+        piv_year = inc.groupby('Año')['Valor_24_esc'].sum().reset_index()
+        fig = make_subplots(rows=1, cols=2, x_title='Año',  )
+        
+        fig.add_trace(
+            go.Line(
+                x=piv_year['Año'], y=piv_year['Valor_24_esc'], 
+                name='Ingreso', line=dict(color=DIC_COLORES['ax_viol'][1])
+            ),
+            row=1, col=1
+        )
 
-    piv_tipo_ingreso = (inc
-                      .groupby(['Año', 'Ingreso_alt'])['Valor_24_esc']
-                      .sum()
-                      .reset_index())
-    piv_tipo_ingreso['total'] = piv_tipo_ingreso.groupby(['Año'])['Valor_24_esc'].transform('sum')
+        piv_tipo_ingreso = (inc
+                        .groupby(['Año', 'Ingreso_alt'])['Valor_24_esc']
+                        .sum()
+                        .reset_index())
+        piv_tipo_ingreso['total'] = piv_tipo_ingreso.groupby(['Año'])['Valor_24_esc'].transform('sum')
 
-    piv_tipo_ingreso['%'] = ((piv_tipo_ingreso['Valor_24_esc'] / piv_tipo_ingreso['total']) * 100).round(2)
+        piv_tipo_ingreso['%'] = ((piv_tipo_ingreso['Valor_24_esc'] / piv_tipo_ingreso['total']) * 100).round(2)
 
-    val = 0.2
-    for i, group in piv_tipo_ingreso.groupby('Ingreso_alt'):
-        fig.add_trace(go.Bar(
-            x=group['Año'],
-            y=group['%'],
-            name=i, marker_color=dict_ingreso[i], 
-            marker_pattern_shape=dict_pat_ingreso[i],
-            marker_pattern_bgcolor=DIC_COLORES['az_verd'][2],
-            marker_pattern_size=6,
-            opacity=val
-        ),  row=1, col=2)
-        val += 0.2
+        val = 0.2
+        for i, group in piv_tipo_ingreso.groupby('Ingreso_alt'):
+            fig.add_trace(go.Bar(
+                x=group['Año'],
+                y=group['%'],
+                name=i, marker_color=dict_ingreso[i], 
+                marker_pattern_shape=dict_pat_ingreso[i],
+                marker_pattern_bgcolor=DIC_COLORES['az_verd'][2],
+                marker_pattern_size=6,
+                opacity=val
+            ),  row=1, col=2)
+            val += 0.2
 
-    fig.update_layout(barmode='stack', hovermode='x unified')
-    fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
-    yanchor="bottom",
-    y=1.02,
-    xanchor="right",
-    x=1), title='Histórico general <br><sup>Cifras en miles de millones de pesos</sup>', yaxis_tickformat='.0f')
+        fig.update_layout(barmode='stack', hovermode='x unified')
+        fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
+        yanchor="bottom",
+        y=1.02,
+        xanchor="right",
+        x=1), title='Histórico general <br><sup>Cifras en miles de millones de pesos</sup>', yaxis_tickformat='.0f')
 
 
-    st.plotly_chart(fig)    
+        st.plotly_chart(fig)    
+
+    with tab2:
+        d = inc[inc['Sector'] != 'Nación']
+        sectors = d['Sector'].unique().tolist()
+        sector = st.selectbox("Seleccione un sector: ", sectors, key=20)
+        fil_sector = d[d['Sector'] == sector]
+        piv_sec = fil_sector.groupby('Año')['Valor_24_esc'].sum().reset_index()
+
+        fig = make_subplots(rows=1, cols=2, x_title='Año',  )
+            
+        fig.add_trace(
+                go.Line(
+                    x=piv_sec['Año'], y=piv_sec['Valor_24_esc'], 
+                    name='Valor', line=dict(color=DIC_COLORES['ax_viol'][1])
+                ),
+                row=1, col=1
+            )
+
+        piv_sector = (fil_sector
+                            .groupby(['Año', 'Ingreso específico'])['Valor_24_esc']
+                            .sum()
+                            .reset_index())
+
+        piv_sector['total'] = piv_sector.groupby(['Año'])['Valor_24_esc'].transform('sum')
+
+        piv_sector['%'] = ((piv_sector['Valor_24_esc'] / piv_sector['total']) * 100).round(2)
+
+                
+        for i, group in piv_sector.groupby('Ingreso específico'):
+                fig.add_trace(go.Bar(
+                    x=group['Año'],
+                    y=group['%'],
+                    name=i
+                ), row=1, col=2)
+
+        fig.update_layout(barmode='stack', hovermode='x unified')
+        fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
+            yanchor="bottom",
+            y=-0.24,
+            xanchor="right",
+            x=1), title='Histórico por sector<br><sup>Cifras en miles de millones de pesos</sup>', yaxis_tickformat='.0f')
+
+
+        st.plotly_chart(fig, key=1)
+
+    with tab3:
+        d = inc[inc['Sector'] != 'Nación']
+        sector = st.selectbox("Seleccione un sector: ", sectors)
+        d = d[d['Sector'] == sector]
+        ents = d['Entidad'].unique().tolist()
+        ent = st.selectbox("Seleccione una entidad: ", ents, key=4)
+        fil_ent = d[d['Entidad'] == ent]
+        piv_ent = fil_ent.groupby('Año')['Valor_24_esc'].sum().reset_index()
+
+        fig = make_subplots(rows=1, cols=2, x_title='Año',  )
+            
+        fig.add_trace(
+                go.Line(
+                    x=piv_ent['Año'], y=piv_ent['Valor_24_esc'], 
+                    name='Valor', line=dict(color=DIC_COLORES['ax_viol'][1])
+                ),
+                row=1, col=1
+            )
+
+        piv_entidad = (fil_ent
+                            .groupby(['Año', 'Ingreso específico'])['Valor_24_esc']
+                            .sum()
+                            .reset_index())
+        piv_entidad['total'] = piv_entidad.groupby(['Año'])['Valor_24_esc'].transform('sum')
+
+        piv_entidad['%'] = ((piv_entidad['Valor_24_esc'] / piv_entidad['total']) * 100).round(2)
+
+                
+        for i, group in piv_entidad.groupby('Ingreso específico'):
+                fig.add_trace(go.Bar(
+                    x=group['Año'],
+                    y=group['%'],
+                    name=i
+                ), row=1, col=2)
+
+        fig.update_layout(barmode='stack', hovermode='x unified')
+        fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
+            yanchor="bottom",
+            y=-0.24,
+            xanchor="right",
+            x=1), title='Histórico por entidad <br><sup>Cifras en miles de millones de pesos</sup>', yaxis_tickformat='.0f')
+
+
+        st.plotly_chart(fig, key=12)
+
 
 
 elif selected_option == "Gastos":
