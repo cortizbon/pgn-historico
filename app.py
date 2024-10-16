@@ -775,7 +775,7 @@ elif selected_option == 'Ejecución':
                             hoverinfo='x+text'), row=1, col=1)
         fig.add_trace(go.Bar(y=tops_perd['Entidad'], 
                             x=tops_perd['perc_compr'], 
-                            name='Pérdida de apropiación', 
+                            name='Comprometido', 
                             marker_color='#81D3CD', 
                             orientation='h',
                             hovertext=tops_perd['Entidad'],
