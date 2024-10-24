@@ -673,8 +673,11 @@ elif selected_option == 'Ejecución':
                                     aggfunc='sum')
                                     .assign(perc_ejecucion=lambda x: (x['OBLIGACION'] / x['APR. VIGENTE'] * 100).round(1),
                                             perc_compr=lambda x: (x['COMPROMISO'] / x['APR. VIGENTE'] * 100).round(1)))
+        bots_ejec = piv_s.sort_values(by='perc_ejecucion', ascending=True).head(10).reset_index()
+        bots_compr = piv_s.sort_values(by='perc_compr', ascending=True).head(10).reset_index()
         tops_ejec = piv_s.sort_values(by='perc_ejecucion', ascending=True).tail(10).reset_index()
         tops_compr = piv_s.sort_values(by='perc_compr', ascending=True).tail(10).reset_index()
+
 
         fig = make_subplots(rows=1, cols=2, subplot_titles=("Ejecutado (%)", "Comprometido (%)"))
 
@@ -709,7 +712,53 @@ elif selected_option == 'Ejecución':
         )
         fig.update_yaxes(showticklabels=False)
         fig.update_layout(
-            title="Top 10 sectores por ejecución (al mes de agosto) ",
+            title="Top 10 sectores con mayor ejecución (al mes de agosto) ",
+            height=400, 
+            width=900,
+            legend=dict(
+                orientation='h',   # Horizontal legend
+                x=0.72,             # Center the legend
+                y=1.1,             # Position it slightly above the plots
+                xanchor='left',  # Center the legend horizontally
+                yanchor='bottom'   # Align the legend vertically
+            )
+        )
+        st.plotly_chart(fig)
+
+        # peor ejecución
+        fig = make_subplots(rows=1, cols=2, subplot_titles=("Ejecutado (%)", "Comprometido (%)"))
+
+        fig.add_trace(go.Bar(y=bots_ejec['Sector'], 
+                            x=bots_ejec['perc_ejecucion'], 
+                            name='Ejecutado', 
+                            marker_color='#F7B261', 
+                            orientation='h',
+                            text=bots_ejec['Sector'],
+                            textposition='inside',
+                            hoverinfo='x'), row=1, col=1)
+        fig.add_trace(go.Bar(y=bots_compr['Sector'], 
+                            x=bots_compr['perc_compr'], 
+                            name='Comprometido', 
+                            marker_color='#81D3CD', 
+                            orientation='h',
+                            text=bots_compr['Sector'],
+                            textposition='inside',
+                            hoverinfo='x'), row=1, col=2)
+        fig.add_shape(
+            type='line',
+            x0=100, x1=100, y0=-0.5, y1=9.5,  # Set x0, x1 for the vertical line position
+            line=dict(color='#dd722a', width=1, dash='dash'),
+            row=1, col=1
+        )
+        fig.add_shape(
+            type='line',
+            x0=100, x1=100, y0=-0.5, y1=9.5,  # Set x0, x1 for the vertical line position
+            line=dict(color='#81D3CD', width=1, dash='dash'),
+            row=1, col=2
+        )
+        fig.update_yaxes(showticklabels=False)
+        fig.update_layout(
+            title="Top 10 sectores con menor ejecución (al mes de agosto) ",
             height=400, 
             width=900,
             legend=dict(
@@ -730,8 +779,9 @@ elif selected_option == 'Ejecución':
                                     .assign(perc_perdida=lambda x:100 - x['perc_compr']))
         tops_ejec = piv_e.sort_values(by='perc_ejecucion', ascending=True).tail(10).reset_index()
         tops_compr = piv_e.sort_values(by='perc_compr', ascending=True).tail(10).reset_index()
-        tops_perd = piv_e.sort_values(by='perc_perdida', ascending=True).tail(10).reset_index()
-        bots_ejec = piv_e.sort_values(by='perc_ejecucion', ascending=False).tail(10).reset_index()
+        bots_ejec = piv_e.sort_values(by='perc_ejecucion', ascending=True).head(10).reset_index()
+        bots_compr = piv_e.sort_values(by='perc_compr', ascending=True).head(10).reset_index()
+        
 
 
 
@@ -768,7 +818,7 @@ elif selected_option == 'Ejecución':
         )
         fig.update_yaxes(showticklabels=False)
         fig.update_layout(
-            title="Top 10 entidades por ejecución (al mes de agosto)",
+            title="Top 10 entidades con mayor ejecución (al mes de agosto)",
             height=400, 
             width=900,
             legend=dict(
@@ -791,12 +841,12 @@ elif selected_option == 'Ejecución':
                             orientation='h',
                             hovertext=bots_ejec['Entidad'],
                             hoverinfo='x+text'), row=1, col=1)
-        fig.add_trace(go.Bar(y=tops_perd['Entidad'], 
-                            x=tops_perd['perc_compr'], 
+        fig.add_trace(go.Bar(y=bots_compr['Entidad'], 
+                            x=bots_compr['perc_compr'], 
                             name='Comprometido', 
                             marker_color='#81D3CD', 
                             orientation='h',
-                            hovertext=tops_perd['Entidad'],
+                            hovertext=bots_compr['Entidad'],
                             hoverinfo='x+text'), row=1, col=2)
         fig.add_shape(
             type='line',
@@ -812,7 +862,7 @@ elif selected_option == 'Ejecución':
         )
         fig.update_yaxes(showticklabels=False)
         fig.update_layout(
-            title="Top 10 entidades con menor ejecución y mayor pérdida de apropiación (al mes de agosto)",
+            title="Top 10 entidades con menor ejecución (al mes de agosto)",
             height=400, 
             width=900,
             legend=dict(
