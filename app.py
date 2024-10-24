@@ -243,6 +243,8 @@ elif selected_option == "Gastos":
     with tab1:
 
         piv_2024 = df.groupby('Año')['Apropiación a precios constantes (2024)'].sum().reset_index()
+        tasa_gen_cagr = (piv_2024[piv_2024['Año'] == 2024]['Apropiación a precios constantes (2024)'].reset_index(drop=True)/ piv_2024[piv_2024['Año'] == 2013]['Apropiación a precios constantes (2024)'].reset_index(drop=True))[0] ** (1/(2024 - 2013)) - 1        
+        piv_2024['CAGR'] = tasa_gen_cagr
         piv_corr = df.groupby('Año')['apropiacion_corrientes'].sum().reset_index()
 
         #piv_2024['Apropiación a precios constantes (2024)'] /= 1000
@@ -264,6 +266,8 @@ elif selected_option == "Gastos":
         piv_tipo_gasto['total'] = piv_tipo_gasto.groupby(['Año'])['Apropiación a precios constantes (2024)'].transform('sum')
 
         piv_tipo_gasto['%'] = ((piv_tipo_gasto['Apropiación a precios constantes (2024)'] / piv_tipo_gasto['total']) * 100).round(2)
+
+
 
             
         for i, group in piv_tipo_gasto.groupby('Tipo de gasto'):
@@ -334,6 +338,7 @@ elif selected_option == "Gastos":
         den = max(pivot_sector.index) - min(pivot_sector.index)
         pivot_sector['CAGR'] = ((pivot_sector.loc[max(pivot_sector.index), 'Apropiación a precios constantes (2024)'] / pivot_sector.loc[min(pivot_sector.index), 'Apropiación a precios constantes (2024)']) ** (1/11)) - 1
         pivot_sector['CAGR'] = (pivot_sector['CAGR'] * 100).round(2)
+        pivot_sector['CAGR_gen'] = (tasa_gen_cagr * 100).round(2)
         pivot_sector = pivot_sector.reset_index()
 
         fig = make_subplots(rows=1, cols=2, x_title='Año')
@@ -353,7 +358,13 @@ elif selected_option == "Gastos":
             )
         fig.add_trace(
                 go.Line(
-                    x=pivot_sector['Año'], y=pivot_sector['CAGR'], name='Variación anualizada (%)', line=dict(color=DIC_COLORES['verde'][0])
+                    x=pivot_sector['Año'], y=pivot_sector['CAGR'], name='Variación anualizada sector (%)', line=dict(color=DIC_COLORES['verde'][0])
+                ),
+                row=1, col=2
+            )
+        fig.add_trace(
+                go.Line(
+                    x=pivot_sector['Año'], y=pivot_sector['CAGR_gen'], name='Variación anualizada PGN (%)', line=dict(color=DIC_COLORES['ax_viol'][2])
                 ),
                 row=1, col=2
             )
@@ -424,6 +435,7 @@ elif selected_option == "Gastos":
         den = max(pivot_entity.index) - min(pivot_entity.index)
         pivot_entity['CAGR'] = ((pivot_entity.loc[max(pivot_entity.index), 'Apropiación a precios constantes (2024)'] / pivot_entity.loc[min(pivot_entity.index), 'Apropiación a precios constantes (2024)'] ) ** (1/den)) - 1
         pivot_entity['CAGR'] = (pivot_entity['CAGR'] * 100).round(2)
+        pivot_entity['CAGR_gen'] = (tasa_gen_cagr * 100).round(2)
         pivot_entity = pivot_entity.reset_index()
 
         fig = make_subplots(rows=1, cols=2, x_title='Año')
@@ -447,6 +459,12 @@ elif selected_option == "Gastos":
             ),
             row=1, col=2
         )
+        fig.add_trace(
+                go.Line(
+                    x=pivot_entity['Año'], y=pivot_entity['CAGR_gen'], name='Variación anualizada PGN (%)', line=dict(color=DIC_COLORES['ax_viol'][2])
+                ),
+                row=1, col=2
+            )
         fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
         yanchor="bottom",
         y=1.02,
