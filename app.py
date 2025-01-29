@@ -14,7 +14,7 @@ from utils import DIC_COLORES, convert_df, get_dic_colors, get_dic_colors_area, 
 
 st.set_page_config(layout='wide', page_title="ofiscal - PePE", page_icon='imgs/favicon.jpeg')
 
-df = pd.read_csv('datasets/gastos_def_2025.csv')
+df = pd.read_csv('datasets/gastos_def_2025_test.csv')
 df2 = pd.read_csv('datasets/datos_desagregados_2025.csv')
 pgn_25 = pd.read_csv('datasets/pgn_2025.csv')
 df2025 = pd.read_excel('datasets/decreto_2025.xlsx')
