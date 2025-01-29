@@ -19,8 +19,8 @@ df2 = pd.read_csv('datasets/datos_desagregados_2025.csv')
 pgn_25 = pd.read_csv('datasets/pgn_2025.csv')
 df2025 = pd.read_excel('datasets/decreto_2025.xlsx')
 diff = pd.read_excel('datasets/merge_william.xlsx')
-inc = pd.read_csv('datasets/ingresos_pgn.csv')
-inc['Valor_24_esc'] = (inc['Valor_24'] / 1_000_000_000).round(1)
+inc = pd.read_csv('datasets/ingresos_2025.csv')
+inc['Valor_25_esc'] = (inc['Valor_25'] / 1_000_000_000).round(1)
 df['Apropiación a precios corrientes'] /= 1_000_000_000
 df['Apropiación a precios constantes (2025)'] /= 1_000_000_000
 
@@ -83,24 +83,24 @@ elif selected_option == 'Ingresos':
     tab1, tab2, tab3 = st.tabs(['General', 'Por sector', 'Por entidad'])
 
     with tab1:
-        piv_year = inc.groupby('Año')['Valor_24_esc'].sum().reset_index()
+        piv_year = inc.groupby('Año')['Valor_25_esc'].sum().reset_index()
         fig = make_subplots(rows=1, cols=2, x_title='Año',  )
         
         fig.add_trace(
             go.Line(
-                x=piv_year['Año'], y=piv_year['Valor_24_esc'], 
+                x=piv_year['Año'], y=piv_year['Valor_25_esc'], 
                 name='Ingreso', line=dict(color=DIC_COLORES['ax_viol'][1])
             ),
             row=1, col=1
         )
 
         piv_tipo_ingreso = (inc
-                        .groupby(['Año', 'Ingreso_alt'])['Valor_24_esc']
+                        .groupby(['Año', 'Ingreso_alt'])['Valor_25_esc']
                         .sum()
                         .reset_index())
-        piv_tipo_ingreso['total'] = piv_tipo_ingreso.groupby(['Año'])['Valor_24_esc'].transform('sum')
+        piv_tipo_ingreso['total'] = piv_tipo_ingreso.groupby(['Año'])['Valor_25_esc'].transform('sum')
 
-        piv_tipo_ingreso['%'] = ((piv_tipo_ingreso['Valor_24_esc'] / piv_tipo_ingreso['total']) * 100).round(2)
+        piv_tipo_ingreso['%'] = ((piv_tipo_ingreso['Valor_25_esc'] / piv_tipo_ingreso['total']) * 100).round(2)
 
         val = 0.2
         for i, group in piv_tipo_ingreso.groupby('Ingreso_alt'):
@@ -125,14 +125,14 @@ elif selected_option == 'Ingresos':
 
         st.plotly_chart(fig)  
 
-        piv_year = inc.groupby(['Año', 'Ingreso_alt'])['Valor_24_esc'].sum().reset_index()
+        piv_year = inc.groupby(['Año', 'Ingreso_alt'])['Valor_25_esc'].sum().reset_index()
         fig = make_subplots(rows=1, cols=1, x_title='Año',  )
 
         for n, i in enumerate(piv_year['Ingreso_alt'].unique()):
             filtro = piv_year[piv_year['Ingreso_alt'] == i]       
             fig.add_trace(
                 go.Line(
-                    x=filtro['Año'], y=filtro['Valor_24_esc'], 
+                    x=filtro['Año'], y=filtro['Valor_25_esc'], 
                     name=i, line=dict(color=DIC_COLORES['ro_am_na'][n]),
                 ),
                 row=1, col=1
@@ -151,26 +151,26 @@ elif selected_option == 'Ingresos':
         sectors = d['Sector'].unique().tolist()
         sector = st.selectbox("Seleccione un sector: ", sectors, key=20)
         fil_sector = d[d['Sector'] == sector]
-        piv_sec = fil_sector.groupby('Año')['Valor_24_esc'].sum().reset_index()
+        piv_sec = fil_sector.groupby('Año')['Valor_25_esc'].sum().reset_index()
 
         fig = make_subplots(rows=1, cols=2, x_title='Año',  )
             
         fig.add_trace(
                 go.Line(
-                    x=piv_sec['Año'], y=piv_sec['Valor_24_esc'], 
+                    x=piv_sec['Año'], y=piv_sec['Valor_25_esc'], 
                     name='Valor', line=dict(color=DIC_COLORES['ax_viol'][1])
                 ),
                 row=1, col=1
             )
 
         piv_sector = (fil_sector
-                            .groupby(['Año', 'Ingreso específico'])['Valor_24_esc']
+                            .groupby(['Año', 'Ingreso específico'])['Valor_25_esc']
                             .sum()
                             .reset_index())
 
-        piv_sector['total'] = piv_sector.groupby(['Año'])['Valor_24_esc'].transform('sum')
+        piv_sector['total'] = piv_sector.groupby(['Año'])['Valor_25_esc'].transform('sum')
 
-        piv_sector['%'] = ((piv_sector['Valor_24_esc'] / piv_sector['total']) * 100).round(2)
+        piv_sector['%'] = ((piv_sector['Valor_25_esc'] / piv_sector['total']) * 100).round(2)
 
                 
         for i, group in piv_sector.groupby('Ingreso específico'):
@@ -197,25 +197,25 @@ elif selected_option == 'Ingresos':
         ents = d['Entidad'].unique().tolist()
         ent = st.selectbox("Seleccione una entidad: ", ents, key=4)
         fil_ent = d[d['Entidad'] == ent]
-        piv_ent = fil_ent.groupby('Año')['Valor_24_esc'].sum().reset_index()
+        piv_ent = fil_ent.groupby('Año')['Valor_25_esc'].sum().reset_index()
 
         fig = make_subplots(rows=1, cols=2, x_title='Año',  )
             
         fig.add_trace(
                 go.Line(
-                    x=piv_ent['Año'], y=piv_ent['Valor_24_esc'], 
+                    x=piv_ent['Año'], y=piv_ent['Valor_25_esc'], 
                     name='Valor', line=dict(color=DIC_COLORES['ax_viol'][1])
                 ),
                 row=1, col=1
             )
 
         piv_entidad = (fil_ent
-                            .groupby(['Año', 'Ingreso específico'])['Valor_24_esc']
+                            .groupby(['Año', 'Ingreso específico'])['Valor_25_esc']
                             .sum()
                             .reset_index())
-        piv_entidad['total'] = piv_entidad.groupby(['Año'])['Valor_24_esc'].transform('sum')
+        piv_entidad['total'] = piv_entidad.groupby(['Año'])['Valor_25_esc'].transform('sum')
 
-        piv_entidad['%'] = ((piv_entidad['Valor_24_esc'] / piv_entidad['total']) * 100).round(2)
+        piv_entidad['%'] = ((piv_entidad['Valor_25_esc'] / piv_entidad['total']) * 100).round(2)
 
                 
         for i, group in piv_entidad.groupby('Ingreso específico'):
