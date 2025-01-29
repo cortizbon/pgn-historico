@@ -5,7 +5,7 @@ def convert_df(df):
 
 def get_dic_colors(filtro):
     dic_colors = {}
-    rank = filtro.groupby('Sector')['apropiacion_cons_2024'].sum().rank().reset_index(name='rank')
+    rank = filtro.groupby('Sector')['apropiacion_cons_2025'].sum().rank().reset_index(name='rank')
     for _, info in rank.iterrows():
         sector_ = info['Sector']
         rank_ = info['rank']
@@ -20,8 +20,8 @@ def get_dic_colors(filtro):
 
 def get_dic_colors_area(df):
     dic_colors = {}
-    filtro = df[df['Año'] == 2024]
-    rank = filtro.groupby('Sector')['apropiacion_cons_2024'].sum().rank().reset_index(name='rank')
+    filtro = df[df['Año'] == 2025]
+    rank = filtro.groupby('Sector')['apropiacion_cons_2025'].sum().rank().reset_index(name='rank')
     for _, info in rank.iterrows():
         sector_ = info['Sector']
         rank_ = info['rank']

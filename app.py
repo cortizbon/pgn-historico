@@ -14,15 +14,17 @@ from utils import DIC_COLORES, convert_df, get_dic_colors, get_dic_colors_area, 
 
 st.set_page_config(layout='wide', page_title="ofiscal - PePE", page_icon='imgs/favicon.jpeg')
 
-df = pd.read_csv('datasets/gastos_def_2024.csv')
+df = pd.read_csv('datasets/gastos_def_2025.csv')
 df2 = pd.read_csv('datasets/datos_desagregados_2025.csv')
-df2025 = pd.read_csv('datasets/ley_2025.csv')
+pgn_25 = pd.read_csv('datasets/pgn_2025.csv')
+df2025 = pd.read_excel('datasets/decreto_2025.xlsx')
+diff = pd.read_excel('datasets/merge_william.xlsx')
 inc = pd.read_csv('datasets/ingresos_pgn.csv')
 inc['Valor_24_esc'] = (inc['Valor_24'] / 1_000_000_000).round(1)
-df['Apropiación a precios corrientes'] /= 1000000000
-df['Apropiación a precios constantes (2024)'] /= 1000000000
-years = list(df['Año'].unique())
-years = [int(year) for year in years]
+df['Apropiación a precios corrientes'] /= 1_000_000_000
+df['Apropiación a precios constantes (2025)'] /= 1_000_000_000
+
+years = [int(year) for year in list(df['Año'].unique())]
 sectors = list(df['Sector'].unique())
 entities = list(df['Entidad'].unique())
 dict_gasto = {'Funcionamiento':DIC_COLORES['az_verd'][2],
@@ -45,7 +47,7 @@ show = False
 
 
 prices = {"corrientes": 'Apropiación a precios corrientes',
-          "constantes 2024": 'Apropiación a precios constantes (2024)'}
+          "constantes 2025": 'Apropiación a precios constantes (2025)'}
 
 #with st.sidebar:
 #    selected_option = option_menu("Menú", ["Main", "Histórico general", "Histórico por sector", "Histórico por entidad", "Treemap", "Descarga de datos"], 
@@ -60,7 +62,7 @@ selected_option = option_menu(None, ["Main",
                                      "Treemap", 
                                      "Ejecución",
                                      "Recaudo", 
-                                     "Proyecto - 2025",
+                                     "PGN - 2025",
                                      "Descarga de datos"], 
         icons=['arrow-right-short', 
                'file-bar-graph', 
@@ -242,8 +244,8 @@ elif selected_option == "Gastos":
                                 'Por entidad'])
     with tab1:
 
-        piv_2024 = df.groupby('Año')['Apropiación a precios constantes (2024)'].sum().reset_index()
-        tasa_gen_cagr = (piv_2024[piv_2024['Año'] == 2024]['Apropiación a precios constantes (2024)'].reset_index(drop=True)/ piv_2024[piv_2024['Año'] == 2013]['Apropiación a precios constantes (2024)'].reset_index(drop=True))[0] ** (1/(2024 - 2013)) - 1        
+        piv_2024 = df.groupby('Año')['Apropiación a precios constantes (2025)'].sum().reset_index()
+        tasa_gen_cagr = (piv_2024[piv_2024['Año'] == 2025]['Apropiación a precios constantes (2025)'].reset_index(drop=True)/ piv_2024[piv_2024['Año'] == 2013]['Apropiación a precios constantes (2025)'].reset_index(drop=True))[0] ** (1/(2025 - 2013)) - 1        
         piv_2024['CAGR'] = tasa_gen_cagr
         piv_corr = df.groupby('Año')['apropiacion_corrientes'].sum().reset_index()
 
@@ -253,19 +255,19 @@ elif selected_option == "Gastos":
         
         fig.add_trace(
             go.Line(
-                x=piv_2024['Año'], y=piv_2024['Apropiación a precios constantes (2024)'], 
-                name='Apropiación a precios constantes (2024)', line=dict(color=DIC_COLORES['ax_viol'][1])
+                x=piv_2024['Año'], y=piv_2024['Apropiación a precios constantes (2025)'], 
+                name='Apropiación a precios constantes (2025)', line=dict(color=DIC_COLORES['ax_viol'][1])
             ),
             row=1, col=1
         )
 
         piv_tipo_gasto = (df
-                        .groupby(['Año', 'Tipo de gasto'])['Apropiación a precios constantes (2024)']
+                        .groupby(['Año', 'Tipo de gasto'])['Apropiación a precios constantes (2025)']
                         .sum()
                         .reset_index())
-        piv_tipo_gasto['total'] = piv_tipo_gasto.groupby(['Año'])['Apropiación a precios constantes (2024)'].transform('sum')
+        piv_tipo_gasto['total'] = piv_tipo_gasto.groupby(['Año'])['Apropiación a precios constantes (2025)'].transform('sum')
 
-        piv_tipo_gasto['%'] = ((piv_tipo_gasto['Apropiación a precios constantes (2024)'] / piv_tipo_gasto['total']) * 100).round(2)
+        piv_tipo_gasto['%'] = ((piv_tipo_gasto['Apropiación a precios constantes (2025)'] / piv_tipo_gasto['total']) * 100).round(2)
 
 
 
@@ -300,20 +302,20 @@ elif selected_option == "Gastos":
         
         fig.add_trace(
             go.Line(
-                x=pivot_sector['Año'], y=pivot_sector['Apropiación a precios constantes (2024)'], 
-                name='Apropiación a precios constantes (2024)', line=dict(color=DIC_COLORES['ax_viol'][1])
+                x=pivot_sector['Año'], y=pivot_sector['Apropiación a precios constantes (2025)'], 
+                name='Apropiación a precios constantes (2025)', line=dict(color=DIC_COLORES['ax_viol'][1])
             ),
             row=1, col=1
         )
 
         piv_tipo_gasto_sector = (filter_sector
-                        .groupby(['Año', 'Tipo de gasto'])['Apropiación a precios constantes (2024)']
+                        .groupby(['Año', 'Tipo de gasto'])['Apropiación a precios constantes (2025)']
                         .sum()
                         .reset_index())
         for i, group in piv_tipo_gasto_sector.groupby('Tipo de gasto'):
             fig.add_trace(go.Bar(
                 x=group['Año'],
-                y=group['Apropiación a precios constantes (2024)'],
+                y=group['Apropiación a precios constantes (2025)'],
                 name=i, marker_color=dict_gasto[i]
             ), row=1, col=2)
 
@@ -333,10 +335,10 @@ elif selected_option == "Gastos":
 
 
         pivot_sector = pivot_sector.set_index('Año')
-        pivot_sector['pct'] = pivot_sector['Apropiación a precios constantes (2024)'].pct_change()
+        pivot_sector['pct'] = pivot_sector['Apropiación a precios constantes (2025)'].pct_change()
         pivot_sector['pct'] = (pivot_sector['pct'] * 100).round(2)
         den = max(pivot_sector.index) - min(pivot_sector.index)
-        pivot_sector['CAGR'] = ((pivot_sector.loc[max(pivot_sector.index), 'Apropiación a precios constantes (2024)'] / pivot_sector.loc[min(pivot_sector.index), 'Apropiación a precios constantes (2024)']) ** (1/11)) - 1
+        pivot_sector['CAGR'] = ((pivot_sector.loc[max(pivot_sector.index), 'Apropiación a precios constantes (2025)'] / pivot_sector.loc[min(pivot_sector.index), 'Apropiación a precios constantes (2025)']) ** (1/11)) - 1
         pivot_sector['CAGR'] = (pivot_sector['CAGR'] * 100).round(2)
         pivot_sector['CAGR_gen'] = (tasa_gen_cagr * 100).round(2)
         pivot_sector = pivot_sector.reset_index()
@@ -344,8 +346,8 @@ elif selected_option == "Gastos":
         fig = make_subplots(rows=1, cols=2, x_title='Año')
 
         fig.add_trace(
-                go.Bar(x=pivot_sector['Año'], y=pivot_sector['Apropiación a precios constantes (2024)'],
-                    name='Apropiación a precios constantes (2024)', marker_color=DIC_COLORES['ofiscal'][1]),
+                go.Bar(x=pivot_sector['Año'], y=pivot_sector['Apropiación a precios constantes (2025)'],
+                    name='Apropiación a precios constantes (2025)', marker_color=DIC_COLORES['ofiscal'][1]),
                 row=1, col=1, 
             )
 
@@ -397,19 +399,19 @@ elif selected_option == "Gastos":
         
         fig.add_trace(
             go.Line(
-                x=pivot_entity['Año'], y=pivot_entity['Apropiación a precios constantes (2024)'], 
-                name='Apropiación a precios constantes (2024)', line=dict(color=DIC_COLORES['ax_viol'][1])
+                x=pivot_entity['Año'], y=pivot_entity['Apropiación a precios constantes (2025)'], 
+                name='Apropiación a precios constantes (2025)', line=dict(color=DIC_COLORES['ax_viol'][1])
             ),
             row=1, col=1
         )
         piv_tipo_gasto_entity = (filter_entity
-                        .groupby(['Año', 'Tipo de gasto'])['Apropiación a precios constantes (2024)']
+                        .groupby(['Año', 'Tipo de gasto'])['Apropiación a precios constantes (2025)']
                         .sum()
                         .reset_index())
         for i, group in piv_tipo_gasto_entity.groupby('Tipo de gasto'):
             fig.add_trace(go.Bar(
                 x=group['Año'],
-                y=group['Apropiación a precios constantes (2024)'],
+                y=group['Apropiación a precios constantes (2025)'],
                 name=i, marker_color=dict_gasto[i]
             ), row=1, col=2)
 
@@ -430,10 +432,10 @@ elif selected_option == "Gastos":
         st.subheader(f"Variación histórica por entidad: {entidad}")
 
         pivot_entity = pivot_entity.set_index('Año')
-        pivot_entity['pct'] = pivot_entity['Apropiación a precios constantes (2024)'].pct_change()
+        pivot_entity['pct'] = pivot_entity['Apropiación a precios constantes (2025)'].pct_change()
         pivot_entity['pct'] = (pivot_entity['pct'] * 100).round(2)
         den = max(pivot_entity.index) - min(pivot_entity.index)
-        pivot_entity['CAGR'] = ((pivot_entity.loc[max(pivot_entity.index), 'Apropiación a precios constantes (2024)'] / pivot_entity.loc[min(pivot_entity.index), 'Apropiación a precios constantes (2024)'] ) ** (1/den)) - 1
+        pivot_entity['CAGR'] = ((pivot_entity.loc[max(pivot_entity.index), 'Apropiación a precios constantes (2025)'] / pivot_entity.loc[min(pivot_entity.index), 'Apropiación a precios constantes (2025)'] ) ** (1/den)) - 1
         pivot_entity['CAGR'] = (pivot_entity['CAGR'] * 100).round(2)
         pivot_entity['CAGR_gen'] = (tasa_gen_cagr * 100).round(2)
         pivot_entity = pivot_entity.reset_index()
@@ -441,8 +443,8 @@ elif selected_option == "Gastos":
         fig = make_subplots(rows=1, cols=2, x_title='Año')
 
         fig.add_trace(
-            go.Bar(x=pivot_entity['Año'], y=pivot_entity['Apropiación a precios constantes (2024)'],
-                name='Apropiación a precios constantes (2024)', marker_color=DIC_COLORES['ofiscal'][1]),
+            go.Bar(x=pivot_entity['Año'], y=pivot_entity['Apropiación a precios constantes (2025)'],
+                name='Apropiación a precios constantes (2025)', marker_color=DIC_COLORES['ofiscal'][1]),
             row=1, col=1, 
         )
 
@@ -510,7 +512,7 @@ elif selected_option == "Treemap":
                         path=[px.Constant('PGN'),     'Sector', 
                                 'Entidad', 
                                 'Tipo de gasto'],
-                        values='Apropiación a precios constantes (2024)',
+                        values='Apropiación a precios constantes (2025)',
                         color='Sector',
                         color_discrete_map=dic_treemap,
                         title="Matriz de composición anual de gasto del PGN <br><sup>Cifras en miles de millones de pesos</sup>")
@@ -520,7 +522,9 @@ elif selected_option == "Treemap":
         st.plotly_chart(fig)
 
 elif selected_option == 'Ejecución':
-    months = [
+    st.warning("Sin datos de ejecución a la fecha. Esperando actualización de Minhacienda.")
+    
+    time = """ months = [
         "Ene", "Feb", "Mar", "Abr", "May", "Jun",
         "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"
     ]
@@ -1117,10 +1121,11 @@ elif selected_option == 'Ejecución':
                     label="Descargar CSV",
                     data=csv,
                     file_name='datos_ejecucion_agosto.csv',
-                    mime='text/csv')
+                    mime='text/csv') """
 
 elif selected_option == 'Recaudo':
-    rec = pd.read_csv('datasets/recaudo.csv')
+    st.warning("Sin datos de recaudo a la fecha. Esperando actualización de DIAN.")
+    time2 = """rec = pd.read_csv('datasets/recaudo.csv')
     rec['Valor'] = rec['Valor'] / 1_000
 
     tab1, tab2, tab3 = st.tabs(['General', 'Interno', 'Externo'])
@@ -1267,171 +1272,62 @@ elif selected_option == 'Recaudo':
             x=1), title='Histórico externo <br><sup>Cifras en miles de millones de pesos</sup>', yaxis_tickformat='.0f')
 
 
-            st.plotly_chart(fig)
+            st.plotly_chart(fig)"""
         
 
 
-elif selected_option == "Proyecto - 2025":
+elif selected_option == "PGN - 2025":
+    
+    st.header("PGN - 2025")
+    
+    pgn_25['TOTAL_mil'] = (pgn_25['TOTAL'] / 1_000_000).round(1)
 
-    st.header("Proyecto de ley - 2025")
-    df2025['TOTAL_mil'] = (df2025['TOTAL'] / 1000000).round(1)
-
-    fig = px.treemap(df2025, path=[px.Constant('Proyecto'), 'Sector', 'Entidad', 'Tipo de gasto'],
+    fig = px.treemap(pgn_25, path=[px.Constant('PGN'), 'Sector', 'Entidad', 'Tipo de gasto', 'CTA PROG','SUBC SUBP','OBJG PROY', 'ORD\nSPRY'],
                             values='TOTAL_mil',
-                            title="Matriz de composición anual del proyecto <br><sup>Cifras en millones de pesos</sup>",
+                            title="Matriz de composición del presupuesto de 2025 <br><sup>Cifras en millones de pesos</sup>",
                             color_continuous_scale='Teal')
 
     fig.update_layout(width=1000, height=600)
             
     st.plotly_chart(fig)
+    
+    st.subheader("Descarga de datos")
+    
+    binary_output = BytesIO()
+    pgn_25.to_excel(binary_output, index=False)
+    st.download_button(label = 'Descargar datos de decreto',
+                    data = binary_output.getvalue(),
+                    file_name = 'pgn_2025.xlsx')    
+    
+
+    st.header("Decreto de aplazamiento - 2025")
+    df2025['TOTAL_mil'] = (df2025['TOTAL'] / 1_000_000).round(1)
+
+    fig = px.treemap(df2025, path=[px.Constant('Decreto'), 'Sector', 'Entidad', 'Tipo de gasto', 'CTA\nPROG', 'SUBC\nSUBP', 'OBJG\nPROY', 'ORD\nSPRY'],
+                            values='TOTAL_mil',
+                            title="Matriz de composición del decreto de aplazamiento <br><sup>Cifras en millones de pesos</sup>",
+                            color_continuous_scale='Teal')
+
+    fig.update_layout(width=1000, height=600)
+            
+    st.plotly_chart(fig)
+    
+    st.subheader("Visualización diferenciada")
+    
+    entidad = st.selectbox("Seleccione una entidad", diff['Entidad'].unique().tolist())
+    
+    diff_entidad = diff[diff['Entidad'] == entidad]
+    
+    st.dataframe(diff_entidad[['OBJG\nPROY','pgn_25','dec_aplaz', '% aplazado']].sort_values(by='% aplazado', ascending=False).reset_index(drop=True))
 
     st.subheader("Descarga de datos")
 
 
     binary_output = BytesIO()
     df2025.to_excel(binary_output, index=False)
-    st.download_button(label = 'Descargar datos de proyecto',
+    st.download_button(label = 'Descargar datos de decreto',
                     data = binary_output.getvalue(),
-                    file_name = 'proyecto_2025.xlsx')  
-
-    
-    
-    st.header("Anteproyecto - 2025")
-
-    df4 = df2.copy()
-    df4.loc[df4['CTA PROG'].isna(), 'CTA PROG'] = 'Inversión'
-
-    fig = px.treemap(df4, 
-                            path=[px.Constant('Anteproyecto'), 'Sector', 'Entidad','Tipo de gasto', 
-                                    'CTA PROG'],
-                            values='Apropiación 2025',
-                            title="Matriz de composición anual del Anteproyecto <br><sup>Cifras en millones de pesos</sup>",
-                            color_continuous_scale='Teal')
-            
-    fig.update_layout(width=1000, height=600)
-            
-    st.plotly_chart(fig)
-
-    st.subheader("Flujo del gasto por tipo de gasto (% del PGN)")
-
-    lista = ['PGN', 'Tipo de gasto', 'CTA PROG']
-    df3 = df2.copy()
-    df3['PGN'] = 'PGN'
-
-    dicti = {'2':['Inversión','Deuda']}
-    nodes, rev_info, links = create_dataframe_sankey(df3, '% porc',*lista, **dicti)
-    fig = go.Figure(data=[go.Sankey(
-    arrangement='snap',
-    node = dict(
-      pad = 15,
-      thickness = 20,
-      line = dict(color = "#2635bf", width = 0.5),
-      label = nodes['names'],
-      color = nodes['color'],
-      x = nodes['x_pos'].values ,
-      y = nodes['x_pos'].values / 2.4
-    ),
-    link = dict(
-      source = links['source'], 
-      target = links['target'],
-      value = links['value'],
-      color = links['color'],
-      hovertemplate='Proporción del gasto de %{source.label}<br />'+
-        'hacia %{target.label}:<br /> <b>%{value:.2f}%<extra></extra>'
-    ))])
-
-    fig.update_layout(title_text="Flujo del gasto", 
-                      font_size=12, 
-                      width=1000, 
-                      height=600)
-    st.plotly_chart(fig)
-
-
-
-
-    st.subheader("Flujo del gasto por sector (% del PGN)")
-    lista = ['PGN', 'Sector', 'Tipo de gasto', 'CTA PROG']
-    df3 = df2.copy()
-    df3['PGN'] = 'PGN'
-
-    top_10 = df2.groupby('Sector')['Apropiación 2025'].sum().reset_index().sort_values(by='Apropiación 2025', ascending=False).head(10)['Sector']
-
-    df3.loc[~df3['Sector'].isin(top_10), 'Sector'] = 'Otros sectores'
-
-    dicti = {'3':['Inversión','Deuda']}
-    nodes, rev_info, links = create_dataframe_sankey(df3, '% porc',*lista, **dicti)
-    fig = go.Figure(data=[go.Sankey(
-    arrangement='snap',
-    node = dict(
-      pad = 15,
-      thickness = 20,
-      line = dict(color = "#2635bf", width = 0.5),
-      label = nodes['names'],
-      color = nodes['color'],
-      x = nodes['x_pos'].values ,
-      y = nodes['x_pos'].values / 2.4
-    ),
-    link = dict(
-      source = links['source'], 
-      target = links['target'],
-      value = links['value'],
-      color = links['color'],
-      hovertemplate='Proporción del gasto de %{source.label}<br />'+
-        'hacia %{target.label}:<br /> <b>%{value:.2f}%<extra></extra>'
-    ))])
-
-    fig.update_layout(title_text="Flujo del gasto por sector", 
-                      font_size=12, 
-                      width=1000, 
-                      height=600)
-    st.plotly_chart(fig)
-    
-
-    st.subheader("Flujo del gasto por entidad (% del PGN)")
-    lista = ['PGN','Entidad', 'Tipo de gasto', 'CTA PROG']
-    df3 = df2.copy()
-    df3['PGN'] = 'PGN'
-
-    top_10 = df2.groupby('Entidad')['Apropiación 2025'].sum().reset_index().sort_values(by='Apropiación 2025', ascending=False).head(10)['Entidad']
-
-    df3.loc[~df3['Entidad'].isin(top_10), 'Entidad'] = 'Otras entidades'
-
-    dicti = {'3':['Inversión','Deuda']}
-    nodes, rev_info, links = create_dataframe_sankey(df3, '% porc',*lista, **dicti)
-    fig = go.Figure(data=[go.Sankey(
-    arrangement='snap',
-    node = dict(
-      pad = 15,
-      thickness = 20,
-      line = dict(color = "#2635bf", width = 0.5),
-      label = nodes['names'],
-      color = nodes['color'],
-      x = nodes['x_pos'].values,
-      y = nodes['x_pos'].values / 2.4
-    ),
-    link = dict(
-      source = links['source'], 
-      target = links['target'],
-      value = links['value'],
-      color = links['color'],
-      hovertemplate='Proporción del gasto de %{source.label}<br />'+
-        'hacia %{target.label}:<br /> <b>%{value:.2f}%<extra></extra>'
-    ))])
-
-    fig.update_layout(title_text="Flujo del gasto por entidad", 
-                      font_size=12, 
-                      width=1000, 
-                      height=600)
-    st.plotly_chart(fig)
-
-    st.subheader("Descarga de datos")
-
-
-    binary_output = BytesIO()
-    df2.to_excel(binary_output, index=False)
-    st.download_button(label = 'Descargar datos de anteproyecto',
-                    data = binary_output.getvalue(),
-                    file_name = 'anteproyecto_2025.xlsx')    
+                    file_name = 'decreto_2025.xlsx')  
 
     
 
