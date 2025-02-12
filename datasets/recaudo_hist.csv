@@ -1,0 +1,1211 @@
+Actividad,C1,C2,Impuesto,Año,Valor,IPC,Valor_pc,Rubro,Rubro2
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1970,5419.0,0.0803367287205411,6745358.052666674,Renta,Renta
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1970,1000.0,0.0803367287205411,1244760.6666666681,IVA,IVA
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1970,3681.0,0.0803367287205411,4581964.014000005,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1970,0.0,0.0803367287205411,0.0,IVA,IVA
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1970,599.0,0.0803367287205411,745611.6393333342,Otros impuestos,Timbre nacional
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1970,74.0,0.0803367287205411,92112.28933333344,IVA,IVA
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1970,0.0,0.0803367287205411,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1970,0.0,0.0803367287205411,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1970,0.0,0.0803367287205411,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1970,0.0,0.0803367287205411,0.0,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1970,0.0,0.0803367287205411,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1970,0.0,0.0803367287205411,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1970,0.0,0.0803367287205411,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1970,0.0,0.0803367287205411,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1970,0.0,0.0803367287205411,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1970,0.0,0.0803367287205411,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1970,0.0,0.0803367287205411,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1970,0.0,0.0803367287205411,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1970,0.0,0.0803367287205411,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1970,0.0,0.0803367287205411,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1970,539.0,0.0803367287205411,670925.9993333342,Renta,Renta
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1970,0.0,0.0803367287205411,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1971,0.0,0.093726183507298,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1971,4045.0,0.093726183507298,4315763.054285717,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1971,6122.0,0.093726183507298,6531792.686857147,Renta,Renta
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1971,344.0,0.093726183507298,367026.573714286,IVA,IVA
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1971,0.0,0.093726183507298,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1971,0.0,0.093726183507298,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1971,0.0,0.093726183507298,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1971,0.0,0.093726183507298,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1971,1338.0,0.093726183507298,1427562.6617142865,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1971,0.0,0.093726183507298,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1971,876.0,0.093726183507298,934637.4377142864,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1971,0.0,0.093726183507298,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1971,0.0,0.093726183507298,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1971,0.0,0.093726183507298,0.0,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1971,0.0,0.093726183507298,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1971,818.0,0.093726183507298,872755.0502857149,Renta,Renta
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1971,0.0,0.093726183507298,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1971,0.0,0.093726183507298,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1971,0.0,0.093726183507298,0.0,IVA,IVA
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1971,0.0,0.093726183507298,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1971,0.0,0.093726183507298,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1971,0.0,0.093726183507298,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1972,4534.0,0.1071156382940549,4232808.647000001,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1972,6862.0,0.1071156382940549,6406160.771000001,Renta,Renta
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1972,0.0,0.1071156382940549,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1972,0.0,0.1071156382940549,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1972,0.0,0.1071156382940549,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1972,1447.0,0.1071156382940549,1350876.5135000001,IVA,IVA
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1972,0.0,0.1071156382940549,0.0,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1972,0.0,0.1071156382940549,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1972,0.0,0.1071156382940549,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1972,1040.0,0.1071156382940549,970913.3200000002,Otros impuestos,Timbre nacional
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1972,0.0,0.1071156382940549,0.0,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1972,0.0,0.1071156382940549,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1972,1159.0,0.1071156382940549,1082008.2095,Renta,Renta
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1972,0.0,0.1071156382940549,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1972,0.0,0.1071156382940549,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1972,0.0,0.1071156382940549,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1972,0.0,0.1071156382940549,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1972,0.0,0.1071156382940549,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1972,0.0,0.1071156382940549,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1972,548.0,0.1071156382940549,511596.6340000001,IVA,IVA
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1972,0.0,0.1071156382940549,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1972,0.0,0.1071156382940549,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1973,0.0,0.1271998204741902,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1973,1686.0,0.1271998204741902,1325473.5688421053,IVA,IVA
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1973,0.0,0.1271998204741902,0.0,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1973,0.0,0.1271998204741902,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1973,0.0,0.1271998204741902,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1973,0.0,0.1271998204741902,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1973,0.0,0.1271998204741902,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1973,0.0,0.1271998204741902,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1973,0.0,0.1271998204741902,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1973,7528.0,0.1271998204741902,5918247.346526316,Renta,Renta
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1973,0.0,0.1271998204741902,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1973,1375.0,0.1271998204741902,1080976.3684210526,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1973,0.0,0.1271998204741902,0.0,IVA,IVA
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1973,0.0,0.1271998204741902,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1973,0.0,0.1271998204741902,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1973,774.0,0.1271998204741902,608491.4248421052,IVA,IVA
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1973,0.0,0.1271998204741902,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1973,0.0,0.1271998204741902,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1973,1522.0,0.1271998204741902,1196542.569263158,Renta,Renta
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1973,0.0,0.1271998204741902,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1973,0.0,0.1271998204741902,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1973,6156.0,0.1271998204741902,4839629.472,Otros impuestos,Arancel
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1974,1390.0,0.1673681848344608,830504.3168,IVA,IVA
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1974,0.0,0.1673681848344608,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1974,2555.0,0.1673681848344608,1526574.4816,IVA,IVA
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1974,0.0,0.1673681848344608,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1974,8996.0,0.1673681848344608,5374976.13952,Renta,Renta
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1974,0.0,0.1673681848344608,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1974,7634.0,0.1673681848344608,4561201.40608,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1974,0.0,0.1673681848344608,0.0,IVA,IVA
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1974,0.0,0.1673681848344608,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1974,0.0,0.1673681848344608,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1974,0.0,0.1673681848344608,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1974,0.0,0.1673681848344608,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1974,0.0,0.1673681848344608,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1974,0.0,0.1673681848344608,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1974,0.0,0.1673681848344608,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1974,1791.0,0.1673681848344608,1070095.84992,Otros impuestos,Timbre nacional
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1974,0.0,0.1673681848344608,0.0,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1974,0.0,0.1673681848344608,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1974,0.0,0.1673681848344608,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1974,2139.0,0.1673681848344608,1278020.6716800001,Renta,Renta
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1974,0.0,0.1673681848344608,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1974,0.0,0.1673681848344608,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1975,15702.0,0.1941470944079745,8087682.201931036,Renta,Renta
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1975,0.0,0.1941470944079745,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1975,0.0,0.1941470944079745,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1975,0.0,0.1941470944079745,0.0,IVA,IVA
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1975,0.0,0.1941470944079745,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1975,0.0,0.1941470944079745,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1975,0.0,0.1941470944079745,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1975,2613.0,0.1941470944079745,1345886.7401379314,Renta,Renta
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1975,0.0,0.1941470944079745,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1975,9479.0,0.1941470944079745,4882380.562482759,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1975,0.0,0.1941470944079745,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1975,0.0,0.1941470944079745,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1975,2584.0,0.1941470944079745,1330949.6121379314,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1975,0.0,0.1941470944079745,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1975,0.0,0.1941470944079745,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1975,1658.0,0.1941470944079745,853991.6628965519,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1975,0.0,0.1941470944079745,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1975,0.0,0.1941470944079745,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1975,5174.0,0.1941470944079745,2664989.6645517247,IVA,IVA
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1975,0.0,0.1941470944079745,0.0,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1975,0.0,0.1941470944079745,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1975,0.0,0.1941470944079745,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1976,13687.0,0.2410101861616235,5679013.081555557,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1976,0.0,0.2410101861616235,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1976,3564.0,0.2410101861616235,1478775.6720000005,IVA,IVA
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1976,10950.0,0.2410101861616235,4543376.4333333345,Renta,Renta
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1976,0.0,0.2410101861616235,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1976,0.0,0.2410101861616235,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1976,0.0,0.2410101861616235,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1976,9819.0,0.2410101861616235,4074101.6620000014,Renta,Renta
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1976,0.0,0.2410101861616235,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1976,0.0,0.2410101861616235,0.0,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1976,1748.0,0.2410101861616235,725280.5484444447,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1976,0.0,0.2410101861616235,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1976,0.0,0.2410101861616235,0.0,IVA,IVA
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1976,0.0,0.2410101861616235,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1976,0.0,0.2410101861616235,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1976,0.0,0.2410101861616235,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1976,6497.0,0.2410101861616235,2695736.683777779,IVA,IVA
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1976,0.0,0.2410101861616235,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1976,0.0,0.2410101861616235,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1976,0.0,0.2410101861616235,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1976,0.0,0.2410101861616235,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1976,0.0,0.2410101861616235,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1977,0.0,0.3146521874887863,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1977,0.0,0.3146521874887863,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1977,0.0,0.3146521874887863,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1977,0.0,0.3146521874887863,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1977,0.0,0.3146521874887863,0.0,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1977,0.0,0.3146521874887863,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1977,0.0,0.3146521874887863,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1977,19037.0,0.3146521874887863,6050172.462468085,Otros impuestos,Arancel
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1977,5107.0,0.3146521874887863,1623061.9722553191,IVA,IVA
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1977,0.0,0.3146521874887863,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1977,0.0,0.3146521874887863,0.0,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1977,0.0,0.3146521874887863,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1977,8344.0,0.3146521874887863,2651816.9368510637,IVA,IVA
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1977,0.0,0.3146521874887863,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1977,0.0,0.3146521874887863,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1977,0.0,0.3146521874887863,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1977,19813.0,0.3146521874887863,6296793.980085107,Renta,Renta
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1977,0.0,0.3146521874887863,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1977,2176.0,0.3146521874887863,691557.2452765957,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1977,4375.0,0.3146521874887863,1390424.1489361702,Renta,Renta
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1977,0.0,0.3146521874887863,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1977,0.0,0.3146521874887863,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1978,0.0,0.3749047340291922,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1978,7506.0,0.3749047340291922,2002108.6208571428,IVA,IVA
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1978,2876.0,0.3749047340291922,767128.2165714286,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1978,0.0,0.3749047340291922,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1978,0.0,0.3749047340291922,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1978,0.0,0.3749047340291922,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1978,0.0,0.3749047340291922,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1978,25063.0,0.3749047340291922,6685164.983285714,Renta,Renta
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1978,0.0,0.3749047340291922,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1978,0.0,0.3749047340291922,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1978,0.0,0.3749047340291922,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1978,0.0,0.3749047340291922,0.0,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1978,0.0,0.3749047340291922,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1978,21505.0,0.3749047340291922,5736123.886428571,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1978,0.0,0.3749047340291922,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1978,0.0,0.3749047340291922,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1978,11151.0,0.3749047340291922,2974355.613,IVA,IVA
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1978,0.0,0.3749047340291922,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1978,0.0,0.3749047340291922,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1978,5614.0,0.3749047340291922,1497447.082,Renta,Renta
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1978,0.0,0.3749047340291922,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1978,0.0,0.3749047340291922,0.0,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1979,0.0,0.4820203723232471,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1979,0.0,0.4820203723232471,0.0,Otros impuestos,Riqueza
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1979,9342.0,0.4820203723232471,1938092.358,IVA,IVA
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1979,0.0,0.4820203723232471,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1979,8686.0,0.4820203723232471,1801998.525111111,Renta,Renta
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1979,0.0,0.4820203723232471,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1979,3176.0,0.4820203723232471,658893.3128888889,Otros impuestos,Timbre nacional
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1979,0.0,0.4820203723232471,0.0,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1979,15556.0,0.4820203723232471,3227249.4884444443,IVA,IVA
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1979,0.0,0.4820203723232471,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1979,0.0,0.4820203723232471,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1979,0.0,0.4820203723232471,0.0,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1979,0.0,0.4820203723232471,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1979,0.0,0.4820203723232471,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1979,0.0,0.4820203723232471,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1979,29799.0,0.4820203723232471,6182103.851,Renta,Renta
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1979,25477.0,0.4820203723232471,5285461.250777777,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1979,0.0,0.4820203723232471,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1979,0.0,0.4820203723232471,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1979,0.0,0.4820203723232471,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1979,0.0,0.4820203723232471,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1979,0.0,0.4820203723232471,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1980,0.0,0.6025254654040589,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1980,0.0,0.6025254654040589,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1980,0.0,0.6025254654040589,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1980,4969.0,0.6025254654040589,824695.4336888888,Otros impuestos,Timbre nacional
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1980,0.0,0.6025254654040589,0.0,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1980,13175.0,0.6025254654040589,2186629.571111111,Renta,Renta
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1980,0.0,0.6025254654040589,0.0,IVA,IVA
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1980,0.0,0.6025254654040589,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1980,0.0,0.6025254654040589,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1980,0.0,0.6025254654040589,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1980,35143.0,0.6025254654040589,5832616.547822222,Renta,Renta
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1980,18758.0,0.6025254654040589,3113229.4113777773,IVA,IVA
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1980,0.0,0.6025254654040589,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1980,0.0,0.6025254654040589,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1980,35526.0,0.6025254654040589,5896182.325866667,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1980,0.0,0.6025254654040589,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1980,14806.0,0.6025254654040589,2457323.524088889,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1980,0.0,0.6025254654040589,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1980,0.0,0.6025254654040589,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1980,0.0,0.6025254654040589,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1980,0.0,0.6025254654040589,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1980,0.0,0.6025254654040589,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1981,0.0,0.7631989228451411,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1981,0.0,0.7631989228451411,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1981,0.0,0.7631989228451411,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1981,0.0,0.7631989228451411,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1981,0.0,0.7631989228451411,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1981,38633.0,0.7631989228451411,5061983.035298247,Renta,Renta
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1981,0.0,0.7631989228451411,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1981,0.0,0.7631989228451411,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1981,0.0,0.7631989228451411,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1981,4945.0,0.7631989228451411,647930.6838596493,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1981,0.0,0.7631989228451411,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1981,0.0,0.7631989228451411,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1981,0.0,0.7631989228451411,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1981,0.0,0.7631989228451411,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1981,17159.0,0.7631989228451411,2248299.8188771936,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1981,0.0,0.7631989228451411,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1981,0.0,0.7631989228451411,0.0,IVA,IVA
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1981,37535.0,0.7631989228451411,4918114.907719299,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1981,16093.0,0.7631989228451411,2108624.569333334,Renta,Renta
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1981,0.0,0.7631989228451411,0.0,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1981,0.0,0.7631989228451411,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1981,25713.0,0.7631989228451411,3369108.52863158,IVA,IVA
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1982,0.0,0.943956562466359,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1982,0.0,0.943956562466359,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1982,0.0,0.943956562466359,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1982,0.0,0.943956562466359,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1982,0.0,0.943956562466359,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1982,0.0,0.943956562466359,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1982,0.0,0.943956562466359,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1982,0.0,0.943956562466359,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1982,43972.0,0.943956562466359,4658265.194439717,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1982,0.0,0.943956562466359,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1982,0.0,0.943956562466359,0.0,IVA,IVA
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1982,0.0,0.943956562466359,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1982,33536.0,0.943956562466359,3552705.8482836885,IVA,IVA
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1982,6615.0,0.943956562466359,700773.7710638299,Otros impuestos,Timbre nacional
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1982,21282.0,0.943956562466359,2254552.8942978727,IVA,IVA
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1982,0.0,0.943956562466359,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1982,0.0,0.943956562466359,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1982,0.0,0.943956562466359,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1982,0.0,0.943956562466359,0.0,Otros impuestos,Riqueza
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1982,0.0,0.943956562466359,0.0,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1982,46655.0,0.943956562466359,4942494.374751774,Renta,Renta
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1982,21215.0,0.943956562466359,2247455.1100709224,Renta,Renta
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1983,0.0,1.1046300199074413,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1983,7436.0,1.1046300199074413,673166.5685333335,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1983,0.0,1.1046300199074413,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1983,0.0,1.1046300199074413,0.0,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1983,0.0,1.1046300199074413,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1983,0.0,1.1046300199074413,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1983,0.0,1.1046300199074413,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1983,0.0,1.1046300199074413,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1983,0.0,1.1046300199074413,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1983,42845.0,1.1046300199074413,3878674.237333334,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1983,0.0,1.1046300199074413,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1983,0.0,1.1046300199074413,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1983,0.0,1.1046300199074413,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1983,0.0,1.1046300199074413,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1983,21357.0,1.1046300199074413,1933407.5314909094,IVA,IVA
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1983,72515.0,1.1046300199074413,6564641.435878789,Renta,Renta
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1983,41997.0,1.1046300199074413,3801906.4522181824,IVA,IVA
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1983,0.0,1.1046300199074413,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1983,0.0,1.1046300199074413,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1983,0.0,1.1046300199074413,0.0,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1983,0.0,1.1046300199074413,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1983,27716.0,1.1046300199074413,2509075.391806061,Renta,Renta
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1984,0.0,1.3054718417087945,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1984,0.0,1.3054718417087945,0.0,IVA,IVA
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1984,38979.0,1.3054718417087945,2985816.986215384,Renta,Renta
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1984,0.0,1.3054718417087945,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1984,0.0,1.3054718417087945,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1984,0.0,1.3054718417087945,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1984,0.0,1.3054718417087945,0.0,Otros impuestos,Riqueza
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1984,46087.0,1.3054718417087945,3530294.4519794867,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1984,62269.0,1.3054718417087945,4769846.274010256,IVA,IVA
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1984,0.0,1.3054718417087945,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1984,0.0,1.3054718417087945,0.0,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1984,0.0,1.3054718417087945,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1984,81860.0,1.3054718417087945,6270529.733743588,Renta,Renta
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1984,0.0,1.3054718417087945,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1984,0.0,1.3054718417087945,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1984,0.0,1.3054718417087945,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1984,25827.0,1.3054718417087945,1978365.153107692,IVA,IVA
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1984,0.0,1.3054718417087945,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1984,11027.0,1.3054718417087945,844675.4382358973,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1984,0.0,1.3054718417087945,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1984,0.0,1.3054718417087945,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1984,0.0,1.3054718417087945,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1985,0.0,1.5933451196240669,0.0,Otros impuestos,Por clasificar
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1985,90415.0,1.5933451196240669,5674539.613949581,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1985,94801.0,1.5933451196240669,5949809.544235295,IVA,IVA
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1985,0.0,1.5933451196240669,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1985,0.0,1.5933451196240669,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1985,0.0,1.5933451196240669,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1985,0.0,1.5933451196240669,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1985,0.0,1.5933451196240669,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1985,0.0,1.5933451196240669,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1985,19486.0,1.5933451196240669,1222961.664739496,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1985,0.0,1.5933451196240669,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1985,61532.0,1.5933451196240669,3861812.437378152,Renta,Renta
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1985,0.0,1.5933451196240669,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1985,0.0,1.5933451196240669,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1985,0.0,1.5933451196240669,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1985,100567.0,1.5933451196240669,6311689.7125042025,Renta,Renta
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1985,0.0,1.5933451196240669,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1985,0.0,1.5933451196240669,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1985,0.0,1.5933451196240669,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1985,0.0,1.5933451196240669,0.0,IVA,IVA
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1985,40758.0,1.5933451196240669,2558014.5505210087,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1985,0.0,1.5933451196240669,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1986,0.0,1.9280814892929885,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1986,24926.0,1.9280814892929885,1292787.682388889,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1986,0.0,1.9280814892929885,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1986,62743.0,1.9280814892929885,3254167.437861111,IVA,IVA
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1986,0.0,1.9280814892929885,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1986,124243.0,1.9280814892929885,6443866.646194444,Renta,Renta
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1986,0.0,1.9280814892929885,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1986,0.0,1.9280814892929885,0.0,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1986,0.0,1.9280814892929885,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1986,0.0,1.9280814892929885,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1986,0.0,1.9280814892929885,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1986,98358.0,1.9280814892929885,5101340.402166666,Renta,Renta
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1986,0.0,1.9280814892929885,0.0,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1986,0.0,1.9280814892929885,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1986,0.0,1.9280814892929885,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1986,0.0,1.9280814892929885,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1986,0.0,1.9280814892929885,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1986,141638.0,1.9280814892929885,7346058.804388888,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1986,126040.0,1.9280814892929885,6537068.101111111,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1986,0.0,1.9280814892929885,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1986,0.0,1.9280814892929885,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1986,0.0,1.9280814892929885,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1987,0.0,2.3967124068294785,0.0,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1987,16964.0,2.3967124068294785,707802.9033296091,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1987,0.0,2.3967124068294785,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1987,0.0,2.3967124068294785,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1987,0.0,2.3967124068294785,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1987,0.0,2.3967124068294785,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1987,0.0,2.3967124068294785,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1987,0.0,2.3967124068294785,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1987,0.0,2.3967124068294785,0.0,IVA,IVA
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1987,0.0,2.3967124068294785,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1987,0.0,2.3967124068294785,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1987,156559.0,2.3967124068294785,6532239.727798884,Renta,Renta
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1987,0.0,2.3967124068294785,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1987,0.0,2.3967124068294785,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1987,91559.0,2.3967124068294785,3820191.347910615,IVA,IVA
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1987,241266.0,2.3967124068294785,10066539.452648045,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1987,161770.0,2.3967124068294785,6749662.560223465,Renta,Renta
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1987,0.0,2.3967124068294785,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1987,0.0,2.3967124068294785,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1987,173164.0,2.3967124068294785,7225063.779307263,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1987,0.0,2.3967124068294785,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1987,0.0,2.3967124068294785,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1988,0.0,3.0661851461673217,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1988,205014.0,3.0661851461673217,6686288.99517904,Renta,Renta
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1988,0.0,3.0661851461673217,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1988,0.0,3.0661851461673217,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1988,0.0,3.0661851461673217,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1988,0.0,3.0661851461673217,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1988,228690.0,3.0661851461673217,7458453.716855896,IVA,IVA
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1988,0.0,3.0661851461673217,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1988,0.0,3.0661851461673217,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1988,0.0,3.0661851461673217,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1988,19077.0,3.0661851461673217,622173.7791615721,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1988,221915.0,3.0661851461673217,7237495.109432315,Renta,Renta
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1988,0.0,3.0661851461673217,0.0,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1988,0.0,3.0661851461673217,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1988,0.0,3.0661851461673217,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1988,0.0,3.0661851461673217,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1988,0.0,3.0661851461673217,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1988,0.0,3.0661851461673217,0.0,IVA,IVA
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1988,133764.0,3.0661851461673217,4362554.56286463,IVA,IVA
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1988,0.0,3.0661851461673217,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1988,334655.0,3.0661851461673217,10914376.792227076,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1988,0.0,3.0661851461673217,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1989,0.0,3.869552433372734,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1989,307202.0,3.869552433372734,7938954.318089966,IVA,IVA
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1989,0.0,3.869552433372734,0.0,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1989,0.0,3.869552433372734,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1989,0.0,3.869552433372734,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1989,0.0,3.869552433372734,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1989,26213.0,3.869552433372734,677416.8447474049,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1989,297145.0,3.869552433372734,7679053.459446367,Renta,Renta
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1989,0.0,3.869552433372734,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1989,0.0,3.869552433372734,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1989,0.0,3.869552433372734,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1989,0.0,3.869552433372734,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1989,0.0,3.869552433372734,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1989,0.0,3.869552433372734,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1989,0.0,3.869552433372734,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1989,0.0,3.869552433372734,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1989,161477.0,3.869552433372734,4173014.910131488,IVA,IVA
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1989,400102.0,3.869552433372734,10339748.766532872,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1989,0.0,3.869552433372734,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1989,0.0,3.869552433372734,0.0,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1989,0.0,3.869552433372734,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1989,289600.0,3.869552433372734,7484069.669204152,Renta,Renta
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1990,0.0,5.121466455934501,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1990,0.0,5.121466455934501,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1990,33789.0,5.121466455934501,659752.4418196079,Otros impuestos,Timbre nacional
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1990,212470.0,5.121466455934501,4148616.452496732,IVA,IVA
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1990,0.0,5.121466455934501,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1990,0.0,5.121466455934501,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1990,0.0,5.121466455934501,0.0,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1990,0.0,5.121466455934501,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1990,411482.0,5.121466455934501,8034456.606138563,IVA,IVA
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1990,0.0,5.121466455934501,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1990,0.0,5.121466455934501,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1990,492678.0,5.121466455934501,9619861.893835295,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1990,0.0,5.121466455934501,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1990,0.0,5.121466455934501,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1990,0.0,5.121466455934501,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1990,0.0,5.121466455934501,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1990,388745.0,5.121466455934501,7590501.731189542,Renta,Renta
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1990,0.0,5.121466455934501,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1990,433768.0,5.121466455934501,8469605.409547713,Renta,Renta
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1990,0.0,5.121466455934501,0.0,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1990,0.0,5.121466455934501,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1990,0.0,5.121466455934501,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1991,0.0,6.493885571577079,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1991,0.0,6.493885571577079,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1991,630994.0,6.493885571577079,9716740.355909279,Renta,Renta
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1991,628340.0,6.493885571577079,9675871.141773196,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1991,0.0,6.493885571577079,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1991,0.0,6.493885571577079,0.0,IVA,IVA
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1991,0.0,6.493885571577079,0.0,Otros impuestos,Por clasificar
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1991,418231.0,6.493885571577079,6440381.42326598,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1991,0.0,6.493885571577079,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1991,0.0,6.493885571577079,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1991,40831.0,6.493885571577079,628760.6941938144,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1991,0.0,6.493885571577079,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1991,0.0,6.493885571577079,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1991,0.0,6.493885571577079,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1991,0.0,6.493885571577079,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1991,0.0,6.493885571577079,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1991,0.0,6.493885571577079,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1991,275308.0,6.493885571577079,4239495.706622681,IVA,IVA
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1991,0.0,6.493885571577079,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1991,0.0,6.493885571577079,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1991,0.0,6.493885571577079,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1991,778766.0,6.493885571577079,11992296.313451547,Renta,Renta
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1992,0.0,8.127399055561417,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1992,0.0,8.127399055561417,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1992,0.0,8.127399055561417,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1992,0.0,8.127399055561417,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1992,0.0,8.127399055561417,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1992,0.0,8.127399055561417,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1992,0.0,8.127399055561417,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1992,745607.0,8.127399055561417,9173992.748514004,Renta,Renta
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1992,460017.0,8.127399055561417,5660076.4507215815,IVA,IVA
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1992,0.0,8.127399055561417,0.0,IVA,IVA
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1992,0.0,8.127399055561417,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1992,0.0,8.127399055561417,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1992,0.0,8.127399055561417,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1992,0.0,8.127399055561417,0.0,Otros impuestos,Riqueza
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1992,0.0,8.127399055561417,0.0,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1992,0.0,8.127399055561417,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1992,0.0,8.127399055561417,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1992,337007.0,8.127399055561417,4146554.115235585,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1992,1100714.0,8.127399055561417,13543250.3372257,Renta,Renta
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1992,55565.0,8.127399055561417,683675.0554530477,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1992,894653.0,8.127399055561417,11007863.572144976,IVA,IVA
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1992,0.0,8.127399055561417,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1993,0.0,9.968449088740485,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1993,0.0,9.968449088740485,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1993,0.0,9.968449088740485,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1993,15494.0,9.968449088740485,155430.3970664876,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1993,0.0,9.968449088740485,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1993,0.0,9.968449088740485,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1993,0.0,9.968449088740485,0.0,IVA,IVA
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1993,0.0,9.968449088740485,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1993,1359344.0,9.968449088740485,13636464.287462728,IVA,IVA
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1993,545489.0,9.968449088740485,5472155.148147751,Otros impuestos,Arancel
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1993,901757.0,9.968449088740485,9046111.305504367,IVA,IVA
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1993,0.0,9.968449088740485,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1993,0.0,9.968449088740485,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1993,0.0,9.968449088740485,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1993,0.0,9.968449088740485,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1993,1505436.0,9.968449088740485,15102008.212094026,Renta,Renta
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1993,0.0,9.968449088740485,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1993,0.0,9.968449088740485,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1993,812946.0,9.968449088740485,8155190.36876293,Renta,Renta
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1993,0.0,9.968449088740485,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1993,0.0,9.968449088740485,0.0,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1993,0.0,9.968449088740485,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1994,0.0,12.21787749291564,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1994,0.0,12.21787749291564,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1994,0.0,12.21787749291564,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1994,0.0,12.21787749291564,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1994,0.0,12.21787749291564,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1994,86477.0,12.21787749291564,707790.6948252054,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1994,0.0,12.21787749291564,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1994,0.0,12.21787749291564,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1994,0.0,12.21787749291564,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1994,0.0,12.21787749291564,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1994,0.0,12.21787749291564,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1994,0.0,12.21787749291564,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1994,1142775.0,12.21787749291564,9353302.16449315,IVA,IVA
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1994,733360.0,12.21787749291564,6002351.884975342,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1994,0.0,12.21787749291564,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1994,1801397.0,12.21787749291564,14743943.872775888,IVA,IVA
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1994,1775169.0,12.21787749291564,14529274.835414793,Renta,Renta
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1994,0.0,12.21787749291564,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1994,0.0,12.21787749291564,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1994,0.0,12.21787749291564,0.0,IVA,IVA
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1994,1035281.0,12.21787749291564,8473493.048201643,Renta,Renta
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1994,11292.0,12.21787749291564,92421.94486356163,Otros impuestos,Por clasificar
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1995,16146.0,14.59450571756498,110630.67371009177,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1995,0.0,14.59450571756498,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1995,0.0,14.59450571756498,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1995,0.0,14.59450571756498,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1995,1149129.0,14.59450571756498,7873709.615372479,Renta,Renta
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1995,1436018.0,14.59450571756498,9839442.512066057,IVA,IVA
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1995,876066.0,14.59450571756498,6002710.999288075,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1995,0.0,14.59450571756498,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1995,0.0,14.59450571756498,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1995,129584.0,14.59450571756498,887895.7774091746,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1995,2218156.0,14.59450571756498,15198568.851361472,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1995,0.0,14.59450571756498,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1995,0.0,14.59450571756498,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1995,0.0,14.59450571756498,0.0,IVA,IVA
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1995,2334430.0,14.59450571756498,15995265.92524771,Renta,Renta
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1995,0.0,14.59450571756498,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1995,0.0,14.59450571756498,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1995,0.0,14.59450571756498,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1995,0.0,14.59450571756498,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1995,0.0,14.59450571756498,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1995,0.0,14.59450571756498,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1995,0.0,14.59450571756498,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1996,0.0,17.754417047239603,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1996,0.0,17.754417047239603,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1996,0.0,17.754417047239603,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1996,31978.0,17.754417047239603,180112.92578582204,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1996,148854.0,17.754417047239603,838405.4492126697,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1996,0.0,17.754417047239603,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1996,0.0,17.754417047239603,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1996,0.0,17.754417047239603,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1996,0.0,17.754417047239603,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1996,2753982.0,17.754417047239603,15511531.539855205,Renta,Renta
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1996,0.0,17.754417047239603,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1996,2888624.0,17.754417047239603,16269889.303119157,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1996,0.0,17.754417047239603,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1996,0.0,17.754417047239603,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1996,523913.0,17.754417047239603,2950888.2133725495,IVA,IVA
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1996,0.0,17.754417047239603,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1996,1619137.0,17.754417047239603,9119629.192509806,IVA,IVA
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1996,906033.0,17.754417047239603,5103141.362452489,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1996,0.0,17.754417047239603,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1996,0.0,17.754417047239603,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1996,1292721.0,17.754417047239603,7281123.320244345,Renta,Renta
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1996,0.0,17.754417047239603,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1997,0.0,20.894244194734085,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1997,0.0,20.894244194734085,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1997,727219.0,20.894244194734085,3480475.260183275,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1997,0.0,20.894244194734085,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1997,0.0,20.894244194734085,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1997,0.0,20.894244194734085,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1997,0.0,20.894244194734085,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1997,1845332.0,20.894244194734085,8831771.95978725,Renta,Renta
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1997,2079276.0,20.894244194734085,9951429.592863828,IVA,IVA
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1997,3633544.0,20.894244194734085,17390167.19693432,Renta,Renta
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1997,3283057.0,20.894244194734085,15712733.944343481,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1997,0.0,20.894244194734085,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1997,1353553.0,20.894244194734085,6478114.19922589,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1997,0.0,20.894244194734085,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1997,0.0,20.894244194734085,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1997,0.0,20.894244194734085,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1997,0.0,20.894244194734085,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1997,130502.0,20.894244194734085,624583.4919115669,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1997,0.0,20.894244194734085,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1997,0.0,20.894244194734085,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1997,0.0,20.894244194734085,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1997,233157.0,20.894244194734085,1115891.0455289972,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1998,0.0,24.38219716668425,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1998,4419149.0,24.38219716668425,18124490.462403078,Renta,Renta
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1998,0.0,24.38219716668425,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1998,2401536.0,24.38219716668425,9849547.124823725,IVA,IVA
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1998,0.0,24.38219716668425,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1998,0.0,24.38219716668425,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1998,1716858.0,24.38219716668425,7041440.885179572,Otros impuestos,Arancel
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1998,12410.0,24.38219716668425,50897.792004393195,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1998,0.0,24.38219716668425,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1998,0.0,24.38219716668425,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1998,3589001.0,24.38219716668425,14719760.38691049,IVA,IVA
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1998,317176.0,24.38219716668425,1300850.7716990665,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1998,0.0,24.38219716668425,0.0,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1998,1641863.0,24.38219716668425,6733859.909243274,Renta,Renta
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1998,0.0,24.38219716668425,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1998,0.0,24.38219716668425,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1998,0.0,24.38219716668425,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1998,0.0,24.38219716668425,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1998,0.0,24.38219716668425,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1998,0.0,24.38219716668425,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1998,923717.0,24.38219716668425,3788489.583958265,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1998,0.0,24.38219716668425,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,1999,0.0,26.638320298252783,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,1999,0.0,26.638320298252783,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),1999,0.0,26.638320298252783,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,1999,1438675.0,26.638320298252783,5400772.210454889,Otros impuestos,Arancel
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,1999,10616.0,26.638320298252783,39852.3626157326,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,1999,880692.0,26.638320298252783,3306109.3572696657,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,1999,0.0,26.638320298252783,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,1999,2134398.0,26.638320298252783,8012509.708204072,IVA,IVA
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,1999,4594462.0,26.638320298252783,17247566.470252827,Renta,Renta
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,1999,2105943.0,26.638320298252783,7905689.909953255,Renta,Renta
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,1999,0.0,26.638320298252783,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,1999,0.0,26.638320298252783,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,1999,986390.0,26.638320298252783,3702898.6398391556,IVA,IVA
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,1999,0.0,26.638320298252783,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,1999,336548.0,26.638320298252783,1263397.9779200805,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,1999,3947625.0,26.638320298252783,14819346.549635587,IVA,IVA
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,1999,0.0,26.638320298252783,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,1999,0.0,26.638320298252783,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,1999,0.0,26.638320298252783,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,1999,0.0,26.638320298252783,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,1999,0.0,26.638320298252783,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,1999,0.0,26.638320298252783,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,2000,0.0,28.968085431148474,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,2000,0.0,28.968085431148474,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,2000,0.0,28.968085431148474,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,2000,34038.0,28.968085431148474,117501.72472012945,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,2000,2474471.0,28.968085431148474,8542059.177094525,Renta,Renta
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,2000,1762238.0,28.968085431148474,6083377.530035592,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,2000,5052493.0,28.968085431148474,17441584.159950085,Renta,Renta
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,2000,2742842.0,28.968085431148474,9468495.964357756,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,2000,0.0,28.968085431148474,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),2000,0.0,28.968085431148474,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,2000,1036744.0,28.968085431148474,3578917.9180106316,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,2000,0.0,28.968085431148474,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,2000,402693.0,28.968085431148474,1390126.389115785,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,2000,0.0,28.968085431148474,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,2000,0.0,28.968085431148474,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,2000,4576003.0,28.968085431148474,15796705.001013177,IVA,IVA
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,2000,1213585.0,28.968085431148474,4189386.291629305,IVA,IVA
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,2000,0.0,28.968085431148474,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,2000,0.0,28.968085431148474,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,2000,0.0,28.968085431148474,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,2000,0.0,28.968085431148474,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,2000,0.0,28.968085431148474,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,2001,420749.0,31.184040198356737,1349244.6691438386,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,2001,0.0,31.184040198356737,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,2001,0.0,31.184040198356737,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,2001,3969717.0,31.184040198356737,12729963.708195793,Renta,Renta
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,2001,0.0,31.184040198356737,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,2001,0.0,31.184040198356737,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,2001,0.0,31.184040198356737,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,2001,1437359.0,31.184040198356737,4609277.665296694,Otros impuestos,G.M.F.
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,2001,22000.0,31.184040198356737,70548.90854443968,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,2001,0.0,31.184040198356737,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,2001,0.0,31.184040198356737,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,2001,0.0,31.184040198356737,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,2001,2087178.0,31.184040198356737,6693096.81081666,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,2001,0.0,31.184040198356737,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,2001,0.0,31.184040198356737,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),2001,0.0,31.184040198356737,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,2001,2253310.0,31.184040198356737,7225843.686921426,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,2001,0.0,31.184040198356737,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,2001,0.0,31.184040198356737,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,2001,3152714.0,31.184040198356737,10110024.166035209,IVA,IVA
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,2001,5235224.0,31.184040198356737,16788151.781166166,IVA,IVA
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,2001,6291509.0,31.184040198356737,20175413.320341777,Renta,Renta
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,2002,0.0,33.35982660120472,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,2002,2150084.0,33.35982660120472,6445129.423791292,Otros impuestos,Arancel
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,2002,3485896.0,33.35982660120472,10449382.851031108,IVA,IVA
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,2002,0.0,33.35982660120472,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,2002,0.0,33.35982660120472,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,2002,0.0,33.35982660120472,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),2002,0.0,33.35982660120472,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,2002,0.0,33.35982660120472,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,2002,13579.0,33.35982660120472,40704.64802568735,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,2002,0.0,33.35982660120472,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,2002,3635357.0,33.35982660120472,10897409.760123622,Renta,Renta
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,2002,0.0,33.35982660120472,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,2002,0.0,33.35982660120472,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,2002,7224636.0,33.35982660120472,21656695.30110536,Renta,Renta
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,2002,1408101.0,33.35982660120472,4220948.198661048,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,2002,5610841.0,33.35982660120472,16819155.168502513,IVA,IVA
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,2002,1250722.0,33.35982660120472,3749186.154207506,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,2002,0.0,33.35982660120472,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,2002,2340202.0,33.35982660120472,7015030.467560909,IVA,IVA
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,2002,0.0,33.35982660120472,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,2002,433977.0,33.35982660120472,1300897.0495797715,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,2002,0.0,33.35982660120472,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,2003,20019.0,35.52891827665934,56345.6501661956,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,2003,8412194.0,35.52891827665934,23677033.83056944,Renta,Renta
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,2003,0.0,35.52891827665934,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,2003,511537.0,35.52891827665934,1439776.4548211796,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,2003,1621500.0,35.52891827665934,4563887.893725269,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),2003,0.0,35.52891827665934,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,2003,0.0,35.52891827665934,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,2003,0.0,35.52891827665934,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,2003,0.0,35.52891827665934,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,2003,0.0,35.52891827665934,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,2003,0.0,35.52891827665934,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,2003,0.0,35.52891827665934,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,2003,0.0,35.52891827665934,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,2003,0.0,35.52891827665934,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,2003,6889780.0,35.52891827665934,19392034.247567367,IVA,IVA
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,2003,4129479.0,35.52891827665934,11622867.23126286,Renta,Renta
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,2003,2782378.0,35.52891827665934,7831305.1310314685,IVA,IVA
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,2003,0.0,35.52891827665934,0.0,Otros impuestos,Riqueza
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,2003,4405051.0,35.52891827665934,12398494.560679859,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,2003,0.0,35.52891827665934,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,2003,2285380.0,35.52891827665934,6432450.271083475,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,2003,1227934.0,35.52891827665934,3456153.6336069345,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,2004,0.0,37.48377867552584,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,2004,2380780.0,37.48377867552584,6351494.123922129,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,2004,0.0,37.48377867552584,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,2004,0.0,37.48377867552584,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,2004,574710.0,37.48377867552584,1533223.22430434,Otros impuestos,Timbre nacional
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,2004,5163343.0,37.48377867552584,13774873.245026613,IVA,IVA
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,2004,3169982.0,37.48377867552584,8456943.542006787,IVA,IVA
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,2004,0.0,37.48377867552584,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,2004,7840824.0,37.48377867552584,20917912.433197357,IVA,IVA
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,2004,88491.0,37.48377867552584,236078.1199942847,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,2004,0.0,37.48377867552584,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,2004,0.0,37.48377867552584,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,2004,0.0,37.48377867552584,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,2004,0.0,37.48377867552584,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,2004,0.0,37.48377867552584,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,2004,2237595.0,37.48377867552584,5969502.2195320595,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),2004,0.0,37.48377867552584,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,2004,9408708.0,37.48377867552584,25100745.79578925,Renta,Renta
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,2004,0.0,37.48377867552584,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,2004,0.0,37.48377867552584,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,2004,454012.0,37.48377867552584,1211222.6035963565,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,2004,6546626.0,37.48377867552584,17465224.241851762,Renta,Renta
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,2005,0.0,39.2980497991314,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,2005,0.0,39.2980497991314,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,2005,7923954.0,39.2980497991314,20163733.418077003,Renta,Renta
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,2005,8889565.0,39.2980497991314,22620880.795454856,IVA,IVA
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,2005,0.0,39.2980497991314,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,2005,474219.0,39.2980497991314,1206724.00392368,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,2005,0.0,39.2980497991314,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,2005,0.0,39.2980497991314,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,2005,6277481.0,39.2980497991314,15974026.782720273,IVA,IVA
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,2005,0.0,39.2980497991314,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,2005,0.0,39.2980497991314,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,2005,0.0,39.2980497991314,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,2005,33837.0,39.2980497991314,86103.50939284498,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,2005,0.0,39.2980497991314,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,2005,0.0,39.2980497991314,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,2005,3007760.0,39.2980497991314,7653713.136844975,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),2005,0.0,39.2980497991314,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,2005,10615016.0,39.2980497991314,27011559.23578331,Renta,Renta
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,2005,673406.0,39.2980497991314,1713586.3062977856,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,2005,0.0,39.2980497991314,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,2005,2401226.0,39.2980497991314,6110293.035592505,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,2005,3295135.0,39.2980497991314,8384983.521683135,IVA,IVA
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,2006,2668946.0,41.058763103589925,6500307.847234307,Otros impuestos,G.M.F.
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,2006,19656.0,41.058763103589925,47872.84982357737,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,2006,0.0,41.058763103589925,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,2006,0.0,41.058763103589925,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,2006,0.0,41.058763103589925,0.0,Otros impuestos,Riqueza
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,2006,8569224.0,41.058763103589925,20870633.58041285,IVA,IVA
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,2006,3241161.0,41.058763103589925,7893956.746389695,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,2006,0.0,41.058763103589925,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,2006,0.0,41.058763103589925,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,2006,0.0,41.058763103589925,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,2006,791208.0,41.058763103589925,1927013.724217186,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,2006,0.0,41.058763103589925,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,2006,0.0,41.058763103589925,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,2006,536233.0,41.058763103589925,1306013.5266303604,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,2006,0.0,41.058763103589925,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,2006,10887932.0,41.058763103589925,26517924.986025766,IVA,IVA
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,2006,0.0,41.058763103589925,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,2006,0.0,41.058763103589925,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,2006,9842101.0,41.058763103589925,23970768.372073703,Renta,Renta
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),2006,0.0,41.058763103589925,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,2006,12577012.0,41.058763103589925,30631736.197869886,Renta,Renta
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,2006,3690888.0,41.058763103589925,8989281.997336378,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,2007,0.0,43.39522296387899,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,2007,3962496.0,43.39522296387899,9131180.183814874,IVA,IVA
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,2007,18421.0,43.39522296387899,42449.37286146252,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,2007,0.0,43.39522296387899,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,2007,2989522.0,43.39522296387899,6889057.817466215,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,2007,0.0,43.39522296387899,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,2007,0.0,43.39522296387899,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,2007,4244505.0,43.39522296387899,9781042.036661526,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,2007,0.0,43.39522296387899,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,2007,1232681.0,43.39522296387899,2840591.4656229564,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,2007,0.0,43.39522296387899,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,2007,13097249.0,43.39522296387899,30181315.143608768,IVA,IVA
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,2007,0.0,43.39522296387899,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),2007,0.0,43.39522296387899,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,2007,0.0,43.39522296387899,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,2007,14519613.0,43.39522296387899,33459012.325125583,Renta,Renta
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,2007,10222033.0,43.39522296387899,23555664.19951003,Renta,Renta
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,2007,9091407.0,43.39522296387899,20950248.38924653,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,2007,0.0,43.39522296387899,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,2007,863928.0,43.39522296387899,1990836.6428238202,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,2007,0.0,43.39522296387899,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,2007,0.0,43.39522296387899,0.0,Otros impuestos,Riqueza
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,2008,36206.0,46.72919720578145,77480.46652836677,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,2008,16525925.0,46.72919720578145,35365309.032005735,Renta,Renta
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,2008,0.0,46.72919720578145,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,2008,3320867.0,46.72919720578145,7106621.124638396,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,2008,0.0,46.72919720578145,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,2008,3199639.0,46.72919720578145,6847194.455127794,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,2008,0.0,46.72919720578145,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,2008,0.0,46.72919720578145,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,2008,4428604.0,46.72919720578145,9477166.87812493,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,2008,0.0,46.72919720578145,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,2008,0.0,46.72919720578145,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,2008,4534565.0,46.72919720578145,9703922.32511748,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),2008,0.0,46.72919720578145,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,2008,14322836.0,46.72919720578145,30650721.297279086,IVA,IVA
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,2008,9713835.0,46.72919720578145,20787506.69998281,IVA,IVA
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,2008,809376.0,46.72919720578145,1732056.2911358168,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,2008,10140964.0,46.72919720578145,21701558.354067624,Renta,Renta
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,2008,0.0,46.72919720578145,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,2008,0.0,46.72919720578145,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,2008,0.0,46.72919720578145,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,2008,0.0,46.72919720578145,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,2008,0.0,46.72919720578145,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),2009,0.0,47.666459040854434,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,2009,3121278.0,47.666459040854434,6548164.186739326,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,2009,646812.0,47.666459040854434,1356954.162350562,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,2009,0.0,47.666459040854434,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,2009,0.0,47.666459040854434,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,2009,17183499.0,47.666459040854434,36049455.62512247,Renta,Renta
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,2009,0.0,47.666459040854434,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,2009,4133529.0,47.666459040854434,8671776.933246069,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,2009,0.0,47.666459040854434,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,2009,0.0,47.666459040854434,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,2009,0.0,47.666459040854434,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,2009,0.0,47.666459040854434,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,2009,28234.0,47.666459040854434,59232.42583595506,Otros impuestos,Por clasificar
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,2009,8594142.0,47.666459040854434,18029747.06519326,IVA,IVA
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,2009,4657457.0,47.666459040854434,9770931.37127753,IVA,IVA
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,2009,0.0,47.666459040854434,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,2009,13510157.0,47.666459040854434,28343110.169816855,Renta,Renta
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,2009,14797056.0,47.666459040854434,31042910.04145618,IVA,IVA
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,2009,2238618.0,47.666459040854434,4696421.8552112365,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,2009,0.0,47.666459040854434,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,2009,0.0,47.666459040854434,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,2009,0.0,47.666459040854434,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,2010,16577995.0,49.17277270436458,33713768.99909599,IVA,IVA
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,2010,2235367.0,49.17277270436458,4545944.588968823,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,2010,9425350.0,49.17277270436458,19167822.92645337,Renta,Renta
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,2010,353912.0,49.17277270436458,719731.6330477877,Otros impuestos,Timbre nacional
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,2010,9703216.0,49.17277270436458,19732903.93514609,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,2010,0.0,49.17277270436458,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,2010,0.0,49.17277270436458,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),2010,0.0,49.17277270436458,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,2010,3224922.0,49.17277270436458,6558348.904563105,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,2010,0.0,49.17277270436458,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,2010,0.0,49.17277270436458,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,2010,0.0,49.17277270436458,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,2010,0.0,49.17277270436458,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,2010,0.0,49.17277270436458,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,2010,0.0,49.17277270436458,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,2010,18703979.0,49.17277270436458,38037267.31549517,Renta,Renta
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,2010,4868210.0,49.17277270436458,9900214.554238258,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,2010,5081710.0,49.17277270436458,10334397.920882234,IVA,IVA
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,2010,24127.0,49.17277270436458,49065.770899387346,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,2010,0.0,49.17277270436458,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,2010,0.0,49.17277270436458,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,2010,0.0,49.17277270436458,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,2011,5069606.0,51.007128010150275,9939014.796110777,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,2011,0.0,51.007128010150275,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,2011,0.0,51.007128010150275,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,2011,0.0,51.007128010150275,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,2011,56491.0,51.007128010150275,110751.18753747213,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,2011,12536626.0,51.007128010150275,24578184.440232053,Renta,Renta
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,2011,4447798.0,51.007128010150275,8719953.805505186,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,2011,22300779.0,51.007128010150275,43720906.998649694,Renta,Renta
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,2011,0.0,51.007128010150275,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,2011,12561092.0,51.007128010150275,24626150.285309885,IVA,IVA
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,2011,19107012.0,51.007128010150275,37459493.88916341,IVA,IVA
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,2011,0.0,51.007128010150275,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,2011,4390493.0,51.007128010150275,8607606.762580918,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,2011,5991760.0,51.007128010150275,11746907.21423809,IVA,IVA
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,2011,0.0,51.007128010150275,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,2011,0.0,51.007128010150275,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,2011,0.0,51.007128010150275,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),2011,0.0,51.007128010150275,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,2011,119242.0,51.007128010150275,233775.16957290986,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,2011,0.0,51.007128010150275,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,2011,0.0,51.007128010150275,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,2011,0.0,51.007128010150275,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,2012,6565772.0,52.252347305318665,12565506.314262139,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,2012,0.0,52.252347305318665,0.0,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,2012,0.0,52.252347305318665,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,2012,4391723.0,52.252347305318665,8404833.900261883,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,2012,0.0,52.252347305318665,0.0,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,2012,0.0,52.252347305318665,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,2012,23859875.0,52.252347305318665,45662781.15810378,Renta,Renta
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,2012,0.0,52.252347305318665,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,2012,0.0,52.252347305318665,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,2012,5351294.0,52.252347305318665,10241250.9216697,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,2012,0.0,52.252347305318665,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,2012,0.0,52.252347305318665,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,2012,3960337.0,52.252347305318665,7579251.850369763,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,2012,0.0,52.252347305318665,0.0,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),2012,0.0,52.252347305318665,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,2012,38951.0,52.252347305318665,74544.01956796924,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,2012,55395.0,52.252347305318665,106014.37611274823,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,2012,22000009.0,52.252347305318665,42103388.90892402,Renta,Renta
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,2012,0.0,52.252347305318665,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,2012,0.0,52.252347305318665,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,2012,19877817.0,52.252347305318665,38041959.88335375,IVA,IVA
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,2012,13043703.0,52.252347305318665,24962903.43433491,IVA,IVA
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,2013,21243422.0,53.2632511417188,39883825.235296145,IVA,IVA
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,2013,0.0,53.2632511417188,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,2013,25470591.0,53.2632511417188,47820195.82738161,Renta,Renta
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,2013,4111876.0,53.2632511417188,7719911.781313226,IVA,IVA
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,2013,5935091.0,53.2632511417188,11142937.90329915,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,2013,0.0,53.2632511417188,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,2013,21039924.0,53.2632511417188,39501764.44171344,Renta,Renta
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,2013,57247.0,53.2632511417188,107479.35729210662,Otros impuestos,Timbre nacional
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,2013,12080300.0,53.2632511417188,22680365.43217698,IVA,IVA
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,2013,4240323.0,53.2632511417188,7961066.793909505,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,2013,0.0,53.2632511417188,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,2013,4466767.0,53.2632511417188,8386207.946854703,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,2013,2736545.0,53.2632511417188,5137773.120005029,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,2013,1288442.0,53.2632511417188,2419007.425160383,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,2013,0.0,53.2632511417188,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,2013,130347.0,53.2632511417188,244722.2000271494,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,2013,0.0,53.2632511417188,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),2013,0.0,53.2632511417188,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,2013,0.0,53.2632511417188,0.0,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,2013,0.0,53.2632511417188,0.0,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,2013,0.0,53.2632511417188,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,2013,2967366.0,53.2632511417188,5571131.946310711,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,2014,0.0,55.21141681319193,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,2014,11990124.0,55.21141681319193,21716747.535330668,Renta,Renta
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,2014,0.0,55.21141681319193,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,2014,0.0,55.21141681319193,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,2014,6464683.0,55.21141681319193,11708960.525090823,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,2014,72303.0,55.21141681319193,130956.61037759186,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,2014,24338466.0,55.21141681319193,44082306.531544566,IVA,IVA
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,2014,27465013.0,55.21141681319193,49745169.7226463,Renta,Renta
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),2014,0.0,55.21141681319193,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,2014,0.0,55.21141681319193,0.0,Otros impuestos,Riqueza
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,2014,13609157.0,55.21141681319193,24649171.829889175,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,2014,2980885.0,55.21141681319193,5399037.322454226,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,2014,4399951.0,55.21141681319193,7969277.46825852,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,2014,0.0,55.21141681319193,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,2014,4361286.0,55.21141681319193,7899246.66261768,Otros impuestos,Patrimonio
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,2014,27436.0,55.21141681319193,49692.62080853644,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,2014,3976562.0,55.21141681319193,7202427.015149267,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,2014,1757643.0,55.21141681319193,3183477.4426220446,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,2014,6923239.0,55.21141681319193,12539506.137697589,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,2014,5994962.0,55.21141681319193,10858192.645705834,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,2014,0.0,55.21141681319193,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,2014,0.0,55.21141681319193,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,2015,5512168.0,58.947074698697094,9351045.880011814,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,2015,1824289.0,58.947074698697094,3094791.402838388,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,2015,4682409.0,58.947074698697094,7943411.991067803,IVA,IVA
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,2015,0.0,58.947074698697094,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,2015,3418957.0,58.947074698697094,5800045.239692903,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,2015,104085.0,58.947074698697094,176573.64768654178,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,2015,24901947.0,58.947074698697094,42244584.87089337,IVA,IVA
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,2015,15446104.0,58.947074698697094,26203342.708610114,IVA,IVA
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,2015,36532.0,58.947074698697094,61974.237376036355,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,2015,0.0,58.947074698697094,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,2015,0.0,58.947074698697094,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,2015,0.0,58.947074698697094,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,2015,10702326.0,58.947074698697094,18155822.073790804,Renta,Renta
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,2015,0.0,58.947074698697094,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,2015,7068880.0,58.947074698697094,11991909.753167521,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,2015,0.0,58.947074698697094,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,2015,5074220.0,58.947074698697094,8608094.678042023,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,2015,7470241.0,58.947074698697094,12672793.413724931,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,2015,30708382.0,58.947074698697094,52094836.18476957,Renta,Renta
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,2015,6775377.0,58.947074698697094,11494000.397189781,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),2015,0.0,58.947074698697094,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,2015,0.0,58.947074698697094,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,2016,10882846.0,62.33460675974658,17458754.55979895,Renta,Renta
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,2016,0.0,62.33460675974658,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,2016,1843916.0,62.33460675974658,2958093.578911825,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,2016,4962975.0,62.33460675974658,7961829.324003867,IVA,IVA
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,2016,0.0,62.33460675974658,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,2016,7553508.0,62.33460675974658,12117679.717003975,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,2016,5065927.0,62.33460675974658,8126989.586258834,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,2016,0.0,62.33460675974658,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,2016,14011.0,62.33460675974658,22477.08091590592,Otros impuestos,Por clasificar
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,2016,4583842.0,62.33460675974658,7353606.990202556,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,2016,0.0,62.33460675974658,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,2016,3747950.0,62.33460675974658,6012631.176844593,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,2016,0.0,62.33460675974658,0.0,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,2016,0.0,62.33460675974658,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),2016,0.0,62.33460675974658,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,2016,105821.0,62.33460675974658,169762.8420242724,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,2016,32640747.0,62.33460675974658,52363765.00425476,Renta,Renta
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,2016,7067991.0,62.33460675974658,11338791.351073785,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,2016,7568786.0,62.33460675974658,12142189.376716573,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,2016,25723556.0,62.33460675974658,41266893.84461047,IVA,IVA
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,2016,0.0,62.33460675974658,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,2016,14992159.0,62.33460675974658,24051100.631441522,IVA,IVA
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,2017,17151552.0,64.88529789662377,26433649.15627899,IVA,IVA
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,2017,1104378.0,64.88529789662377,1702046.589598019,Otros impuestos,Retención CREE
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,2017,4262914.0,64.88529789662377,6569922.8302715635,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,2017,15077560.0,64.88529789662377,23237251.717672307,Renta,Renta
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,2017,476862.0,64.88529789662377,734930.7400264135,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,2017,5616259.0,64.88529789662377,8655672.674799008,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,2017,2107550.0,64.88529789662377,3248116.3966570366,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,2017,41594296.0,64.88529789662377,64104346.205312416,Renta,Renta
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),2017,0.0,64.88529789662377,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,2017,0.0,64.88529789662377,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,2017,31900266.0,64.88529789662377,49164089.607516296,IVA,IVA
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,2017,4058303.0,64.88529789662377,6254580.207777961,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,2017,1619472.0,64.88529789662377,2495899.768511762,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,2017,7307441.0,64.88529789662377,11262090.545754023,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,2017,0.0,64.88529789662377,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,2017,0.0,64.88529789662377,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,2017,116936.0,64.88529789662377,180219.5625059843,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,2017,0.0,64.88529789662377,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,2017,0.0,64.88529789662377,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,2017,79668.0,64.88529789662377,122782.8222765167,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,2017,0.0,64.88529789662377,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,2017,3975716.0,64.88529789662377,6127298.677635988,Otros impuestos,Riqueza
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,2018,75200.0,66.94727393378432,112327.20256000002,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,2018,79889.0,66.94727393378432,119331.22187920002,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,2018,469144.0,66.94727393378432,700766.3978432001,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,2018,34484697.0,66.94727393378432,51510233.31302161,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,2018,0.0,66.94727393378432,0.0,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,2018,4014559.0,66.94727393378432,5996598.164655201,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,2018,7703514.0,66.94727393378432,11506837.466779202,Otros impuestos,G.M.F.
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,2018,19081077.0,66.94727393378432,28501648.952685606,IVA,IVA
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,2018,17632781.0,66.94727393378432,26338310.679296806,Renta,Renta
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,2018,1517546.0,66.94727393378432,2266777.8847888005,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,2018,0.0,66.94727393378432,0.0,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,2018,0.0,66.94727393378432,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,2018,294072.0,66.94727393378432,439259.1105216001,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,2018,0.0,66.94727393378432,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),2018,0.0,66.94727393378432,0.0,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,2018,0.0,66.94727393378432,0.0,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,2018,16479.0,66.94727393378432,24614.893231200003,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,2018,6378863.0,66.94727393378432,9528189.312546402,IVA,IVA
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,2018,139455.0,66.94727393378432,208305.71852400005,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,2018,2214709.0,66.94727393378432,3308139.1815752005,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,2018,50277595.0,66.94727393378432,75100287.20471601,Renta,Renta
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,2018,0.0,66.94727393378432,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,2019,0.0,69.49127034326813,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,2019,72561.0,69.49127034326813,104417.43206242775,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,2019,85801.0,69.49127034326813,123470.1849256262,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,2019,37068618.0,69.49127034326813,53342841.21860347,IVA,IVA
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,2019,859266.0,69.49127034326813,1236509.2705248555,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),2019,73893.0,69.49127034326813,106334.21958612716,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,2019,18276284.0,69.49127034326813,26300114.978068594,Renta,Renta
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,2019,22032710.0,69.49127034326813,31705723.454420038,IVA,IVA
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,2019,52877699.0,69.49127034326813,76092577.87172177,Renta,Renta
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,2019,0.0,69.49127034326813,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,2019,102385.0,69.49127034326813,147335.0530134875,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,2019,451046.0,69.49127034326813,649068.5776385356,Otros impuestos,Impuesto al carbono
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,2019,4277734.0,69.49127034326813,6155786.156835453,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,2019,9575.0,69.49127034326813,13778.709113680154,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,2019,8689719.0,69.49127034326813,12504763.48622659,Otros impuestos,G.M.F.
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,2019,141126.0,69.49127034326813,203084.50155375723,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,2019,1138914.0,69.49127034326813,1638931.0403653178,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,2019,2419668.0,69.49127034326813,3481974.04947052,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,2019,0.0,69.49127034326813,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,2019,1623254.0,69.49127034326813,2335910.6719183046,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,2019,137322.0,69.49127034326813,197610.4326797688,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,2019,7283146.0,69.49127034326813,10480663.202763777,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,2020,626018.0,70.6159845453557,886510.333362154,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,2020,46526.0,70.6159845453557,65885.9326249526,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,2020,51309636.0,70.6159845453557,72660087.27392946,Renta,Renta
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,2020,1477518.0,70.6159845453557,2092327.975758817,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,2020,294902.0,70.6159845453557,417613.6633917331,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,2020,6932376.0,70.6159845453557,9817006.793337885,IVA,IVA
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,2020,952146.0,70.6159845453557,1348343.446784983,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),2020,321520.0,70.6159845453557,455307.67866514984,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,2020,8813.0,70.6159845453557,12480.177196056125,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,2020,0.0,70.6159845453557,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,2020,0.0,70.6159845453557,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,2020,3412380.0,70.6159845453557,4832305.351217292,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,2020,0.0,70.6159845453557,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,2020,5037.0,70.6159845453557,7132.94593629124,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,2020,18037327.0,70.6159845453557,25542838.659163445,Renta,Renta
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,2020,179780.0,70.6159845453557,254588.251027683,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,2020,27507.0,70.6159845453557,38952.937039817974,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,2020,32734659.0,70.6159845453557,46355877.087538116,IVA,IVA
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,2020,41577.0,70.6159845453557,58877.60436632537,Otros impuestos,Timbre nacional
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,2020,20319385.0,70.6159845453557,28774483.75296549,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,2020,1322732.0,70.6159845453557,1873133.9774076603,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,2020,8216316.0,70.6159845453557,11635207.032655291,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),2021,599102.0,74.58595788962911,803236.9858231756,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,2021,32767.0,74.58595788962911,43931.86187738982,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,2021,5988.0,74.58595788962911,8028.320838703887,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,2021,8183508.0,74.58595788962911,10971915.131947221,IVA,IVA
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,2021,29044524.0,74.58595788962911,38941008.22969859,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,2021,145303.0,74.58595788962911,194812.80942321155,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,2021,0.0,74.58595788962911,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,2021,4789453.0,74.58595788962911,6421386.994972085,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,2021,33004.0,74.58595788962911,44249.616058881606,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,2021,0.0,74.58595788962911,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,2021,1002538.0,74.58595788962911,1344137.7282886636,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,2021,1530684.0,74.58595788962911,2052241.5254960954,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,2021,4231.0,74.58595788962911,5672.649543847051,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,2021,334309.0,74.58595788962911,448219.7580604973,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,2021,0.0,74.58595788962911,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,2021,38422261.0,74.58595788962911,51514067.911893725,IVA,IVA
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,2021,9856524.0,74.58595788962911,13214986.143350866,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,2021,60748437.0,74.58595788962911,81447552.21873584,Renta,Renta
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,2021,84432.0,74.58595788962911,113200.93270765641,Otros impuestos,Timbre nacional
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,2021,216185.0,74.58595788962911,289846.78365317296,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,2021,16832856.0,74.58595788962911,22568398.229743112,Renta,Renta
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,2021,1799855.0,74.58595788962911,2413128.4908392425,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,2022,62699.0,84.37364933874838,74311.1154861541,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,2022,53566.0,84.37364933874838,63486.64591351266,Otros impuestos,Declaraciones CREE
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,2022,7057588.0,84.37364933874838,8364682.641217489,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,2022,12676744.0,84.37364933874838,15024529.695408396,Otros impuestos,G.M.F.
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,2022,167181.0,84.37364933874838,198143.61629516783,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,2022,24194067.0,84.37364933874838,28674908.801045466,Renta,Renta
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,2022,0.0,84.37364933874838,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,2022,0.0,84.37364933874838,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,2022,11089597.0,84.37364933874838,13143436.472063478,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,2022,2897785.0,84.37364933874838,3434466.830237245,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,2022,16522.0,84.37364933874838,19581.943094183927,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,2022,3347.0,84.37364933874838,3966.8783159565187,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,2022,45349922.0,84.37364933874838,53748916.107594706,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,2022,2186240.0,84.37364933874838,2591140.73781798,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,2022,233435.0,84.37364933874838,276668.13256208843,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,2022,41635013.0,84.37364933874838,49345990.51516814,IVA,IVA
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,2022,134468.0,84.37364933874838,159372.032683012,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,2022,10613.0,84.37364933874838,12578.571726096961,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,2022,0.0,84.37364933874838,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,2022,423904.0,84.37364933874838,502412.78328271053,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),2022,1191783.0,84.37364933874838,1412506.1667241135,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,2022,78995744.0,84.37364933874838,93626084.23258209,Renta,Renta
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,2023,96429321.0,92.19978566160776,104587359.18748826,Renta,Renta
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,2023,12433926.0,92.19978566160776,13485851.307328494,IVA,IVA
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,2023,6191114.0,92.19978566160776,6714889.796731921,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,2023,3370208.0,92.19978566160776,3655331.708003486,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,2023,1211120.0,92.19978566160776,1313582.2294045892,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,2023,14009341.0,92.19978566160776,15194548.338124312,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,2023,53831575.0,92.19978566160776,58385791.912329376,IVA,IVA
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),2023,1833599.0,92.19978566160776,1988723.7121458035,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,2023,105946.0,92.19978566160776,114909.16083996516,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,2023,2384057.0,92.19978566160776,2585751.1304310197,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,2023,4986.0,92.19978566160776,5407.821682253849,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,2023,575274.0,92.19978566160776,623942.882157421,Otros impuestos,Impuesto al carbono
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,2023,25463.0,92.19978566160776,27617.200861458034,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,2023,10316.0,92.19978566160776,11188.746184141739,Otros impuestos,Riqueza
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,2023,0.0,92.19978566160776,0.0,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,2023,35239463.0,92.19978566160776,38220764.557236716,IVA,IVA
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,2023,0.0,92.19978566160776,0.0,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,2023,215679.0,92.19978566160776,233925.70649956437,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,2023,50734447.0,92.19978566160776,55026643.105447,Renta,Renta
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,2023,0.0,92.19978566160776,0.0,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,2023,308227.0,92.19978566160776,334303.3801957596,Otros impuestos,Por clasificar
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,2023,3676.0,92.19978566160776,3986.9940842288706,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,Impuesto al carbono,Impuesto al carbono,Impuesto al carbono,2024,551965.0,96.99321047526672,569075.915,Otros impuestos,Impuesto al carbono
+ACTIVIDAD EXTERNA,IVA,IVA externo,IVA externo,2024,30407420.0,96.99321047526672,31350050.020000003,IVA,IVA
+ACTIVIDAD INTERNA,Renta y complementarios,Renta cuotas,Renta cuotas,2024,29786459.0,96.99321047526672,30709839.229000002,Renta,Renta
+ACTIVIDAD INTERNA,Renta y complementarios,Retención en la fuente a título de renta,Retención en la fuente a título de renta,2024,88383283.0,96.99321047526672,91123164.773,Renta,Renta
+ACTIVIDAD INTERNA,IVA,IVA interno,Declaraciones IVA,2024,56718967.0,96.99321047526672,58477254.977000006,IVA,IVA
+ACTIVIDAD INTERNA,IVA,IVA interno,Retención en la fuente a título de IVA,2024,11094373.0,96.99321047526672,11438298.563000001,IVA,IVA
+ACTIVIDAD INTERNA,Timbre nacional,Timbre nacional,Timbre nacional,2024,227399.0,96.99321047526672,234448.36900000004,Otros impuestos,Timbre nacional
+ACTIVIDAD INTERNA,G.M.F.,G.M.F.,G.M.F.,2024,13117773.0,96.99321047526672,13524423.963000001,Otros impuestos,G.M.F.
+ACTIVIDAD INTERNA,Patrimonio,Patrimonio,Patrimonio,2024,1466442.0,96.99321047526672,1511901.702,Otros impuestos,Patrimonio
+ACTIVIDAD INTERNA,Riqueza,Riqueza,Riqueza,2024,5195.0,96.99321047526672,5356.045,Otros impuestos,Riqueza
+ACTIVIDAD EXTERNA,Arancel,Arancel,Arancel,2024,5906914.0,96.99321047526672,6090028.334000001,Otros impuestos,Arancel
+ACTIVIDAD INTERNA,Impuesto al consumo,Impuesto al consumo,Impuesto al consumo,2024,3538627.0,96.99321047526672,3648324.4370000004,Otros impuestos,Impuesto al consumo
+ACTIVIDAD INTERNA,CREE,Declaraciones CREE,Declaraciones CREE,2024,7463.0,96.99321047526672,7694.353000000001,Otros impuestos,Declaraciones CREE
+ACTIVIDAD INTERNA,CREE,Retención CREE,Retención CREE,2024,2391.0,96.99321047526672,2465.121,Otros impuestos,Retención CREE
+ACTIVIDAD INTERNA,Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),Impuesto unificado RST (Simple),2024,2803376.0,96.99321047526672,2890280.6560000004,Otros impuestos,Impuesto unificado RST (Simple)
+ACTIVIDAD INTERNA,Impuesto de normalización tributaria,Impuesto de normalización tributaria,Impuesto de normalización tributaria,2024,855.727505,96.99321047526672,882.2550576550001,Otros impuestos,Impuesto de normalización tributaria
+ACTIVIDAD INTERNA,Consumo bienes inmuebles,Consumo bienes inmuebles,Consumo bienes inmuebles,2024,6119.0,96.99321047526672,6308.689,Otros impuestos,Consumo bienes inmuebles
+ACTIVIDAD INTERNA,Productos plásticos de un solo uso,Productos plásticos de un solo uso,Productos plásticos de un solo uso,2024,64517.0,96.99321047526672,66517.027,Otros impuestos,Productos plásticos de un solo uso
+ACTIVIDAD INTERNA,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,Impuestos saludables - Bebidas azucaradas,2024,288042.0,96.99321047526672,296971.302,Otros impuestos,Impuestos saludables - Bebidas azucaradas
+ACTIVIDAD INTERNA,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,Impuestos saludables - Comestibles ultraprocesados,2024,1931661.0,96.99321047526672,1991542.4910000002,Otros impuestos,Impuestos saludables - Comestibles ultraprocesados
+ACTIVIDAD INTERNA,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,Impuesto gasolina y ACPM,2024,2340401.0,96.99321047526672,2412953.4310000003,Otros impuestos,Impuesto gasolina y ACPM
+ACTIVIDAD EXTERNA,Por clasificar,Por clasificar,Por clasificar,2024,124748.0,96.99321047526672,128615.18800000001,Otros impuestos,Por clasificar

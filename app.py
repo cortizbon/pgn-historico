@@ -14,12 +14,17 @@ from utils import DIC_COLORES, convert_df, get_dic_colors, get_dic_colors_area, 
 
 st.set_page_config(layout='wide', page_title="ofiscal - PePE", page_icon='imgs/favicon.jpeg')
 
-df = pd.read_csv('datasets/gastos_def_2025_test.csv')
-df2 = pd.read_csv('datasets/datos_desagregados_2025.csv')
-pgn_25 = pd.read_csv('datasets/pgn_2025.csv')
-df2025 = pd.read_excel('datasets/decreto_2025.xlsx')
-diff = pd.read_excel('datasets/merge_william.xlsx')
-inc = pd.read_csv('datasets/ingresos_2025.csv')
+df = pd.read_csv('datasets/gastos_def_2025_test.csv')       # gastos anuales
+#df2 = pd.read_csv('datasets/datos_desagregados_2025.csv')   
+pgn_25 = pd.read_csv('datasets/pgn_2025.csv')               # datos desagregados de pgn 25
+df2025 = pd.read_excel('datasets/decreto_2025.xlsx')        # datos desagregados de decreto 2025
+diff = pd.read_excel('datasets/merge_william.xlsx')         # datos desagregados de diferencia
+inc = pd.read_csv('datasets/ingresos_2025.csv')             # ingresos anuales
+ejec = pd.read_csv('datasets/ejecucion_hist.csv')
+rec = pd.read_csv('datasets/recaudo_hist.csv')
+pib_rec = pd.read_csv('datasets/pib_rec.csv')
+pib_rec2 = pd.read_csv('datasets/c2_pib_rec.csv')
+
 inc['Valor_25_esc'] = (inc['Valor_25'] / 1_000_000_000).round(1)
 df['Apropiación a precios corrientes'] /= 1_000_000_000
 df['Apropiación a precios constantes (2025)'] /= 1_000_000_000
@@ -60,8 +65,9 @@ selected_option = option_menu(None, ["Main",
                                      "Ingresos", 
                                      "Gastos", 
                                      "Treemap", 
-                                     "Ejecución",
-                                     "Recaudo", 
+                                     "Coyuntura", 
+                                     "Ejecución histórica",
+                                     "Recaudo histórico",
                                      "PGN - 2025",
                                      "Descarga de datos"], 
         icons=['arrow-right-short', 
@@ -71,6 +77,7 @@ selected_option = option_menu(None, ["Main",
                "list-task",
                "database", 
                'pencil-square',
+               'cloud-download',
                'cloud-download'], 
         menu_icon="p", default_index=0, orientation="horizontal")    
     
@@ -488,7 +495,7 @@ elif selected_option == "Treemap":
         fig = px.treemap(filter_inc, 
                         path=[px.Constant('PGN'),     'Ingreso', 
                                 'Ingreso específico'],
-                        values='Valor_24_esc',
+                        values='Valor_25_esc',
                         color_discrete_sequence=[DIC_COLORES['ax_viol'][1],
                                                  DIC_COLORES['ro_am_na'][3],
                                                  DIC_COLORES['az_verd'][2]],
@@ -521,746 +528,427 @@ elif selected_option == "Treemap":
     
         st.plotly_chart(fig)
 
-elif selected_option == 'Ejecución':
-    st.warning("Sin datos de ejecución a la fecha. Esperando actualización de Minhacienda.")
-    
-    time = """ months = [
-        "Ene", "Feb", "Mar", "Abr", "May", "Jun",
-        "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"
-    ]
-
-
-
-    df_ejec = pd.read_csv('datasets/ejecucion_agosto.csv')
-
-    total_ap = (df_ejec.groupby('mes_num')['APR. VIGENTE'].sum() / 1_000_000_000_000).round(1)
-    total_ej = (df_ejec.groupby('mes_num')['OBLIGACION'].sum() / 1_000_000_000_000).round(1)
-    total_co = (df_ejec.groupby('mes_num')['COMPROMISO'].sum() / 1_000_000_000_000).round(1)
-    total_ej_perc = (df_ejec.groupby('mes_num')['perc_ejecucion'].sum() * 100).round(1)
-    total_co_perc = (df_ejec.groupby('mes_num')['perc_compr'].sum() * 100).round(1)
-
-    
-
-    sectores = df_ejec['Sector'].unique().tolist()
-    entidades = df_ejec['Entidad'].unique().tolist()
-
-    tab1, tab2, tab3 = st.tabs(["Vista general",
-                                "Navegación detallada",
-                                "Descarga de datos"])
-
+elif selected_option == 'Coyuntura':
+    tab1, tab2 = st.tabs(['Ejecución', 'Recaudo'])
     with tab1:
-        col1, col2, col3, col4, col5 = st.columns(5)
-        with col1:
-            st.metric("Apr. Vigente (bil)", total_ap[8])
-        with col2: 
-            st.metric("Ejecutado (bil)", total_ej[8])
-        with col3:
-            st.metric("Comprometido (bil)", total_co[8])
-        with col4:
-            st.metric("% ejecutado (al mes actual)", total_ej_perc[8])
-        with col5:
-            st.metric("% comprometido (al mes actual)", total_co_perc[8])
-
-        fig = make_subplots(rows=1, cols=2, subplot_titles=("Valores (billones)", "Porcentaje (%)"))
-
-        mean_growth_rate = (total_ej.loc[8] / 8)
-        forecast_values = [mean_growth_rate * i  for i in range(9, 13)]
-        full_values_ej = list(total_ej.values) + forecast_values
-        full_values_ej = [round(i, 1) for i in full_values_ej]
-        fig.add_trace(go.Scatter(x=months[:9], 
-                                y=full_values_ej[:9], 
-                                mode='lines+markers',
-                                name='Ejecutado', showlegend=False,
-                                line=dict(color='#dd722a')), row=1, col=1)
-
-        # Highlight the forecasted part with a red dashed line (the last 4 points)
-        fig.add_trace(go.Scatter(
-            x=months[8:],  # x-axis for forecasted values
-            y=full_values_ej[8:],     # The forecasted values
-            mode='lines+markers',          # Just lines (no markers here)
-            name='Pronóstico', 
-            line=dict(color='#81D3CD', width=2, dash='dash'),
-            marker=dict(color='#81D3CD', size=8),  # Dashed line for forecast
-        ), row=1, col=1)
-
-        mean_growth_rate = (total_co.loc[8] / 8)
-        forecast_values = [mean_growth_rate * i  for i in range(9, 13)]
-        full_values_co = list(total_co.values) + forecast_values
-        full_values_co = [round(i, 1) for i in full_values_co]
-
-
-        fig.add_trace(go.Scatter(x=months[:9], 
-                                y=full_values_co[:9], 
-                                mode='lines+markers', 
-                                name='Comprometido', showlegend=False,
-                                line=dict(color='#2635bf')), row=1, col=1)
-        fig.add_trace(go.Scatter(
-            x=months[8:],  # x-axis for forecasted values
-            y=full_values_co[8:],     # The forecasted values
-            mode='lines+markers',          # Just lines (no markers here)
-            name='Pronóstico', showlegend=False,
-            line=dict(color='#81D3CD', width=2, dash='dash'),
-            marker=dict(color='#81D3CD', size=8),  # Dashed line for forecast
-        ), row=1, col=1)
-
-        fig.add_shape(type='line', x0=0, x1=11, y0=total_ap[8], y1=total_ap[8], line=dict(color='#2635bf', dash='dash'),
-                    row=1, col=1)
-
+        #st.warning("Sin datos de ejecución a la fecha. Esperando actualización de Minhacienda.")
         
-        mean_growth_rate = (total_ej_perc.loc[8] / 8)
-        forecast_values = [mean_growth_rate * i  for i in range(9, 13)]
-        full_values_perc = list(total_ej_perc.values) + forecast_values
-        full_values_perc = [round(i, 1) for i in full_values_perc]
+        months = [
+            "Ene", "Feb", "Mar", "Abr", "May", "Jun",
+            "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"
+        ]
+        df_ejec = pd.read_csv('datasets/ejec_acum_2025.csv')
+        # general
 
-        fig.add_trace(go.Scatter(x=months[:9], 
-                                y=full_values_perc[:9], 
-                                mode='lines+markers', 
-                                name='Ejecutado', 
-                                line=dict(color='#dd722a')), row=1, col=2)
+        a = (df_ejec['APR. VIGENTE'].sum() / 1_000_000_000_000).round(2)
+        b = ((df_ejec['COMPROMISO'].sum() / df_ejec['APR. VIGENTE'].sum()) * 100).round(1)
+        c = ((df_ejec['OBLIGACION'].sum() / df_ejec['APR. VIGENTE'].sum() ) * 100).round(1)
 
-        fig.add_trace(go.Scatter(
-            x=months[8:],  # x-axis for forecasted values
-            y=full_values_perc[8:],     # The forecasted values
-            mode='lines+markers',          # Just lines (no markers here)
-            name='Pronóstico', showlegend=False,
-            line=dict(color='#81D3CD', width=2, dash='dash'),
-            marker=dict(color='#81D3CD', size=8),  # Dashed line for forecast
-        ), row=1, col=2)
+        t1, t2 = st.tabs(["Vista general",
+                                    "Navegación detallada"])
 
+        with t1:
+            col1, col2, col3, col4 = st.columns(4)
+            with col1:
+                st.metric("Apr. Vigente (bil)", a)
+            with col2: 
+                st.metric("% Comprometido", f"{b}%")
+            with col3:
+                st.metric("% Ejecutado ", f"{c}%")
+            with col4:
+                st.metric("% Proyección de ejecución final", f"{round(c * 12, 1)}%")
 
-
-        mean_growth_rate = (total_co_perc.loc[8] / 8)
-        forecast_values = [mean_growth_rate * i  for i in range(9, 13)]
-        full_values_co = list(total_co_perc.values) + forecast_values
-        full_values_co = [round(i, 1) for i in full_values_co]
-
-        fig.add_trace(go.Scatter(x=months[:9], 
-                                y=full_values_co[:9], 
-                                mode='lines+markers', 
-                                name='Comprometido', 
-                                line=dict(color='#2635bf')),  row=1, col=2)
-        fig.add_trace(go.Scatter(
-            x=months[8:],  # x-axis for forecasted values
-            y=full_values_co[8:],     # The forecasted values
-            mode='lines+markers',          # Just lines (no markers here)
-            name='Pronóstico', showlegend=False,
-            line=dict(color='#81D3CD', width=2, dash='dash'),
-            marker=dict(color='#81D3CD', size=8),  # Dashed line for forecast
-        ), row=1, col=2)
-
-        fig.add_shape(type='line', x0=0, x1=11, y0=100, y1=100, line=dict(color='#2635bf', dash='dash'),
-                    row=1, col=2)
-
-        fig.update_layout(
-            title="Ejecución y compromiso general al mes de agosto",
-            height=400, 
-            width=900,
-            legend=dict(
-                orientation='h',   # Horizontal legend
-                x=0.64,             # Center the legend
-                y=1.1,             # Position it slightly above the plots
-                xanchor='left',  # Center the legend horizontally
-                yanchor='bottom'   # Align the legend vertically
-            )
-        )
-        st.plotly_chart(fig)
-
-        perd_aprop = 100 - full_values_co[-1]
-
-        if perd_aprop > 0:
-            st.error(f"Hay una pérdida de apropiación del {round(perd_aprop, 2)}%.")
-        else:
-            st.success(f"No hay pérdida de apropiación.")
-
-        piv_s = (df_ejec[df_ejec['mes_num'] == 8].pivot_table(index='Sector',
-                                    values=['APR. VIGENTE','OBLIGACION', 'COMPROMISO'],
+            tab = df_ejec.pivot_table(index='mes',
+                                    values=['APR. VIGENTE', 'OBLIGACION', 'COMPROMISO'],
                                     aggfunc='sum')
-                                    .assign(perc_ejecucion=lambda x: (x['OBLIGACION'] / x['APR. VIGENTE'] * 100).round(1),
-                                            perc_compr=lambda x: (x['COMPROMISO'] / x['APR. VIGENTE'] * 100).round(1)))
-        bots_ejec = piv_s.sort_values(by='perc_ejecucion', ascending=True).head(10).reset_index()
-        bots_compr = piv_s.sort_values(by='perc_compr', ascending=True).head(10).reset_index()
-        tops_ejec = piv_s.sort_values(by='perc_ejecucion', ascending=True).tail(10).reset_index()
-        tops_compr = piv_s.sort_values(by='perc_compr', ascending=True).tail(10).reset_index()
+
+            num_month = len(tab)
+
+            
+            fig = make_subplots(rows=1, cols=2, subplot_titles=("Valores (billones)", "Porcentaje (%)"))
+
+            if num_month == 1:
+                comp_rate = (tab['COMPROMISO'] / tab['APR. VIGENTE'])[0] 
+                obl_rate = (tab['OBLIGACION'] / tab['APR. VIGENTE'])[0]
+                obs_values_r = [obl_rate]
+            else:
+                prov_tab = tab.pct_change().fillna(tab.iloc[0].div(tab['APR. VIGENTE'].unique()[0]))
+                comp_rate = prov_tab['COMPROMISO'].mean()
+                obl_rate = prov_tab['OBLIGACION'].mean()
+                obs_values_r = prov_tab['OBLIGACION'].tolist()
+            
+            obs_values_v = tab['OBLIGACION'].tolist()
+            
+            forecast_values = [obl_rate * i  for i in range(num_month + 1, 13)]
+            full_values_ej = obs_values_r + forecast_values
+            full_values_ej = [ round(i * 100, 2) for i in full_values_ej]
+            fig.add_trace(go.Scatter(x=months[:num_month + 1], 
+                                        y=full_values_ej[:num_month + 1], 
+                                        mode='lines+markers',
+                                        name='Ejecutado', showlegend=False,
+                                        line=dict(color='#dd722a')), row=1, col=2)
+
+                # Highlight the forecasted part with a red dashed line (the last 4 points)
+            fig.add_trace(go.Scatter(
+                    x=months[num_month:],  # x-axis for forecasted values
+                    y=full_values_ej[num_month:],     # The forecasted values
+                    mode='lines+markers',          # Just lines (no markers here)
+                    name='Pronóstico', 
+                    line=dict(color='#81D3CD', width=2, dash='dash'),
+                    marker=dict(color='#81D3CD', size=8),  # Dashed line for forecast
+                ), row=1, col=2)
+            perd_aprop = 100 - full_values_ej[-1]
 
 
-        fig = make_subplots(rows=1, cols=2, subplot_titles=("Ejecutado (%)", "Comprometido (%)"))
+            forecast_values = [obl_rate * i for i in range(num_month + 1, 13)]
+            forecast_values = [tab['APR. VIGENTE'].unique()[0] * i for i in forecast_values]
+            full_values_ej = obs_values_v + forecast_values
+            full_values_ej = [round(i / 1_000_000_000, 1) for i in full_values_ej]
 
-    # Plot absolute values as bar plots in the first subplot
-        fig.add_trace(go.Bar(y=tops_ejec['Sector'], 
-                            x=tops_ejec['perc_ejecucion'], 
-                            name='Ejecutado', 
-                            marker_color='#F7B261', 
-                            orientation='h',
-                            text=tops_ejec['Sector'],
-                            textposition='inside',
-                            hoverinfo='x'), row=1, col=1)
-        fig.add_trace(go.Bar(y=tops_compr['Sector'], 
-                            x=tops_compr['perc_compr'], 
-                            name='Comprometido', 
-                            marker_color='#81D3CD', 
-                            orientation='h',
-                            text=tops_compr['Sector'],
-                            textposition='inside',
-                            hoverinfo='x'), row=1, col=2)
-        fig.add_shape(
-            type='line',
-            x0=100, x1=100, y0=-0.5, y1=9.5,  # Set x0, x1 for the vertical line position
-            line=dict(color='#dd722a', width=1, dash='dash'),
-            row=1, col=1
-        )
-        fig.add_shape(
-            type='line',
-            x0=100, x1=100, y0=-0.5, y1=9.5,  # Set x0, x1 for the vertical line position
-            line=dict(color='#81D3CD', width=1, dash='dash'),
-            row=1, col=2
-        )
-        fig.update_yaxes(showticklabels=False)
-        fig.update_layout(
-            title="Top 10 sectores con mayor ejecución (al mes de agosto) ",
-            height=400, 
-            width=900,
-            legend=dict(
-                orientation='h',   # Horizontal legend
-                x=0.72,             # Center the legend
-                y=1.1,             # Position it slightly above the plots
-                xanchor='left',  # Center the legend horizontally
-                yanchor='bottom'   # Align the legend vertically
-            )
-        )
-        st.plotly_chart(fig)
 
-        # peor ejecución
-        fig = make_subplots(rows=1, cols=2, subplot_titles=("Ejecutado (%)", "Comprometido (%)"))
+            fig.add_trace(go.Scatter(x=months[:num_month + 1], 
+                                        y=full_values_ej[:num_month + 1], 
+                                        mode='lines+markers', 
+                                        name='Ejecutado', showlegend=False,
+                                        line=dict(color='#2635bf')), row=1, col=1)
+            fig.add_trace(go.Scatter(
+                    x=months[num_month:],  # x-axis for forecasted values
+                    y=full_values_ej[num_month:],     # The forecasted values
+                    mode='lines+markers',          # Just lines (no markers here)
+                    name='Pronóstico', showlegend=False,
+                    line=dict(color='#81D3CD', width=2, dash='dash'),
+                    marker=dict(color='#81D3CD', size=8),  # Dashed line for forecast
+                ), row=1, col=1)
 
-        fig.add_trace(go.Bar(y=bots_ejec['Sector'], 
-                            x=bots_ejec['perc_ejecucion'], 
-                            name='Ejecutado', 
-                            marker_color='#F7B261', 
-                            orientation='h',
-                            text=bots_ejec['Sector'],
-                            textposition='inside',
-                            hoverinfo='x'), row=1, col=1)
-        fig.add_trace(go.Bar(y=bots_compr['Sector'], 
-                            x=bots_compr['perc_compr'], 
-                            name='Comprometido', 
-                            marker_color='#81D3CD', 
-                            orientation='h',
-                            text=bots_compr['Sector'],
-                            textposition='inside',
-                            hoverinfo='x'), row=1, col=2)
-        fig.add_shape(
-            type='line',
-            x0=100, x1=100, y0=-0.5, y1=9.5,  # Set x0, x1 for the vertical line position
-            line=dict(color='#dd722a', width=1, dash='dash'),
-            row=1, col=1
-        )
-        fig.add_shape(
-            type='line',
-            x0=100, x1=100, y0=-0.5, y1=9.5,  # Set x0, x1 for the vertical line position
-            line=dict(color='#81D3CD', width=1, dash='dash'),
-            row=1, col=2
-        )
-        fig.update_yaxes(showticklabels=False)
-        fig.update_layout(
-            title="Top 10 sectores con menor ejecución (al mes de agosto) ",
-            height=400, 
-            width=900,
-            legend=dict(
-                orientation='h',   # Horizontal legend
-                x=0.72,             # Center the legend
-                y=1.1,             # Position it slightly above the plots
-                xanchor='left',  # Center the legend horizontally
-                yanchor='bottom'   # Align the legend vertically
-            )
-        )
-        st.plotly_chart(fig)
+            fig.add_shape(type='line', x0=0, x1=11, y0=round(tab['APR. VIGENTE'].unique()[0] / (1_000_000_000), 1), y1=round(tab['APR. VIGENTE'].unique()[0] / (1_000_000_000), 1), line=dict(color='#2635bf', dash='dash'),
+                            row=1, col=1)
+            
+            fig.add_shape(type='line', x0=0, x1=11, y0=100, y1=100, line=dict(color='#2635bf', dash='dash'),
+                            row=1, col=2)
+            fig.update_layout(showlegend=False)
+            st.plotly_chart(fig)
 
-        piv_e = (df_ejec[df_ejec['mes_num'] == 8].pivot_table(index='Entidad',
-                                    values=['APR. VIGENTE','OBLIGACION', 'COMPROMISO'],
+            
+            if perd_aprop > 0:
+                    st.error(f"Puede presentarse una pérdida de apropiación del {round(perd_aprop, 2)}%.")
+            else:
+                    st.success(f"No hay pérdida de apropiación.")
+
+        with t2:
+            st.subheader('Por sector')
+            sectores = df_ejec['Sector'].unique().tolist()
+            sector = st.selectbox('Seleccione un sector: ', sectores)
+            f_sec = df_ejec[df_ejec['Sector'] == sector]
+
+            a = (f_sec['APR. VIGENTE'].sum() / 1_000_000_000).round(2)
+            b = ((f_sec['COMPROMISO'].sum() / f_sec['APR. VIGENTE'].sum()) * 100).round(1)
+            c = ((f_sec['OBLIGACION'].sum() / f_sec['APR. VIGENTE'].sum() ) * 100).round(1)
+
+            col1, col2, col3, col4 = st.columns(4)
+            with col1:
+                st.metric("Apr. Vigente (mmil)", a)
+            with col2: 
+                st.metric("% Comprometido", f"{b}%")
+            with col3:
+                st.metric("% Ejecutado ", f"{c}%")
+            with col4:
+                st.metric("% Proyección de ejecución final", f"{round(c * 12, 1)}%")
+
+            tab = f_sec.pivot_table(index='mes',
+                                    values=['APR. VIGENTE', 'OBLIGACION', 'COMPROMISO'],
                                     aggfunc='sum')
-                                    .assign(perc_ejecucion=lambda x: (x['OBLIGACION'] / x['APR. VIGENTE'] * 100).round(1),
-                                            perc_compr=lambda x: (x['COMPROMISO'] / x['APR. VIGENTE'] * 100).round(1))
-                                    .assign(perc_perdida=lambda x:100 - x['perc_compr']))
-        tops_ejec = piv_e.sort_values(by='perc_ejecucion', ascending=True).tail(10).reset_index()
-        tops_compr = piv_e.sort_values(by='perc_compr', ascending=True).tail(10).reset_index()
-        bots_ejec = piv_e.sort_values(by='perc_ejecucion', ascending=True).head(10).reset_index()
-        bots_compr = piv_e.sort_values(by='perc_compr', ascending=True).head(10).reset_index()
-        
+
+            num_month = len(tab)
+
+            
+            fig = make_subplots(rows=1, cols=2, subplot_titles=("Valores (billones)", "Porcentaje (%)"))
+
+            if num_month == 1:
+                comp_rate = (tab['COMPROMISO'] / tab['APR. VIGENTE'])[0] 
+                obl_rate = (tab['OBLIGACION'] / tab['APR. VIGENTE'])[0]
+                obs_values_r = [obl_rate]
+            else:
+                prov_tab = tab.pct_change().fillna(tab.iloc[0].div(tab['APR. VIGENTE'].unique()[0]))
+                comp_rate = prov_tab['COMPROMISO'].mean()
+                obl_rate = prov_tab['OBLIGACION'].mean()
+                obs_values_r = prov_tab['OBLIGACION'].tolist()
+            
+            obs_values_v = tab['OBLIGACION'].tolist()
+            
+            forecast_values = [obl_rate * i  for i in range(num_month + 1, 13)]
+            full_values_ej = obs_values_r + forecast_values
+            full_values_ej = [ round(i * 100, 2) for i in full_values_ej]
+            fig.add_trace(go.Scatter(x=months[:num_month + 1], 
+                                        y=full_values_ej[:num_month + 1], 
+                                        mode='lines+markers',
+                                        name='Ejecutado', showlegend=False,
+                                        line=dict(color='#dd722a')), row=1, col=2)
+
+                # Highlight the forecasted part with a red dashed line (the last 4 points)
+            fig.add_trace(go.Scatter(
+                    x=months[num_month:],  # x-axis for forecasted values
+                    y=full_values_ej[num_month:],     # The forecasted values
+                    mode='lines+markers',          # Just lines (no markers here)
+                    name='Pronóstico', 
+                    line=dict(color='#81D3CD', width=2, dash='dash'),
+                    marker=dict(color='#81D3CD', size=8),  # Dashed line for forecast
+                ), row=1, col=2)
+            perd_aprop = 100 - full_values_ej[-1]
 
 
-
-        fig = make_subplots(rows=1, cols=2, subplot_titles=("Ejecutado (%)", "Pérdida de aprop. (%)"))
-
-    # Plot absolute values as bar plots in the first subplot
-        fig.add_trace(go.Bar(y=tops_ejec['Entidad'], 
-                            x=tops_ejec['perc_ejecucion'], 
-                            name='Ejecutado', 
-                            marker_color='#F7B261', 
-                            orientation='h',
-                            text=tops_ejec['Entidad'],
-                            textposition='inside',
-                            hoverinfo='x'), row=1, col=1)
-        fig.add_trace(go.Bar(y=tops_compr['Entidad'], 
-                            x=tops_compr['perc_compr'], 
-                            name='Comprometido', 
-                            marker_color='#81D3CD', 
-                            orientation='h',
-                            text=tops_compr['Entidad'],
-                            textposition='inside',
-                            hoverinfo='x'), row=1, col=2)
-        fig.add_shape(
-            type='line',
-            x0=100, x1=100, y0=-0.5, y1=9.5,  # Set x0, x1 for the vertical line position
-            line=dict(color='#dd722a', width=1, dash='dash'),
-            row=1, col=1
-        )
-        fig.add_shape(
-            type='line',
-            x0=100, x1=100, y0=-0.5, y1=9.5,  # Set x0, x1 for the vertical line position
-            line=dict(color='#81D3CD', width=1, dash='dash'),
-            row=1, col=2
-        )
-        fig.update_yaxes(showticklabels=False)
-        fig.update_layout(
-            title="Top 10 entidades con mayor ejecución (al mes de agosto)",
-            height=400, 
-            width=900,
-            legend=dict(
-                orientation='h',   # Horizontal legend
-                x=0.72,             # Center the legend
-                y=1.1,             # Position it slightly above the plots
-                xanchor='left',  # Center the legend horizontally
-                yanchor='bottom'   # Align the legend vertically
-            )
-        )
-        st.plotly_chart(fig)
-
-        fig = make_subplots(rows=1, cols=2, subplot_titles=("Ejecutado (%)", "Comprometido (%)"))
-
-    # Plot absolute values as bar plots in the first subplot
-        fig.add_trace(go.Bar(y=bots_ejec['Entidad'], 
-                            x=bots_ejec['perc_ejecucion'], 
-                            name='Ejecutado', 
-                            marker_color='#F7B261', 
-                            orientation='h',
-                            hovertext=bots_ejec['Entidad'],
-                            hoverinfo='x+text'), row=1, col=1)
-        fig.add_trace(go.Bar(y=bots_compr['Entidad'], 
-                            x=bots_compr['perc_compr'], 
-                            name='Comprometido', 
-                            marker_color='#81D3CD', 
-                            orientation='h',
-                            hovertext=bots_compr['Entidad'],
-                            hoverinfo='x+text'), row=1, col=2)
-        fig.add_shape(
-            type='line',
-            x0=100, x1=100, y0=-0.5, y1=9.5,  # Set x0, x1 for the vertical line position
-            line=dict(color='#dd722a', width=1, dash='dash'),
-            row=1, col=1
-        )
-        fig.add_shape(
-            type='line',
-            x0=100, x1=100, y0=-0.5, y1=9.5,  # Set x0, x1 for the vertical line position
-            line=dict(color='#81D3CD', width=1, dash='dash'),
-            row=1, col=2
-        )
-        fig.update_yaxes(showticklabels=False)
-        fig.update_layout(
-            title="Top 10 entidades con menor ejecución (al mes de agosto)",
-            height=400, 
-            width=900,
-            legend=dict(
-                orientation='h',   # Horizontal legend
-                x=0.7,             # Center the legend
-                y=1.1,             # Position it slightly above the plots
-                xanchor='left',  # Center the legend horizontally
-                yanchor='bottom'   # Align the legend vertically
-            )
-        )
-        st.plotly_chart(fig)
-    
-    with tab2:
-        st.subheader("Por sector")
-        sector = st.selectbox("Seleccione un sector: ", sectores)
-
-        fil_sector = df_ejec[df_ejec['Sector'] == sector]
-        piv_sector = (fil_sector.pivot_table(index='mes_num',
-                    aggfunc='sum',
-                    values=['OBLIGACION', 'APR. VIGENTE', 'COMPROMISO'])
-                                .div(1_000_000_000, axis=0)
-                                .assign(perc_ejecucion=lambda x: (x['OBLIGACION'] / x['APR. VIGENTE'] * 100),
-                                        perc_compr=lambda x: x['COMPROMISO'] / x['APR. VIGENTE'] * 100)
-                                .round(1))
-        
-        col1, col2, col3, col4, col5 = st.columns(5)
-        with col1:
-            st.metric("Apr. Vigente (mmil)", piv_sector.loc[8, "APR. VIGENTE"])
-        with col2: 
-            st.metric("Ejecutado (mmil)", piv_sector.loc[8, "OBLIGACION"])
-        with col3:
-            st.metric("Comprometido (mmil)", piv_sector.loc[8, "COMPROMISO"])
-        with col4:
-            st.metric("% ejecutado", piv_sector.loc[8, "perc_ejecucion"])
-        with col5:
-            st.metric("% comprometido", piv_sector.loc[8, "perc_compr"])
+            forecast_values = [obl_rate * i for i in range(num_month + 1, 13)]
+            forecast_values = [tab['APR. VIGENTE'].unique()[0] * i for i in forecast_values]
+            full_values_ej = obs_values_v + forecast_values
+            full_values_ej = [round(i / 1_000_000_000, 1) for i in full_values_ej]
 
 
-        mean_growth_rate = (piv_sector.loc[8, "perc_ejecucion"] / 8) / 100
+            fig.add_trace(go.Scatter(x=months[:num_month + 1], 
+                                        y=full_values_ej[:num_month + 1], 
+                                        mode='lines+markers', 
+                                        name='Ejecutado', showlegend=False,
+                                        line=dict(color='#2635bf')), row=1, col=1)
+            fig.add_trace(go.Scatter(
+                    x=months[num_month:],  # x-axis for forecasted values
+                    y=full_values_ej[num_month:],     # The forecasted values
+                    mode='lines+markers',          # Just lines (no markers here)
+                    name='Pronóstico', showlegend=False,
+                    line=dict(color='#81D3CD', width=2, dash='dash'),
+                    marker=dict(color='#81D3CD', size=8),  # Dashed line for forecast
+                ), row=1, col=1)
 
-        # Step 2: Forecast the next 4 values
-        last_value = piv_sector['perc_ejecucion'].iloc[-1]
-        forecast_values = [mean_growth_rate * i * 100 for i in range(9, 13)]
+            fig.add_shape(type='line', x0=0, x1=11, y0=round(tab['APR. VIGENTE'].unique()[0] / (1_000_000_000), 1), y1=round(tab['APR. VIGENTE'].unique()[0] / (1_000_000_000), 1), line=dict(color='#2635bf', dash='dash'),
+                            row=1, col=1)
+            
+            fig.add_shape(type='line', x0=0, x1=11, y0=100, y1=100, line=dict(color='#2635bf', dash='dash'),
+                            row=1, col=2)
+            fig.update_layout(showlegend=False)
+            st.plotly_chart(fig)
 
-        # Combine original and forecasted values
-        full_values = piv_sector['perc_ejecucion'].tolist() + forecast_values
-        full_values = [round(i, 1) for i in full_values]
+            
+            if perd_aprop > 0:
+                    st.error(f"Puede presentarse una pérdida de apropiación del {round(perd_aprop, 2)}% en el sector {sector}.")
+            else:
+                    st.success(f"No hay pérdida de apropiación en el sector {sector}.")
 
-        # Step 3: Create a line plot
-        fig = make_subplots(rows=1, cols=2, subplot_titles=("Ejecutado (%)", "Comprometido (%)"))
+            mes = max(f_sec['mes_num'].unique())
 
-        # Plot the first 8 values (blue solid line)
-        fig.add_trace(go.Scatter(
-            x=months[:9],  # x-axis for all values (1 to 12)
-            y=full_values[:9],         # All values (original + forecast)
-            mode='lines+markers',  # Line and markers
-            name='Observado', showlegend=False,
-            line=dict(color='#2635bf', width=2),  # Solid blue line for all values
-            marker=dict(color=['#2635bf']*9, size=8)  # Red markers for forecasted values
-        ), row=1, col=1)
+            piv = (df_ejec[df_ejec['mes_num'] == 1].pivot_table(index='Sector',
+                                                           values=['APR. VIGENTE', 'OBLIGACION'],
+                                                           aggfunc='sum')
+                                                           .assign(perc_ejec=lambda x: (x['OBLIGACION'] / x['APR. VIGENTE']).mul(100).round(2))
+                                                           .sort_values(by='perc_ejec', ascending=False))
+            best = piv.head(5).reset_index().sort_values(by='perc_ejec').reset_index(drop=True).set_index('Sector')
+            worst = piv.tail(5).reset_index().sort_values(by='perc_ejec').reset_index(drop=True).set_index('Sector')
+            st.dataframe(best)
+            st.dataframe(worst)
 
-        # Highlight the forecasted part with a red dashed line (the last 4 points)
-        fig.add_trace(go.Scatter(
-            x=months[8:],  # x-axis for forecasted values
-            y=full_values[8:],     # The forecasted values
-            mode='lines+markers',          # Just lines (no markers here)
-            name='Pronóstico', showlegend=False,
-            line=dict(color='#dd722a', width=2, dash='dash'),
-            marker=dict(color='#dd722a', size=8),  # Dashed line for forecast
-        ), row=1, col=1)
+            fig = make_subplots(rows=1, cols=2, subplot_titles=("Top 5 mejores", "Top 5 peores"))
 
-        mean_growth_rate = (piv_sector.loc[8, "perc_compr"] / 8) / 100
+            fig_bar1 = px.bar(best, 
+                              x='perc_ejec', 
+                              orientation="h", 
+                              hover_data=['perc_ejec'], 
+                              color_discrete_sequence=['#81D3CD'])
+            fig_bar2 = px.bar(worst, 
+                              x='perc_ejec', 
+                              orientation='h', 
+                              hover_data=['perc_ejec'], 
+                              color_discrete_sequence=['#81D3CD'])
 
-        # Step 2: Forecast the next 4 values
-        last_value = piv_sector['perc_compr'].iloc[-1]
-        forecast_values = [mean_growth_rate * i * 100 for i in range(9, 13)]
-
-        # Combine original and forecasted values
-        full_values = piv_sector['perc_compr'].tolist() + forecast_values
-        full_values = [round(i, 1) for i in full_values]
-
-        fig.add_trace(go.Scatter(
-            x=months[:9],  # x-axis for all values (1 to 12)
-            y=full_values[:9],         # All values (original + forecast)
-            mode='lines+markers',  # Line and markers
-            name='Observado',
-            line=dict(color='#2635bf', width=2), # Solid blue line for all values
-            marker=dict(color=['#2635bf']*9, size=8)  # Red markers for forecasted values
-        ), row=1, col=2)
-
-
-
-        # Highlight the forecasted part with a red dashed line (the last 4 points)
-        fig.add_trace(go.Scatter(
-            x=months[8:],  # x-axis for forecasted values
-            y=full_values[8:],     # The forecasted values
-            mode='lines+markers',          # Just lines (no markers here)
-            name='Pronóstico',
-            line=dict(color='#dd722a', width=2, dash='dash'),
-            marker=dict(color='#dd722a', size=8),  # Dashed line for forecast
-        ), row=1, col=2)
-
-        fig.add_shape(type='line', x0=0, x1=11, y0=100, y1=100, line=dict(color='#2635bf', dash='dash'),
-                    row=1, col=2)
-        fig.add_shape(type='line', x0=0, x1=11, y0=100, y1=100, line=dict(color='#2635bf', dash='dash'),
-                    row=1, col=1)
-        fig.update_yaxes(range=[0, max(100, max(full_values))]) 
-
-        fig.update_layout(
-            title=f"Ejecución y compromiso al mes de agosto por sector: {sector}",
-            height=400, 
-            width=900,
-            legend=dict(
-                orientation='h',
-                yanchor="bottom",
-                y=1.1,
-                xanchor="right",
-                x=1   # Align the legend vertically
-            )
-        )
-
-        # Show the plot
-        st.plotly_chart(fig)
-
-        perd_aprop = 100 - full_values[-1]
-
-        if perd_aprop > 0:
-            st.error(f"Hay una pérdida de apropiación del {round(perd_aprop, 2)}% para el sector {sector}.")
-        else:
-            st.success(f"No hay pérdida de apropiación para el sector {sector}.")
-
-        st.subheader("Por entidad")
-        entidad = st.selectbox("Seleccione una entidad: ", entidades)
-        fil_entidad = df_ejec[df_ejec['Entidad'] == entidad]
-        piv_entidad = (fil_entidad.pivot_table(index='mes_num',
-                    aggfunc='sum',
-                    values=['OBLIGACION', 'APR. VIGENTE', 'COMPROMISO'])
-                                .div(1_000_000_000, axis=0)
-                                .assign(perc_ejecucion=lambda x: (x['OBLIGACION'] / x['APR. VIGENTE'] * 100),
-                                        perc_compr=lambda x: x['COMPROMISO'] / x['APR. VIGENTE'] * 100)
-                                .round(1))
-        col1, col2, col3, col4, col5 = st.columns(5)
-        with col1:
-            st.metric("Apr. Vigente (mmil)", piv_entidad.loc[8, "APR. VIGENTE"])
-        with col2: 
-            st.metric("Ejecutado (mmil)", piv_entidad.loc[8, "OBLIGACION"])
-        with col3:
-            st.metric("Comprometido (mmil)", piv_entidad.loc[8, "COMPROMISO"])
-        with col4:
-            st.metric("% ejecutado", piv_entidad.loc[8, "perc_ejecucion"])
-        with col5:
-            st.metric("% comprometido", piv_entidad.loc[8, "perc_compr"])
-
-        mean_growth_rate = (piv_entidad.loc[8, "perc_ejecucion"] / 8) / 100
-
-        # Step 2: Forecast the next 4 values
-        last_value = piv_entidad['perc_ejecucion'].iloc[-1]
-        forecast_values = [mean_growth_rate * i * 100 for i in range(9, 13)]
-
-        # Combine original and forecasted values
-        full_values = piv_entidad['perc_ejecucion'].tolist() + forecast_values
-        full_values = [round(i, 1) for i in full_values]
-
-        # Step 3: Create a line plot
-        fig = make_subplots(rows=1, cols=2, subplot_titles=("Ejecutado (%)", "Comprometido (%)"))
-
-        # Plot the first 8 values (blue solid line)
-        fig.add_trace(go.Scatter(
-            x=months[:9],  # x-axis for all values (1 to 12)
-            y=full_values[:9],         # All values (original + forecast)
-            mode='lines+markers',  # Line and markers
-            name='Observado', showlegend=False,
-            line=dict(color='#2635bf', width=2),  # Solid blue line for all values
-            marker=dict(color=['#2635bf']*9, size=8)  # Red markers for forecasted values
-        ), row=1, col=1)
-
-        # Highlight the forecasted part with a red dashed line (the last 4 points)
-        fig.add_trace(go.Scatter(
-            x=months[8:],  # x-axis for forecasted values
-            y=full_values[8:],     # The forecasted values
-            mode='lines+markers',          # Just lines (no markers here)
-            name='Pronóstico', showlegend=False,
-            line=dict(color='#dd722a', width=2, dash='dash'),
-            marker=dict(color='#dd722a', size=8),  # Dashed line for forecast
-        ), row=1, col=1)
-
-        mean_growth_rate = (piv_entidad.loc[8, "perc_compr"] / 8) / 100
-
-        # Step 2: Forecast the next 4 values
-        last_value = piv_entidad['perc_compr'].iloc[-1]
-        forecast_values = [mean_growth_rate * i * 100 for i in range(9, 13)]
-
-        # Combine original and forecasted values
-        full_values = piv_entidad['perc_compr'].tolist() + forecast_values
-        full_values = [round(i, 1) for i in full_values]
-
-        fig.add_trace(go.Scatter(
-            x=months[:9],  # x-axis for all values (1 to 12)
-            y=full_values[:9],         # All values (original + forecast)
-            mode='lines+markers',  # Line and markers
-            name='Observado', showlegend=True,
-            line=dict(color='#2635bf', width=2),  # Solid blue line for all values
-            marker=dict(color=['#2635bf']*9, size=8)  # Red markers for forecasted values
-        ), row=1, col=2)
+            for d in fig_bar1.data:
+                fig.add_trace(d, row=1, col=1)
+            for d in fig_bar2.data:
+                fig.add_trace(d, row=1, col=2)
 
 
-
-        # Highlight the forecasted part with a red dashed line (the last 4 points)
-        fig.add_trace(go.Scatter(
-            x=months[8:],  # x-axis for forecasted values
-            y=full_values[8:],     # The forecasted values
-            mode='lines+markers',          # Just lines (no markers here)
-            name='Pronóstico', showlegend=True,
-            line=dict(color='#dd722a', width=2, dash='dash'),
-            marker=dict(color='#dd722a', size=8),  # Dashed line for forecast
-        ), row=1, col=2)
-
-        fig.add_shape(type='line', x0=0, x1=11, y0=100, y1=100, line=dict(color='#2635bf', dash='dash'),
-                    row=1, col=2)
-        fig.add_shape(type='line', x0=0, x1=11, y0=100, y1=100, line=dict(color='#2635bf', dash='dash'),
-                    row=1, col=1)
-        fig.update_yaxes(range=[0, max(100, max(full_values))]) 
-
-        fig.update_layout(
-            title=f"Ejecución y compromiso al mes de agosto por entidad: {entidad}",
-            height=400, 
-            width=900,
-            legend=dict(
-                orientation='h',
-                yanchor="bottom",
-                y=1.1,
-                xanchor="right",
-                x=1 # Align the legend vertically
-            )
-        )
-
-        # Show the plot
-        st.plotly_chart(fig)
-
-        perd_aprop = 100 - full_values[-1]
-
-        if perd_aprop > 0:
-            st.error(f"Hay una pérdida de apropiación del {round(perd_aprop, 2)}% para la entidad {entidad}.")
-        else:
-            st.success(f"No hay pérdida de apropiación para la entidad {entidad}.")
-
-    with tab3:
-        st.subheader("Descarga de datos")
-
-        csv = df.to_csv(index=False).encode('utf-8')
-        st.download_button(
-                    label="Descargar CSV",
-                    data=csv,
-                    file_name='datos_ejecucion_agosto.csv',
-                    mime='text/csv') """
-
-elif selected_option == 'Recaudo':
-    st.warning("Sin datos de recaudo a la fecha. Esperando actualización de DIAN.")
-    time2 = """rec = pd.read_csv('datasets/recaudo.csv')
-    rec['Valor'] = rec['Valor'] / 1_000
-
-    tab1, tab2, tab3 = st.tabs(['General', 'Interno', 'Externo'])
-
-    with tab1:
-        piv_year = rec.groupby(['Mes_num', 'Mes'])['Valor'].sum().reset_index()
-        acum = (piv_year
-                                        .groupby(['Mes_num', 'Mes'])['Valor']
-                                        .sum()
-                                        .reset_index()
-                                        .assign(Acumulado=lambda x: x['Valor'].cumsum()))[['Mes','Acumulado']]
-        fig = make_subplots(rows=1, cols=2, x_title='Año',  )
-        
-        fig.add_trace(
-                go.Scatter(
-                x=acum['Mes'],  # x-axis for forecasted values
-                y=acum['Acumulado'],     # The forecasted values
-                mode='lines+markers',          # Just lines (no markers here)
-                name='Recaudo acumulado', showlegend=True,
-                line=dict(color=DIC_COLORES['ax_viol'][1], width=2, dash='dash'),
-                marker=dict(color=DIC_COLORES['ax_viol'][1], size=8),  # Dashed line for forecast
-            ), row=1, col=1
-            )
-
-        piv_recaudo = (rec
-                        .groupby(['Mes_num','Mes', 'Tipo de impuesto'])['Valor']
-                        .sum()
-                        .reset_index())
-        piv_recaudo['total'] = piv_recaudo.groupby(['Mes_num'])['Valor'].transform('sum')
-
-        piv_recaudo['%'] = ((piv_recaudo['Valor'] / piv_recaudo['total']) * 100).round(2)
-        dict_rec = {'Interno':DIC_COLORES['az_verd'][2],
-              'Externo':DIC_COLORES['ax_viol'][1],
-              'Por clasificar':DIC_COLORES['ro_am_na'][3]}
-
-        for i, group in piv_recaudo.groupby('Tipo de impuesto'):
-            fig.add_trace(go.Bar(
-                x=group['Mes'],
-                y=group['%'],
-                name=i, marker_color=dict_rec[i],
-            ),  row=1, col=2)
-
-
-        fig.update_layout(barmode='stack', hovermode='x unified')
-        fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
-        yanchor="bottom",
-        y=1.02,
-        xanchor="right",
-        x=1), title='Histórico general <br><sup>Cifras en miles de millones de pesos</sup>', yaxis_tickformat='.0f')
-
-
-        st.plotly_chart(fig)  
-
-         
-    with tab2:
-            rec_int = rec[rec['Tipo de impuesto'] == 'Interno']
-            piv_recaudo = (rec_int
-                            .groupby(['Mes_num','Mes', 'clas_alt'])['Valor']
-                            .sum()
-                            .reset_index())
-            acum = (piv_recaudo
-                                        .groupby(['Mes_num', 'Mes'])['Valor']
-                                        .sum()
-                                        .reset_index()
-                                        .assign(Acumulado=lambda x: x['Valor'].cumsum()))[['Mes','Acumulado']]
-            piv_recaudo['total'] = piv_recaudo.groupby(['Mes_num'])['Valor'].transform('sum')
-
-            piv_recaudo['%'] = ((piv_recaudo['Valor'] / piv_recaudo['total']) * 100).round(2)
-            fig = make_subplots(rows=1, cols=2, x_title='Año',  )
-        
-            fig.add_trace(
-                go.Scatter(
-                x=acum['Mes'],  # x-axis for forecasted values
-                y=acum['Acumulado'],     # The forecasted values
-                mode='lines+markers',          # Just lines (no markers here)
-                name='Recaudo acumulado', showlegend=True,
-                line=dict(color=DIC_COLORES['ax_viol'][1], width=2, dash='dash'),
-                marker=dict(color=DIC_COLORES['ax_viol'][1], size=8),  # Dashed line for forecast
-            ), row=1, col=1
-            )
-            dict_alt = {'IVA Interno':DIC_COLORES['az_verd'][2],
-              'Renta':DIC_COLORES['ax_viol'][1],
-              'Otros':DIC_COLORES['ro_am_na'][3]}
-
-            for i, group in piv_recaudo.groupby('clas_alt'):
-                fig.add_trace(go.Bar(
-                    x=group['Mes'],
-                    y=group['%'],
-                    name=i, marker_color=dict_alt[i]
-                ),  row=1, col=2)
-
-
-            fig.update_layout(barmode='stack', hovermode='x unified')
-            fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
-            yanchor="bottom",
-            y=1.02,
-            xanchor="right",
-            x=1), title='Histórico interno <br><sup>Cifras en miles de millones de pesos</sup>', yaxis_tickformat='.0f')
-
+            fig.update_layout(yaxis1=dict(showticklabels=False),
+                              yaxis2=dict(showticklabels=False),
+                                xaxis1=dict(title="%"), 
+                                xaxis2=dict(title="%"))   
 
             st.plotly_chart(fig)
 
-    with tab3:
-            rec_ext = rec[rec['Tipo de impuesto'] == 'Externo']
-            piv_recaudo = (rec_ext
-                            .groupby(['Mes_num','Mes', 'Clasificación'])['Valor']
+            
+            st.subheader('Por entidad')
+            sector = st.selectbox("Seleccione un sector: ", sectores, key=124)
+            f_sec = df_ejec[df_ejec['Sector'] == sector]
+            ents = f_sec['Entidad'].unique().tolist()
+            ent = st.selectbox('Seleccione una entidad: ', ents)
+            f_ent = f_sec[f_sec['Entidad'] == ent]
+
+            a = (f_ent['APR. VIGENTE'].sum() / 1_000_000_000).round(2)
+            b = ((f_ent['COMPROMISO'].sum() / f_ent['APR. VIGENTE'].sum()) * 100).round(1)
+            c = ((f_ent['OBLIGACION'].sum() / f_ent['APR. VIGENTE'].sum() ) * 100).round(1)
+
+            col1, col2, col3, col4 = st.columns(4)
+            with col1:
+                st.metric("Apr. Vigente (mmil)", a)
+            with col2: 
+                st.metric("% Comprometido", f"{b}%")
+            with col3:
+                st.metric("% Ejecutado ", f"{c}%")
+            with col4:
+                st.metric("% Proyección de ejecución final", f"{round(c * 12, 1)}%")
+
+            tab = f_ent.pivot_table(index='mes',
+                                    values=['APR. VIGENTE', 'OBLIGACION', 'COMPROMISO'],
+                                    aggfunc='sum')
+
+            num_month = len(tab)
+
+            
+            fig = make_subplots(rows=1, cols=2, subplot_titles=("Valores (billones)", "Porcentaje (%)"))
+
+            if num_month == 1:
+                comp_rate = (tab['COMPROMISO'] / tab['APR. VIGENTE'])[0] 
+                obl_rate = (tab['OBLIGACION'] / tab['APR. VIGENTE'])[0]
+                obs_values_r = [obl_rate]
+            else:
+                prov_tab = tab.pct_change().fillna(tab.iloc[0].div(tab['APR. VIGENTE'].unique()[0]))
+                comp_rate = prov_tab['COMPROMISO'].mean()
+                obl_rate = prov_tab['OBLIGACION'].mean()
+                obs_values_r = prov_tab['OBLIGACION'].tolist()
+            
+            obs_values_v = tab['OBLIGACION'].tolist()
+            
+            forecast_values = [obl_rate * i  for i in range(num_month + 1, 13)]
+            full_values_ej = obs_values_r + forecast_values
+            full_values_ej = [ round(i * 100, 2) for i in full_values_ej]
+            fig.add_trace(go.Scatter(x=months[:num_month + 1], 
+                                        y=full_values_ej[:num_month + 1], 
+                                        mode='lines+markers',
+                                        name='Ejecutado', showlegend=False,
+                                        line=dict(color='#dd722a')), row=1, col=2)
+
+                # Highlight the forecasted part with a red dashed line (the last 4 points)
+            fig.add_trace(go.Scatter(
+                    x=months[num_month:],  # x-axis for forecasted values
+                    y=full_values_ej[num_month:],     # The forecasted values
+                    mode='lines+markers',          # Just lines (no markers here)
+                    name='Pronóstico', 
+                    line=dict(color='#81D3CD', width=2, dash='dash'),
+                    marker=dict(color='#81D3CD', size=8),  # Dashed line for forecast
+                ), row=1, col=2)
+            perd_aprop = 100 - full_values_ej[-1]
+
+
+            forecast_values = [obl_rate * i for i in range(num_month + 1, 13)]
+            forecast_values = [tab['APR. VIGENTE'].unique()[0] * i for i in forecast_values]
+            full_values_ej = obs_values_v + forecast_values
+            full_values_ej = [round(i / 1_000_000_000, 1) for i in full_values_ej]
+
+
+            fig.add_trace(go.Scatter(x=months[:num_month + 1], 
+                                        y=full_values_ej[:num_month + 1], 
+                                        mode='lines+markers', 
+                                        name='Ejecutado', showlegend=False,
+                                        line=dict(color='#2635bf')), row=1, col=1)
+            fig.add_trace(go.Scatter(
+                    x=months[num_month:],  # x-axis for forecasted values
+                    y=full_values_ej[num_month:],     # The forecasted values
+                    mode='lines+markers',          # Just lines (no markers here)
+                    name='Pronóstico', showlegend=False,
+                    line=dict(color='#81D3CD', width=2, dash='dash'),
+                    marker=dict(color='#81D3CD', size=8),  # Dashed line for forecast
+                ), row=1, col=1)
+
+            fig.add_shape(type='line', x0=0, x1=11, y0=round(tab['APR. VIGENTE'].unique()[0] / (1_000_000_000), 1), y1=round(tab['APR. VIGENTE'].unique()[0] / (1_000_000_000), 1), line=dict(color='#2635bf', dash='dash'),
+                            row=1, col=1)
+            
+            fig.add_shape(type='line', x0=0, x1=11, y0=100, y1=100, line=dict(color='#2635bf', dash='dash'),
+                            row=1, col=2)
+            
+            fig.update_layout(showlegend=False)
+            
+            st.plotly_chart(fig, key=100)
+        
+
+            
+            if perd_aprop > 0:
+                    st.error(f"Puede presentarse una pérdida de apropiación del {round(perd_aprop, 2)}% en la entidad {ent}.")
+            else:
+                    st.success(f"No hay pérdida de apropiación en la entidad {ent}.")
+
+            piv = (df_ejec[df_ejec['mes_num'] == 1].pivot_table(index='Entidad',
+                                                           values=['APR. VIGENTE', 'OBLIGACION'],
+                                                           aggfunc='sum')
+                                                           .assign(perc_ejec=lambda x: (x['OBLIGACION'] / x['APR. VIGENTE']).mul(100).round(2))
+                                                           .sort_values(by='perc_ejec', ascending=False))
+            best = piv.head(10).reset_index().sort_values(by='perc_ejec').reset_index(drop=True).set_index('Entidad')
+            worst = piv.tail(10).reset_index().sort_values(by='perc_ejec').reset_index(drop=True).set_index('Entidad')
+            worst['perc_ejec'] += 0.00001
+
+            fig = make_subplots(rows=1, cols=2, subplot_titles=("Top 10 mejores", "Top 10 peores"))
+
+            fig_bar1 = px.bar(best, 
+                              x='perc_ejec', 
+                              orientation="h", 
+                              hover_data=['perc_ejec'], 
+                              color_discrete_sequence=['#dd722a'])
+            fig_bar2 = px.bar(worst, 
+                              x='perc_ejec', 
+                              orientation='h', 
+                              hover_data=['perc_ejec'], 
+                              color_discrete_sequence=['#dd722a'])
+
+            for d in fig_bar1.data:
+                fig.add_trace(d, row=1, col=1)
+            for d in fig_bar2.data:
+                fig.add_trace(d, row=1, col=2)
+
+
+            fig.update_layout(yaxis1=dict(showticklabels=False),
+                              yaxis2=dict(showticklabels=False),
+                                xaxis1=dict(title="%"), 
+                                xaxis2=dict(title="%"))   
+
+            st.plotly_chart(fig)
+            
+
+    with tab2:
+        st.warning("Sin datos de recaudo a la fecha. Esperando actualización de DIAN.")
+
+        time2 = """rec = pd.read_csv('datasets/recaudo.csv')
+        rec['Valor'] = rec['Valor'] / 1_000
+
+        tab1, tab2, tab3 = st.tabs(['General', 'Interno', 'Externo'])
+
+        with tab1:
+            piv_year = rec.groupby(['Mes_num', 'Mes'])['Valor'].sum().reset_index()
+            acum = (piv_year
+                                            .groupby(['Mes_num', 'Mes'])['Valor']
+                                            .sum()
+                                            .reset_index()
+                                            .assign(Acumulado=lambda x: x['Valor'].cumsum()))[['Mes','Acumulado']]
+            fig = make_subplots(rows=1, cols=2, x_title='Año',  )
+            
+            fig.add_trace(
+                    go.Scatter(
+                    x=acum['Mes'],  # x-axis for forecasted values
+                    y=acum['Acumulado'],     # The forecasted values
+                    mode='lines+markers',          # Just lines (no markers here)
+                    name='Recaudo acumulado', showlegend=True,
+                    line=dict(color=DIC_COLORES['ax_viol'][1], width=2, dash='dash'),
+                    marker=dict(color=DIC_COLORES['ax_viol'][1], size=8),  # Dashed line for forecast
+                ), row=1, col=1
+                )
+
+            piv_recaudo = (rec
+                            .groupby(['Mes_num','Mes', 'Tipo de impuesto'])['Valor']
                             .sum()
                             .reset_index())
-            acum = (piv_recaudo
-                                        .groupby(['Mes_num', 'Mes'])['Valor']
-                                        .sum()
-                                        .reset_index()
-                                        .assign(Acumulado=lambda x: x['Valor'].cumsum()))[['Mes','Acumulado']]
             piv_recaudo['total'] = piv_recaudo.groupby(['Mes_num'])['Valor'].transform('sum')
 
             piv_recaudo['%'] = ((piv_recaudo['Valor'] / piv_recaudo['total']) * 100).round(2)
-            fig = make_subplots(rows=1, cols=2, x_title='Año',  )
-        
-            fig.add_trace(
-                go.Scatter(
-                x=acum['Mes'],  # x-axis for forecasted values
-                y=acum['Acumulado'],     # The forecasted values
-                mode='lines+markers',          # Just lines (no markers here)
-                name='Recaudo acumulado', showlegend=True,
-                line=dict(color=DIC_COLORES['ax_viol'][1], width=2, dash='dash'),
-                marker=dict(color=DIC_COLORES['ax_viol'][1], size=8),  # Dashed line for forecast
-            ), row=1, col=1
-            )
-            dict_alt = {'IVA Externo ':DIC_COLORES['ro_am_na'][3],
-              'Arancel':DIC_COLORES['az_verd'][2]}
-            for i, group in piv_recaudo.groupby('Clasificación'):
+            dict_rec = {'Interno':DIC_COLORES['az_verd'][2],
+                'Externo':DIC_COLORES['ax_viol'][1],
+                'Por clasificar':DIC_COLORES['ro_am_na'][3]}
+
+            for i, group in piv_recaudo.groupby('Tipo de impuesto'):
                 fig.add_trace(go.Bar(
                     x=group['Mes'],
                     y=group['%'],
-                    name=i, marker_color=dict_alt[i]
+                    name=i, marker_color=dict_rec[i],
                 ),  row=1, col=2)
 
 
@@ -1269,11 +957,437 @@ elif selected_option == 'Recaudo':
             yanchor="bottom",
             y=1.02,
             xanchor="right",
-            x=1), title='Histórico externo <br><sup>Cifras en miles de millones de pesos</sup>', yaxis_tickformat='.0f')
+            x=1), title='Histórico general <br><sup>Cifras en miles de millones de pesos</sup>', yaxis_tickformat='.0f')
 
 
-            st.plotly_chart(fig)"""
+            st.plotly_chart(fig)  
+
+            
+        with tab2:
+                rec_int = rec[rec['Tipo de impuesto'] == 'Interno']
+                piv_recaudo = (rec_int
+                                .groupby(['Mes_num','Mes', 'clas_alt'])['Valor']
+                                .sum()
+                                .reset_index())
+                acum = (piv_recaudo
+                                            .groupby(['Mes_num', 'Mes'])['Valor']
+                                            .sum()
+                                            .reset_index()
+                                            .assign(Acumulado=lambda x: x['Valor'].cumsum()))[['Mes','Acumulado']]
+                piv_recaudo['total'] = piv_recaudo.groupby(['Mes_num'])['Valor'].transform('sum')
+
+                piv_recaudo['%'] = ((piv_recaudo['Valor'] / piv_recaudo['total']) * 100).round(2)
+                fig = make_subplots(rows=1, cols=2, x_title='Año',  )
+            
+                fig.add_trace(
+                    go.Scatter(
+                    x=acum['Mes'],  # x-axis for forecasted values
+                    y=acum['Acumulado'],     # The forecasted values
+                    mode='lines+markers',          # Just lines (no markers here)
+                    name='Recaudo acumulado', showlegend=True,
+                    line=dict(color=DIC_COLORES['ax_viol'][1], width=2, dash='dash'),
+                    marker=dict(color=DIC_COLORES['ax_viol'][1], size=8),  # Dashed line for forecast
+                ), row=1, col=1
+                )
+                dict_alt = {'IVA Interno':DIC_COLORES['az_verd'][2],
+                'Renta':DIC_COLORES['ax_viol'][1],
+                'Otros':DIC_COLORES['ro_am_na'][3]}
+
+                for i, group in piv_recaudo.groupby('clas_alt'):
+                    fig.add_trace(go.Bar(
+                        x=group['Mes'],
+                        y=group['%'],
+                        name=i, marker_color=dict_alt[i]
+                    ),  row=1, col=2)
+
+
+                fig.update_layout(barmode='stack', hovermode='x unified')
+                fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
+                yanchor="bottom",
+                y=1.02,
+                xanchor="right",
+                x=1), title='Histórico interno <br><sup>Cifras en miles de millones de pesos</sup>', yaxis_tickformat='.0f')
+
+
+                st.plotly_chart(fig)
+
+        with tab3:
+                rec_ext = rec[rec['Tipo de impuesto'] == 'Externo']
+                piv_recaudo = (rec_ext
+                                .groupby(['Mes_num','Mes', 'Clasificación'])['Valor']
+                                .sum()
+                                .reset_index())
+                acum = (piv_recaudo
+                                            .groupby(['Mes_num', 'Mes'])['Valor']
+                                            .sum()
+                                            .reset_index()
+                                            .assign(Acumulado=lambda x: x['Valor'].cumsum()))[['Mes','Acumulado']]
+                piv_recaudo['total'] = piv_recaudo.groupby(['Mes_num'])['Valor'].transform('sum')
+
+                piv_recaudo['%'] = ((piv_recaudo['Valor'] / piv_recaudo['total']) * 100).round(2)
+                fig = make_subplots(rows=1, cols=2, x_title='Año',  )
+            
+                fig.add_trace(
+                    go.Scatter(
+                    x=acum['Mes'],  # x-axis for forecasted values
+                    y=acum['Acumulado'],     # The forecasted values
+                    mode='lines+markers',          # Just lines (no markers here)
+                    name='Recaudo acumulado', showlegend=True,
+                    line=dict(color=DIC_COLORES['ax_viol'][1], width=2, dash='dash'),
+                    marker=dict(color=DIC_COLORES['ax_viol'][1], size=8),  # Dashed line for forecast
+                ), row=1, col=1
+                )
+                dict_alt = {'IVA Externo ':DIC_COLORES['ro_am_na'][3],
+                'Arancel':DIC_COLORES['az_verd'][2]}
+                for i, group in piv_recaudo.groupby('Clasificación'):
+                    fig.add_trace(go.Bar(
+                        x=group['Mes'],
+                        y=group['%'],
+                        name=i, marker_color=dict_alt[i]
+                    ),  row=1, col=2)
+
+
+                fig.update_layout(barmode='stack', hovermode='x unified')
+                fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
+                yanchor="bottom",
+                y=1.02,
+                xanchor="right",
+                x=1), title='Histórico externo <br><sup>Cifras en miles de millones de pesos</sup>', yaxis_tickformat='.0f')
+
+
+                st.plotly_chart(fig)"""
+    
+elif selected_option == 'Ejecución histórica':
+
+    l_sectores = ejec['Sector'].unique().tolist()
+    st.header("Ejecución histórica")
+
+    st.subheader("General")
+
+    t = ejec.pivot_table(index='Año',
+                        columns='Etapa',
+                        values='Valor_pc',
+                        aggfunc='sum')
+    tab = t.div(t['Apropiación'], axis=0).mul(100).round(1).reset_index()
+    t = t.reset_index()
+
+    fig = make_subplots(rows=1, cols=2, subplot_titles=("Ejecución", "%"))
+    
+    fig_area = go.Figure()
+
+    # Add traces
+    fig_area.add_trace(go.Scatter(x=tab["Año"], 
+                             y=tab["Apropiación"], 
+                             fill='tozeroy',
+                             mode='none', 
+                             name='Apropiación',
+                             fillcolor="#2635bf")
+                             )
+    fig_area.add_trace(go.Scatter(x=tab["Año"], 
+                             y=tab["Compromiso"], 
+                             fill='tozeroy', 
+                             mode='none', 
+                             name='Compromiso',
+                             fillcolor="#F7B261"))
+    fig_area.add_trace(go.Scatter(x=tab["Año"], 
+                             y=tab["Obligación"], 
+                             fill='tozeroy', 
+                             mode='none', 
+                             name='Obligación',
+                             fillcolor="#009999"))
+    fig_area.add_trace(go.Scatter(x=tab["Año"], 
+                             y=tab["Pago"], 
+                             fill='tozeroy', 
+                             mode='none', 
+                             name='Pago',
+                             fillcolor="#81D3CD"))
+
+    # Customize layout
+    fig_area.update_layout(
+        title="Ejecución histórica",
+        xaxis_title="Año",
+        yaxis_title="Valor",
+        template="plotly_white")
+    
+
+    fig_line = go.Figure()
+
+    fig_line.add_trace(go.Scatter(x=t["Año"], 
+                             y=t["Apropiación"], 
+                             fill='tozeroy',
+                             mode='none', 
+                             name='Apropiación',
+                             fillcolor="#2635bf"))
+    fig_line.add_trace(go.Scatter(x=t["Año"], 
+                             y=t["Compromiso"], 
+                             fill='tozeroy', 
+                             mode='none', 
+                             name='Compromiso',
+                             fillcolor="#F7B261"))
+    fig_line.add_trace(go.Scatter(x=t["Año"], 
+                             y=t["Obligación"], 
+                             fill='tozeroy', 
+                             mode='none', 
+                             name='Obligación',
+                             fillcolor="#009999"))
+    fig_line.add_trace(go.Scatter(x=t["Año"], 
+                             y=t["Pago"], 
+                             fill='tozeroy', 
+                             mode='none', 
+                             name='Pago',
+                             fillcolor="#81D3CD"))
+
+    # Customize layout
+    fig_line.update_layout(
+        title="Ejecución histórica",
+        xaxis_title="Año",
+        yaxis_title="Valor",
+        template="plotly_white")
+    for trace in fig_line.data:
+        fig.add_trace(trace, row=1, col=1)
+
+    for trace in fig_area.data:
+        fig.add_trace(trace, row=1, col=2)
+
+    fig.update_layout(showlegend=False, 
+        hovermode='x unified')
+
+    
+    st.plotly_chart(fig)
+
+    st.subheader("Sector")
+
+    sector = st.selectbox("Seleccione el sector:", l_sectores)
+    fil = ejec[ejec['Sector'] == sector]
+    t = fil.pivot_table(index='Año',
+                        columns='Etapa',
+                        values='Valor_pc',
+                        aggfunc='sum')
+    tab = t.div(t['Apropiación'], axis=0).mul(100).round(1).reset_index()
+    t = t.reset_index()
+    fig = make_subplots(rows=1, cols=2, subplot_titles=("Ejecución", "%"))
+    
+    fig_area = go.Figure()
+
+    # Add traces
+    fig_area.add_trace(go.Scatter(x=tab["Año"], 
+                             y=tab["Apropiación"], 
+                             fill='tozeroy',
+                             mode='none', 
+                             name='Apropiación',
+                             fillcolor="#2635bf")
+                             )
+    fig_area.add_trace(go.Scatter(x=tab["Año"], 
+                             y=tab["Compromiso"], 
+                             fill='tozeroy', 
+                             mode='none', 
+                             name='Compromiso',
+                             fillcolor="#F7B261"))
+    fig_area.add_trace(go.Scatter(x=tab["Año"], 
+                             y=tab["Obligación"], 
+                             fill='tozeroy', 
+                             mode='none', 
+                             name='Obligación',
+                             fillcolor="#009999"))
+    fig_area.add_trace(go.Scatter(x=tab["Año"], 
+                             y=tab["Pago"], 
+                             fill='tozeroy', 
+                             mode='none', 
+                             name='Pago',
+                             fillcolor="#81D3CD"))
+
+    # Customize layout
+    fig_area.update_layout(
+        title="Ejecución histórica",
+        xaxis_title="Año",
+        yaxis_title="Valor",
+        template="plotly_white")
+    
+
+    fig_line = go.Figure()
+
+    fig_line.add_trace(go.Scatter(x=t["Año"], 
+                             y=t["Apropiación"], 
+                             fill='tozeroy',
+                             mode='none', 
+                             name='Apropiación',
+                             fillcolor="#2635bf"))
+    fig_line.add_trace(go.Scatter(x=t["Año"], 
+                             y=t["Compromiso"], 
+                             fill='tozeroy', 
+                             mode='none', 
+                             name='Compromiso',
+                             fillcolor="#F7B261"))
+    fig_line.add_trace(go.Scatter(x=t["Año"], 
+                             y=t["Obligación"], 
+                             fill='tozeroy', 
+                             mode='none', 
+                             name='Obligación',
+                             fillcolor="#009999"))
+    fig_line.add_trace(go.Scatter(x=t["Año"], 
+                             y=t["Pago"], 
+                             fill='tozeroy', 
+                             mode='none', 
+                             name='Pago',
+                             fillcolor="#81D3CD"))
+
+    # Customize layout
+    fig_line.update_layout(
+        title="Ejecución histórica",
+        xaxis_title="Año",
+        yaxis_title="Valor",
+        template="plotly_white")
+    for trace in fig_line.data:
+        fig.add_trace(trace, row=1, col=1)
+
+    for trace in fig_area.data:
+        fig.add_trace(trace, row=1, col=2)
+
+    fig.update_layout(showlegend=False, 
+        hovermode='x unified')
+
+    
+    st.plotly_chart(fig)
+
+elif selected_option == 'Recaudo histórico':
+
+    tab1, tab2 = st.tabs(['General', 'Detallado'])
+
+    with tab1:
+        st.header("Recaudo histórico")
+
+        a = rec.groupby(['Año'])['Valor_pc'].sum().reset_index()
+        b = rec.pivot_table(index='Año',
+                        columns='Rubro',
+                        values='Valor_pc',
+                        aggfunc='sum')
+        c = b.div(b.sum(axis=1), axis=0).mul(100).round(1).stack().reset_index(name='%')
+
+
+        fig_line = px.scatter(a, x='Año', y='Valor_pc', color_discrete_sequence=["#2635bf"])
+        fig_line.update_traces(mode="lines+markers")
+
+        fig_area1 = px.area(c, x='Año', y='%', color='Rubro',
+                            color_discrete_sequence=["#2635bf", "#F7B261", "#81D3CD", "#009999"])
+        fig_area2 = px.bar(pib_rec, x='Año', y='perc_total',
+                            color_discrete_sequence=["#2635bf", "#F7B261", "#81D3CD", "#009999"])
+
+        fig = make_subplots(rows=1, cols=3, subplot_titles=("Recaudo histórico", "% recaudo", "recaudo/PIB"), shared_xaxes=True)
+
+        for trace in fig_line.data:
+            fig.add_trace(trace, row=1, col=1)
+
+        for trace in fig_area1.data:
+            fig.add_trace(trace, row=1, col=2)
+
+        for trace in fig_area2.data:
+            fig.add_trace(trace, row=1, col=3)
+
+        # Update layout
+        fig.update_layout(height=400, width=1200, title_text="Recaudo histórico",
+                        showlegend=False, hovermode='x unified')
+
+        # Show figure
+        st.plotly_chart(fig)
+
+        st.subheader('Actividad interna')
+
+        aint = rec[rec['Actividad'] == 'ACTIVIDAD INTERNA']
+        a = aint.groupby(['Año'])['Valor_pc'].sum().reset_index()
+        b = aint.pivot_table(index='Año',
+                        columns='Rubro',
+                        values='Valor_pc',
+                        aggfunc='sum')
+        c = b.div(b.sum(axis=1), axis=0).mul(100).round(1).stack().reset_index(name='%')
+
+
+        fig_line = px.scatter(a, x='Año', y='Valor_pc', color_discrete_sequence=["#2635bf"])
+        fig_line.update_traces(mode="lines+markers")
+
+        fig_area1 = px.area(c, x='Año', y='%', color='Rubro',
+                            color_discrete_sequence=["#2635bf", "#F7B261", "#81D3CD", "#009999"])
+        fig_area2 = px.bar(pib_rec, x='Año', y='perc_interna',
+                                color_discrete_sequence=["#2635bf", "#F7B261", "#81D3CD", "#009999"])
+
+        fig = make_subplots(rows=1, cols=3, subplot_titles=("Recaudo histórico", "% recaudo", "recaudo/PIB"), shared_xaxes=True)
+
+        for trace in fig_line.data:
+            fig.add_trace(trace, row=1, col=1)
+
+        for trace in fig_area1.data:
+            fig.add_trace(trace, row=1, col=2)
+
+        for trace in fig_area2.data:
+            fig.add_trace(trace, row=1, col=3)
+
+        # Update layout
+        fig.update_layout(height=400, width=1200, title_text="Recaudo histórico",
+                        showlegend=False, hovermode='x unified')
         
+        st.plotly_chart(fig)
+
+
+        st.subheader('Actividad externa')
+
+        aext = rec[rec['Actividad'] == 'ACTIVIDAD EXTERNA']
+        a = aext.groupby(['Año'])['Valor_pc'].sum().reset_index()
+        b = aext.pivot_table(index='Año',
+                        columns='Rubro',
+                        values='Valor_pc',
+                        aggfunc='sum')
+        c = b.div(b.sum(axis=1), axis=0).mul(100).round(1).stack().reset_index(name='%')
+
+
+        fig_line = px.scatter(a, x='Año', y='Valor_pc', color_discrete_sequence=["#2635bf"])
+        fig_line.update_traces(mode="lines+markers")
+
+        fig_area1 = px.area(c, x='Año', y='%', color='Rubro',
+                            color_discrete_sequence=["#2635bf", "#F7B261", "#81D3CD", "#009999"])
+        fig_area2 = px.bar(pib_rec, x='Año', y='perc_externa',
+                                color_discrete_sequence=["#2635bf", "#F7B261", "#81D3CD", "#009999"])
+
+        fig = make_subplots(rows=1, cols=3, subplot_titles=("Recaudo histórico", "% recaudo", "recaudo/PIB"), shared_xaxes=True)
+
+        for trace in fig_line.data:
+            fig.add_trace(trace, row=1, col=1)
+
+        for trace in fig_area1.data:
+            fig.add_trace(trace, row=1, col=2)
+
+        for trace in fig_area2.data:
+            fig.add_trace(trace, row=1, col=3)
+
+        # Update layout
+        fig.update_layout(height=400, width=1200, title_text="Recaudo histórico",
+                        showlegend=False, hovermode='x unified')
+        
+        st.plotly_chart(fig)
+
+    with tab2:
+        st.header('Recaudo histórico')
+        impuestos = pib_rec2['C2'].unique().tolist()
+        tax = st.selectbox("Seleccione un impuesto: ", impuestos)
+        fil = pib_rec2[pib_rec2['C2'] == tax]
+        fil['Valor_pc'] /= 1_000_000
+
+        fig_line = px.scatter(fil, x='Año', y='Valor_pc', color_discrete_sequence=["#2635bf"])
+        fig_line.update_traces(mode="lines+markers")
+        fig_area2 = px.bar(fil, x='Año', y='perc_pib',
+                                color_discrete_sequence=["#2635bf", "#F7B261", "#81D3CD", "#009999"])
+
+        fig = make_subplots(rows=1, cols=2, subplot_titles=("Recaudo histórico", "recaudo/PIB (%)"), shared_xaxes=True)
+
+        for trace in fig_line.data:
+            fig.add_trace(trace, row=1, col=1)
+
+        for trace in fig_area2.data:
+            fig.add_trace(trace, row=1, col=2)
+
+        # Update layout
+        fig.update_layout(height=400, width=1200, title_text="Recaudo histórico",
+                        showlegend=False, hovermode='x unified')
+        
+        st.plotly_chart(fig)
 
 
 elif selected_option == "PGN - 2025":
