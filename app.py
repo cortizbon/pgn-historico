@@ -18,7 +18,7 @@ df = pd.read_csv('datasets/gastos_def_2025_test.csv')       # gastos anuales
 #df2 = pd.read_csv('datasets/datos_desagregados_2025.csv')   
 pgn_25 = pd.read_csv('datasets/pgn_2025.csv')               # datos desagregados de pgn 25
 df2025 = pd.read_excel('datasets/decreto_2025.xlsx')        # datos desagregados de decreto 2025
-#diff = pd.read_excel('datasets/merge_william.xlsx')         # datos desagregados de diferencia
+diff = pd.read_excel('datasets/merge_william.xlsx')         # datos desagregados de diferencia
 inc = pd.read_csv('datasets/ingresos_2025.csv')             # ingresos anuales
 ejec = pd.read_csv('datasets/ejecucion_hist.csv')
 rec = pd.read_csv('datasets/recaudo_hist.csv')
@@ -1060,9 +1060,10 @@ elif selected_option == 'Coyuntura':
 elif selected_option == 'Ejecución histórica':
 
     l_sectores = ejec['Sector'].unique().tolist()
-    st.header("Ejecución histórica")
+    st.header("Ejecución histórica (sin deuda)")
 
     st.subheader("General")
+    ejec['Valor_pc'] = (ejec['Valor_pc'] / 1_000_000).round(1)
 
     t = ejec.pivot_table(index='Año',
                         columns='Etapa',
@@ -1104,7 +1105,7 @@ elif selected_option == 'Ejecución histórica':
 
     # Customize layout
     fig_area.update_layout(
-        title="Ejecución histórica",
+        title="Ejecución histórica (sin deuda) en millones de pesos",
         xaxis_title="Año",
         yaxis_title="Valor",
         template="plotly_white")
@@ -1426,14 +1427,6 @@ elif selected_option == "PGN - 2025":
             
     st.plotly_chart(fig)
     
-    st.subheader("Visualización diferenciada")
-    
-    entidad = st.selectbox("Seleccione una entidad", diff['Entidad'].unique().tolist())
-    
-    diff_entidad = diff[diff['Entidad'] == entidad]
-    
-    st.dataframe(diff_entidad[['OBJG\nPROY','pgn_25','dec_aplaz', '% aplazado']].sort_values(by='% aplazado', ascending=False).reset_index(drop=True))
-
     st.subheader("Descarga de datos")
 
 
