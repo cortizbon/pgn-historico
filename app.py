@@ -25,6 +25,8 @@ rec = pd.read_csv('datasets/recaudo_hist.csv')
 pib_rec = pd.read_csv('datasets/pib_rec.csv')
 pib_rec2 = pd.read_csv('datasets/c2_pib_rec.csv')
 df26 = pd.read_excel('datasets/datos_anteproyecto26.xlsx')
+pgn_pib = pd.read_csv('pgn_pib_2024.csv')
+pib = pd.read_csv('datasets/pib_nominal_24.csv')
 
 inc['Valor_25_esc'] = (inc['Valor_25'] / 1_000_000_000).round(1)
 df['Apropiación a precios corrientes'] /= 1_000_000_000
@@ -111,13 +113,11 @@ elif selected_option == 'Ingresos':
         piv_tipo_ingreso['%'] = ((piv_tipo_ingreso['Valor_25_esc'] / piv_tipo_ingreso['total']) * 100).round(2)
 
         val = 0.2
-        for i, group in piv_tipo_ingreso.groupby('Ingreso_alt'):
+        for idx, (i, group) in enumerate(piv_tipo_ingreso.groupby('Ingreso_alt')):
             fig.add_trace(go.Bar(
                 x=group['Año'],
                 y=group['%'],
-                name=i, marker_color=dict_ingreso[i], 
-                marker_pattern_shape=dict_pat_ingreso[i],
-                marker_pattern_bgcolor=DIC_COLORES['az_verd'][2],
+                name=i, marker_color=DIC_COLORES['ro_am_na'][-idx+1],
                 marker_pattern_size=6,
                 opacity=val
             ),  row=1, col=2)
@@ -125,10 +125,10 @@ elif selected_option == 'Ingresos':
 
         fig.update_layout(barmode='stack', hovermode='x unified')
         fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
-        yanchor="bottom",
-        y=1.02,
-        xanchor="right",
-        x=1), title='Histórico general <br><sup>Cifras en miles de millones de pesos</sup>', yaxis_tickformat='.0f')
+            yanchor="bottom",
+            y=-0.34,
+            xanchor="right",
+            x=1), title='Histórico general <br><sup>Cifras en miles de millones de pesos</sup>', yaxis_tickformat='.0f')
 
 
         st.plotly_chart(fig)  
@@ -149,7 +149,7 @@ elif selected_option == 'Ingresos':
         fig.update_layout(barmode='stack', hovermode='x unified')
         fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
             yanchor="bottom",
-            y=1.02,
+            y=-0.34,
             xanchor="right",
             x=1), title='Histórico general <br><sup>Cifras en miles de millones de pesos</sup>', yaxis_tickformat='.0f')
         st.plotly_chart(fig)
@@ -166,7 +166,7 @@ elif selected_option == 'Ingresos':
         fig.add_trace(
                 go.Line(
                     x=piv_sec['Año'], y=piv_sec['Valor_25_esc'], 
-                    name='Valor', line=dict(color=DIC_COLORES['ax_viol'][1])
+                    name='Ingreso total', line=dict(color=DIC_COLORES['ax_viol'][1])
                 ),
                 row=1, col=1
             )
@@ -191,7 +191,7 @@ elif selected_option == 'Ingresos':
         fig.update_layout(barmode='stack', hovermode='x unified')
         fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
             yanchor="bottom",
-            y=-0.24,
+            y=-0.34,
             xanchor="right",
             x=1), title='Histórico por sector<br><sup>Cifras en miles de millones de pesos</sup>', yaxis_tickformat='.0f')
 
@@ -212,7 +212,7 @@ elif selected_option == 'Ingresos':
         fig.add_trace(
                 go.Line(
                     x=piv_ent['Año'], y=piv_ent['Valor_25_esc'], 
-                    name='Valor', line=dict(color=DIC_COLORES['ax_viol'][1])
+                    name='Ingreso', line=dict(color=DIC_COLORES['ax_viol'][1])
                 ),
                 row=1, col=1
             )
@@ -259,7 +259,12 @@ elif selected_option == "Gastos":
 
         #piv_2024['Apropiación a precios constantes (2024)'] /= 1000
 
-        fig = make_subplots(rows=1, cols=2, x_title='Año',  )
+        fig = make_subplots(rows=1, cols=3, x_title='Año',
+                                subplot_titles=(
+        "Apropiación a precios constantes (2025)",
+        "Composición del gasto (en %)",
+        "Gasto como % del PIB"
+    ))
         
         fig.add_trace(
             go.Line(
@@ -277,25 +282,65 @@ elif selected_option == "Gastos":
 
         piv_tipo_gasto['%'] = ((piv_tipo_gasto['Apropiación a precios constantes (2025)'] / piv_tipo_gasto['total']) * 100).round(2)
 
-
+        fig.update_layout(barmode='stack', hovermode='x unified')
+        fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
+        yanchor="bottom",
+        y=-0.34,
+        xanchor="right",
+        x=1), title='Histórico general <br><sup>Cifras en miles de millones de pesos</sup>', yaxis_tickformat='.0f')
+                
 
             
         for i, group in piv_tipo_gasto.groupby('Tipo de gasto'):
             fig.add_trace(go.Bar(
                 x=group['Año'],
                 y=group['%'],
-                name=i, marker_color=dict_gasto[i]
+                name=i, marker_color=dict_gasto[i],
             ), row=1, col=2)
 
         fig.update_layout(barmode='stack', hovermode='x unified')
-        fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
+        fig.update_layout(width=1000, height=300, legend=dict(orientation="h",
         yanchor="bottom",
-        y=1.02,
+        y=-0.34,
         xanchor="right",
         x=1), title='Histórico general <br><sup>Cifras en miles de millones de pesos</sup>', yaxis_tickformat='.0f')
 
+        fig.add_trace(go.Bar(
+            x=pgn_pib['Año'],
+            y=pgn_pib['Deuda'],
+            name='Deuda',
+            marker_color=DIC_COLORES['ax_viol'][1],
+            showlegend=False
+        ), row=1, col=3)
 
-        st.plotly_chart(fig, key=1)
+        fig.add_trace(go.Bar(
+            x=pgn_pib['Año'],
+            y=pgn_pib['Funcionamiento'],
+            name='Funcionamiento',
+            marker_color=DIC_COLORES['az_verd'][2],
+            showlegend=False
+        ), row=1, col=3)
+
+        fig.add_trace(go.Bar(
+            x=pgn_pib['Año'],
+            y=pgn_pib['Inversión'],
+            name='Inversión',
+            marker_color=DIC_COLORES['ro_am_na'][3],
+            showlegend=False
+        ), row=1, col=3)
+
+
+        fig.update_layout(barmode='stack', hovermode='x unified')
+        fig.update_layout(width=1200, height=500, legend=dict(orientation="h",
+        yanchor="bottom",
+        y=-0.34,
+        xanchor="right",
+        x=1), title='Histórico general <br><sup>Cifras en miles de millones de pesos</sup>', yaxis_tickformat='.0f')
+
+        st.plotly_chart(fig)
+  
+
+
 
     with tab2:
 
@@ -317,9 +362,10 @@ elif selected_option == "Gastos":
         )
 
         piv_tipo_gasto_sector = (filter_sector
-                        .groupby(['Año', 'Tipo de gasto'])['Apropiación a precios constantes (2025)']
+                        .groupby(['Año', 'Tipo de gasto'])[['Apropiación a precios constantes (2025)', 'apropiacion_corrientes']]
                         .sum()
                         .reset_index())
+        
         for i, group in piv_tipo_gasto_sector.groupby('Tipo de gasto'):
             fig.add_trace(go.Bar(
                 x=group['Año'],
@@ -332,7 +378,7 @@ elif selected_option == "Gastos":
 
         fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
         yanchor="bottom",
-        y=1.02,
+        y=-0.34,
         xanchor="right",
         x=1), title=f"{sector} <br><sup>Cifras en miles de millones de pesos</sup>", yaxis_tickformat='.0f')
 
@@ -350,6 +396,7 @@ elif selected_option == "Gastos":
         pivot_sector['CAGR'] = (pivot_sector['CAGR'] * 100).round(2)
         pivot_sector['CAGR_gen'] = (tasa_gen_cagr * 100).round(2)
         pivot_sector = pivot_sector.reset_index()
+
 
         fig = make_subplots(rows=1, cols=2, x_title='Año')
 
@@ -380,7 +427,7 @@ elif selected_option == "Gastos":
             )
         fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
             yanchor="bottom",
-            y=1.02,
+            y=-0.34,
             xanchor="right",
             x=1), hovermode='x unified', yaxis_tickformat='.0f', title=f"{sector} <br><sup>Cifras en miles de millones de pesos</sup>")
 
@@ -427,7 +474,7 @@ elif selected_option == "Gastos":
 
         fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
         yanchor="bottom",
-        y=1.02,
+        y=-0.34,
         xanchor="right",
         x=1), title=f"{entidad} <br><sup>Cifras en miles de millones de pesos</sup>", yaxis_tickformat='.0f')
 
@@ -477,7 +524,7 @@ elif selected_option == "Gastos":
             )
         fig.update_layout(width=1000, height=500, legend=dict(orientation="h",
         yanchor="bottom",
-        y=1.02,
+        y=-0.34,
         xanchor="right",
         x=1), hovermode='x unified', yaxis_tickformat='.0f', title=f"{entidad} <br><sup>Cifras en miles de millones de pesos</sup>")
 
