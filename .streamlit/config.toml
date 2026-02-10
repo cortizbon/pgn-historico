@@ -1,5 +1,22 @@
 [theme]
-
 primaryColor = "#1A1F63"
 backgroundColor = "#F9F9F9"
+secondaryBackgroundColor = "#FFFFFF"
 textColor = "#1A1F63"
+font = "sans serif"
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"
+showErrorDetails = false
+
+[runner]
+fastReruns = true
+magicEnabled = false
+
+[server]
+headless = true
+enableCORS = false
+enableXsrfProtection = true
