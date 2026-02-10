@@ -55,6 +55,7 @@ def render(data, meta):
             ),
             row=1, col=1,
         )
+        fig.update_yaxes(rangemode="tozero", row=1, col=1)
 
         piv_tipo = (
             df.groupby(["Año", "Tipo de gasto"])["Apropiación a precios constantes (2025)"]
