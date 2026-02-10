@@ -4,3 +4,4 @@
 test*.*
 *.css
 .DS_Store
+**/__pycache__
