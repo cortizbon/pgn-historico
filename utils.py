@@ -1,11 +1,14 @@
 import pandas as pd
+from datetime import datetime
+
+current_year = datetime.now().year
 
 def convert_df(df):
     return df.to_csv(index=False).encode('utf-8')
 
 def get_dic_colors(filtro):
     dic_colors = {}
-    rank = filtro.groupby('Sector')['apropiacion_cons_2025'].sum().rank().reset_index(name='rank')
+    rank = filtro.groupby('Sector')[f'Apropiación a precios constantes ({current_year})'].sum().rank().reset_index(name='rank')
     for _, info in rank.iterrows():
         sector_ = info['Sector']
         rank_ = info['rank']
@@ -20,8 +23,8 @@ def get_dic_colors(filtro):
 
 def get_dic_colors_area(df):
     dic_colors = {}
-    filtro = df[df['Año'] == 2025]
-    rank = filtro.groupby('Sector')['apropiacion_cons_2025'].sum().rank().reset_index(name='rank')
+    filtro = df[df['Año'] == 2026]
+    rank = filtro.groupby('Sector')[f'Apropiación a precios constantes ({current_year})'].sum().rank().reset_index(name='rank')
     for _, info in rank.iterrows():
         sector_ = info['Sector']
         rank_ = info['rank']

@@ -1,4 +1,7 @@
 from streamlit_option_menu import option_menu
+from datetime import datetime
+
+current_year = datetime.now().year
 
 OPTIONS = [
     "Main",
@@ -7,8 +10,8 @@ OPTIONS = [
     "Treemap",
     "Ejecución histórica",
     "Recaudo histórico",
-    "PGN - 2025",
-    "Anteproyecto - 2026",
+    f"PGN - {current_year}",
+    f"Anteproyecto - {current_year + 1}",
     "Descarga de datos",
 ]
 

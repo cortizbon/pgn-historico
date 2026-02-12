@@ -36,7 +36,7 @@ def render(data, meta):
         fig = px.treemap(
             fil,
             path=[px.Constant("PGN"), "Sector", "Entidad", "Tipo de gasto"],
-            values="Apropiación a precios constantes (2025)",
+            values="Apropiación a precios constantes (2026)",
             color="Sector",
             color_discrete_map=dic,
             title="Matriz de composición anual de gasto del PGN <br><sup>Cifras en miles de millones de pesos</sup>",

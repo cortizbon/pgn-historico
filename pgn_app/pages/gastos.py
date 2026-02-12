@@ -21,26 +21,26 @@ def render(data, meta):
 
     prices = {
         "corrientes": "Apropiación a precios corrientes",
-        "constantes 2025": "Apropiación a precios constantes (2025)",
+        "constantes 2026": "Apropiación a precios constantes (2026)",
     }
 
     tab1, tab2, tab3 = st.tabs(["General", "Por sector", "Por entidad"])
 
     with tab1:
-        piv = df.groupby("Año")["Apropiación a precios constantes (2025)"].sum().reset_index()
+        piv = df.groupby("Año")["Apropiación a precios constantes (2026)"].sum().reset_index()
 
-        # CAGR general (usa extremos 2013 vs 2025 como en tu lógica original)
-        if (piv["Año"] == 2013).any() and (piv["Año"] == 2025).any():
-            v0 = piv.loc[piv["Año"] == 2013, "Apropiación a precios constantes (2025)"].iloc[0]
-            v1 = piv.loc[piv["Año"] == 2025, "Apropiación a precios constantes (2025)"].iloc[0]
-            tasa_gen_cagr = (v1 / v0) ** (1 / (2025 - 2013)) - 1
+        # CAGR general (usa extremos 2013 vs 2026 como en tu lógica original)
+        if (piv["Año"] == 2013).any() and (piv["Año"] == 2026).any():
+            v0 = piv.loc[piv["Año"] == 2013, "Apropiación a precios constantes (2026)"].iloc[0]
+            v1 = piv.loc[piv["Año"] == 2026, "Apropiación a precios constantes (2026)"].iloc[0]
+            tasa_gen_cagr = (v1 / v0) ** (1 / (2026 - 2013)) - 1
         else:
             tasa_gen_cagr = 0.0
 
         fig = make_subplots(
             rows=1, cols=3, x_title="Año",
             subplot_titles=(
-                "Apropiación a precios constantes (2025)",
+                "Apropiación a precios constantes (2026)",
                 "Composición del gasto (en %)",
                 "Gasto como % del PIB",
             ),
@@ -49,8 +49,8 @@ def render(data, meta):
         fig.add_trace(
             go.Line(
                 x=piv["Año"],
-                y=piv["Apropiación a precios constantes (2025)"],
-                name="Constantes (2025)",
+                y=piv["Apropiación a precios constantes (2026)"],
+                name="Constantes (2026)",
                 line=dict(color=DIC_COLORES["ax_viol"][1]),
             ),
             row=1, col=1,
@@ -58,12 +58,12 @@ def render(data, meta):
         fig.update_yaxes(rangemode="tozero", row=1, col=1)
 
         piv_tipo = (
-            df.groupby(["Año", "Tipo de gasto"])["Apropiación a precios constantes (2025)"]
+            df.groupby(["Año", "Tipo de gasto"])["Apropiación a precios constantes (2026)"]
             .sum()
             .reset_index()
         )
-        piv_tipo["total"] = piv_tipo.groupby("Año")["Apropiación a precios constantes (2025)"].transform("sum")
-        piv_tipo["%"] = ((piv_tipo["Apropiación a precios constantes (2025)"] / piv_tipo["total"]) * 100).round(2)
+        piv_tipo["total"] = piv_tipo.groupby("Año")["Apropiación a precios constantes (2026)"].transform("sum")
+        piv_tipo["%"] = ((piv_tipo["Apropiación a precios constantes (2026)"] / piv_tipo["total"]) * 100).round(2)
 
         for tipo, group in piv_tipo.groupby("Tipo de gasto"):
             fig.add_trace(
@@ -76,7 +76,7 @@ def render(data, meta):
                 row=1, col=2,
             )
 
-        # Barras gasto/PIB (ya viene armado en pgn_pib_2024.csv según tu uso)
+        # Barras gasto/PIB (ya viene armado)
         for col, color in [("Deuda", DIC_COLORES["ax_viol"][1]), ("Funcionamiento", DIC_COLORES["az_verd"][2]), ("Inversión", DIC_COLORES["ro_am_na"][3])]:
             if col in pgn_pib.columns:
                 fig.add_trace(go.Bar(x=pgn_pib["Año"], y=pgn_pib[col], name=col, marker_color=color, showlegend=False), row=1, col=3)
@@ -103,20 +103,20 @@ def render(data, meta):
         fig.add_trace(
             go.Line(
                 x=piv_sector["Año"],
-                y=piv_sector["Apropiación a precios constantes (2025)"],
-                name="Constantes (2025)",
+                y=piv_sector["Apropiación a precios constantes (2026)"],
+                name="Constantes (2026)",
                 line=dict(color=DIC_COLORES["ax_viol"][1]),
             ),
             row=1, col=1,
         )
 
         piv_tipo = (
-            fil.groupby(["Año", "Tipo de gasto"])["Apropiación a precios constantes (2025)"]
+            fil.groupby(["Año", "Tipo de gasto"])["Apropiación a precios constantes (2026)"]
             .sum()
             .reset_index()
         )
         for tipo, group in piv_tipo.groupby("Tipo de gasto"):
-            fig.add_trace(go.Bar(x=group["Año"], y=group["Apropiación a precios constantes (2025)"], name=tipo, marker_color=dict_gasto.get(tipo, "#999999")), row=1, col=2)
+            fig.add_trace(go.Bar(x=group["Año"], y=group["Apropiación a precios constantes (2026)"], name=tipo, marker_color=dict_gasto.get(tipo, "#999999")), row=1, col=2)
 
         fig.update_layout(
             barmode="stack",
@@ -142,20 +142,20 @@ def render(data, meta):
         fig.add_trace(
             go.Line(
                 x=piv["Año"],
-                y=piv["Apropiación a precios constantes (2025)"],
-                name="Constantes (2025)",
+                y=piv["Apropiación a precios constantes (2026)"],
+                name="Constantes (2026)",
                 line=dict(color=DIC_COLORES["ax_viol"][1]),
             ),
             row=1, col=1,
         )
 
         piv_tipo = (
-            fil.groupby(["Año", "Tipo de gasto"])["Apropiación a precios constantes (2025)"]
+            fil.groupby(["Año", "Tipo de gasto"])["Apropiación a precios constantes (2026)"]
             .sum()
             .reset_index()
         )
         for tipo, group in piv_tipo.groupby("Tipo de gasto"):
-            fig.add_trace(go.Bar(x=group["Año"], y=group["Apropiación a precios constantes (2025)"], name=tipo, marker_color=dict_gasto.get(tipo, "#999999")), row=1, col=2)
+            fig.add_trace(go.Bar(x=group["Año"], y=group["Apropiación a precios constantes (2026)"], name=tipo, marker_color=dict_gasto.get(tipo, "#999999")), row=1, col=2)
 
         fig.update_layout(
             barmode="stack",

@@ -14,13 +14,13 @@ def _read_xlsx(path) -> pd.DataFrame:
 @st.cache_data(show_spinner="Cargando datasets...")
 def load_all() -> dict[str, pd.DataFrame]:
     
-    gastos = _read_csv(DATA_APP_DIR / "gastos_def_2025_test.csv")
+    gastos = _read_csv(DATA_APP_DIR / "gastos_def_2026.csv")
     ingresos = _read_csv(DATA_APP_DIR / "ingresos_2025.csv")
     ejecucion = _read_csv(DATA_APP_DIR / "ejecucion_hist.csv")
     recaudo = _read_csv(DATA_APP_DIR / "recaudo_hist.csv")
 
     
-    pgn_25 = _read_csv(DATA_APP_DIR / "pgn_2025.csv")
+    pgn_26 = _read_csv(DATA_APP_DIR / "desag_2026.csv")
     decreto_25 = _read_xlsx(DATA_APP_DIR / "decreto_2025.xlsx")
     diff = _read_xlsx(DATA_APP_DIR / "merge_william.xlsx")
     pib_rec = _read_csv(DATA_APP_DIR / "pib_rec.csv")
@@ -38,8 +38,8 @@ def load_all() -> dict[str, pd.DataFrame]:
     
     if "Apropiación a precios corrientes" in gastos.columns:
         gastos["Apropiación a precios corrientes"] = gastos["Apropiación a precios corrientes"] / 1_000_000_000
-    if "Apropiación a precios constantes (2025)" in gastos.columns:
-        gastos["Apropiación a precios constantes (2025)"] = gastos["Apropiación a precios constantes (2025)"] / 1_000_000_000
+    if "Apropiación a precios constantes (2026)" in gastos.columns:
+        gastos["Apropiación a precios constantes (2026)"] = gastos["Apropiación a precios constantes (2026)"] / 1_000_000_000
 
     
     if "apropiacion_corrientes" not in gastos.columns and "Apropiación a precios corrientes" in gastos.columns:
@@ -50,7 +50,7 @@ def load_all() -> dict[str, pd.DataFrame]:
         "ingresos": ingresos,
         "ejecucion": ejecucion,
         "recaudo": recaudo,
-        "pgn_25": pgn_25,
+        "pgn_26": pgn_26,
         "decreto_25": decreto_25,
         "diff": diff,
         "pib_rec": pib_rec,

@@ -5,6 +5,9 @@ from pgn_app.data.loaders import load_all, build_meta
 from pgn_app.pages import (
     main, ingresos, gastos, treemap, ejecucion, recaudo, pgn_2025, anteproyecto_2026, descargas
 )
+from datetime import datetime
+
+current_year = datetime.now().year
 
 ROUTES = {
     "Main": main,
@@ -13,8 +16,8 @@ ROUTES = {
     "Treemap": treemap,
     "Ejecución histórica": ejecucion,
     "Recaudo histórico": recaudo,
-    "PGN - 2025": pgn_2025,
-    "Anteproyecto - 2026": anteproyecto_2026,
+    f"PGN - {current_year}": pgn_2025,
+    f"Anteproyecto - {current_year + 1}": anteproyecto_2026,
     "Descarga de datos": descargas,
 }
 
