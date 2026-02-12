@@ -15,7 +15,7 @@ def _read_xlsx(path) -> pd.DataFrame:
 def load_all() -> dict[str, pd.DataFrame]:
     
     gastos = _read_csv(DATA_APP_DIR / "gastos_def_2026.csv")
-    ingresos = _read_csv(DATA_APP_DIR / "ingresos_2025.csv")
+    ingresos = _read_csv(DATA_APP_DIR / "ingresos_2026.csv")
     ejecucion = _read_csv(DATA_APP_DIR / "ejecucion_hist.csv")
     recaudo = _read_csv(DATA_APP_DIR / "recaudo_hist.csv")
 
@@ -31,8 +31,8 @@ def load_all() -> dict[str, pd.DataFrame]:
 
     
     ingresos = ingresos.copy()
-    if "Valor_25" in ingresos.columns and "Valor_25_esc" not in ingresos.columns:
-        ingresos["Valor_25_esc"] = (ingresos["Valor_25"] / 1_000_000_000).round(1)
+    if  "Valor a precios constantes (2026)" in ingresos.columns:
+        ingresos["Valor a precios constantes (2026)"] = (ingresos["Valor a precios constantes (2026)"] / 1_000_000_000).round(1)
 
     gastos = gastos.copy()
     

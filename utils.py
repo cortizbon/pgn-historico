@@ -6,9 +6,12 @@ current_year = datetime.now().year
 def convert_df(df):
     return df.to_csv(index=False).encode('utf-8')
 
-def get_dic_colors(filtro):
+def get_dic_colors(filtro, pgn_current=False):
     dic_colors = {}
-    rank = filtro.groupby('Sector')[f'Apropiación a precios constantes ({current_year})'].sum().rank().reset_index(name='rank')
+    if pgn_current:
+        rank = filtro.groupby('Sector')['Total'].sum().rank().reset_index(name='rank')
+    else:
+        rank = filtro.groupby('Sector')[f'Apropiación a precios constantes ({current_year})'].sum().rank().reset_index(name='rank')
     for _, info in rank.iterrows():
         sector_ = info['Sector']
         rank_ = info['rank']
@@ -41,7 +44,8 @@ DIC_COLORES = {'verde':["#009966"],
                'ro_am_na':["#FFE9C5", "#F7B261","#D8841C", "#dd722a","#C24C31", "#BC3B26"],
                'az_verd': ["#CBECEF", "#81D3CD", "#0FB7B3", "#009999"],
                'ax_viol': ["#D9D9ED", "#2F399B", "#1A1F63", "#262947"],
-               'ofiscal': ["#F9F9F9", "#2635bf"]}
+               'ofiscal': ["#F9F9F9", "#2635bf"],
+               'colors' : ["#262947",  "#009999", "#81D3CD", "#dd722a", "#F7B261"]}
 
 def create_dataframe_sankey(data, value_column, *columns, **filtros):
     for col in columns:

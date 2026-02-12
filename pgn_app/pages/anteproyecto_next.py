@@ -27,4 +27,4 @@ def render(data, meta):
     # fig.update_layout(width=1000, height=600)
     # st.plotly_chart(fig, use_container_width=True)
 
-    st.write(f"El anteproyecto de presupuesto para {current_year + 1} aún no está disponible. Por favor, vuelva más tarde para consultar esta información.")
+    st.write(f"El anteproyecto de presupuesto para {current_year + 1} aún no está disponible. Estamos a la espera de una actualización del Ministerio de Hacienda y Crédito Público.")

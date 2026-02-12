@@ -50,7 +50,7 @@ def render(data, meta):
     with col2:
         prices = {
             "corrientes": "Apropiación a precios corrientes",
-            "constantes 2025": "Apropiación a precios constantes (2025)",
+            "constantes 2026": "Apropiación a precios constantes (2026)",
         }
         price_selected = st.selectbox("Nivel(es) de precios", list(prices.keys()))
         total_or_account = st.selectbox("Suma o por cuenta", ["suma", "por cuenta"])

@@ -3,7 +3,7 @@ from pgn_app.ui.navigation import render_nav
 from pgn_app.data.loaders import load_all, build_meta
 
 from pgn_app.pages import (
-    main, ingresos, gastos, treemap, ejecucion, recaudo, pgn_2025, anteproyecto_2026, descargas
+    anteproyecto_next, main, ingresos, gastos, pgn_current, treemap, ejecucion, recaudo, descargas
 )
 from datetime import datetime
 
@@ -16,8 +16,8 @@ ROUTES = {
     "Treemap": treemap,
     "Ejecución histórica": ejecucion,
     "Recaudo histórico": recaudo,
-    f"PGN - {current_year}": pgn_2025,
-    f"Anteproyecto - {current_year + 1}": anteproyecto_2026,
+    f"PGN - {current_year}": pgn_current,
+    f"Anteproyecto - {current_year + 1}": anteproyecto_next,
     "Descarga de datos": descargas,
 }
 

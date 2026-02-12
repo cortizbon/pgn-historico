@@ -18,7 +18,7 @@ def render(data, meta):
         fig = px.treemap(
             fil,
             path=[px.Constant("PGN"), "Ingreso", "Ingreso específico"],
-            values="Valor_25_esc",
+            values="Valor a precios constantes (2026)",
             color_discrete_sequence=[DIC_COLORES["ax_viol"][1], DIC_COLORES["ro_am_na"][3], DIC_COLORES["az_verd"][2]],
             title="Matriz de composición anual de ingreso del PGN <br><sup>Cifras en miles de millones de pesos</sup>",
         )
