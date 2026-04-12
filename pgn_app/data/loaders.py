@@ -11,6 +11,9 @@ def _read_xlsx(path) -> pd.DataFrame:
     
     return pd.read_excel(path)
 
+def _read_parquet(path) -> pd.DataFrame:
+    return pd.read_parquet(path)
+
 @st.cache_data(show_spinner="Cargando datasets...")
 def load_all() -> dict[str, pd.DataFrame]:
     
@@ -25,7 +28,7 @@ def load_all() -> dict[str, pd.DataFrame]:
     diff = _read_xlsx(DATA_APP_DIR / "merge_william.xlsx")
     pib_rec = _read_csv(DATA_APP_DIR / "pib_rec.csv")
     pib_rec2 = _read_csv(DATA_APP_DIR / "c2_pib_rec.csv")
-    anteproyecto_26 = _read_xlsx(DATA_APP_DIR / "datos_anteproyecto26.xlsx")
+    anteproyecto_27 = _read_parquet(DATA_APP_DIR / "datos_anteproyecto27.parquet")
     pgn_pib = _read_csv(DATA_APP_DIR / "pgn_pib_2024.csv")
     pib_nominal = _read_csv(DATA_APP_DIR / "pib_nominal_24.csv")
 
@@ -55,7 +58,7 @@ def load_all() -> dict[str, pd.DataFrame]:
         "diff": diff,
         "pib_rec": pib_rec,
         "pib_rec2": pib_rec2,
-        "anteproyecto_26": anteproyecto_26,
+        "anteproyecto_27": anteproyecto_27,
         "pgn_pib": pgn_pib,
         "pib_nominal": pib_nominal,
     }
