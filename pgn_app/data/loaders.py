@@ -60,6 +60,7 @@ def load_all() -> dict[str, pd.DataFrame]:
         "pib_rec": pib_rec,
         "pib_rec2": pib_rec2,
         "anteproyecto_27": anteproyecto_27,
+        "proyecto_27": proyecto_27,
         "pgn_pib": pgn_pib,
         "pib_nominal": pib_nominal,
     }
