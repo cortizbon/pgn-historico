@@ -29,6 +29,7 @@ def load_all() -> dict[str, pd.DataFrame]:
     pib_rec = _read_csv(DATA_APP_DIR / "pib_rec.csv")
     pib_rec2 = _read_csv(DATA_APP_DIR / "c2_pib_rec.csv")
     anteproyecto_27 = _read_parquet(DATA_APP_DIR / "datos_anteproyecto27.parquet")
+    proyecto_27 = _read_csv(DATA_APP_DIR / "proyecto_pgn.csv")
     pgn_pib = _read_csv(DATA_APP_DIR / "pgn_pib_2024.csv")
     pib_nominal = _read_csv(DATA_APP_DIR / "pib_nominal_24.csv")
 

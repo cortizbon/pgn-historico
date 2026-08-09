@@ -1,0 +1,298 @@
+cod_entidad,cod_sector,Tipo de gasto,Entidad,Sector,Total
+0101,01,Funcionamiento,Congreso de la república,Congreso de la república,1116820490563
+0101,01,Deuda,Congreso de la república,Congreso de la república,1105650762
+0101,01,Inversión,Congreso de la república,Congreso de la república,147320456000
+0201,02,Funcionamiento,Presidencia de la república,Presidencia de la república,1174829384810
+0201,02,Inversión,Presidencia de la república,Presidencia de la república,77203946685
+0209,02,Funcionamiento,"Agencia presidencial de cooperación internacional de colombia, apc - colombia",Presidencia de la república,51429000000
+0209,02,Inversión,"Agencia presidencial de cooperación internacional de colombia, apc - colombia",Presidencia de la república,87792981663
+0211,02,Funcionamiento,Unidad nacional para la gestión del riesgo de desastres,Presidencia de la república,802544000000
+0211,02,Inversión,Unidad nacional para la gestión del riesgo de desastres,Presidencia de la república,10000000000
+0212,02,Funcionamiento,Agencia para la reincorporación y la normalización - arn,Presidencia de la república,370454000000
+0212,02,Inversión,Agencia para la reincorporación y la normalización - arn,Presidencia de la república,2000000000
+0213,02,Funcionamiento,Agencia nacional inmobiliaria virgilio barco vargas,Presidencia de la república,14478000000
+0213,02,Inversión,Agencia nacional inmobiliaria virgilio barco vargas,Presidencia de la república,45000000000
+0214,02,Funcionamiento,Agencia de renovación del territorio – art,Presidencia de la república,77296000000
+0214,02,Inversión,Agencia de renovación del territorio – art,Presidencia de la república,99939000000
+0301,03,Funcionamiento,Departamento administrativo nacional de planeación,Planeación,116285993726
+0301,03,Inversión,Departamento administrativo nacional de planeación,Planeación,570000000000
+0303,03,Funcionamiento,Unidad administrativa especial  - agencia nacional de contratación pública - colombia compra eficiente,Planeación,29682785711
+0303,03,Inversión,Unidad administrativa especial  - agencia nacional de contratación pública - colombia compra eficiente,Planeación,85597916411
+0324,03,Funcionamiento,Superintendencia de servicios públicos domiciliarios,Planeación,492577267947
+0324,03,Inversión,Superintendencia de servicios públicos domiciliarios,Planeación,42635000000
+0401,04,Funcionamiento,Departamento administrativo nacional de estadística (dane),Información estadística,173579000000
+0401,04,Inversión,Departamento administrativo nacional de estadística (dane),Información estadística,108650771518
+0402,04,Funcionamiento,Fondo rotatorio del dane,Información estadística,930025026
+0402,04,Inversión,Fondo rotatorio del dane,Información estadística,30227205570
+0403,04,Funcionamiento,Instituto geográfico agustín codazzi - igac,Información estadística,132555311492
+0403,04,Inversión,Instituto geográfico agustín codazzi - igac,Información estadística,143463763466
+0501,05,Funcionamiento,Departamento administrativo de la función pública,Empleo público,42518047287
+0501,05,Inversión,Departamento administrativo de la función pública,Empleo público,13488205700
+0503,05,Funcionamiento,Escuela superior de administración pública (esap),Empleo público,175006786000
+0503,05,Inversión,Escuela superior de administración pública (esap),Empleo público,306360451000
+1101,11,Funcionamiento,Ministerio de relaciones exteriores,Relaciones exteriores,670160000000
+1102,11,Funcionamiento,Fondo rotatorio del ministerio de relaciones exteriores,Relaciones exteriores,825501000000
+1102,11,Inversión,Fondo rotatorio del ministerio de relaciones exteriores,Relaciones exteriores,157932110095
+1104,11,Funcionamiento,Unidad administrativa especial migración colombia,Relaciones exteriores,258086000000
+1104,11,Inversión,Unidad administrativa especial migración colombia,Relaciones exteriores,68633961587
+1201,12,Funcionamiento,Ministerio de justicia y del derecho,Justicia y del derecho,120445535000
+1201,12,Inversión,Ministerio de justicia y del derecho,Justicia y del derecho,55706836995
+1204,12,Funcionamiento,Superintendencia de notariado y registro,Justicia y del derecho,759758947502
+1204,12,Inversión,Superintendencia de notariado y registro,Justicia y del derecho,380601935432
+1208,12,Funcionamiento,Instituto nacional penitenciario y carcelario - inpec,Justicia y del derecho,2428787039484
+1208,12,Inversión,Instituto nacional penitenciario y carcelario - inpec,Justicia y del derecho,14869889877
+1210,12,Funcionamiento,Unidad administrativa especial agencia nacional de defensa jurídica del estado,Justicia y del derecho,237411000000
+1210,12,Inversión,Unidad administrativa especial agencia nacional de defensa jurídica del estado,Justicia y del derecho,22266327000
+1211,12,Funcionamiento,Unidad de servicios penitenciarios y carcelarios - uspec,Justicia y del derecho,1623982000000
+1211,12,Inversión,Unidad de servicios penitenciarios y carcelarios - uspec,Justicia y del derecho,500000000000
+1301,13,Funcionamiento,Ministerio de hacienda y crédito público,Hacienda,21882471258988
+1301,13,Inversión,Ministerio de hacienda y crédito público,Hacienda,4785684568311
+1308,13,Funcionamiento,Unidad administrativa especial contaduría general de la nación,Hacienda,23814127000
+1308,13,Inversión,Unidad administrativa especial contaduría general de la nación,Hacienda,4334872606
+1309,13,Funcionamiento,Superintendencia de la economía solidaria,Hacienda,28122360596
+1309,13,Inversión,Superintendencia de la economía solidaria,Hacienda,24593033289
+1310,13,Funcionamiento,Unidad administrativa especial dirección de impuestos y aduanas nacionales,Hacienda,3580814390000
+1310,13,Inversión,Unidad administrativa especial dirección de impuestos y aduanas nacionales,Hacienda,56901443173
+1312,13,Funcionamiento,Unidad de información y análisis financiero,Hacienda,26896000000
+1312,13,Inversión,Unidad de información y análisis financiero,Hacienda,2496264045
+1313,13,Funcionamiento,Superintendencia financiera de colombia,Hacienda,393203444994
+1313,13,Inversión,Superintendencia financiera de colombia,Hacienda,74918409649
+1314,13,Funcionamiento,Unidad administrativa especial de gestión  pensional y contribuciones parafiscales de la protección social (ugppp),Hacienda,255610000000
+1314,13,Inversión,Unidad administrativa especial de gestión  pensional y contribuciones parafiscales de la protección social (ugppp),Hacienda,4784056802
+1315,13,Funcionamiento,Fondo adaptación,Hacienda,44045000000
+1315,13,Inversión,Fondo adaptación,Hacienda,15985083250
+1401,14,Deuda,Servicio de la deuda pública nacional,Servicio de la deuda pública nacional,115045878545010
+1501,15,Funcionamiento,Ministerio de defensa nacional,Defensa y policía,26816987000000
+1501,15,Deuda,Ministerio de defensa nacional,Defensa y policía,282926448751
+1501,15,Inversión,Ministerio de defensa nacional,Defensa y policía,5707501196895
+1503,15,Funcionamiento,Caja de retiro de las fuerzas militares,Defensa y policía,9109759000000
+1503,15,Inversión,Caja de retiro de las fuerzas militares,Defensa y policía,21805000000
+1507,15,Funcionamiento,Instituto casas fiscales del ejército,Defensa y policía,43288000000
+1507,15,Inversión,Instituto casas fiscales del ejército,Defensa y policía,28294000000
+1508,15,Funcionamiento,"Defensa civil colombiana, guillermo león valencia",Defensa y policía,67251000000
+1508,15,Inversión,"Defensa civil colombiana, guillermo león valencia",Defensa y policía,10692145600
+1510,15,Funcionamiento,Club militar de oficiales,Defensa y policía,81770000000
+1510,15,Inversión,Club militar de oficiales,Defensa y policía,4001000000
+1511,15,Funcionamiento,Caja de sueldos de retiro de la policía nacional,Defensa y policía,8405386000000
+1511,15,Inversión,Caja de sueldos de retiro de la policía nacional,Defensa y policía,10412257000
+1512,15,Funcionamiento,Fondo rotatorio de la policía,Defensa y policía,340204000000
+1512,15,Inversión,Fondo rotatorio de la policía,Defensa y policía,3500000000
+1516,15,Funcionamiento,Superintendencia de vigilancia y seguridad privada,Defensa y policía,43649000000
+1516,15,Inversión,Superintendencia de vigilancia y seguridad privada,Defensa y policía,4900854375
+1519,15,Funcionamiento,Hospital militar,Defensa y policía,667386000000
+1519,15,Inversión,Hospital militar,Defensa y policía,35000000000
+1520,15,Funcionamiento,Agencia logística de las fuerzas militares,Defensa y policía,1042421000000
+1520,15,Inversión,Agencia logística de las fuerzas militares,Defensa y policía,1861446000
+1521,15,Funcionamiento,Unidad administrativa especial de la justicia penal militar y policial,Defensa y policía,153321000000
+1521,15,Inversión,Unidad administrativa especial de la justicia penal militar y policial,Defensa y policía,6356890439
+1601,16,Funcionamiento,Policía nacional,Defensa y policía,19426418000000
+1601,16,Inversión,Policía nacional,Defensa y policía,592338934390
+1701,17,Funcionamiento,Ministerio de agricultura y desarrollo rural,Agricultura y desarrollo rural,496591404984
+1701,17,Inversión,Ministerio de agricultura y desarrollo rural,Agricultura y desarrollo rural,441689207769
+1702,17,Funcionamiento,Instituto colombiano agropecuario (ica),Agricultura y desarrollo rural,237610142887
+1702,17,Inversión,Instituto colombiano agropecuario (ica),Agricultura y desarrollo rural,200316179255
+1715,17,Funcionamiento,Autoridad nacional de acuicultura y pesca - aunap,Agricultura y desarrollo rural,25528920771
+1715,17,Inversión,Autoridad nacional de acuicultura y pesca - aunap,Agricultura y desarrollo rural,69054702159
+1716,17,Funcionamiento,Unidad administrativa especial de gestión de restitución de tierras despojadas,Agricultura y desarrollo rural,79960992420
+1716,17,Inversión,Unidad administrativa especial de gestión de restitución de tierras despojadas,Agricultura y desarrollo rural,429356026425
+1717,17,Funcionamiento,Agencia nacional de tierras - ant,Agricultura y desarrollo rural,77865379577
+1717,17,Inversión,Agencia nacional de tierras - ant,Agricultura y desarrollo rural,547000302309
+1718,17,Funcionamiento,Agencia de desarrollo rural - adr,Agricultura y desarrollo rural,52163543228
+1718,17,Inversión,Agencia de desarrollo rural - adr,Agricultura y desarrollo rural,321936887577
+1901,19,Funcionamiento,Ministerio de salud y protección social,Salud y protección social,75400514967744
+1901,19,Inversión,Ministerio de salud y protección social,Salud y protección social,1797979443506
+1903,19,Funcionamiento,Instituto nacional de salud (ins),Salud y protección social,61007000000
+1903,19,Inversión,Instituto nacional de salud (ins),Salud y protección social,66919614403
+1910,19,Funcionamiento,Superintendencia nacional de salud,Salud y protección social,296784000000
+1910,19,Inversión,Superintendencia nacional de salud,Salud y protección social,217223931659
+1912,19,Funcionamiento,Instituto nacional de vigilancia de medicamentos y alimentos - invima,Salud y protección social,224525000000
+1912,19,Inversión,Instituto nacional de vigilancia de medicamentos y alimentos - invima,Salud y protección social,162655457473
+1913,19,Funcionamiento,Fondo de previsión social del congreso ,Salud y protección social,499871000000
+1914,19,Funcionamiento,Fondo pasivo social de ferrocarriles nacionales de colombia ,Salud y protección social,968251000000
+1914,19,Inversión,Fondo pasivo social de ferrocarriles nacionales de colombia ,Salud y protección social,2000000000
+2101,21,Funcionamiento,Ministerio de minas y energía,Minas y energía,380375203409
+2101,21,Deuda,Ministerio de minas y energía,Minas y energía,3459701281
+2101,21,Inversión,Ministerio de minas y energía,Minas y energía,5283961708123
+2103,21,Funcionamiento,Servicio geológico colombiano,Minas y energía,76683046685
+2103,21,Inversión,Servicio geológico colombiano,Minas y energía,60049498258
+2109,21,Funcionamiento,Unidad de planeacion minero energética - upme,Minas y energía,51976348950
+2109,21,Inversión,Unidad de planeacion minero energética - upme,Minas y energía,41049177229
+2110,21,Funcionamiento,Instituto de planificación y promoción de soluciones  energéticas para las zonas no interconectadas - ipse,Minas y energía,23030412315
+2110,21,Inversión,Instituto de planificación y promoción de soluciones  energéticas para las zonas no interconectadas - ipse,Minas y energía,52000000000
+2111,21,Funcionamiento,Agencia nacional de hidrocarburos - anh,Minas y energía,885554597329
+2111,21,Inversión,Agencia nacional de hidrocarburos - anh,Minas y energía,423150687113
+2112,21,Funcionamiento,Agencia nacional de minería - anm,Minas y energía,163306967079
+2112,21,Inversión,Agencia nacional de minería - anm,Minas y energía,92589984078
+2201,22,Funcionamiento,Ministerio de educación nacional,Educación,75829673734318
+2201,22,Inversión,Ministerio de educación nacional,Educación,3203548198496
+2209,22,Funcionamiento,Instituto nacional para sordos (insor),Educación,9733644000
+2209,22,Inversión,Instituto nacional para sordos (insor),Educación,9374469137
+2210,22,Funcionamiento,Instituto nacional para ciegos (inci),Educación,9581842000
+2210,22,Inversión,Instituto nacional para ciegos (inci),Educación,3479780620
+2234,22,Funcionamiento,Escuela tecnológica instituto técnico central,Educación,53242154953
+2234,22,Inversión,Escuela tecnológica instituto técnico central,Educación,21638738558
+2238,22,Funcionamiento,Instituto nacional de formación técnica profesional de san andres y providencia,Educación,9360169144
+2238,22,Inversión,Instituto nacional de formación técnica profesional de san andres y providencia,Educación,7393642070
+2239,22,Funcionamiento,Instituto nacional de formación técnica profesional de san juan del cesar,Educación,11575493683
+2239,22,Inversión,Instituto nacional de formación técnica profesional de san juan del cesar,Educación,17530267447
+2241,22,Funcionamiento,Instituto tolimense de formación técnica profesional,Educación,27040337000
+2241,22,Inversión,Instituto tolimense de formación técnica profesional,Educación,10503220324
+2242,22,Funcionamiento,"Instituto técnico nacional de comercio ""simón rodríguez"" de cali",Educación,15882467642
+2242,22,Inversión,"Instituto técnico nacional de comercio ""simón rodríguez"" de cali",Educación,12152395223
+2246,22,Funcionamiento,Unidad administrativa especial alimentación escolar,Educación,16791878078
+2246,22,Inversión,Unidad administrativa especial alimentación escolar,Educación,3174521829231
+2257,22,Funcionamiento,Entes autónomos universitarios estatales - universidades públicas,Educación,9799840683000
+2257,22,Inversión,Entes autónomos universitarios estatales - universidades públicas,Educación,212257616364
+2301,23,Funcionamiento,Ministerio de tecnologías de la información y las comunicaciones,Tecnologías de la información y las comunicaciones,129058073539
+2306,23,Funcionamiento,Fondo único de tecnologías de la información y las comunicaciones,Tecnologías de la información y las comunicaciones,549460499000
+2306,23,Inversión,Fondo único de tecnologías de la información y las comunicaciones,Tecnologías de la información y las comunicaciones,1781387296785
+2308,23,Funcionamiento,Unidad administrativa especial comisión de regulación de las comunicaciones ,Tecnologías de la información y las comunicaciones,42793571551
+2308,23,Inversión,Unidad administrativa especial comisión de regulación de las comunicaciones ,Tecnologías de la información y las comunicaciones,18470208000
+2309,23,Funcionamiento,Agencia nacional del espectro - ane,Tecnologías de la información y las comunicaciones,26138461986
+2309,23,Inversión,Agencia nacional del espectro - ane,Tecnologías de la información y las comunicaciones,23452336014
+2311,23,Funcionamiento,Computadores para educar cpe,Tecnologías de la información y las comunicaciones,32988361000
+2311,23,Inversión,Computadores para educar cpe,Tecnologías de la información y las comunicaciones,33001616000
+2312,23,Funcionamiento,Corporación agencia nacional de gobierno digital - and,Tecnologías de la información y las comunicaciones,6551927183
+2312,23,Inversión,Corporación agencia nacional de gobierno digital - and,Tecnologías de la información y las comunicaciones,151177403465
+2401,24,Funcionamiento,Ministerio de transporte,Transporte,246695824883
+2401,24,Deuda,Ministerio de transporte,Transporte,6797215826
+2401,24,Inversión,Ministerio de transporte,Transporte,152859597920
+2402,24,Funcionamiento,Instituto nacional de vías,Transporte,529175066000
+2402,24,Deuda,Instituto nacional de vías,Transporte,601876014
+2402,24,Inversión,Instituto nacional de vías,Transporte,5525114412210
+2412,24,Funcionamiento,Unidad administrativa especial de la aeronáutica civil,Transporte,1171031913735
+2412,24,Deuda,Unidad administrativa especial de la aeronáutica civil,Transporte,14550000000
+2412,24,Inversión,Unidad administrativa especial de la aeronáutica civil,Transporte,2861239156611
+2413,24,Funcionamiento,Agencia nacional de infraestructura,Transporte,147152070063
+2413,24,Deuda,Agencia nacional de infraestructura,Transporte,2490771107743
+2413,24,Inversión,Agencia nacional de infraestructura,Transporte,7226980903121
+2414,24,Funcionamiento,Unidad de planeación del sector de infraestructura de transporte,Transporte,19288602000
+2414,24,Inversión,Unidad de planeación del sector de infraestructura de transporte,Transporte,16000000000
+2416,24,Funcionamiento,Agencia nacional de seguridad vial,Transporte,36996146000
+2416,24,Inversión,Agencia nacional de seguridad vial,Transporte,241160206000
+2417,24,Funcionamiento,Superintendencia de puertos y transporte,Transporte,114024616077
+2417,24,Inversión,Superintendencia de puertos y transporte,Transporte,166270004899
+2501,25,Funcionamiento,Procuraduría general de la nación,Organismos de control,1612615440000
+2501,25,Inversión,Procuraduría general de la nación,Organismos de control,200000000000
+2502,25,Funcionamiento,Defensoría del pueblo,Organismos de control,1186328282287
+2502,25,Inversión,Defensoría del pueblo,Organismos de control,117000000000
+2601,26,Funcionamiento,Contraloría general de la república,Organismos de control,1477869226000
+2601,26,Inversión,Contraloría general de la república,Organismos de control,140000000000
+2602,26,Funcionamiento,Fondo de bienestar social de la contraloría general de la república,Organismos de control,173566738145
+2602,26,Inversión,Fondo de bienestar social de la contraloría general de la república,Organismos de control,775497000
+2701,27,Funcionamiento,Rama judicial,Rama judicial,9347270800000
+2701,27,Deuda,Rama judicial,Rama judicial,17695578134
+2701,27,Inversión,Rama judicial,Rama judicial,1500000000000
+2801,28,Funcionamiento,Registraduría nacional del estado civil,Registraduría,5504581651000
+2801,28,Inversión,Registraduría nacional del estado civil,Registraduría,188000000000
+2802,28,Funcionamiento,Fondo rotatorio de la registraduría,Registraduría,95903515000
+2802,28,Inversión,Fondo rotatorio de la registraduría,Registraduría,146047248109
+2803,28,Funcionamiento,Fondo social de vivienda de la registraduría nacional del estado civil,Registraduría,17832634836
+2901,29,Funcionamiento,Fiscalía general de la nación,Fiscalía,6283601000000
+2901,29,Deuda,Fiscalía general de la nación,Fiscalía,173977914661
+2901,29,Inversión,Fiscalía general de la nación,Fiscalía,287028308475
+2902,29,Funcionamiento,Instituto nacional de medicina legal y ciencias forenses,Fiscalía,427295000000
+2902,29,Inversión,Instituto nacional de medicina legal y ciencias forenses,Fiscalía,144772000000
+2904,29,Funcionamiento,Fondo especial para la administración de bienes de la fiscalía general de la nación,Fiscalía,24127000000
+2904,29,Inversión,Fondo especial para la administración de bienes de la fiscalía general de la nación,Fiscalía,76247674951
+3201,32,Funcionamiento,Ministerio de ambiente y desarrollo sostenible,Ambiente y desarrollo sostenible,373302938938
+3201,32,Inversión,Ministerio de ambiente y desarrollo sostenible,Ambiente y desarrollo sostenible,445564682908
+3202,32,Funcionamiento,"Instituto de hidrología, meteorología y estudios ambientales- ideam",Ambiente y desarrollo sostenible,68333425997
+3202,32,Inversión,"Instituto de hidrología, meteorología y estudios ambientales- ideam",Ambiente y desarrollo sostenible,62659388412
+3204,32,Funcionamiento,Fondo nacional ambiental,Ambiente y desarrollo sostenible,106555691071
+3204,32,Inversión,Fondo nacional ambiental,Ambiente y desarrollo sostenible,227619670302
+3208,32,Funcionamiento,Corporación autónoma regional de los valles del sinú y san jorge (cvs),Ambiente y desarrollo sostenible,7680365691
+3209,32,Funcionamiento,Corporación autónoma regional del quindío (crq),Ambiente y desarrollo sostenible,7174868500
+3210,32,Funcionamiento,Corporación para el desarrollo sostenible del urabá (corpourabá),Ambiente y desarrollo sostenible,5788515211
+3211,32,Funcionamiento,Corporación autónoma regional de caldas (corpocaldas),Ambiente y desarrollo sostenible,5244441380
+3212,32,Funcionamiento,Corporación autónoma regional para el desarrollo sostenible del choco (codechoco),Ambiente y desarrollo sostenible,3467123679
+3213,32,Funcionamiento,Corporación autónoma regional para la defensa de la meseta de bucaramanga (cdmb),Ambiente y desarrollo sostenible,1721888785
+3214,32,Funcionamiento,Corporación autónoma regional del tolima (cortolima),Ambiente y desarrollo sostenible,2890330130
+3215,32,Funcionamiento,Corporación autónoma regional de risaralda (carder),Ambiente y desarrollo sostenible,3533106523
+3216,32,Funcionamiento,Corporación autónoma regional de nariño (corponariño),Ambiente y desarrollo sostenible,4043391136
+3217,32,Funcionamiento,Corporación autónoma regional de la frontera nororiental (corponor),Ambiente y desarrollo sostenible,5359165162
+3218,32,Funcionamiento,Corporación autónoma regional de la guajira (corpoguajira),Ambiente y desarrollo sostenible,5403809354
+3219,32,Funcionamiento,Corporación autónoma regional del cesar (corpocesar),Ambiente y desarrollo sostenible,4629080000
+3221,32,Funcionamiento,Corporación autónoma regional del cauca (crc),Ambiente y desarrollo sostenible,8861688373
+3222,32,Funcionamiento,Corporación autónoma regional del magdalena (corpamag),Ambiente y desarrollo sostenible,7422572416
+3223,32,Funcionamiento,Corporación para el desarrollo sostenible del sur de la amazonia (corpoamazonia),Ambiente y desarrollo sostenible,3433862100
+3224,32,Funcionamiento,Corporación  para el desarrollo sostenible del norte y oriente de la amazonia (cda),Ambiente y desarrollo sostenible,3741110800
+3224,32,Inversión,Corporación  para el desarrollo sostenible del norte y oriente de la amazonia (cda),Ambiente y desarrollo sostenible,4173492932
+3226,32,Funcionamiento,"Corporación para el desarrollo sostenible del archipiélago de san andres, providencia y santa catalina (coralina)",Ambiente y desarrollo sostenible,3605369000
+3227,32,Funcionamiento,Corporación para el desarrollo sostenible del área de manejo especial la macarena (cormacarena),Ambiente y desarrollo sostenible,3944255867
+3228,32,Funcionamiento,Corporación  para el desarrollo sostenible de la mojana y el san jorge (corpomojana),Ambiente y desarrollo sostenible,3551624300
+3229,32,Funcionamiento,Corporación autónoma regional de la orinoquia (corporinoquia),Ambiente y desarrollo sostenible,3370754318
+3230,32,Funcionamiento,Corporación autónoma regional de sucre (carsucre),Ambiente y desarrollo sostenible,3938475900
+3231,32,Funcionamiento,Corporación autónoma regional del alto magdalena (cam),Ambiente y desarrollo sostenible,3286033827
+3232,32,Funcionamiento,Corporación autónoma regional del centro de antioquia (corantioquia),Ambiente y desarrollo sostenible,3474086217
+3233,32,Funcionamiento,Corporación autónoma regional del atlántico (cra),Ambiente y desarrollo sostenible,3088652075
+3234,32,Funcionamiento,Corporación autónoma regional de santander (cas),Ambiente y desarrollo sostenible,3381340700
+3235,32,Funcionamiento,Corporación autónoma regional de boyacá (corpoboyacá),Ambiente y desarrollo sostenible,2831916938
+3236,32,Funcionamiento,Corporación autónoma regional de chivor (corpochivor),Ambiente y desarrollo sostenible,3624983500
+3237,32,Funcionamiento,Corporación autónoma regional del guavio (corpoguavio),Ambiente y desarrollo sostenible,1119025800
+3238,32,Funcionamiento,Corporación autónoma regional del canal del dique (cardique),Ambiente y desarrollo sostenible,3311925207
+3239,32,Funcionamiento,Corporación autónoma regional del sur de bolívar (csb),Ambiente y desarrollo sostenible,4253944800
+3301,33,Funcionamiento,"Ministerio de las culturas, las artes y los saberes ancestrales",Cultura,346677011156
+3301,33,Inversión,"Ministerio de las culturas, las artes y los saberes ancestrales",Cultura,399879295971
+3304,33,Funcionamiento,Archivo general de la nación,Cultura,22656298248
+3304,33,Inversión,Archivo general de la nación,Cultura,26018451619
+3305,33,Funcionamiento,Instituto colombiano de antropología e historia,Cultura,27791477220
+3305,33,Inversión,Instituto colombiano de antropología e historia,Cultura,21743757939
+3307,33,Funcionamiento,Instituto caro y cuervo,Cultura,17412998750
+3307,33,Inversión,Instituto caro y cuervo,Cultura,13902214000
+3401,34,Funcionamiento,Auditoría general de la republica,Organismos de control,67029000000
+3401,34,Inversión,Auditoría general de la republica,Organismos de control,13000000000
+3501,35,Funcionamiento,"Ministerio de comercio, industria y turismo","Comercio, industria y turismo",1137377215958
+3501,35,Inversión,"Ministerio de comercio, industria y turismo","Comercio, industria y turismo",141203598339
+3502,35,Funcionamiento,Superintendencia de sociedades,"Comercio, industria y turismo",217517057159
+3502,35,Inversión,Superintendencia de sociedades,"Comercio, industria y turismo",34550000000
+3503,35,Funcionamiento,Superintendencia de industria y comercio,"Comercio, industria y turismo",232680161575
+3503,35,Inversión,Superintendencia de industria y comercio,"Comercio, industria y turismo",125318180368
+3504,35,Funcionamiento,Unidad administrativa especial junta central contadores,"Comercio, industria y turismo",17036291000
+3504,35,Inversión,Unidad administrativa especial junta central contadores,"Comercio, industria y turismo",14888902025
+3505,35,Funcionamiento,Instituto nacional de metrología - inm,"Comercio, industria y turismo",24546674148
+3505,35,Inversión,Instituto nacional de metrología - inm,"Comercio, industria y turismo",14729045107
+3601,36,Funcionamiento,Ministerio del trabajo,Trabajo,51690693000000
+3601,36,Inversión,Ministerio del trabajo,Trabajo,622749157049
+3602,36,Funcionamiento,Servicio nacional de aprendizaje (sena),Trabajo,152402000000
+3602,36,Inversión,Servicio nacional de aprendizaje (sena),Trabajo,8361097587411
+3612,36,Funcionamiento,Unidad administrativa especial de organizaciones solidarias,Trabajo,11121000000
+3612,36,Inversión,Unidad administrativa especial de organizaciones solidarias,Trabajo,44458557030
+3613,36,Funcionamiento,Unidad administrativa especial del servicio público de empleo,Trabajo,16496000000
+3613,36,Inversión,Unidad administrativa especial del servicio público de empleo,Trabajo,16099690804
+3701,37,Funcionamiento,Ministerio del interior,Interior,1094693000000
+3701,37,Inversión,Ministerio del interior,Interior,209577245112
+3703,37,Funcionamiento,Dirección nacional del derecho de autor,Interior,6386000000
+3703,37,Inversión,Dirección nacional del derecho de autor,Interior,2430671401
+3704,37,Funcionamiento,Corporación nacional para la reconstrucción de la cuenca del rio páez y zonas aledañas nasa ki we,Interior,4755000000
+3704,37,Inversión,Corporación nacional para la reconstrucción de la cuenca del rio páez y zonas aledañas nasa ki we,Interior,17000000000
+3708,37,Funcionamiento,Unidad nacional de protección - unp,Interior,2894294000000
+3708,37,Deuda,Unidad nacional de protección - unp,Interior,3610711702
+3708,37,Inversión,Unidad nacional de protección - unp,Interior,4000000000
+3709,37,Funcionamiento,Dirección nacional de bomberos,Interior,9108000000
+3709,37,Inversión,Dirección nacional de bomberos,Interior,168972581970
+3801,38,Funcionamiento,Comisión nacional del servicio civil,Empleo público,40383380547
+3801,38,Inversión,Comisión nacional del servicio civil,Empleo público,138619492766
+3901,39,Funcionamiento,"Ministerio de ciencia, tecnología e innovación","Ciencia, tecnología e innovación",30391191000
+3901,39,Inversión,"Ministerio de ciencia, tecnología e innovación","Ciencia, tecnología e innovación",326648315766
+4001,40,Funcionamiento,"Ministerio de vivienda, ciudad y territorio","Vivienda, ciudad y territorio",5101107326274
+4001,40,Inversión,"Ministerio de vivienda, ciudad y territorio","Vivienda, ciudad y territorio",1549923149545
+4002,40,Funcionamiento,Fondo nacional de vivienda - fonvivienda,"Vivienda, ciudad y territorio",4610000000
+4002,40,Inversión,Fondo nacional de vivienda - fonvivienda,"Vivienda, ciudad y territorio",704796888012
+4101,41,Funcionamiento,Departamento administrativo para la prosperidad social,Inclusión social y reconciliación,326951000000
+4101,41,Inversión,Departamento administrativo para la prosperidad social,Inclusión social y reconciliación,9621697602549
+4104,41,Funcionamiento,Unidad de atención y reparación integral a las víctimas,Inclusión social y reconciliación,1839136100000
+4104,41,Inversión,Unidad de atención y reparación integral a las víctimas,Inclusión social y reconciliación,2982614695496
+4105,41,Funcionamiento,Centro de memoria histórica,Inclusión social y reconciliación,22978000000
+4105,41,Inversión,Centro de memoria histórica,Inclusión social y reconciliación,72107972103
+4106,41,Funcionamiento,Instituto colombiano de bienestar familiar,Inclusión social y reconciliación,1481811657000
+4106,41,Inversión,Instituto colombiano de bienestar familiar,Inclusión social y reconciliación,10792239206109
+4201,42,Funcionamiento,Departamento administrativo dirección nacional de inteligencia,Inteligencia,164508000000
+4201,42,Inversión,Departamento administrativo dirección nacional de inteligencia,Inteligencia,23154858491
+4301,43,Funcionamiento,Ministerio del deporte,Deporte y recreación,54990656148
+4301,43,Inversión,Ministerio del deporte,Deporte y recreación,246221188914
+4401,44,Funcionamiento,Jurisdicción especial para la paz,"Sistema integral de verdad, justicia, reparación y no repetición",603424000000
+4401,44,Inversión,Jurisdicción especial para la paz,"Sistema integral de verdad, justicia, reparación y no repetición",189521300973
+4403,44,Funcionamiento,Unidad de búsqueda de personas dadas por desaparecidas en el contexto y en razón del conflicto armado (ubpd),"Sistema integral de verdad, justicia, reparación y no repetición",125445000000
+4403,44,Inversión,Unidad de búsqueda de personas dadas por desaparecidas en el contexto y en razón del conflicto armado (ubpd),"Sistema integral de verdad, justicia, reparación y no repetición",76273000000
+4601,46,Funcionamiento,Ministerio de la igualdad y la equidad,Igualdad y equidad,121590671000
