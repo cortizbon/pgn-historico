@@ -31,10 +31,10 @@ def render(data, meta):
     dic = get_dic_colors(p27, pgn_current=True)
     dic["(?)"] = "#D9D9ED"
     fig = px.treemap(
-        df27,
+        p27,
         path=[px.Constant("PGN"), "Sector", "Entidad", "Tipo de gasto"],
         values="TOTAL_mil",
-        title="Matriz de composición del anteproyecto en 2027 <br><sup>Cifras en millones de pesos</sup>",
+        title="Matriz de composición del proyecto de Ley del PGN para 2027 <br><sup>Cifras en millones de pesos</sup>",
         color='Sector',
         color_discrete_map=dic,
     )
